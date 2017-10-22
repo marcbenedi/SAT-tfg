@@ -129,6 +129,7 @@ class BoolFunc {
 
     ~BoolFunc() {
         //MARC: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
+        if(type == NOD_ID) VarsManager::freeId(value);
         std::printf("Destructor of %p\n", (void *)this);
         //delete child1; //MARC: b = !b recursiu
         child1 = NULL;

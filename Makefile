@@ -1,9 +1,8 @@
-VERSION =
 FLAGS = -std=c++0x -o
 DEBUG = -g
 EXE_NAME = main
 
-make: main.cpp BoolFunc$(VERSION).h
+make: main.cpp BoolFunc.h VarsManager.h
 	g++ $(DEBUG) $(FLAGS) $(EXE_NAME) main.cpp
 
 clean:

@@ -1,8 +1,9 @@
 #ifndef VARSMANAGER_H
 #define VARSMANAGER_H
 
-#include <vector>
 #include <assert.h>
+#include <queue>
+#include <iostream>
 
 class VarsManager {
 private:
@@ -15,15 +16,31 @@ private:
  */
 static int last_id;
 
+//When an id is unused is pushed into this queue for a future use.
+static std::queue<int> recyclable;
+
 public:
 
 static int newId() {
-        //MARC: Que puguis marcar com a unused una variable i així pugui retornar el seu inten un futur
-        ++last_id;
-        return last_id;
+        if(!recyclable.empty()){
+            int front = recyclable.front();
+            recyclable.pop();
+            return front;
+        }
+        else{
+            ++last_id;
+            return last_id;
+        }
 }
+
+static void freeId(int id){
+    std::cout << "Freeing "<< id << std::endl;
+    recyclable.push(id);
+}
+
 };
 
 int VarsManager::last_id = 0;
+std::queue<int> VarsManager::recyclable;
 
 #endif // VARSMANAGER_H
