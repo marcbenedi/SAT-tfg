@@ -1,0 +1,3 @@
+/home/marcbenedi/Desktop/SAT-tfg/ClionProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/ClionProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/ClionProject/cmake-build-debug/CMakeFiles/ClionProject.dir

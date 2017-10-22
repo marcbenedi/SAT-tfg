@@ -8,10 +8,18 @@ class CnfConverter{
 private:
     CnfConverter();
 public:
-    static Cnf boolFuncToCnf(BoolFunc const & boolfunc){
+    static Cnf silly(BoolFunc const & boolFunc){
+        /**
+         * 1 - Apply De Morgan
+         * 2 - Apply distributive
+         * The size of boolFunc grows!!
+         **/
         Cnf cnf;
         return cnf;
     }
+
+    //Other methods
+    static Cnf tseitin(BoolFunc const & boolFunc){}
 };
 
 #endif // CNFCONVERTER_H

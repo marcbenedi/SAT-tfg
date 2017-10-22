@@ -38,7 +38,7 @@ class BoolFunc {
          */
         static std::map < std::string, int > name_to_index;
 
-    BoolFunc const * child1 = NULL;
+    BoolFunc const* child1 = NULL;
     BoolFunc const * child2 = NULL;
     BoolFunc const * child3 = NULL;
 
@@ -78,6 +78,17 @@ class BoolFunc {
     }
 
     public:
+
+    NodeType getType(){return type;}
+    int getValue(){return value;}
+    const BoolFunc* getChild1(){return child1;}
+    const BoolFunc* getChild2(){return child2;}
+    const BoolFunc* getChild3(){return child3;}
+    void setType(NodeType t){type = t;}
+    void setValue(int v){value = v;}
+    void setChild1(BoolFunc const & c){child1 = &c;}
+    void setChild2(BoolFunc const & c){child2 = &c;}
+    void setChild3(BoolFunc const & c){child3 = &c;}
 
     static BoolFunc newFalse() {
         return BoolFunc(NOD_CONST, FALSE);
