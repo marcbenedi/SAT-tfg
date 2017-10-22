@@ -9,6 +9,10 @@ private:
     std::vector<int> lits;
 
 public:
+    void addVar(int v){
+        lits.push_back(v);
+    }
+
 };
 
 #endif // CLAUSE_H

@@ -15,4 +15,5 @@ int main() {
 
     BoolFunc d = b + c;
     d.print();
+
 }

@@ -7,6 +7,7 @@
 
 class VarsManager {
 private:
+    VarsManager();
 /**
  * Used to assign unique int id in name_to_index
  * 0 and 1 reserved to FALSE and TRUE respectively
