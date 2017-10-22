@@ -9,6 +9,7 @@
 #include <map>
 #include <iostream>
 #include <assert.h>
+#include "VarsManager.h"
 
 #define TRUE 1
 #define FALSE 0
@@ -36,14 +37,6 @@ class BoolFunc {
          * Var name -> unique int id
          */
         static std::map < std::string, int > name_to_index;
-    /**
-     * Used to assign unique int id in name_to_index
-     * 0 and 1 reserved to FALSE and TRUE respectively
-     * MARC: Podria ser un uint?
-     * MARC: Realment no faria falta que el 0 i el 1 estiguin exclosos
-     *       ja que sabrem si es true o false depenent del NodeType
-     */
-    static int last_id;
 
     BoolFunc const * child1 = NULL;
     BoolFunc const * child2 = NULL;
@@ -84,11 +77,6 @@ class BoolFunc {
         child3 = & f;
     }
 
-    static int newId() {
-        ++last_id;
-        return last_id;
-    }
-
     public:
 
     static BoolFunc newFalse() {
@@ -127,7 +115,7 @@ class BoolFunc {
 
     static BoolFunc newLit(std::string var_name) {
         assert(name_to_index.find(var_name) == name_to_index.end());
-        int lit = newId();
+        int lit = VarsManager::newId();
         name_to_index[var_name] = lit;
         return BoolFunc(NOD_ID, lit);
     }
@@ -202,7 +190,7 @@ class BoolFunc {
         bool exists = name_to_index.find(name) != name_to_index.end();
         //Si no existeix es crea
         if (!exists) {
-            int lit = newId();
+            int lit = VarsManager::newId();
             name_to_index[name] = lit;
             value = lit;
             return;
@@ -271,7 +259,6 @@ BoolFunc operator ^= (const BoolFunc & lhs, const BoolFunc & rhs) {
     return BoolFunc::newXor(lhs, rhs);
 }
 
-int BoolFunc::last_id = 0;
 std::map < std::string, int > BoolFunc::name_to_index = {};
 
 #endif // BOOLFUNC_H
