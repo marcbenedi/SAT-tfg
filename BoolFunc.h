@@ -1,6 +1,3 @@
-/**
- * Comments starting with MARC: are questions or temporal comments
- */
 #ifndef BOOLFUNC_H
 #define BOOLFUNC_H
 
@@ -28,7 +25,7 @@ enum NodeType {
 class BoolFunc;
 
 //Shared pointer with reference counter
-typedef std::shared_ptr < BoolFunc > Formula;
+//typedef std::shared_ptr < BoolFunc > Formula;
 
 class BoolFunc {
     private:
@@ -44,12 +41,13 @@ class BoolFunc {
 
     NodeType type;
     /**
-     * if type == NOD_CONST then value is {0,1}
-     * else if type == NOD_ID then value is {2, max_int}
-     * otherwise is ignored
+     * if type == NOD_CONST then value is {TRUE,FALSE}
+     * else if type == NOD_ID then value is {1, max_int}
+     * otherwise is ignored = UNDEF
      */
     int value;
 
+    //MARC: Es pot construïr un UNDEF??
     BoolFunc(NodeType type, int value): type(type), value(value) {
         assert(type == NOD_CONST || type == NOD_ID);
         if (type == NOD_CONST)
@@ -59,9 +57,9 @@ class BoolFunc {
     BoolFunc(NodeType param_type, BoolFunc const & param_child): type(param_type), value(UNDEF) {
         assert(param_type == NOD_NOT);
         child1 = & param_child;
-        std::cout<< "constructor NOT " << std::endl;
-        std::printf("My address %p\n", (void *)this);
-        std::printf("Child address %p\n", &param_child);
+        //std::cout<< "constructor NOT " << std::endl;
+        //std::printf("My address %p\n", (void *)this);
+        //std::printf("Child address %p\n", &param_child);
     }
 
     BoolFunc(NodeType param_type, BoolFunc const & left, BoolFunc const & right): type(param_type), value(UNDEF) {
@@ -100,13 +98,11 @@ class BoolFunc {
         return BoolFunc(NOD_CONST, UNDEF);
     }
 
-    //NOT
     static BoolFunc newNot(BoolFunc
         const & f) {
         return BoolFunc(NOD_NOT, f);
     }
 
-    //AND
     static BoolFunc newAnd(BoolFunc
         const & a, BoolFunc
         const & b) {
@@ -153,7 +149,7 @@ class BoolFunc {
     void print(int level = 0) const {
         std::cout << "-----------------------" << std::endl;
         for (int i = 0; i < level; ++i) std::cout << "\t";
-        std::printf("Printing boolfunc of %p\n", (void *)this);
+        std::printf("Address %p\n", (void *)this);
         std::cout << "Type: ";
         switch (type) {
         case NOD_ID:
