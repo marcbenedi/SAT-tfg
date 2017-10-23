@@ -75,32 +75,18 @@ private:
         return result;
     }
 public:
-    static Cnf silly(BoolFunc const & boolFunc){
-        /**
-         * 1 - Apply De Morgan
-         * 2 - Apply distributive
-         * The size of boolFunc grows!!
-         **/
-        Cnf cnf;
-        return cnf;
-    }
 
     static Cnf tseitin(BoolFunc const & boolFunc){
-        /**
-         * x = a ^ b
-         * x -> a = !x v a
-         * x -> b = !x v b
-         * a ^ b -> x = !a v !b v x
-         *
-         * x = a v b
-         * a -> x = x v !a
-         * b -> x = x v !b
-         * x -> a v b = a v b v !x
-         **/
         //This map saves for each aux var what node it references
         std::map<const BoolFunc*, int> auxToNode;
-        //MARC: Recordar afegir que l'arrel sigui true a la cnf
-        return tseitinRec(boolFunc,auxToNode);
+
+        Cnf result = tseitinRec(boolFunc,auxToNode);
+        //We add a new Clause which is the aux var of the root node
+        //Root node must be satisfied
+        int varRoot = auxToNode[&boolFunc];
+        Clause c = Clause(1, varRoot);
+        result.addClause(c);
+        return result;
 
     }
 };
