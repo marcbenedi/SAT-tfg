@@ -30,10 +30,10 @@ class BoolFunc;
 class BoolFunc {
     private:
 
-        /**
-         * Var name -> unique int id
-         */
-        static std::map < std::string, int > name_to_index;
+    /**
+     * Var name -> unique int id
+     */
+    static std::map < std::string, int > name_to_index;
 
     const BoolFunc * child1 = NULL; // Modifiable pointer  const value
     const BoolFunc * child2 = NULL;

@@ -20,8 +20,7 @@ public:
     Clause(int n, ...){
         va_list vl;
         va_start(vl,n);
-        for (int i=0;i<n;i++)
-        {
+        for (int i=0;i<n;i++){
             lits.push_back(va_arg(vl,int));
         }
         va_end(vl);
