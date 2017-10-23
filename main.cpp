@@ -1,6 +1,7 @@
 #include "BoolFunc.h"
 #include <iostream>
 #include <string>
+#include "Clause.h"
 
 void print(std::string s){
         std::cout << s << std::endl;
@@ -8,12 +9,8 @@ void print(std::string s){
 
 int main() {
 
-    BoolFunc b = FALSE;
-    BoolFunc c = TRUE;
+    Clause c = Clause(5,1,2,3,4,5);
+    c.print();
 
-    BoolFunc z = std::string("a");
-
-    BoolFunc d = b + c;
-    d.print();
 
 }

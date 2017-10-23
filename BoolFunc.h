@@ -17,10 +17,10 @@
 
 enum NodeType {
     NOD_ID, //start with '_' or alphabetic char, followed by alphanumeric, '_' or '$' chars
-    NOD_CONST, //0, 1  (true TRUE false FALSE)          (1'b0 and 1'b1) -> no se que signifiquen
+    NOD_CONST, //0, 1  (TRUE FALSE)
     NOD_NOT, //!, ~ (not NOT)
-    NOD_AND, // &, && (and AND)
-    NOD_OR, // |, || (or OR)
+    NOD_AND, // *, && (and AND)
+    NOD_OR, // +, || (or OR)
     NOD_XOR, // ^ (xor XOR)
     NOD_COND // bool ? true : false   (if bool then true else false)
 };
@@ -38,9 +38,9 @@ class BoolFunc {
          */
         static std::map < std::string, int > name_to_index;
 
-    BoolFunc const* child1 = NULL;
-    BoolFunc const * child2 = NULL;
-    BoolFunc const * child3 = NULL;
+    const BoolFunc * child1 = NULL; // Modifiable pointer  const value
+    const BoolFunc * child2 = NULL;
+    const BoolFunc * child3 = NULL;
 
     NodeType type;
     /**
@@ -79,11 +79,11 @@ class BoolFunc {
 
     public:
 
-    NodeType getType(){return type;}
-    int getValue(){return value;}
-    const BoolFunc* getChild1(){return child1;}
-    const BoolFunc* getChild2(){return child2;}
-    const BoolFunc* getChild3(){return child3;}
+    NodeType getType() const {return type;}
+    int getValue() const {return value;}
+    const BoolFunc* getChild1() const {return child1;}
+    const BoolFunc* getChild2() const {return child2;}
+    const BoolFunc* getChild3() const {return child3;}
     void setType(NodeType t){type = t;}
     void setValue(int v){value = v;}
     void setChild1(BoolFunc const & c){child1 = &c;}
