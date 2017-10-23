@@ -9,6 +9,7 @@
 class CnfConverter{
 private:
     CnfConverter();
+
     static Cnf tseitinRec(BoolFunc const & boolFunc, std::map<const BoolFunc*,int> & auxToNode){
 
         Cnf result;
@@ -25,7 +26,26 @@ private:
         if(child3 != NULL) tseitinRec(*child3, auxToNode);
 
         if(type == NOD_NOT){
+            NodeType typeChild = child1->getType();
+            if(typeChild == NOD_CONST){
+                if (child1->getValue() == TRUE) {
+                    
+                }
+                else if (child1->getValue() == FALSE){
 
+                }
+                else{
+                    assert(false && "Unhandled value of NOD_CONST");
+                }
+            }
+            else if (typeChild == NOD_ID){
+                int varChild = child1->getValue();
+                auxToNode[&boolFunc] = -varChild;
+            }
+            else{
+                int varChild = auxToNode[child1];
+                auxToNode[&boolFunc] = -varChild;
+            }
         }
         else if (type == NOD_AND){
             //Get the aux vars of the childs
