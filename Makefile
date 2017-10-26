@@ -1,7 +1,7 @@
 FLAGS = -std=c++0x -o
 DEBUG = -g
 EXE_NAME = main
-HEADERS = BoolFunc.h VarsManager.h Clause.h Cnf.h
+HEADERS = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h
 
 make: main.cpp $(HEADERS)
 	g++ $(DEBUG) $(FLAGS) $(EXE_NAME) main.cpp

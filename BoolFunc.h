@@ -10,7 +10,7 @@
 
 #define TRUE 1
 #define FALSE 0
-#define UNDEF - 1
+#define UNDEF -1
 
 enum NodeType {
     NOD_ID, //start with '_' or alphabetic char, followed by alphanumeric, '_' or '$' chars
@@ -147,9 +147,11 @@ class BoolFunc {
     }
 
     void print(int level = 0) const {
+        for (int i = 0; i < level; ++i) std::cout << "\t";
         std::cout << "-----------------------" << std::endl;
         for (int i = 0; i < level; ++i) std::cout << "\t";
         std::printf("Address %p\n", (void *)this);
+        for (int i = 0; i < level; ++i) std::cout << "\t";
         std::cout << "Type: ";
         switch (type) {
         case NOD_ID:
@@ -234,6 +236,8 @@ class BoolFunc {
 //Operators
 
 BoolFunc operator!(BoolFunc const & f) {
+    std::cout<<"NOT OPERATOR" << std::endl;
+    f.print();
     return BoolFunc::newNot(f);
 }
 BoolFunc operator~(BoolFunc const & f) {
@@ -243,12 +247,18 @@ BoolFunc operator & (BoolFunc const & a, BoolFunc const & b) {
     return BoolFunc::newAnd(a, b);
 }
 BoolFunc operator * (BoolFunc const & a, BoolFunc const & b) {
+    std::cout<<"AND OPERATOR" << std::endl;
+    a.print();
+    b.print();
     return BoolFunc::newAnd(a, b);
 }
 BoolFunc operator | (BoolFunc const & a, BoolFunc const & b) {
     return BoolFunc::newOr(a, b);
 }
 BoolFunc operator + (BoolFunc const & a, BoolFunc const & b) {
+    std::cout<<"OR OPERATOR" << std::endl;
+    a.print();
+    b.print();
     return BoolFunc::newOr(a, b);
 }
 BoolFunc operator ^ (BoolFunc const & a, BoolFunc const & b) {

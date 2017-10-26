@@ -1,7 +1,6 @@
-#include "BoolFunc.h"
 #include <iostream>
 #include <string>
-#include "Clause.h"
+#include "CnfConverter.h"
 
 void print(std::string s){
         std::cout << s << std::endl;
@@ -9,7 +8,21 @@ void print(std::string s){
 
 int main() {
 
-    Clause c = Clause(5,1,2,3,4,5);
-    c.print();
+    BoolFunc p = std::string("p");
+    p.print();
+    BoolFunc q = std::string("q");
+    q.print();
+    BoolFunc r = std::string("r");
+    r.print();
+
+    print("JAULALAMIDI");
+
+    BoolFunc f = p + q * r;
+    print("IEEEEEEEEEEEEEPA");
+    f.print();
+
+    //Cnf cnf = CnfConverter::tseitin(f);
+    //cnf.print();
+
 
 }
