@@ -26,6 +26,7 @@ class BoolFunc;
 
 //Shared pointer with reference counter
 //typedef std::shared_ptr < BoolFunc > Formula;
+typedef BoolFunc const * Formula; //Pointer to a const BoolFunc
 
 class BoolFunc {
     private:
@@ -270,6 +271,8 @@ BoolFunc operator += (const BoolFunc & lhs, const BoolFunc & rhs) {
 }
 
 BoolFunc operator *= (const BoolFunc & lhs, const BoolFunc & rhs) {
+    lhs.print();
+    rhs.print();
     return BoolFunc::newAnd(lhs, rhs);
 }
 

@@ -9,20 +9,9 @@ void print(std::string s){
 int main() {
 
     BoolFunc p = std::string("p");
-    p.print();
+    //p.print();
     BoolFunc q = std::string("q");
-    q.print();
-    BoolFunc r = std::string("r");
-    r.print();
+    //q.print();
 
-    print("JAULALAMIDI");
-
-    BoolFunc f = p + q * r;
-    print("IEEEEEEEEEEEEEPA");
-    f.print();
-
-    //Cnf cnf = CnfConverter::tseitin(f);
-    //cnf.print();
-
-
+    p *= q;
 }
