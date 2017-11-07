@@ -271,8 +271,6 @@ BoolFunc operator += (const BoolFunc & lhs, const BoolFunc & rhs) {
 }
 
 BoolFunc operator *= (const BoolFunc & lhs, const BoolFunc & rhs) {
-    lhs.print();
-    rhs.print();
     return BoolFunc::newAnd(lhs, rhs);
 }
 

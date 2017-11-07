@@ -35,7 +35,7 @@ public:
     }
 
     static void freeId(int id){
-        std::cout << "Freeing "<< id << std::endl;
+        std::cout << "Releasing "<< id << std::endl;
         recyclable.push(id);
     }
 
