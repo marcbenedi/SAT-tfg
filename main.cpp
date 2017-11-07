@@ -8,10 +8,21 @@ void print(std::string s){
 
 int main() {
 
-    BoolFunc p = std::string("p");
-    //p.print();
-    BoolFunc q = std::string("q");
-    //q.print();
+    Formula p = BoolFunc::newLit("a");
+    Formula q = BoolFunc::newLit("b");
+    Formula r = BoolFunc::newLit("c");
 
-    p *= q;
+    Formula i = (p*q) + !(!r*q);
+
+    //Cnf result = CnfConverter::tseitin(i);
+    //result.print();
+
+    Formula r2 = BoolFunc::newLit("d");
+    Formula j = !(p*(q+r))+!r2;
+
+    Cnf result2 = CnfConverter::tseitin(j);
+    result2.print();
+
+
+
 }
