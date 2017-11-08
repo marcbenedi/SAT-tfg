@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Clause.h"
+#include "VarsManager.h"
 
 class Cnf{
 private:
@@ -20,13 +21,40 @@ public:
     void print(){
         for(uint i = 0; i < cnf.size(); ++i){
             cnf[i].print();
-            std::cout<<std::endl;
         }
     }
     Clause getClause(int i) const{
         return cnf[i];
     }
     int getClauseNumber() const {return cnf.size();}
+    int getNumVars() const {
+        int last_id = VarsManager::getLastId();
+        std::vector<bool> counters = std::vector<bool>(last_id+1,false);
+        //MARC: Trobar alguna forma de fer millor aquest mètode
+        for (int i = 0; i < getClauseNumber(); ++i ) {
+            Clause c = cnf[i];
+            for (int j = 0; j < c.getNumVars(); ++j) {
+                int var = c.getVar(j);
+                if(var < 0) var = -var;
+                counters[var]=true;
+            }
+        }
+
+        int suma = 0;
+        for (int i = 0; i < last_id+1; ++i ) {
+            if(counters[i])suma += 1;
+        }
+        return suma;
+
+    }
+
+    void printPicosatFormat(){
+        int num_vars= getNumVars(), num_clauses = getClauseNumber();
+        std::cout << "p cnf "<<num_vars<< " " << num_clauses << std::endl;
+        for(uint i = 0; i < cnf.size(); ++i){
+            cnf[i].printPicosat();
+        }
+    }
 };
 
 #endif // CNF_H

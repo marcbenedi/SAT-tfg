@@ -39,6 +39,8 @@ public:
         recyclable.push(id);
     }
 
+    static int getLastId(){return last_id;}
+
 };
 
 int VarsManager::last_id = 0;

@@ -33,6 +33,16 @@ public:
         std::cout << std::endl;
     }
 
+    void printPicosat(){
+        for(uint i = 0; i < lits.size(); ++i){
+            std::cout << lits[i] << " ";
+        }
+        std::cout <<" "<<0<< std::endl;
+    }
+
+    int getNumVars() const{return lits.size();}
+    int getVar(int i) const{return lits[i];}
+
 };
 
 #endif // CLAUSE_H
