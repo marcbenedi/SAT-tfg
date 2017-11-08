@@ -14,14 +14,14 @@ int main() {
 
     Formula i = (p*q) + !(!r*q);
 
-    //Cnf result = CnfConverter::tseitin(i);
-    //result.print();
+    Cnf result = CnfConverter::tseitin(i);
+    result.print();
 
-    Formula r2 = BoolFunc::newLit("d");
-    Formula j = !(p*(q+r))+!r2;
+    //Formula r2 = BoolFunc::newLit("d");
+    //Formula j = !(p*(q+r))+!r2;
 
-    Cnf result2 = CnfConverter::tseitin(j);
-    result2.print();
+    //Cnf result2 = CnfConverter::tseitin(j);
+    //result2.print();
 
 
 

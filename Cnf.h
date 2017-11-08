@@ -6,7 +6,7 @@
 
 class Cnf{
 private:
-std::vector<Clause> cnf;
+    std::vector<Clause> cnf;
 
 public:
     void addClause(Clause const & clause){
