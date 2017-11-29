@@ -1,0 +1,15 @@
+paquet bdds 
+cudd-3.0.0   al github
+generar bdd formula petita i posar f != z y veure que sigui insat
+
+
+
+1 - Generar bdd per a formules petites
+2 - Veure que són equivalents. Com?
+	Agafar el node arrel del bdd f.
+	Agafar el node arrel de la formula z.
+	Cridar al sat solver amb totes les clausules dels 2 i f!=z. Veure que això és insat
+
+3 - Generar un bdd de nivell k d'una subformula
+
+
