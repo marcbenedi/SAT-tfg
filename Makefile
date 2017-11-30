@@ -1,24 +1,37 @@
-FLAGS = -std=c++0x -o
+DIR = .
+
+NAME = main
+CFILES = $(NAME).cpp
+OBJFILES = $(NAME).o
+
+#My headers
+HFILES1_FOLDER = $(DIR)/include/
+HFILES1_H = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h
+HFILES1 = $(foreach HFILES1_H,$(HFILES1_H),$(HFILES1_FOLDER)$(HFILES1_H))
+MY_FLAGS = -I$(HFILES1_FOLDER)
+#CUDD
+CUDD = $(DIR)/cudd
+HFILES2 = $(CUDD)/cudd/cudd.h
+CUDD_FLAGS = -I$(CUDD)/include -L$(CUDD)/cudd/.libs -L$(CUDD)/util #-L$(CUDD)/mtr/.libs -L$(CUDD)/st/.libs 
+LIBS = -lcudd -lutil # -lmtr -lst -lepd
+
+SRCFILES = $(CFILES) $(HFILES1) $(HFILES2)
+CFLAGS = $(DEBUG) $(MY_FLAGS) $(CUDD_FLAGS)
+
 DEBUG = -g
-EXE_NAME = main
-FOLDER = ./marc/
-MY_HEADERS = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h
-MY_HEADERS_IN_FOLDER = $(foreach MY_HEADERS,$(MY_HEADERS),$(FOLDER)$(MY_HEADERS))
-LIBRARY = -I ./cudd/cplusplus -I ./cudd/cudd -L ./cudd/cudd/.libs/ -l cudd
+CC = g++
 
-make: main.cpp $(MY_HEADERS_IN_FOLDER)
-	g++ $(DEBUG) $(FLAGS) $(EXE_NAME) main.cpp
-	make clean
+mycudd: $(OBJFILES)
+	$(CC) -o mycudd $(CFLAGS) $(OBJFILES) $(LIBS)
 
-cudd: cudd_test.cpp
-	g++ $(FLAGS) cudd_test cudd_test.cpp $(LIBRARY)
-	make clean
+main.o: $(CFILES)
+	$(CC) -c -std=c++0x $(CFLAGS) $(CFILES)
 
 clean:
 	rm -f *.o *.gch
 
 ultraclean:
-	rm -f *.o *.gch main
+	rm -f *.o *.gch $(NAME)
 
 valgrind:
-	 valgrind --leak-check=yes ./$(EXE_NAME)
+	 valgrind --leak-check=yes ./$(NAME)

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "marc/CnfConverter.h"
+#include "CnfConverter.h"
 
 void print(std::string s){
         std::cout << s << std::endl;

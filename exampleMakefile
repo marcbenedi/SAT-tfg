@@ -1,0 +1,21 @@
+DIR = /usr/local/CUDD/cudd-2.4.0
+#DIR = /spare/rice/CODE/cudd-2.3.1
+CFILES = main.cc
+HFILES = $(DIR)/include/cudd.h
+SRCFILES = $(CFILES) $(HFILES)
+OBJFILES = main.o
+#CFLAGS = -pg
+CFLAGS = -g -I$(DIR)/include -L$(DIR)/cudd -L$(DIR)/mtr -L$(DIR)/st -L$(DIR)/util
+CC = g++
+LIBS = -lcudd -lmtr -lst -lutil -lepd
+DDDEBUG = -DDD_STATS
+#DDDEBUG = -DDD_VERBOSE -DDDCASE_PROFILE -DDD_UNIQUE_PROFILE -DDD_DEBUG
+
+mycudd: main.o
+	$(CC) -o mycudd $(CFLAGS) $(OBJFILES) $(LIBS)
+
+main.o: main.cc
+	$(CC) -c $(CFLAGS) main.cc
+
+clean:
+	\rm -f $(OBJFILES)
