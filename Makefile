@@ -12,7 +12,7 @@ MY_FLAGS = -I$(HFILES1_FOLDER)
 #CUDD
 CUDD = $(DIR)/cudd
 HFILES2 = $(CUDD)/cudd/cudd.h
-CUDD_FLAGS = -I$(CUDD)/include -L$(CUDD)/cudd/.libs -L$(CUDD)/util #-L$(CUDD)/mtr/.libs -L$(CUDD)/st/.libs 
+CUDD_FLAGS = -I$(CUDD)/include -L$(CUDD)/cudd/.libs -L$(CUDD)/util #-L$(CUDD)/mtr/.libs -L$(CUDD)/st/.libs
 LIBS = -lcudd -lutil # -lmtr -lst -lepd
 
 SRCFILES = $(CFILES) $(HFILES1) $(HFILES2)
@@ -28,7 +28,7 @@ main.o: $(CFILES)
 	$(CC) -c -std=c++0x $(CFLAGS) $(CFILES)
 
 clean:
-	rm -f *.o *.gch
+	rm -f $(OBJFILES)
 
 ultraclean:
 	rm -f *.o *.gch $(NAME)

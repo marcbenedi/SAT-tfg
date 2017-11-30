@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "CnfConverter.h"
+#include "cudd.h"
 
 void print(std::string s){
         std::cout << s << std::endl;
