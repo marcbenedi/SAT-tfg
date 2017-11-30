@@ -2,6 +2,7 @@
 #include <string>
 #include "CnfConverter.h"
 #include "cudd.h"
+#include "cuddObj.hh"
 
 void print(std::string s){
         std::cout << s << std::endl;
