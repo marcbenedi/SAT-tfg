@@ -4,11 +4,11 @@ NAME = main
 CFILES = $(NAME).cpp
 OBJFILES = $(NAME).o
 
-#My headers
+#BDD headers
 BDD_FOLDER = $(DIR)/include/
 BDD_H = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h
 BDD = $(foreach BDD_H,$(BDD_H),$(BDD_FOLDER)$(BDD_H))
-MY_FLAGS = -I$(BDD_FOLDER)
+BDD_FLAGS = -I$(BDD_FOLDER)
 #CUDD
 CUDD = $(DIR)/cudd-3.0.0
 #HFILES2 = $(CUDD)/cudd/cudd.h
@@ -17,7 +17,7 @@ CUDD_FLAGS = -I$(CUDD)/cudd -I$(CUDD)/cplusplus -I$(CUDD)/util -I$(CUDD) -L$(CUD
 LIBS = -lcudd -lobj #-lutil -lmtr -lst #-lepd
 
 #SRCFILES = $(CFILES) $(BDD) $(HFILES2)
-CFLAGS = $(DEBUG) $(MY_FLAGS) $(CUDD_FLAGS)
+CFLAGS = $(DEBUG) $(BDD_FLAGS) $(CUDD_FLAGS)
 
 DEBUG = -g
 CC = g++
