@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -trav -image depend -depend ./nanotrav/s27c.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -trav -image depend -depend ./nanotrav/s27c.blif
 # CUDD Version 3.0.0
 Order before final reordering
 G5 G6 G7 
@@ -68,7 +68,7 @@ Number of cache deletions: 0
 Cache used slots = 0.13% (expected 0.15%)
 Soft limit for cache size: 7168
 Number of buckets in unique table: 1792
-Used buckets in unique table: 1.51% (expected 1.60%)
+Used buckets in unique table: 1.62% (expected 1.60%)
 Number of BDD and ADD nodes: 29
 Number of ZDD nodes: 0
 Number of dead BDD and ADD nodes: 17
@@ -89,13 +89,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            =  5988K
+Maximum resident size            =  7408K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 888
+Minor page faults = 1263
 Swaps = 0
 Input blocks = 0
 Output blocks = 8
-Context switch (voluntary) = 0
-Context switch (involuntary) = 0
+Context switch (voluntary) = 13
+Context switch (involuntary) = 1

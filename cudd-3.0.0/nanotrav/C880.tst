@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -ordering dfs -autodyn -automethod sifting -reordering sifting -drop ./nanotrav/C880.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -ordering dfs -autodyn -automethod sifting -reordering sifting -drop ./nanotrav/C880.blif
 # CUDD Version 3.0.0
 BDD reordering with sifting: from 3974 to ... 2432 nodes in 0.01 sec
 BDD reordering with sifting: from 4893 to ... 3549 nodes in 0.02 sec
@@ -54,15 +54,15 @@ Peak number of live nodes: 12568
 Number of BDD variables: 60
 Number of ZDD variables: 0
 Number of cache entries: 65536
-Number of cache look-ups: 59175
-Number of cache hits: 28640
-Number of cache insertions: 30614
-Number of cache collisions: 2599
-Number of cache deletions: 28015
-Cache used slots = 18.14% (expected 0.00%)
+Number of cache look-ups: 59159
+Number of cache hits: 28635
+Number of cache insertions: 30603
+Number of cache collisions: 2531
+Number of cache deletions: 28072
+Cache used slots = 18.11% (expected 0.00%)
 Soft limit for cache size: 62464
 Number of buckets in unique table: 15616
-Used buckets in unique table: 21.21% (expected 20.96%)
+Used buckets in unique table: 21.04% (expected 20.96%)
 Number of BDD and ADD nodes: 4671
 Number of ZDD nodes: 0
 Number of dead BDD and ADD nodes: 0
@@ -83,13 +83,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            =  5968K
+Maximum resident size            =  7464K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 1607
+Minor page faults = 1985
 Swaps = 0
 Input blocks = 0
 Output blocks = 8
-Context switch (voluntary) = 0
-Context switch (involuntary) = 1
+Context switch (voluntary) = 14
+Context switch (involuntary) = 2

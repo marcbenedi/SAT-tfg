@@ -55,26 +55,26 @@ GA population size: 0
 Number of crossovers for GA: 0
 Next reordering threshold: 4004
 **** CUDD non-modifiable parameters ****
-Memory in use: 27909736
-Peak number of nodes: 497714
-Peak number of live nodes: 365638
+Memory in use: 25323400
+Peak number of nodes: 423108
+Peak number of live nodes: 327701
 Number of BDD variables: 38
 Number of ZDD variables: 0
 Number of cache entries: 262144
-Number of cache look-ups: 789510
-Number of cache hits: 165236
-Number of cache insertions: 624438
-Number of cache collisions: 495668
+Number of cache look-ups: 671196
+Number of cache hits: 140462
+Number of cache insertions: 530897
+Number of cache collisions: 408104
 Number of cache deletions: 0
-Cache used slots = 49.12% (expected 90.76%)
-Soft limit for cache size: 746496
-Number of buckets in unique table: 186624
-Used buckets in unique table: 90.78% (expected 90.28%)
-Number of BDD and ADD nodes: 496702
+Cache used slots = 46.84% (expected 86.80%)
+Soft limit for cache size: 648192
+Number of buckets in unique table: 162048
+Used buckets in unique table: 89.75% (expected 89.35%)
+Number of BDD and ADD nodes: 422242
 Number of ZDD nodes: 0
-Number of dead BDD and ADD nodes: 496660
+Number of dead BDD and ADD nodes: 422200
 Number of dead ZDD nodes: 0
-Total number of nodes allocated: 496702
+Total number of nodes allocated: 422242
 Total number of nodes reclaimed: 0
 Garbage collections so far: 0
 Time for garbage collection: 0.00 sec

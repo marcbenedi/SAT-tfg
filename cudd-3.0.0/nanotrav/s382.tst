@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -trav -image part -autodyn -automethod sifting -drop -scc -shortpaths bellman ./nanotrav/s382.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -trav -image part -autodyn -automethod sifting -drop -scc -shortpaths bellman ./nanotrav/s382.blif
 # CUDD Version 3.0.0
 Order before final reordering
 FM TEST CLR TESTL FML OLATCH_Y2L OLATCHVUC_6 OLATCHVUC_5 
@@ -612,9 +612,9 @@ Reached[150]: 95 nodes 1 leaves 8865 minterms
 8865
 depth = 150
 R: 95 nodes 1 leaves 8865 minterms
-Building transition relation. Time = 0.02 sec
+Building transition relation. Time = 0.03 sec
 Transition relation: 21 parts 21 latches 229 nodes
-Computing SCCs. Time = 0.02 sec
+Computing SCCs. Time = 0.03 sec
 S0: 22 nodes 1 leaves 1 minterms
 From[1]: 40 nodes 1 leaves 5 minterms
 Reached[1]: 56 nodes 1 leaves 6 minterms
@@ -3210,27 +3210,27 @@ Peak number of live nodes: 3927
 Number of BDD variables: 87
 Number of ZDD variables: 0
 Number of cache entries: 131072
-Number of cache look-ups: 1262558
-Number of cache hits: 372233
-Number of cache insertions: 920898
-Number of cache collisions: 469021
-Number of cache deletions: 343637
-Cache used slots = 94.57% (expected 94.53%)
+Number of cache look-ups: 1261508
+Number of cache hits: 372068
+Number of cache insertions: 920034
+Number of cache collisions: 467549
+Number of cache deletions: 344574
+Cache used slots = 94.56% (expected 94.56%)
 Soft limit for cache size: 332800
 Number of buckets in unique table: 83200
-Used buckets in unique table: 64.26% (expected 64.12%)
+Used buckets in unique table: 64.41% (expected 64.12%)
 Number of BDD and ADD nodes: 129633
 Number of ZDD nodes: 0
 Number of dead BDD and ADD nodes: 129368
 Number of dead ZDD nodes: 0
 Total number of nodes allocated: 1105734
-Total number of nodes reclaimed: 687425
+Total number of nodes reclaimed: 687335
 Garbage collections so far: 10
 Time for garbage collection: 0.01 sec
 Reorderings so far: 0
 Time for reordering: 0.00 sec
 Final size: 168
-total time = 0.31 sec
+total time = 0.33 sec
 Runtime Statistics
 ------------------
 Machine name: marcbenedi-IdeaPad-U330-Touch
@@ -3239,13 +3239,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            = 13416K
+Maximum resident size            = 15164K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 3156
+Minor page faults = 3548
 Swaps = 0
 Input blocks = 0
 Output blocks = 248
-Context switch (voluntary) = 0
-Context switch (involuntary) = 0
+Context switch (voluntary) = 13
+Context switch (involuntary) = 2

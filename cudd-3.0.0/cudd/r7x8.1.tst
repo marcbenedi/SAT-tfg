@@ -1,5 +1,5 @@
 # TestCudd Version #1.0, Release date 3/17/01
-# cudd/testcudd -p 2 ./cudd/r7x8.1.mat
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/cudd/.libs/lt-testcudd -p 2 ./cudd/r7x8.1.mat
 :name: ./cudd/r7x8.1.mat: 7 rows 9 columns
 :1: M: 63 nodes 5 leaves 52 minterms
 000000--  1
@@ -215,7 +215,7 @@ Support private to f: : 4 nodes 1 leaves 32 minterms
 Support private to g: : 1 nodes 1 leaves 256 minterms
 --------  1
 
-Average distance: 8328.42
+Average distance: 8287.83
 Number of variables =      8	Number of slots     =   2304
 Number of keys      =    999	Number of min dead  =   9216
 walsh1: 16 nodes 2 leaves 256 minterms
@@ -349,12 +349,12 @@ Peak number of live nodes: 119
 Number of BDD variables: 9
 Number of ZDD variables: 0
 Number of cache entries: 2048
-Number of cache look-ups: 2564
-Number of cache hits: 728
-Number of cache insertions: 2004
-Number of cache collisions: 752
-Number of cache deletions: 1248
-Cache used slots = 61.13% (expected 62.41%)
+Number of cache look-ups: 2545
+Number of cache hits: 727
+Number of cache insertions: 1986
+Number of cache collisions: 755
+Number of cache deletions: 1228
+Cache used slots = 60.11% (expected 62.08%)
 Soft limit for cache size: 13312
 Number of buckets in unique table: 2560
 Used buckets in unique table: 0.51% (expected 0.51%)
@@ -377,13 +377,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            =  4892K
+Maximum resident size            =  6300K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 651
+Minor page faults = 1113
 Swaps = 0
 Input blocks = 0
 Output blocks = 16
-Context switch (voluntary) = 0
-Context switch (involuntary) = 0
+Context switch (voluntary) = 16
+Context switch (involuntary) = 2

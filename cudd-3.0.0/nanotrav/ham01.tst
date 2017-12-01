@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -reordering linear ./nanotrav/ham01.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -reordering linear ./nanotrav/ham01.blif
 # CUDD Version 3.0.0
 Order before final reordering
 x2 y2 x1 y1 x0 y0 
@@ -71,13 +71,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            =  6004K
+Maximum resident size            =  7388K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 889
+Minor page faults = 1261
 Swaps = 0
 Input blocks = 0
 Output blocks = 8
-Context switch (voluntary) = 0
-Context switch (involuntary) = 0
+Context switch (voluntary) = 13
+Context switch (involuntary) = 1

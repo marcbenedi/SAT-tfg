@@ -79,8 +79,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-#am__append_1 = dddmp/dddmp.h
-#am__append_2 = cplusplus/cuddObj.hh
+am__append_1 = dddmp/dddmp.h
+am__append_2 = cplusplus/cuddObj.hh
 check_PROGRAMS = cudd/testcudd$(EXEEXT) cudd/testextra$(EXEEXT) \
 	st/testst$(EXEEXT) mtr/testmtr$(EXEEXT) \
 	dddmp/testdddmp$(EXEEXT) cplusplus/testobj$(EXEEXT) \
@@ -119,10 +119,10 @@ am__append_3 = cudd/test_cudd.test \
 	dddmp/test_dddmp.test \
 	cplusplus/test_obj.test \
 	nanotrav/test_ntrv.test
-#am__append_4 = $(dddmp_sources)
-am__append_5 = dddmp/libdddmp.la
-#am__append_6 = $(cplusplus_sources)
-am__append_7 = cplusplus/libobj.la
+am__append_4 = $(dddmp_sources)
+#am__append_5 = dddmp/libdddmp.la
+am__append_6 = $(cplusplus_sources)
+#am__append_7 = cplusplus/libobj.la
 am__append_8 = doc/cudd.pdf doc/cudd.aux doc/cudd.idx doc/cudd.ilg doc/cudd.ind \
   doc/cudd.log doc/cudd.out doc/cudd.toc
 
@@ -177,13 +177,13 @@ am__cplusplus_libobj_la_SOURCES_DIST = cplusplus/cuddObj.hh \
 	cplusplus/cuddObj.cc
 am__dirstamp = $(am__leading_dot)dirstamp
 am__objects_1 = cplusplus/cplusplus_libobj_la-cuddObj.lo
-am_cplusplus_libobj_la_OBJECTS = $(am__objects_1)
+#am_cplusplus_libobj_la_OBJECTS = $(am__objects_1)
 cplusplus_libobj_la_OBJECTS = $(am_cplusplus_libobj_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-am_cplusplus_libobj_la_rpath =
+#am_cplusplus_libobj_la_rpath =
 cudd_libcudd_la_DEPENDENCIES =
 am__cudd_libcudd_la_SOURCES_DIST = cudd/cudd.h cudd/cuddInt.h \
 	cudd/cuddAddAbs.c cudd/cuddAddApply.c cudd/cuddAddFind.c \
@@ -232,9 +232,9 @@ am__objects_2 = dddmp/cudd_libcudd_la-dddmpBinary.lo \
 	dddmp/cudd_libcudd_la-dddmpStoreCnf.lo \
 	dddmp/cudd_libcudd_la-dddmpStoreMisc.lo \
 	dddmp/cudd_libcudd_la-dddmpUtil.lo
-#am__objects_3 = $(am__objects_2)
+am__objects_3 = $(am__objects_2)
 am__objects_4 = cplusplus/cudd_libcudd_la-cuddObj.lo
-#am__objects_5 = $(am__objects_4)
+am__objects_5 = $(am__objects_4)
 am_cudd_libcudd_la_OBJECTS = cudd/cudd_libcudd_la-cuddAddAbs.lo \
 	cudd/cudd_libcudd_la-cuddAddApply.lo \
 	cudd/cudd_libcudd_la-cuddAddFind.lo \
@@ -334,15 +334,15 @@ am__objects_6 = dddmp/dddmp_libdddmp_la-dddmpBinary.lo \
 	dddmp/dddmp_libdddmp_la-dddmpStoreCnf.lo \
 	dddmp/dddmp_libdddmp_la-dddmpStoreMisc.lo \
 	dddmp/dddmp_libdddmp_la-dddmpUtil.lo
-am_dddmp_libdddmp_la_OBJECTS = $(am__objects_6)
+#am_dddmp_libdddmp_la_OBJECTS = $(am__objects_6)
 dddmp_libdddmp_la_OBJECTS = $(am_dddmp_libdddmp_la_OBJECTS)
-am_dddmp_libdddmp_la_rpath =
+#am_dddmp_libdddmp_la_rpath =
 am_cplusplus_testmulti_OBJECTS =  \
 	cplusplus/cplusplus_testmulti-testmulti.$(OBJEXT)
 cplusplus_testmulti_OBJECTS = $(am_cplusplus_testmulti_OBJECTS)
-cplusplus_testmulti_DEPENDENCIES = cplusplus/libobj.la \
-	cudd/libcudd.la
-#cplusplus_testmulti_DEPENDENCIES = cudd/libcudd.la
+#cplusplus_testmulti_DEPENDENCIES = cplusplus/libobj.la \
+#	cudd/libcudd.la
+cplusplus_testmulti_DEPENDENCIES = cudd/libcudd.la
 cplusplus_testmulti_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(AM_CXXFLAGS) $(CXXFLAGS) $(cplusplus_testmulti_LDFLAGS) \
@@ -350,9 +350,9 @@ cplusplus_testmulti_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 am_cplusplus_testobj_OBJECTS =  \
 	cplusplus/cplusplus_testobj-testobj.$(OBJEXT)
 cplusplus_testobj_OBJECTS = $(am_cplusplus_testobj_OBJECTS)
-cplusplus_testobj_DEPENDENCIES = cplusplus/libobj.la \
-	cudd/libcudd.la
-#cplusplus_testobj_DEPENDENCIES = cudd/libcudd.la
+#cplusplus_testobj_DEPENDENCIES = cplusplus/libobj.la \
+#	cudd/libcudd.la
+cplusplus_testobj_DEPENDENCIES = cudd/libcudd.la
 am_cudd_testcudd_OBJECTS = cudd/cudd_testcudd-testcudd.$(OBJEXT)
 cudd_testcudd_OBJECTS = $(am_cudd_testcudd_OBJECTS)
 cudd_testcudd_DEPENDENCIES = cudd/libcudd.la
@@ -362,9 +362,9 @@ cudd_testextra_DEPENDENCIES = cudd/libcudd.la
 am_dddmp_testdddmp_OBJECTS =  \
 	dddmp/dddmp_testdddmp-testdddmp.$(OBJEXT)
 dddmp_testdddmp_OBJECTS = $(am_dddmp_testdddmp_OBJECTS)
-dddmp_testdddmp_DEPENDENCIES = dddmp/libdddmp.la \
-	cudd/libcudd.la
-#dddmp_testdddmp_DEPENDENCIES = cudd/libcudd.la
+#dddmp_testdddmp_DEPENDENCIES = dddmp/libdddmp.la \
+#	cudd/libcudd.la
+dddmp_testdddmp_DEPENDENCIES = cudd/libcudd.la
 am_mtr_testmtr_OBJECTS = mtr/mtr_testmtr-testmtr.$(OBJEXT)
 mtr_testmtr_OBJECTS = $(am_mtr_testmtr_OBJECTS)
 mtr_testmtr_DEPENDENCIES = cudd/libcudd.la
@@ -379,9 +379,9 @@ am_nanotrav_nanotrav_OBJECTS =  \
 	nanotrav/nanotrav_nanotrav-ntrShort.$(OBJEXT) \
 	nanotrav/nanotrav_nanotrav-ntrZddTest.$(OBJEXT)
 nanotrav_nanotrav_OBJECTS = $(am_nanotrav_nanotrav_OBJECTS)
-nanotrav_nanotrav_DEPENDENCIES = dddmp/libdddmp.la \
-	cudd/libcudd.la
-#nanotrav_nanotrav_DEPENDENCIES = cudd/libcudd.la
+#nanotrav_nanotrav_DEPENDENCIES = dddmp/libdddmp.la \
+#	cudd/libcudd.la
+nanotrav_nanotrav_DEPENDENCIES = cudd/libcudd.la
 am_st_testst_OBJECTS = st/st_testst-testst.$(OBJEXT)
 st_testst_OBJECTS = $(am_st_testst_OBJECTS)
 st_testst_DEPENDENCIES = cudd/libcudd.la
@@ -879,7 +879,7 @@ cudd_libcudd_la_SOURCES = cudd/cudd.h cudd/cuddInt.h cudd/cuddAddAbs.c \
 cudd_libcudd_la_CPPFLAGS = -I$(top_srcdir)/cudd -I$(top_srcdir)/st \
   -I$(top_srcdir)/epd -I$(top_srcdir)/mtr -I$(top_srcdir)/util
 
-#cudd_libcudd_la_LIBTOOLFLAGS = --tag=CXX
+cudd_libcudd_la_LIBTOOLFLAGS = --tag=CXX
 cudd_libcudd_la_LDFLAGS = -release 3.0.0 -version-info 0:0:0 \
   -no-undefined
 
@@ -903,32 +903,32 @@ dddmp_sources = dddmp/dddmp.h dddmp/dddmpInt.h \
   dddmp/dddmpStoreBdd.c dddmp/dddmpStoreCnf.c dddmp/dddmpStoreMisc.c \
   dddmp/dddmpUtil.c
 
-dddmp_libdddmp_la_SOURCES = $(dddmp_sources)
-dddmp_libdddmp_la_CPPFLAGS = -I$(top_srcdir)/util -I$(top_srcdir)/mtr \
-  -I$(top_srcdir)/epd -I$(top_srcdir)/cudd -I$(top_srcdir)/st
+#dddmp_libdddmp_la_SOURCES = $(dddmp_sources)
+#dddmp_libdddmp_la_CPPFLAGS = -I$(top_srcdir)/util -I$(top_srcdir)/mtr \
+#  -I$(top_srcdir)/epd -I$(top_srcdir)/cudd -I$(top_srcdir)/st
 
 dddmp_testdddmp_SOURCES = dddmp/testdddmp.c
-dddmp_testdddmp_CPPFLAGS = $(dddmp_libdddmp_la_CPPFLAGS)
-#dddmp_testdddmp_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
-dddmp_testdddmp_LDADD = dddmp/libdddmp.la cudd/libcudd.la
-#dddmp_testdddmp_LDADD = cudd/libcudd.la
+#dddmp_testdddmp_CPPFLAGS = $(dddmp_libdddmp_la_CPPFLAGS)
+dddmp_testdddmp_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
+#dddmp_testdddmp_LDADD = dddmp/libdddmp.la cudd/libcudd.la
+dddmp_testdddmp_LDADD = cudd/libcudd.la
 cplusplus_sources = cplusplus/cuddObj.hh cplusplus/cuddObj.cc
-cplusplus_libobj_la_SOURCES = $(cplusplus_sources)
-cplusplus_libobj_la_CPPFLAGS = -I$(top_srcdir)/cudd -I$(top_srcdir)/mtr \
-  -I$(top_srcdir)/epd -I$(top_srcdir)/st
+#cplusplus_libobj_la_SOURCES = $(cplusplus_sources)
+#cplusplus_libobj_la_CPPFLAGS = -I$(top_srcdir)/cudd -I$(top_srcdir)/mtr \
+#  -I$(top_srcdir)/epd -I$(top_srcdir)/st
 
 cplusplus_testobj_SOURCES = cplusplus/testobj.cc
-cplusplus_testobj_CPPFLAGS = $(cplusplus_libobj_la_CPPFLAGS)
-#cplusplus_testobj_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
-cplusplus_testobj_LDADD = cplusplus/libobj.la \
-	cudd/libcudd.la
-#cplusplus_testobj_LDADD = cudd/libcudd.la
+#cplusplus_testobj_CPPFLAGS = $(cplusplus_libobj_la_CPPFLAGS)
+cplusplus_testobj_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
+#cplusplus_testobj_LDADD = cplusplus/libobj.la \
+#	cudd/libcudd.la
+cplusplus_testobj_LDADD = cudd/libcudd.la
 cplusplus_testmulti_SOURCES = cplusplus/testmulti.cc
-cplusplus_testmulti_CPPFLAGS = $(cplusplus_libobj_la_CPPFLAGS)
-#cplusplus_testmulti_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
-cplusplus_testmulti_LDADD = cplusplus/libobj.la \
-	cudd/libcudd.la
-#cplusplus_testmulti_LDADD = cudd/libcudd.la
+#cplusplus_testmulti_CPPFLAGS = $(cplusplus_libobj_la_CPPFLAGS)
+cplusplus_testmulti_CPPFLAGS = $(cudd_libcudd_la_CPPFLAGS)
+#cplusplus_testmulti_LDADD = cplusplus/libobj.la \
+#	cudd/libcudd.la
+cplusplus_testmulti_LDADD = cudd/libcudd.la
 cplusplus_testmulti_LDFLAGS = -pthread
 nanotrav_nanotrav_SOURCES = nanotrav/bnet.h nanotrav/ntr.h \
   nanotrav/bnet.c nanotrav/chkMterm.c nanotrav/main.c nanotrav/ntrBddTest.c \
@@ -939,9 +939,9 @@ nanotrav_nanotrav_CPPFLAGS = -I$(top_srcdir)/cudd -I$(top_srcdir)/mtr \
   -I$(top_srcdir)/epd -I$(top_srcdir)/st -I$(top_srcdir)/dddmp \
   -I$(top_srcdir)/util
 
-nanotrav_nanotrav_LDADD = dddmp/libdddmp.la \
-	cudd/libcudd.la
-#nanotrav_nanotrav_LDADD = cudd/libcudd.la
+#nanotrav_nanotrav_LDADD = dddmp/libdddmp.la \
+#	cudd/libcudd.la
+nanotrav_nanotrav_LDADD = cudd/libcudd.la
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 

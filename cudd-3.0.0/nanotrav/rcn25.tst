@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -envelope ./nanotrav/rcn25.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -envelope ./nanotrav/rcn25.blif
 # CUDD Version 3.0.0
 Order before final reordering
 n0 n1 n2 n3 n4 n5 n6 n7 
@@ -474,12 +474,12 @@ Peak number of live nodes: 2068734
 Number of BDD variables: 50
 Number of ZDD variables: 0
 Number of cache entries: 2097152
-Number of cache look-ups: 57176983
-Number of cache hits: 32472386
-Number of cache insertions: 24704541
-Number of cache collisions: 17108828
-Number of cache deletions: 7365515
-Cache used slots = 99.98% (expected 100.00%)
+Number of cache look-ups: 57151842
+Number of cache hits: 32458555
+Number of cache insertions: 24693225
+Number of cache collisions: 17098195
+Number of cache deletions: 7364975
+Cache used slots = 99.97% (expected 100.00%)
 Soft limit for cache size: 2796202
 Number of buckets in unique table: 1795072
 Used buckets in unique table: 5.77% (expected 5.77%)
@@ -490,26 +490,26 @@ Number of dead ZDD nodes: 0
 Total number of nodes allocated: 15634687
 Total number of nodes reclaimed: 8157933
 Garbage collections so far: 7
-Time for garbage collection: 1.04 sec
+Time for garbage collection: 1.22 sec
 Reorderings so far: 0
 Time for reordering: 0.00 sec
 Final size: 869
-total time = 19.46 sec
+total time = 22.24 sec
 Runtime Statistics
 ------------------
 Machine name: marcbenedi-IdeaPad-U330-Touch
-User time     19.4 seconds
+User time     22.2 seconds
 System time    0.1 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            = 248496K
+Maximum resident size            = 249956K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 48619
+Minor page faults = 48994
 Swaps = 0
 Input blocks = 0
 Output blocks = 48
-Context switch (voluntary) = 0
-Context switch (involuntary) = 99
+Context switch (voluntary) = 11
+Context switch (involuntary) = 31

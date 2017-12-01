@@ -503,8 +503,8 @@ edge [dir = none];
 "0x564";
 }
 { rank = same; " c ";
-"0x51c";
 "0x562";
+"0x51c";
 }
 { rank = same; " d ";
 "0x52d";
@@ -528,10 +528,10 @@ edge [dir = none];
 "0x569" -> "0x4f4" [style = dashed];
 "0x564" -> "0x52d";
 "0x564" -> "0x4f4" [style = dotted];
-"0x51c" -> "0x52d";
-"0x51c" -> "0x4f4" [style = dashed];
 "0x562" -> "0x4f4";
 "0x562" -> "0x52d" [style = dotted];
+"0x51c" -> "0x52d";
+"0x51c" -> "0x4f4" [style = dashed];
 "0x52d" -> "0x4f4";
 "0x52d" -> "0x4f4" [style = dotted];
 "0x4f4" [label = "1"];
@@ -633,8 +633,8 @@ Number of cache entries: 524288
 Number of cache look-ups: 3847
 Number of cache hits: 876
 Number of cache insertions: 3052
-Number of cache collisions: 13
-Number of cache deletions: 2287
+Number of cache collisions: 10
+Number of cache deletions: 2291
 Cache used slots = 0.17% (expected 0.17%)
 Soft limit for cache size: 76800
 Number of buckets in unique table: 19200
@@ -646,6 +646,6 @@ Number of dead ZDD nodes: 0
 Total number of nodes allocated: 4857
 Total number of nodes reclaimed: 154
 Garbage collections so far: 3
-Time for garbage collection: 0.01 sec
+Time for garbage collection: 0.00 sec
 Reorderings so far: 0
 Time for reordering: 0.00 sec

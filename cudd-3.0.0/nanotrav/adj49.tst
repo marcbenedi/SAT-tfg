@@ -1,5 +1,5 @@
 # Nanotrav Version #0.13, Release date 2015/7/15
-# nanotrav/nanotrav -p 1 -ordering dfs -reordering cogroup -drop -char2vect -cofest ./nanotrav/adj49.blif
+# /home/marcbenedi/Desktop/SAT-tfg/cudd-3.0.0/nanotrav/.libs/lt-nanotrav -p 1 -ordering dfs -reordering cogroup -drop -char2vect -cofest ./nanotrav/adj49.blif
 # CUDD Version 3.0.0
 Order before final reordering
 CA OR NV AZ WA ID UT MT 
@@ -10,7 +10,7 @@ VA NC GA FL PA MD DC SC
 NY NJ DE VT NH MA CT ME 
 RI 
 Number of inputs = 49
-BDD reordering with converging group sifting: from 431 to ... 338 nodes in 0.01 sec
+BDD reordering with converging group sifting: from 431 to ... 338 nodes in 0.02 sec
 New order
 ID OR WA NV AZ CA UT NM 
 WY MT CO SD MN ND NE IA 
@@ -102,29 +102,29 @@ Next reordering threshold: 776
 **** CUDD non-modifiable parameters ****
 Memory in use: 3791944
 Peak number of nodes: 17374
-Peak number of live nodes: 3444
+Peak number of live nodes: 3506
 Number of BDD variables: 49
 Number of ZDD variables: 0
 Number of cache entries: 32768
-Number of cache look-ups: 51748
-Number of cache hits: 17164
-Number of cache insertions: 25257
-Number of cache collisions: 6701
-Number of cache deletions: 1739
-Cache used slots = 53.58% (expected 51.15%)
+Number of cache look-ups: 51795
+Number of cache hits: 17193
+Number of cache insertions: 25275
+Number of cache collisions: 7632
+Number of cache deletions: 1741
+Cache used slots = 51.01% (expected 51.18%)
 Soft limit for cache size: 51200
 Number of buckets in unique table: 12800
-Used buckets in unique table: 55.95% (expected 55.54%)
+Used buckets in unique table: 55.74% (expected 55.54%)
 Number of BDD and ADD nodes: 16471
 Number of ZDD nodes: 0
 Number of dead BDD and ADD nodes: 16082
 Number of dead ZDD nodes: 0
 Total number of nodes allocated: 18850
-Total number of nodes reclaimed: 1710
+Total number of nodes reclaimed: 1833
 Garbage collections so far: 1
 Time for garbage collection: 0.00 sec
 Reorderings so far: 1
-Time for reordering: 0.01 sec
+Time for reordering: 0.02 sec
 Final size: 338
 total time = 0.02 sec
 Runtime Statistics
@@ -135,13 +135,13 @@ System time    0.0 seconds
 
 Average resident text size       =     0K
 Average resident data+stack size =     0K
-Maximum resident size            =  6736K
+Maximum resident size            =  8208K
 
 Virtual memory limit             = unlimited (unlimited)
 Major page faults = 0
-Minor page faults = 1053
+Minor page faults = 1430
 Swaps = 0
 Input blocks = 0
 Output blocks = 8
-Context switch (voluntary) = 0
-Context switch (involuntary) = 0
+Context switch (voluntary) = 13
+Context switch (involuntary) = 4
