@@ -12,7 +12,6 @@ void print(std::string s){
 
 int main() {
 
-    Formula j =  BoolFunc::newLit("x");
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
@@ -25,8 +24,30 @@ int main() {
 
     BDDConverter converter = BDDConverter(mgr);
     BDD result = converter.convertFormula(f);
+
     //result.print(30);
-    Cnf cnf = CnfConverter::convertToCnf(result,mgr);
-    cnf.print();
+    print("printing bdd cnf");
+    Cnf bdd = CnfConverter::convertToCnf(result,mgr);
+    bdd.printPicosatFormat();
+    print("printing tseytin cnf");
+    Cnf tseytin = CnfConverter::tseitin(f);
+    tseytin.print();
+
+    Cnf unsat;
+    unsat.addCnf(bdd);
+    unsat.addCnf(tseytin);
+
+    Clause abf = Clause(3,-2,3,6);
+    Clause cdf = Clause(3,-4,5,6);
+
+    Cnf rootBdd;
+    rootBdd.addClause(abf);
+    rootBdd.addClause(cdf);
+    //rootBdd.add(rootf);
+
+    Clause rootf = Clause(1,6);
+    Clause roott = Clause();
+    Cnf roots;
+
 
 }
