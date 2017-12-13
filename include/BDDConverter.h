@@ -17,7 +17,12 @@ private:
 
         //Base case
         //Todo: si es const returnar la funcio directament
-        if(type == NOD_CONST || type == NOD_ID) return mgr.bddVar(); //In this case a new var
+        if(type == NOD_CONST || type == NOD_ID) {
+            BDD aux = mgr.bddVar();
+            int idx = aux.NodeReadIndex();
+            VarsManager::storeCuddWithId(idx,boolFunc->getValue());
+            return aux;//In this case a new var
+        }
 
         //Recursive case
         Formula child1 = boolFunc->getChild1();

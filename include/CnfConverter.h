@@ -77,7 +77,7 @@ private:
         else if(type == NOD_AND || type == NOD_OR){
             int varC1 = getNodeVar(child1, auxToNode);
             int varC2 = getNodeVar(child2, auxToNode);
-            int me = VarsManager::newId();
+            int me = VarsManager::newId("");
             //Insert ourself into the map
             auxToNode[boolFunc] = me;
 
@@ -153,14 +153,15 @@ public:
             while (not prime.IsOne()) {
 
                 int idx = prime.NodeReadIndex();
+                int my_idx = VarsManager::getIdFromCudd(idx);
                 BDD v = mgr.bddVar(idx);
                 BDD cof = prime.Cofactor(v);
                 if (not cof.IsZero()) {
                     // Positive literal (negative in the CNF)
-                    clause.addVar(-idx);
+                    clause.addVar(-my_idx);
                     prime = cof;
                 } else {
-                    clause.addVar(idx);
+                    clause.addVar(my_idx);
                     prime = prime.Cofactor(!v);
                 }
             }

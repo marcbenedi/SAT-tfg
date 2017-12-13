@@ -3,7 +3,6 @@
 
 #include <string>
 #include <memory>
-#include <map>
 #include <iostream>
 #include <assert.h>
 #include "VarsManager.h"
@@ -31,11 +30,6 @@ typedef std::shared_ptr < BoolFunc > Formula;
 class BoolFunc {
     private:
 
-    /**
-     * Var name -> unique int id
-     */
-    static std::map < std::string, int > name_to_index;
-
     Formula child1 = NULL;
     Formula child2 = NULL;
     Formula child3 = NULL;
@@ -62,18 +56,7 @@ class BoolFunc {
 
     BoolFunc(const std::string & name) {
         type = NOD_ID;
-        //Comprovar si existeix en el map.
-        bool exists = name_to_index.find(name) != name_to_index.end();
-        //Si no existeix es crea
-        if (!exists) {
-            int lit = VarsManager::newId();
-            name_to_index[name] = lit;
-            value = lit;
-            return;
-        }
-        //MARC: Aleshores hauria de tenir una estructura amb una referència a totes les formules creades
-        //Si existeix es copia
-        assert(false);
+        value = VarsManager::newId(name);
     }
 
     //MARC: Es pot construïr un UNDEF??
@@ -147,9 +130,7 @@ class BoolFunc {
     }
 
     static Formula newLit(std::string var_name) {
-        assert(name_to_index.find(var_name) == name_to_index.end());
-        int lit = VarsManager::newId();
-        name_to_index[var_name] = lit;
+        int lit = VarsManager::newId(var_name);
         return std::make_shared<BoolFunc>(NOD_ID,lit);
     }
 
@@ -267,7 +248,5 @@ Formula operator *= (const Formula & lhs, const Formula & rhs) {
 Formula operator ^= (const Formula & lhs, const Formula & rhs) {
     return BoolFunc::newXor(lhs, rhs);
 }
-
-std::map < std::string, int > BoolFunc::name_to_index = {};
 
 #endif // BOOLFUNC_H
