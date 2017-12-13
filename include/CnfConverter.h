@@ -5,6 +5,9 @@
 #include "BoolFunc.h"
 #include "VarsManager.h"
 #include <map>
+#include "util.h"
+#include "cudd.h"
+#include "cuddObj.hh"
 
 class CnfConverter{
 private:
@@ -121,6 +124,50 @@ public:
         Clause c = Clause(1, varRoot);
         result.addClause(c);
         return result;
+
+    }
+
+    static Cnf convertToCnf(const BDD & f,const Cudd & mgr){
+
+        Cnf result;
+        // Trivial cases
+        if (f.IsOne()){
+            if (f.IsZero()){result.addUnsat();}
+            // Nothing to do
+            return result;
+        }
+
+        // Normal case: extract prime by prime
+        BDD g = !f;
+        BDD remainder = g;
+
+        Clause clause;
+
+        while (not remainder.IsZero()) {
+            BDD prime = remainder.LargestCube();
+            prime = prime.MakePrime(g);
+            remainder *= !prime;
+
+            clause.clear();
+            // Store the cube as a clause
+            while (not prime.IsOne()) {
+
+                int idx = prime.NodeReadIndex();
+                BDD v = mgr.bddVar(idx);
+                BDD cof = prime.Cofactor(v);
+                if (not cof.IsZero()) {
+                    // Positive literal (negative in the CNF)
+                    clause.addVar(-idx);
+                    prime = cof;
+                } else {
+                    clause.addVar(idx);
+                    prime = prime.Cofactor(!v);
+                }
+            }
+
+            //clauses.addClause(clause);
+            result.addClause(clause);
+        }
 
     }
 };

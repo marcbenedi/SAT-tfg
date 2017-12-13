@@ -40,6 +40,8 @@ public:
         std::cout <<" "<<0<< std::endl;
     }
 
+    void clear() {lits.clear();}
+
     int getNumVars() const{return lits.size();}
     int getVar(int i) const{return lits[i];}
 

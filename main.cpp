@@ -12,27 +12,21 @@ void print(std::string s){
 
 int main() {
 
-    Formula p = BoolFunc::newLit("a");
-    Formula q = BoolFunc::newLit("b");
-    Formula r = BoolFunc::newLit("c");
+    Formula j =  BoolFunc::newLit("x");
+    Formula a = BoolFunc::newLit("a");
+    Formula b = BoolFunc::newLit("b");
+    Formula c = BoolFunc::newLit("c");
+    Formula d = BoolFunc::newLit("d");
     // Formula i = (p*q) + !(!p*(q+!r));
-    Formula i = p*q+r;
-
+    Formula f = a*!b+c*!d;
+    f->print();
 
     Cudd mgr;
-    BDD x = mgr.bddVar();
-    BDD y = mgr.bddVar();
-    BDD f = x * y;
-    BDD g = y + !f;
-    std::cout << "f is" << (f <= g ? "" : " not")
-    << " less than or equal to g\n";
-    DdNode* node = g.getNode();
-    int index = g.CountLeaves();
-    std::cout << index << std::endl;
-    std::cout << x.IsVar() << std::endl;
 
     BDDConverter converter = BDDConverter(mgr);
-    BDD result = converter.convertFormula(i);
-    result.print(30);
+    BDD result = converter.convertFormula(f);
+    //result.print(30);
+    Cnf cnf = CnfConverter::convertToCnf(result,mgr);
+    cnf.print();
 
 }

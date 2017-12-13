@@ -55,6 +55,13 @@ public:
             cnf[i].printPicosat();
         }
     }
+
+    void addUnsat(){
+        //Afegim empty clause
+        Clause c;
+        c.clear();
+        cnf.push_back(c);
+    }
 };
 
 #endif // CNF_H
