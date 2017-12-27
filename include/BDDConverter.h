@@ -2,22 +2,19 @@
 #define BDDCONVERTER_H
 
 #include "BoolFunc.h"
-#include "util.h"
-#include "cudd.h"
-#include "cuddObj.hh"
+#include "VarsManager.h"
 
 class BDDConverter{
 private:
     BDDConverter();
-    Cudd mgr;
-    BDD convertFormulaRec(Formula const & boolFunc){
+    static BDD convertFormulaRec(Formula const & boolFunc){
         BDD result;
         NodeType type = boolFunc->getType();
 
         //Base case
         //TODO: si es const returnar la funcio directament
         if(type == NOD_CONST || type == NOD_ID) {
-            BDD aux = mgr.bddVar();
+            BDD aux = VarsManager::bddVar();
             int idx = aux.NodeReadIndex();
             VarsManager::storeCuddWithId(idx,boolFunc->getValue());
             return aux;//In this case a new var
@@ -57,9 +54,8 @@ private:
     }
 
 public:
-    BDDConverter(Cudd mgr):mgr(mgr){}
 
-    BDD convertFormula(Formula const & boolFunc){
+    static BDD convertFormula(Formula const & boolFunc){
         BDD result = convertFormulaRec(boolFunc);
         return result;
     }

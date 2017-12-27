@@ -14,7 +14,7 @@ public:
         return cnf[i];
     }
     int getClauseNumber() const {return cnf.size();}
-    //BUG: No retorna la solució correcta si hi ha formules declarades previament
+
     int getNumVars() const {
         int last_id = VarsManager::getLastId();
         std::vector<bool> counters = std::vector<bool>(last_id+1,false);
@@ -49,6 +49,8 @@ public:
         }
     }
 
+    //BUG: Les variables han d'anar entre 1 i num_vars.
+    //Sinó el picosat no funciona. 
     void printPicosatFormat(){
         int num_vars= getNumVars(), num_clauses = getClauseNumber();
         std::cout << "p cnf "<<num_vars<< " " << num_clauses << std::endl;

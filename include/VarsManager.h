@@ -5,6 +5,9 @@
 #include <queue>
 #include <iostream>
 #include <map>
+#include "util.h"
+#include "cudd.h"
+#include "cuddObj.hh"
 
 class VarsManager {
 private:
@@ -29,6 +32,8 @@ private:
      * BDD Var int -> unique int id
      */
     static std::map < int, int > cudd_to_index;
+
+    static Cudd mgr;
 
 public:
 
@@ -71,6 +76,13 @@ public:
     static int getIdFromCudd(int cudd){
         return cudd_to_index[cudd];
     }
+    static BDD bddVar(){
+        return mgr.bddVar();
+    }
+
+    static BDD bddVar(int i){
+        return mgr.bddVar(i);
+    }
 
 };
 
@@ -78,5 +90,6 @@ int VarsManager::last_id = 0;
 std::queue<int> VarsManager::recyclable;
 std::map < std::string, int > VarsManager::name_to_index = {};
 std::map <int,int> VarsManager::cudd_to_index = {};
+Cudd VarsManager::mgr;
 
 #endif // VARSMANAGER_H

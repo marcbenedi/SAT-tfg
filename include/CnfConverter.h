@@ -5,9 +5,6 @@
 #include "BoolFunc.h"
 #include "VarsManager.h"
 #include <map>
-#include "util.h"
-#include "cudd.h"
-#include "cuddObj.hh"
 
 class CnfConverter{
 private:
@@ -123,7 +120,7 @@ public:
 
     }
 
-    static Cnf convertToCnf(const BDD & f,const Cudd & mgr){
+    static Cnf convertToCnf(const BDD & f){
 
         Cnf result;
         // Trivial cases
@@ -150,7 +147,7 @@ public:
 
                 int idx = prime.NodeReadIndex();
                 int my_idx = VarsManager::getIdFromCudd(idx);
-                BDD v = mgr.bddVar(idx);
+                BDD v = VarsManager::bddVar(idx);
                 BDD cof = prime.Cofactor(v);
                 if (not cof.IsZero()) {
                     // Positive literal (negative in the CNF)
