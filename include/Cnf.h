@@ -43,28 +43,27 @@ public:
             addClause(param.getClause(i));
         }
     }
-    void print(){
-        for(uint i = 0; i < cnf.size(); ++i){
-            cnf[i].print();
-        }
-    }
-
-    //BUG: Les variables han d'anar entre 1 i num_vars.
-    //Sinó el picosat no funciona. 
-    void printPicosatFormat(){
-        int num_vars= getNumVars(), num_clauses = getClauseNumber();
-        std::cout << "p cnf "<<num_vars<< " " << num_clauses << std::endl;
-        for(uint i = 0; i < cnf.size(); ++i){
-            cnf[i].printPicosat();
-        }
-    }
-
     //NOTE: Assegurar-se de que funciona bé
     void addUnsat(){
         //Afegim empty clause
         Clause c;
         c.clear();
         cnf.push_back(c);
+    }
+    void print() const{
+        for(uint i = 0; i < cnf.size(); ++i){
+            cnf[i].print();
+        }
+    }
+
+    //BUG: Les variables han d'anar entre 1 i num_vars.
+    //Sinó el picosat no funciona.
+    void printPicosatFormat() const{
+        int num_vars= getNumVars(), num_clauses = getClauseNumber();
+        std::cout << "p cnf "<<num_vars<< " " << num_clauses << std::endl;
+        for(uint i = 0; i < cnf.size(); ++i){
+            cnf[i].printPicosat();
+        }
     }
 };
 

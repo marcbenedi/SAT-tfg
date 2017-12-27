@@ -27,14 +27,14 @@ public:
         lits.push_back(v);
     }
 
-    void print(){
+    void print() const{
         for(uint i = 0; i < lits.size(); ++i){
             std::cout << lits[i] << " ";
         }
         std::cout << std::endl;
     }
 
-    void printPicosat() {
+    void printPicosat() const {
         for(uint i = 0; i < lits.size(); ++i){
             std::cout << lits[i] << " ";
         }
