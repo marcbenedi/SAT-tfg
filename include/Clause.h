@@ -9,14 +9,11 @@
 class Clause{
 private:
     std::vector<int> lits;
-
 public:
-    void addVar(int v){
-        lits.push_back(v);
-    }
-
+//////////////////////////////CONSTRUCTORS//////////////////////////////////////
     Clause(){};
 
+    //n is the number of elements in the list
     Clause(int n, ...){
         va_list vl;
         va_start(vl,n);
@@ -24,6 +21,10 @@ public:
             lits.push_back(va_arg(vl,int));
         }
         va_end(vl);
+    }
+//////////////////////////////OTHER FUNCTIONS///////////////////////////////////
+    void addVar(int v){
+        lits.push_back(v);
     }
 
     void print(){
@@ -33,7 +34,7 @@ public:
         std::cout << std::endl;
     }
 
-    void printPicosat(){
+    void printPicosat() {
         for(uint i = 0; i < lits.size(); ++i){
             std::cout << lits[i] << " ";
         }
@@ -41,7 +42,6 @@ public:
     }
 
     void clear() {lits.clear();}
-
     int getNumVars() const{return lits.size();}
     int getVar(int i) const{return lits[i];}
 

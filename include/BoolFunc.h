@@ -25,7 +25,6 @@ class BoolFunc;
 
 //Shared pointer with reference counter
 typedef std::shared_ptr < BoolFunc > Formula;
-//typedef BoolFunc const * Formula; //Pointer to a const BoolFunc
 
 class BoolFunc {
     private:
@@ -43,7 +42,7 @@ class BoolFunc {
     int value;
 
     public:
-
+/////////////////////////////////////////////CONSTRUCTORS///////////////////////
     //Empty default constructor
     BoolFunc() {}
 
@@ -55,11 +54,13 @@ class BoolFunc {
     }
 
     BoolFunc(const std::string & name) {
+        //QUESTION: Què passa si name ja existeix a VarsManager?
         type = NOD_ID;
         value = VarsManager::newId(name);
     }
 
-    //MARC: Es pot construïr un UNDEF??
+    //QUESTION: Té sentit que es pugui construïr un UNDEF?
+    //Respotsa actual: No, si vols un undef crea una variable
     BoolFunc(NodeType type, int value): type(type), value(value) {
         assert(type == NOD_CONST || type == NOD_ID);
         if (type == NOD_CONST)
@@ -87,6 +88,18 @@ class BoolFunc {
         child3 = f;
     }
 
+    ~BoolFunc() {
+        //QUESTION: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
+        if(type == NOD_ID) VarsManager::freeId(value);
+        //delete child1; //BUG: b = !b recursiu
+        child1 = NULL;
+        //delete child2;
+        child1 = NULL;
+        //delete child3;
+        child1 = NULL;
+    }
+
+//////////////////////////////////GETTERS AND SETTERS///////////////////////////
     NodeType getType() const {return type;}
     int getValue() const {return value;}
     const Formula getChild1() const {return child1;}
@@ -98,6 +111,7 @@ class BoolFunc {
     void setChild2(Formula const & c){child2 = c;}
     void setChild3(Formula const & c){child3 = c;}
 
+/////////////////////////////////////////////NODE CONSTRUCTORS//////////////////
     static Formula newFalse() {
         return std::make_shared<BoolFunc>(NOD_CONST, FALSE);
     }
@@ -140,18 +154,7 @@ class BoolFunc {
         const & f) {
         return std::make_shared<BoolFunc>(NOD_COND,condition,t,f);
     }
-
-    ~BoolFunc() {
-        //MARC: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
-        if(type == NOD_ID) VarsManager::freeId(value);
-        //delete child1; //MARC: b = !b recursiu
-        child1 = NULL;
-        //delete child2;
-        child1 = NULL;
-        //delete child3;
-        child1 = NULL;
-    }
-
+//////////////////////////////OTHER FUNCTIONS///////////////////////////////////
     void print(int level = 0) const {
         for (int i = 0; i < level; ++i) std::cout << "\t";
         std::cout << "-----------------------" << std::endl;
@@ -213,8 +216,7 @@ class BoolFunc {
 
 };
 
-//Operators
-
+//////////////////////////////FORMULA OPERATORS/////////////////////////////////
 Formula operator!(Formula const & f) {
     return BoolFunc::newNot(f);
 }
@@ -236,7 +238,7 @@ Formula operator + (Formula const & a, Formula const & b) {
 Formula operator ^ (Formula const & a, Formula const & b) {
     return BoolFunc::newXor(a, b);
 }
-
+//BUG: Els operadors tipus += no funcionen bé
 Formula operator += (const Formula & lhs, const Formula & rhs) {
     return BoolFunc::newOr(lhs, rhs);
 }

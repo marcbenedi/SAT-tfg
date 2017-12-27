@@ -8,29 +8,17 @@
 class Cnf{
 private:
     std::vector<Clause> cnf;
-
 public:
-    void addClause(Clause const & clause){
-        cnf.push_back(clause);
-    }
-    void addCnf(Cnf const & param){
-        for (int i = 0; i < param.getClauseNumber(); ++i ) {
-            addClause(param.getClause(i));
-        }
-    }
-    void print(){
-        for(uint i = 0; i < cnf.size(); ++i){
-            cnf[i].print();
-        }
-    }
+
     Clause getClause(int i) const{
         return cnf[i];
     }
     int getClauseNumber() const {return cnf.size();}
+    //BUG: No retorna la solució correcta si hi ha formules declarades previament
     int getNumVars() const {
         int last_id = VarsManager::getLastId();
         std::vector<bool> counters = std::vector<bool>(last_id+1,false);
-        //MARC: Trobar alguna forma de fer millor aquest mètode
+        //NOTE: Trobar alguna forma de fer millor aquest mètode
         for (int i = 0; i < getClauseNumber(); ++i ) {
             Clause c = cnf[i];
             for (int j = 0; j < c.getNumVars(); ++j) {
@@ -45,7 +33,20 @@ public:
             if(counters[i])suma += 1;
         }
         return suma;
+    }
 
+    void addClause(Clause const & clause){
+        cnf.push_back(clause);
+    }
+    void addCnf(Cnf const & param){
+        for (int i = 0; i < param.getClauseNumber(); ++i ) {
+            addClause(param.getClause(i));
+        }
+    }
+    void print(){
+        for(uint i = 0; i < cnf.size(); ++i){
+            cnf[i].print();
+        }
     }
 
     void printPicosatFormat(){
@@ -56,6 +57,7 @@ public:
         }
     }
 
+    //NOTE: Assegurar-se de que funciona bé
     void addUnsat(){
         //Afegim empty clause
         Clause c;

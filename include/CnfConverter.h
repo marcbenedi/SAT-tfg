@@ -17,7 +17,7 @@ private:
         return (boolFunc->getType() == NOD_ID || boolFunc->getType() == NOD_CONST)?
                     boolFunc->getValue():auxToNode[boolFunc];
     }
-
+//////////////////////////////TSEITIN///////////////////////////////////////////
     static void tseitinNOT(Formula const & boolFunc,
         std::map<Formula,int> & auxToNode, Formula const & child1){
 
@@ -25,16 +25,11 @@ private:
         int varChild = getNodeVar(child1, auxToNode);
 
         if(typeChild == NOD_CONST){
-            if (varChild == TRUE) {}
-            else if (varChild == FALSE){}
-            else{
-                assert(false && "Unhandled value of NOD_CONST");
-            }
+            if (varChild == TRUE) {auxToNode[boolFunc] = FALSE;}
+            else if (varChild == FALSE){auxToNode[boolFunc] = TRUE;}
+            else{assert(false && "Unhandled value of NOD_CONST");}
         }
-
-        else{//ID or other OP
-            auxToNode[boolFunc] = -varChild;
-        }
+        else{auxToNode[boolFunc] = -varChild;}
     }
 
     static Cnf tseitinChilds(Formula const & child1,
@@ -53,7 +48,6 @@ private:
         result.addCnf(cnf3);
 
         return result;
-
     }
 
     static Cnf tseitinRec(Formula const & boolFunc, std::map<Formula,int> & auxToNode){
@@ -83,8 +77,9 @@ private:
 
             Clause c1,c2,c3;
 
+            //IDEA: Depenent de quin operador és i de si hi ha algun fill true o false, ja podem saber si es complirà o no
             if (type == NOD_AND) {
-                //MARC: Si un child és false ja sabem que no es complirà
+                //Si un child és false ja sabem que no es complirà
                 c1 = Clause(2,-me,varC1); //c1.addVar(-me);c1.addVar(varC1);
                 c2 = Clause(2,-me,varC2); //c2.addVar(-me);c2.addVar(varC2);
                 c3 = Clause(3,-varC1,-varC2,me); //c3.addVar(-varC1);c3.addVar(-varC2);c3.addVar(me);
@@ -101,6 +96,7 @@ private:
             result.addClause(c3);
 
         }
+        //FIXME: Acabar d'implementar aquests casos
         else if (type == NOD_XOR){
             assert(false && "still not implemented");
         }
@@ -165,11 +161,8 @@ public:
                     prime = prime.Cofactor(!v);
                 }
             }
-
-            //clauses.addClause(clause);
             result.addClause(clause);
         }
-
     }
 };
 

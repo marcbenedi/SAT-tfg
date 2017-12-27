@@ -10,13 +10,12 @@ class BDDConverter{
 private:
     BDDConverter();
     Cudd mgr;
-
     BDD convertFormulaRec(Formula const & boolFunc){
         BDD result;
         NodeType type = boolFunc->getType();
 
         //Base case
-        //Todo: si es const returnar la funcio directament
+        //TODO: si es const returnar la funcio directament
         if(type == NOD_CONST || type == NOD_ID) {
             BDD aux = mgr.bddVar();
             int idx = aux.NodeReadIndex();
@@ -44,6 +43,7 @@ private:
         else if(type == NOD_OR){
             result = bdd1 + bdd2;
         }
+        //TODO: implementar aquests casos
         else if (type == NOD_XOR){
             assert(false && "still not implemented");
         }

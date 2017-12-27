@@ -33,12 +33,12 @@ private:
 public:
 
     static int newId(const std::string & name) {
-        //Comprovar si existeix en el map.
+        //Check if exists in the map
         bool exists = name_to_index.find(name) != name_to_index.end();
 
         if(exists) assert(false);
-        //MARC: Aleshores hauria de tenir una estructura amb una referència a totes les formules creades
-        //TODO:Si existeix es copia
+        //IDEA: Si existeix es copia
+        //Aleshores hauria de tenir una estructura amb una referència a totes les formules creades
 
         int id;
 
@@ -51,13 +51,15 @@ public:
             id = last_id;
         }
 
-        if (name != ""){name_to_index[name] = id;} //MARC: "" s'utilitza quan no és important el nom
+        //NOTE: "" is used when it does not need to be stored
+        if (name != ""){name_to_index[name] = id;}
         return id;
 
     }
 
     static void freeId(int id){
-        //TODO: eliminar del map tambe l'string
+        //TODO: delete from the map also the string related to it.
+        //if id belongs also to cudd_to_index, delete from it too.
         recyclable.push(id);
     }
 
