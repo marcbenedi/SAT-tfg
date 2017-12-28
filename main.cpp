@@ -12,44 +12,30 @@ void print(std::string s){
 
 int main() {
 
-    Formula pene = BoolFunc::newLit("Pene");
-
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
     Formula d = BoolFunc::newLit("d");
-
-    // Formula i = (p*q) + !(!p*(q+!r));
+    Formula rt = BoolFunc::newLit("rt");
+    Formula rc = BoolFunc::newLit("rc");
     Formula f = a*!b+c*!d;
-    // f->print();
 
-    Cudd mgr;
+    Formula f2 = !rt*!f + rt*f;
+    Formula f3 = !rc*!f + rc*f;
 
-    BDD result = BDDConverter::convertFormula(f);
+    Formula f4 = !rc*rt + rc*!rt;
+    Cnf f4_cnf = CnfConverter::tseitin(f4);
 
-    //result.print(30);
-//    print("printing bdd cnf");
-    Cnf bdd = CnfConverter::convertToCnf(result);
-    bdd.printPicosatFormat();
-    // print("printing tseytin cnf");
-    // Cnf tseytin = CnfConverter::tseitin(f);
-    // tseytin.print();
-    //
-    // Cnf unsat;
-    // unsat.addCnf(bdd);
-    // unsat.addCnf(tseytin);
-    //
-    // Clause abf = Clause(3,-2,3,6);
-    // Clause cdf = Clause(3,-4,5,6);
-    //
-    // Cnf rootBdd;
-    // rootBdd.addClause(abf);
-    // rootBdd.addClause(cdf);
-    // //rootBdd.add(rootf);
-    //
-    // Clause rootf = Clause(1,6);
-    // Clause roott = Clause();
-    // Cnf roots;
+    BDD f3_bdd = BDDConverter::convertFormula(f3);
+    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
 
+    Cnf f2_cnf = CnfConverter::tseitin(f2);
+
+    Cnf cnf;
+    cnf.addCnf(f2_cnf);
+    cnf.addCnf(f3_cnf);
+    cnf.addCnf(f4_cnf);
+
+    cnf.printPicosatFormat();
 
 }
