@@ -58,12 +58,14 @@ public:
 
     //BUG: Les variables han d'anar entre 1 i num_vars.
     //Sinó el picosat no funciona.
-    void printPicosatFormat() const{
+    std::string picosat() const{
+        std::string returnValue = "";
         int num_vars= getNumVars(), num_clauses = getClauseNumber();
-        std::cout << "p cnf "<<num_vars<< " " << num_clauses << std::endl;
+        returnValue +="p cnf "+std::to_string(num_vars)+" "+std::to_string(num_clauses);
         for(uint i = 0; i < cnf.size(); ++i){
-            cnf[i].printPicosat();
+            returnValue+=cnf[i].picosat();
         }
+        return returnValue;
     }
 };
 

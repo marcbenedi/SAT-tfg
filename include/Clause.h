@@ -34,11 +34,14 @@ public:
         std::cout << std::endl;
     }
 
-    void printPicosat() const {
+    std::string picosat() const {
+        std::string returnValue = " ";
         for(uint i = 0; i < lits.size(); ++i){
-            std::cout << lits[i] << " ";
+            returnValue += std::to_string(lits[i]) + " ";
         }
-        std::cout <<" "<<0<< std::endl;
+        returnValue += '0';
+
+        return returnValue;
     }
 
     void clear() {lits.clear();}

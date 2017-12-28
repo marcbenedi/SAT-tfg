@@ -6,7 +6,7 @@ OBJFILES = $(NAME).o
 
 #MY headers
 MY_FOLDER = $(DIR)/include/
-MY_H = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h BDDConverter.h
+MY_H = BoolFunc.h VarsManager.h Clause.h Cnf.h CnfConverter.h BDDConverter.h SatSolver.h
 MY = $(foreach MY_H,$(MY_H),$(MY_FOLDER)$(MY_H))
 MY_FLAGS = -I$(MY_FOLDER)
 #CUDD

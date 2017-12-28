@@ -5,6 +5,7 @@
 #include "cudd.h"
 #include "cuddObj.hh"
 #include "BDDConverter.h"
+#include "SatSolver.h"
 
 void print(std::string s){
         std::cout << s << std::endl;
@@ -19,23 +20,22 @@ int main() {
     Formula rt = BoolFunc::newLit("rt");
     Formula rc = BoolFunc::newLit("rc");
     Formula f = a*!b+c*!d;
+    //Formula f = a+b*!c+d*a*b;
 
     Formula f2 = !rt*!f + rt*f;
     Formula f3 = !rc*!f + rc*f;
-
     Formula f4 = !rc*rt + rc*!rt;
-    Cnf f4_cnf = CnfConverter::tseitin(f4);
 
     BDD f3_bdd = BDDConverter::convertFormula(f3);
-    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
 
     Cnf f2_cnf = CnfConverter::tseitin(f2);
+    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
+    Cnf f4_cnf = CnfConverter::tseitin(f4);
 
     Cnf cnf;
     cnf.addCnf(f2_cnf);
     cnf.addCnf(f3_cnf);
     cnf.addCnf(f4_cnf);
-
-    cnf.printPicosatFormat();
+    std::cout << SatSolver::solve2(cnf) << std::endl;
 
 }
