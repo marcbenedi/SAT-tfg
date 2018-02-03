@@ -67,6 +67,10 @@ public:
         }
         return returnValue;
     }
+
+    void clear(){
+        cnf.clear();
+    }
 };
 
 #endif // CNF_H
