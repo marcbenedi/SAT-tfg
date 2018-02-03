@@ -6,13 +6,13 @@
 #include "cuddObj.hh"
 #include "BDDConverter.h"
 #include "SatSolver.h"
+#include "MixCNFConverter.h"
 
 void print(std::string s){
         std::cout << s << std::endl;
 }
 
-int main() {
-
+void tseitinVSbdd(){
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
@@ -37,5 +37,24 @@ int main() {
     cnf.addCnf(f3_cnf);
     cnf.addCnf(f4_cnf);
     std::cout << SatSolver::solve2(cnf) << std::endl;
+}
+
+void mixMethod(){
+    Formula a = BoolFunc::newLit("a");
+    Formula b = BoolFunc::newLit("b");
+    Formula c = BoolFunc::newLit("c");
+    Formula d = BoolFunc::newLit("d");
+
+    Formula f = a + b * c * d * (!a);
+    MixCNFConverter m = MixCNFConverter();
+    m.convert(f);
+    Cnf result = m.getResult();
+    result.print();
+}
+
+int main() {
+
+    //tseitinVSbdd();
+    mixMethod();
 
 }

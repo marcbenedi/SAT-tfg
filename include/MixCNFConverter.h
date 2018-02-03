@@ -9,6 +9,7 @@
 #include <map>
 #include <assert.h>
 
+//TODO: ALLIBREAMENT DE MEMORIA
 class MixCNFConverter{
 private:
     static const int minValueCover = 0;
@@ -20,16 +21,74 @@ private:
     void baseCase(Formula const & f){
         BDD bdd = BDDConverter::convertFormula(f);
         nodeToBDD[f] = bdd;
-        nodeToCnf[f] = Cnf();
+        nodeToCnf[f] = CnfConverter::convertToCnf(bdd);
+        //nodeToCnf[f] = Cnf();
         nodeToVar[f] = f->getValue();
     }
 
+    Formula getBiggestChild(Formula const & f){
+        //TODO: implement
+        return f->getChild1();
+    }
+
+    Formula getSmallestChild(Formula const & f){
+        //TODO: implement
+        return f->getChild2();
+    }
+
+    void replaceChild(Formula const & f, Formula const & old_c, Formula const & new_c){
+        if (f->getChild1() == old_c)
+            f->setChild1(new_c);
+        else if (f->getChild2() == old_c)
+            f->setChild2(new_c);
+        else
+            assert(false);
+    }
+
     void hardBDD(Formula const & f){
-        int var = nodeToVar[f];
-        Formula old_c = f->getChild1(); //TODO: get biggest child
-        int aux = VarsManager::newId("");
+        Formula old_c = getBiggestChild(f);
         Formula new_c = BoolFunc::newLit("");
-        //f->childX = new_c;
+        replaceChild(f, old_c, new_c);
+
+        //Setup new_c
+        nodeToVar[new_c] = new_c->getValue();
+        BDD bdd_new_c = BDDConverter::convertFormula(new_c);
+        nodeToBDD[new_c] = bdd_new_c;
+        //nodeToCnf[new_c] = Cnf();
+        nodeToCnf[new_c] = CnfConverter::convertToCnf(bdd_new_c);
+
+        //Do BDD of f with the new_c
+        BDD temp;
+
+        switch (f->getType()) {
+            case NOD_NOT:
+                temp = ~bdd_new_c;
+                break;
+            case NOD_AND:
+                temp = bdd_new_c * nodeToBDD[getSmallestChild(f)];
+                break;
+            case NOD_OR:
+                temp = bdd_new_c + nodeToBDD[getSmallestChild(f)];
+                break;
+            case NOD_XOR:
+                //TODO: implement this case
+                assert(false && "Still not implemented");
+                break;
+        }
+
+        //Generate old_c = new_c
+        int var_old_c = nodeToVar[old_c];
+        int var_new_c = nodeToVar[new_c];
+
+        Clause c1 = Clause(2,-var_old_c,var_new_c);
+        Clause c2 = Clause(2,-var_new_c,var_old_c);
+        Cnf cnf = Cnf();
+        cnf.addClause(c1);
+        cnf.addClause(c2);
+
+        //Write into result the cnf and cnf of old_c
+        result.addCnf(cnf);
+        result.addCnf(nodeToCnf[old_c]);
 
     }
 
@@ -39,6 +98,7 @@ private:
         if (child1!=NULL) convertRec(child1);
         if (child2!=NULL) convertRec(child2);
 
+        //FIXME: aquesta variable no representa al node. En cap moment es diu
         int var = VarsManager::newId("");
         nodeToVar[f] = var;
 
@@ -59,15 +119,19 @@ private:
                 temp = nodeToBDD[child1] + nodeToBDD[child2];
                 break;
             case NOD_XOR:
-                assert(false);
+                //TODO: implement this case
+                assert(false && "Still not implemented");
                 break;
         }
+
+        Cnf myCnf = CnfConverter::convertToCnf(temp);
+        nodeToCnf[f] = myCnf;
 
         BDD largestCube = temp.LargestCube();
         BDD prime = largestCube.MakePrime(temp);
 
         //TODO: find condition
-        if (true)
+        if (false)
             hardBDD(f);
         else
             nodeToBDD[f] = temp;
@@ -96,6 +160,8 @@ public:
     void convert(Formula const & f){
         clear();
         convertRec(f);
+        Cnf remaining = CnfConverter::convertToCnf(nodeToBDD[f]);
+        result.addCnf(remaining);
     }
 
 };
