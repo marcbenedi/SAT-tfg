@@ -13,12 +13,10 @@
 
 enum NodeType {
     NOD_ID, //start with '_' or alphabetic char, followed by alphanumeric, '_' or '$' chars
-    NOD_CONST, //0, 1  (TRUE FALSE)
     NOD_NOT, //!, ~ (not NOT)
     NOD_AND, // *, && (and AND)
     NOD_OR, // +, || (or OR)
     NOD_XOR, // ^ (xor XOR)
-    NOD_COND // bool ? true : false   (if bool then true else false)
 };
 
 class BoolFunc;
@@ -31,12 +29,10 @@ class BoolFunc {
 
     Formula child1 = NULL;
     Formula child2 = NULL;
-    Formula child3 = NULL;
 
     NodeType type;
     /**
-     * if type == NOD_CONST then value is {TRUE,FALSE}
-     * else if type == NOD_ID then value is {1, max_int}
+     * if type == NOD_ID then value is {1, max_int}
      * otherwise is ignored = UNDEF
      */
     int value;
@@ -47,11 +43,6 @@ class BoolFunc {
     BoolFunc() {}
 
     //Converting constructors
-    BoolFunc(int i) {
-        assert(i == TRUE || i == FALSE || i == UNDEF);
-        type = NOD_CONST;
-        value = i;
-    }
 
     BoolFunc(const std::string & name) {
         //QUESTION: Què passa si name ja existeix a VarsManager?
@@ -59,20 +50,13 @@ class BoolFunc {
         value = VarsManager::newId(name);
     }
 
-    //QUESTION: Té sentit que es pugui construïr un UNDEF?
-    //Respotsa actual: No, si vols un undef crea una variable
     BoolFunc(NodeType type, int value): type(type), value(value) {
-        assert(type == NOD_CONST || type == NOD_ID);
-        if (type == NOD_CONST)
-            assert(value == UNDEF || value == TRUE || value == FALSE);
+        assert(type == NOD_ID);
     }
 
     BoolFunc(NodeType param_type, Formula const & param_child): type(param_type), value(UNDEF) {
         assert(param_type == NOD_NOT);
         child1 = param_child;
-        //std::cout<< "constructor NOT " << std::endl;
-        //std::printf("My address %p\n", (void *)this);
-        //std::printf("Child address %p\n", &param_child);
     }
 
     BoolFunc(NodeType param_type, Formula const & left, Formula const & right): type(param_type), value(UNDEF) {
@@ -81,22 +65,13 @@ class BoolFunc {
         child2 = right;
     }
 
-    BoolFunc(NodeType param_type, Formula const & condition, Formula const & t, Formula const & f): type(param_type), value(UNDEF) {
-        assert(param_type == NOD_COND);
-        child1 = condition;
-        child2 = t;
-        child3 = f;
-    }
-
     ~BoolFunc() {
         //QUESTION: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
         if(type == NOD_ID) VarsManager::freeId(value);
         //delete child1; //BUG: b = !b recursiu
         child1 = NULL;
         //delete child2;
-        child1 = NULL;
-        //delete child3;
-        child1 = NULL;
+        child2 = NULL;
     }
 
 //////////////////////////////////GETTERS AND SETTERS///////////////////////////
@@ -104,23 +79,12 @@ class BoolFunc {
     int getValue() const {return value;}
     const Formula getChild1() const {return child1;}
     const Formula getChild2() const {return child2;}
-    const Formula getChild3() const {return child3;}
     void setType(NodeType t){type = t;}
     void setValue(int v){value = v;}
     void setChild1(Formula const & c){child1 = c;}
     void setChild2(Formula const & c){child2 = c;}
-    void setChild3(Formula const & c){child3 = c;}
 
 /////////////////////////////////////////////NODE CONSTRUCTORS//////////////////
-    static Formula newFalse() {
-        return std::make_shared<BoolFunc>(NOD_CONST, FALSE);
-    }
-    static Formula newTrue() {
-        return std::make_shared<BoolFunc>(NOD_CONST, TRUE);
-    }
-    static Formula newUndef() {
-        return std::make_shared<BoolFunc>(NOD_CONST, UNDEF);
-    }
 
     static Formula newNot(Formula const & f) {
         return std::make_shared<BoolFunc>(NOD_NOT,f);
@@ -148,12 +112,6 @@ class BoolFunc {
         return std::make_shared<BoolFunc>(NOD_ID,lit);
     }
 
-    static Formula newCond(Formula
-        const & condition, Formula
-        const & t, Formula
-        const & f) {
-        return std::make_shared<BoolFunc>(NOD_COND,condition,t,f);
-    }
 //////////////////////////////OTHER FUNCTIONS///////////////////////////////////
     void print(int level = 0) const {
         for (int i = 0; i < level; ++i) std::cout << "\t";
@@ -165,9 +123,6 @@ class BoolFunc {
         switch (type) {
         case NOD_ID:
             std::cout << "ID" << std::endl;
-            break;
-        case NOD_CONST:
-            std::cout << "CONST" << std::endl;
             break;
         case NOD_NOT:
             std::cout << "NOT" << std::endl;
@@ -181,15 +136,11 @@ class BoolFunc {
         case NOD_XOR:
             std::cout << "XOR" << std::endl;
             break;
-        case NOD_COND:
-            std::cout << "TRI_COND" << std::endl;
-            break;
         }
         for (int i = 0; i < level; ++i) std::cout << "\t";
         std::cout << "Value: " << value << std::endl;
         if (child1 != NULL) child1->print(level + 1);
         if (child2 != NULL) child2->print(level + 1);
-        if (child3 != NULL) child3->print(level + 1);
         std::cout << "-----------------------" << std::endl;
     }
 

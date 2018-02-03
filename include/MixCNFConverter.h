@@ -30,7 +30,7 @@ private:
         int aux = VarsManager::newId("");
         Formula new_c = BoolFunc::newLit("");
         //f->childX = new_c;
-        
+
     }
 
     void recursiveCase(Formula const & f){
@@ -49,9 +49,6 @@ private:
             case NOD_ID:
                 assert(false);
                 break;
-            case NOD_CONST:
-                assert(false);
-                break;
             case NOD_NOT:
                 temp = ~nodeToBDD[child1];
                 break;
@@ -62,9 +59,6 @@ private:
                 temp = nodeToBDD[child1] + nodeToBDD[child2];
                 break;
             case NOD_XOR:
-                assert(false);
-                break;
-            case NOD_COND:
                 assert(false);
                 break;
         }
