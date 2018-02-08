@@ -15,15 +15,15 @@ private:
     static const int minValueCover = 0;
     std::map<Formula,Cnf> nodeToCnf;
     std::map<Formula,BDD> nodeToBDD;
-    std::map<Formula,int> nodeToVar;
     Cnf result;
 
     void baseCase(Formula const & f){
         BDD bdd = BDDConverter::convertFormula(f);
+        int idx = bdd.NodeReadIndex();
+        VarsManager::storeCuddWithId(idx,f->getValue());
         nodeToBDD[f] = bdd;
         nodeToCnf[f] = CnfConverter::convertToCnf(bdd);
         //nodeToCnf[f] = Cnf();
-        nodeToVar[f] = f->getValue();
     }
 
     Formula getBiggestChild(Formula const & f){
@@ -47,11 +47,10 @@ private:
 
     void hardBDD(Formula const & f){
         Formula old_c = getBiggestChild(f);
-        Formula new_c = BoolFunc::newLit("");
+        Formula new_c = BoolFunc::newLit();
         replaceChild(f, old_c, new_c);
 
         //Setup new_c
-        nodeToVar[new_c] = new_c->getValue();
         BDD bdd_new_c = BDDConverter::convertFormula(new_c);
         nodeToBDD[new_c] = bdd_new_c;
         //nodeToCnf[new_c] = Cnf();
@@ -77,9 +76,6 @@ private:
         }
 
         //Generate old_c = new_c
-        int var_old_c = nodeToVar[old_c];
-        int var_new_c = nodeToVar[new_c];
-
         Clause c1 = Clause(2,-var_old_c,var_new_c);
         Clause c2 = Clause(2,-var_new_c,var_old_c);
         Cnf cnf = Cnf();
@@ -99,8 +95,7 @@ private:
         if (child2!=NULL) convertRec(child2);
 
         //FIXME: aquesta variable no representa al node. En cap moment es diu
-        int var = VarsManager::newId("");
-        nodeToVar[f] = var;
+        //provar dutilitzar lindex del bdd (map de varsmanager)
 
         BDD temp;
 
@@ -153,7 +148,6 @@ public:
     void clear(){
         nodeToCnf.clear();
         nodeToBDD.clear();
-        nodeToVar.clear();
         result.clear();
     }
 

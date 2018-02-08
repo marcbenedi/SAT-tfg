@@ -37,7 +37,7 @@ private:
 
 public:
 
-    static int newId(const std::string & name) {
+    static int newId(const std::string & name = "") {
         //Check if exists in the map
         bool exists = name_to_index.find(name) != name_to_index.end();
 
