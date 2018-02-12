@@ -81,6 +81,9 @@ private:
                 break;
         }
 
+        nodeToBDD[f] = temp;
+        nodeToCnf[f] = CnfConverter::convertToCnf(temp);
+
     }
 
     void recursiveCase(Formula const & f){
@@ -88,9 +91,6 @@ private:
         Formula child2 = f->getChild2();
         if (child1!=NULL) convertRec(child1);
         if (child2!=NULL) convertRec(child2);
-
-        //FIXME: aquesta variable no representa al node. En cap moment es diu
-        //provar dutilitzar lindex del bdd (map de varsmanager)
 
         BDD temp;
 
@@ -114,17 +114,17 @@ private:
                 break;
         }
 
-        Cnf myCnf = CnfConverter::convertToCnf(temp);
-        nodeToCnf[f] = myCnf;
-
         BDD largestCube = temp.LargestCube();
         BDD prime = largestCube.MakePrime(temp);
 
         //TODO: find condition
-        if (false)
+        if (true)
             hardBDD(f);
-        else
+        else{
+            Cnf myCnf = CnfConverter::convertToCnf(temp);
+            nodeToCnf[f] = myCnf;
             nodeToBDD[f] = temp;
+        }
     }
 
     void convertRec(Formula const & f){

@@ -66,7 +66,7 @@ void cnfBDD(){
 int main() {
 
     //tseitinVSbdd();
-    //mixMethod();
-    cnfBDD();
+    mixMethod();
+    //cnfBDD();
 
 }
