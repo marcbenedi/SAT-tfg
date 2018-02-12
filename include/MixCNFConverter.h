@@ -19,8 +19,9 @@ private:
 
     void baseCase(Formula const & f){
         BDD bdd = BDDConverter::convertFormula(f);
-        int idx = bdd.NodeReadIndex();
-        VarsManager::storeCuddWithId(idx,f->getValue());
+        //This is done by BDDConverter
+        // int idx = bdd.NodeReadIndex();
+        // VarsManager::storeCuddWithId(idx,f->getValue());
         nodeToBDD[f] = bdd;
         nodeToCnf[f] = CnfConverter::convertToCnf(bdd);
         //nodeToCnf[f] = Cnf();
@@ -47,7 +48,7 @@ private:
 
     void hardBDD(Formula const & f){
         Formula old_c = getBiggestChild(f);
-        Formula new_c = BoolFunc::newLit();
+        Formula new_c = BoolFunc::newLit("");
         replaceChild(f, old_c, new_c);
 
         //Setup new_c
@@ -56,7 +57,12 @@ private:
         //nodeToCnf[new_c] = Cnf();
         nodeToCnf[new_c] = CnfConverter::convertToCnf(bdd_new_c);
 
-        //Do BDD of f with the new_c
+        // OLD_C XNOR NEW_C
+        BDD substitution = (nodeToBDD[old_c] * nodeToBDD[new_c]) + (!nodeToBDD[old_c] * !nodeToBDD[new_c]);
+        // Store its cnf
+        result.addCnf(CnfConverter::convertToCnf(substitution));
+
+        // Do BDD of f with the new_c
         BDD temp;
 
         switch (f->getType()) {
@@ -74,17 +80,6 @@ private:
                 assert(false && "Still not implemented");
                 break;
         }
-
-        //Generate old_c = new_c
-        Clause c1 = Clause(2,-var_old_c,var_new_c);
-        Clause c2 = Clause(2,-var_new_c,var_old_c);
-        Cnf cnf = Cnf();
-        cnf.addClause(c1);
-        cnf.addClause(c2);
-
-        //Write into result the cnf and cnf of old_c
-        result.addCnf(cnf);
-        result.addCnf(nodeToCnf[old_c]);
 
     }
 

@@ -52,9 +52,21 @@ void mixMethod(){
     result.print();
 }
 
+void cnfBDD(){
+    Formula a = BoolFunc::newLit("a");
+    Formula b = BoolFunc::newLit("b");
+    Formula c = BoolFunc::newLit("c");
+    Formula d = BoolFunc::newLit("d");
+    Formula f = a*!b+c*!d+a+b+c+!d;
+    BDD f3_bdd = BDDConverter::convertFormula(f);
+    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
+    f3_cnf.print();
+}
+
 int main() {
 
     //tseitinVSbdd();
-    mixMethod();
+    //mixMethod();
+    cnfBDD();
 
 }
