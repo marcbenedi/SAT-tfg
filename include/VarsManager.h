@@ -74,8 +74,9 @@ public:
                 it_delete = it;
                 found = true;
             }
-        assert(found);
-        name_to_index.erase(it_delete);
+        //If the key is "" we will not find it
+        if (found)
+            name_to_index.erase(it_delete);
 
     }
 
