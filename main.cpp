@@ -64,10 +64,45 @@ void cnfBDD(){
     f3_cnf.print();
 }
 
+void mixVSbdd(){
+    Formula a = BoolFunc::newLit("a");
+    Formula b = BoolFunc::newLit("b");
+    Formula c = BoolFunc::newLit("c");
+    Formula d = BoolFunc::newLit("d");
+    Formula rbdd = BoolFunc::newLit("rbdd");
+    Formula rmix = BoolFunc::newLit("rmix");
+    Formula f = a*!b+c*!d;
+
+    Formula f2 = !rbdd*!f + rbdd*f;
+    //Formula f3 = !rmix*!bad + rmix*bad;
+    Formula f3 = !rmix*!f + rmix*f;
+    Formula f4 = !rmix*rbdd + rmix*!rbdd;//XOR
+
+    BDD f2_bdd = BDDConverter::convertFormula(f2);
+    Cnf f2_cnf = CnfConverter::convertToCnf(f2_bdd);
+
+    MixCNFConverter m = MixCNFConverter();
+    m.convert(f3);
+    Cnf f3_cnf = m.getResult();
+
+    Cnf f4_cnf = CnfConverter::tseitin(f4);
+
+    Cnf cnf;
+    cnf.addCnf(f2_cnf);
+    cnf.addCnf(f3_cnf);
+    cnf.addCnf(f4_cnf);
+    cnf.print();
+
+    std::cout << SatSolver::solve2(cnf) << std::endl;
+}
+
 int main() {
 
     //tseitinVSbdd();
-    mixMethod();
-    cnfBDD();
+    //mixMethod();
+    //cnfBDD();
+    mixVSbdd();
+
+
 
 }

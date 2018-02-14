@@ -84,6 +84,7 @@ public:
 
     static void storeCuddWithId(int cudd, int id){
         cudd_to_index[cudd] = id;
+        //BUG: this map never releases memory
     }
     static int getIdFromCudd(int cudd){
         return cudd_to_index[cudd];
