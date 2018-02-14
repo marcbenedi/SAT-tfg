@@ -40,12 +40,12 @@ void tseitinVSbdd(){
 }
 
 void mixMethod(){
+    print("mixMethod");
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
     Formula d = BoolFunc::newLit("d");
-
-    Formula f = a + b * c * d * (!a);
+    Formula f = a*!b+c*!d+a+b+c+!d;
     MixCNFConverter m = MixCNFConverter();
     m.convert(f);
     Cnf result = m.getResult();
@@ -53,6 +53,7 @@ void mixMethod(){
 }
 
 void cnfBDD(){
+    print("cnfBDD");
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
@@ -67,6 +68,6 @@ int main() {
 
     //tseitinVSbdd();
     mixMethod();
-    //cnfBDD();
+    cnfBDD();
 
 }

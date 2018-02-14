@@ -118,7 +118,7 @@ private:
         BDD prime = largestCube.MakePrime(temp);
 
         //TODO: find condition
-        if (true)
+        if (false)
             hardBDD(f);
         else{
             Cnf myCnf = CnfConverter::convertToCnf(temp);

@@ -63,9 +63,20 @@ public:
     }
 
     static void freeId(int id){
-        //TODO: delete from the map also the string related to it.
-        //if id belongs also to cudd_to_index, delete from it too.
+        //TODO: if id belongs also to cudd_to_index, delete from it too.
         recyclable.push(id);
+        //Delete id from the map
+        std::map<std::string,int>::iterator it_delete;
+        bool found = false;
+        for (std::map<std::string,int>::iterator it = name_to_index.begin();
+                it != name_to_index.end() && !found; ++it )
+            if (it->second == id){
+                it_delete = it;
+                found = true;
+            }
+        assert(found);
+        name_to_index.erase(it_delete);
+
     }
 
     static int getLastId(){return last_id;}
