@@ -97,6 +97,10 @@ public:
         return mgr.bddVar(i);
     }
 
+    static DdManager* getCuddMgr(){
+        return mgr.getManager();
+    }
+
 };
 
 int VarsManager::last_id = 0;

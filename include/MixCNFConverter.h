@@ -6,6 +6,10 @@
 #include "VarsManager.h"
 #include "BoolFunc.h"
 
+#include "util.h"
+#include "cudd.h"
+#include "cuddObj.hh"
+
 #include <map>
 #include <assert.h>
 
@@ -114,11 +118,16 @@ private:
                 break;
         }
 
-        BDD largestCube = temp.LargestCube();
-        BDD prime = largestCube.MakePrime(temp);
+        BDD largestCube = temp.LargestCube();//maxim 1's restants
+        BDD prime = largestCube.MakePrime(temp);//extendre'l a altres 1's
+
+        double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
+                    prime.getNode(),
+                    0);
+        std::cout << d << std::endl;
 
         //TODO: find condition
-        if (true)
+        if (false)
             hardBDD(f);
         else{
             Cnf myCnf = CnfConverter::convertToCnf(temp);

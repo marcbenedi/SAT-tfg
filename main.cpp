@@ -45,11 +45,12 @@ void mixMethod(){
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
     Formula d = BoolFunc::newLit("d");
-    Formula f = a*!b+c*!d+a+b+c+!d;
+    Formula e = BoolFunc::newLit("e");
+    Formula f = a*!b+c*(!d+a+b*e)+c+!d;
     MixCNFConverter m = MixCNFConverter();
     m.convert(f);
     Cnf result = m.getResult();
-    result.print();
+    //result.print();
 }
 
 void cnfBDD(){
@@ -99,9 +100,9 @@ void mixVSbdd(){
 int main() {
 
     //tseitinVSbdd();
-    //mixMethod();
+    mixMethod();
     //cnfBDD();
-    mixVSbdd();
+    //mixVSbdd();
 
 
 
