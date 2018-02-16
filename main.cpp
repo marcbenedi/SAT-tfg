@@ -40,17 +40,38 @@ void tseitinVSbdd(){
 }
 
 void mixMethod(){
-    print("mixMethod");
+    //print("mixMethod");
     Formula a = BoolFunc::newLit("a");
     Formula b = BoolFunc::newLit("b");
     Formula c = BoolFunc::newLit("c");
     Formula d = BoolFunc::newLit("d");
     Formula e = BoolFunc::newLit("e");
-    Formula f = a*!b+c*(!d+a+b*e)+c+!d;
+    Formula ff = BoolFunc::newLit("f");
+    Formula g = BoolFunc::newLit("g");
+    Formula h = BoolFunc::newLit("h");
+    Formula i = BoolFunc::newLit("i");
+    Formula j = BoolFunc::newLit("j");
+    Formula k = BoolFunc::newLit("k");
+    Formula s1 = (a*b)+(c*d);
+    Formula s2 = (e*ff)+(g*h);
+    Formula s3 = !s1;
+    Formula s4 = !s2;
+    Formula f1 = (s1*s2)+(s3*s4);
+    Formula f2 = (s2*s3)+(s4*s1);
+    Formula f3 = (s3*s4)+(s1*s2);
+    Formula f4 = (s4*s1)+(s2*s3);
+    Formula f = (f1*f2)+(f3*f4);
+
     MixCNFConverter m = MixCNFConverter();
     m.convert(f);
     Cnf result = m.getResult();
     //result.print();
+    //print("Numero vars cnf");
+    std::string  s_value = getenv ("D");
+    double value = atof(s_value.c_str());
+    std::cout << value/10000.0 << "," << result.getNumVars() << ","<<result.getClauseNumber() <<std::endl;
+    //print("Numero clauses cnf");
+    //std::cout << result.getClauseNumber()<<std::endl;
 }
 
 void cnfBDD(){

@@ -13,6 +13,8 @@
 #include <map>
 #include <assert.h>
 
+#include <stdlib.h>
+
 //TODO: ALLIBREAMENT DE MEMORIA
 class MixCNFConverter{
 private:
@@ -26,6 +28,17 @@ private:
         //This is done by BDDConverter
         // int idx = bdd.NodeReadIndex();
         // VarsManager::storeCuddWithId(idx,f->getValue());
+
+        //TODO: delete this code
+        BDD largestCube = bdd.LargestCube();//maxim 1's restants
+        BDD prime = largestCube.MakePrime(bdd);//extendre'l a altres 1's
+
+        double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
+                    prime.getNode(),
+                    0);
+        //f->print();
+        //std::cout << d << std::endl;
+
         nodeToBDD[f] = bdd;
         nodeToCnf[f] = CnfConverter::convertToCnf(bdd);
         //nodeToCnf[f] = Cnf();
@@ -124,10 +137,13 @@ private:
         double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
                     prime.getNode(),
                     0);
-        std::cout << d << std::endl;
-
+        //f->print();
+        //std::cout << d << std::endl;
+        std::string  s_value = getenv ("D");
+        double value = atof(s_value.c_str());
+        value /= 10000.0;
         //TODO: find condition
-        if (false)
+        if (d <= value)
             hardBDD(f);
         else{
             Cnf myCnf = CnfConverter::convertToCnf(temp);
