@@ -139,7 +139,7 @@ private:
                     0);
         std::string  s_value = getenv ("D");
         double value = atof(s_value.c_str());
-        value /= 10000.0;
+        value /= 1000.0;
         //TODO: find condition
         if (d <= value)
             hardBDD(f);

@@ -10,6 +10,8 @@
 
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+#include <thread>         // std::this_thread::sleep_for
+#include <chrono>         // std::chrono::seconds
 
 void print(std::string s){
         std::cout << s << std::endl;
@@ -73,6 +75,7 @@ Formula vars[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
 
 Formula generateRandom (int & level){
 
+    //std::this_thread::sleep_for (std::chrono::seconds(2));
     int op = rand() % 5;
 
     Formula result;
@@ -116,7 +119,7 @@ void mixMethod(){
 
     std::string  s_value = getenv ("D");
     double value = atof(s_value.c_str());
-    std::cout << value/10000.0 << "," << result.getNumVars() << ","<<result.getClauseNumber() <<std::endl;
+    std::cout << value/1000.0 << "," << result.getNumVars() << ","<<result.getClauseNumber() <<std::endl;
 }
 
 void cnfBDD(){
