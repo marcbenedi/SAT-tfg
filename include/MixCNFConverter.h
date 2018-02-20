@@ -137,8 +137,6 @@ private:
         double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
                     prime.getNode(),
                     0);
-        //f->print();
-        //std::cout << d << std::endl;
         std::string  s_value = getenv ("D");
         double value = atof(s_value.c_str());
         value /= 10000.0;
