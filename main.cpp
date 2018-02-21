@@ -73,33 +73,35 @@ Formula z = BoolFunc::newLit("z");
 
 Formula vars[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
 
-Formula generateRandom (int & level){
+Formula generateRandom (int level){
 
     //std::this_thread::sleep_for (std::chrono::seconds(2));
-    int op = rand() % 5;
+    int op;
 
+    if (level<7) {
+        op = rand()%3;
+    }
+    else{
+        op = rand() % 6;
+    }
+    //std::cout<<level<<std::endl;
     Formula result;
 
     if(op == 0){//AND
-        int level1, level2;
-        Formula a = generateRandom(level1);
-        Formula b = generateRandom(level2);
+        Formula a = generateRandom(level+1);
+        Formula b = generateRandom(level+1);
         result = a * b;
-        level = level1 > level2? (level1+1) : (level2+1);
     }else if (op == 1) {//OR
         int level1, level2;
-        Formula a = generateRandom(level1);
-        Formula b = generateRandom(level2);
+        Formula a = generateRandom(level+1);
+        Formula b = generateRandom(level+1);
         result = a * b;
-        level = level1 > level2? (level1+1) : (level2+1);
     }else if (op == 2) {//NOT
-        Formula child = generateRandom(level);
+        Formula child = generateRandom(level+1);
         result = !child;
-        level += 1;
     }else {//VAR
         int var = rand()%26;
         result = vars[var];
-        level = 1;
     }
 
     return result;
@@ -112,14 +114,18 @@ void mixMethod(){
 
     int level = 0;
     Formula formula = generateRandom(level);
+    for (size_t i = 0; i < 1000; i++) {
+        /* code */
+        MixCNFConverter m = MixCNFConverter();
+        m.setValueCover(i);
+        m.convert(formula);
+        Cnf result = m.getResult();
 
-    MixCNFConverter m = MixCNFConverter();
-    m.convert(formula);
-    Cnf result = m.getResult();
+        //std::string  s_value = getenv ("D");
+        //double value = atof(s_value.c_str());
+        std::cout << i/1000.0 << "," << result.getNumVars() << ","<<result.getClauseNumber() <<std::endl;
+    }
 
-    std::string  s_value = getenv ("D");
-    double value = atof(s_value.c_str());
-    std::cout << value/1000.0 << "," << result.getNumVars() << ","<<result.getClauseNumber() <<std::endl;
 }
 
 void cnfBDD(){

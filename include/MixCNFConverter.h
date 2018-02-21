@@ -18,7 +18,7 @@
 //TODO: ALLIBREAMENT DE MEMORIA
 class MixCNFConverter{
 private:
-    static const int minValueCover = 0;
+    int minValueCover = 0;
     std::map<Formula,Cnf> nodeToCnf;
     std::map<Formula,BDD> nodeToBDD;
     Cnf result;
@@ -137,11 +137,11 @@ private:
         double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
                     prime.getNode(),
                     0);
-        std::string  s_value = getenv ("D");
-        double value = atof(s_value.c_str());
-        value /= 1000.0;
-        //TODO: find condition
-        if (d <= value)
+        // std::string  s_value = getenv ("D");
+        // double value = atof(s_value.c_str());
+        // value /= 1000.0;
+        // //TODO: find condition
+        if (d <= (minValueCover/1000.0))
             hardBDD(f);
         else{
             Cnf myCnf = CnfConverter::convertToCnf(temp);
@@ -174,6 +174,10 @@ public:
         convertRec(f);
         Cnf remaining = CnfConverter::convertToCnf(nodeToBDD[f]);
         result.addCnf(remaining);
+    }
+
+    void setValueCover(int i){
+        minValueCover = i;
     }
 
 };
