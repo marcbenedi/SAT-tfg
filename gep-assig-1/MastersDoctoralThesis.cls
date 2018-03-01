@@ -320,8 +320,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	ABBREVIATIONS PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
-\newcommand{\abbrevname}{List of Abbreviations}
-\providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
+\newcommand{\abbrevname}{List of Definitions}
+\providecaptionname{english,british,american}{\abbrevname}{List of Definitions}
 \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
 \NewDocumentEnvironment{abbreviations}{ m }{%
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
@@ -523,9 +523,9 @@ bookmarksopen=true,
 bookmarksopenlevel=0,
 hypertexnames=false,
 colorlinks=true,% Set to false to disable coloring links
-citecolor=magenta,% The color of citations
-linkcolor=red,% The color of references to document elements (sections, figures, etc)
-urlcolor=mdtRed,% The color of hyperlinks (URLs)
+citecolor=blue,% The color of citations
+linkcolor=blue,% The color of references to document elements (sections, figures, etc)
+urlcolor=blue,% The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
 breaklinks=true,
