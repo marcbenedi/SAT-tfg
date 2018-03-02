@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  2 MAR 2018 01:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  2 MAR 2018 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1679,14 +1679,8 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--24
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
- []
-
-
-Overfull \hbox (0.48062pt too wide) in paragraph at lines 13--24
-\T1/ppl/b/n/10.95 Boolean sat-is-fi-a-bil-ity prob-lems \T1/ppl/m/it/10.95 (SAT
- from now on) \T1/ppl/m/n/10.95 is the prob-lem of find-ing a model[][][][][]
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
@@ -1811,7 +1805,7 @@ msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (10 pages, 118297 bytes).
+Output written on main.pdf (10 pages, 118218 bytes).
 PDF statistics:
  297 PDF objects out of 1000 (max. 8388607)
  244 compressed objects within 3 object streams
