@@ -6,7 +6,26 @@ en aquesta seccio es fara una primera introduccio al entorn del treball
 
 \section{Context}
 
-Explicar que es SAT, la logica, boolean formula, pseudo boolean, cnf , satsolvers, minimization
+Explicar que es SAT, la logica, boolean formula, pseudo boolean, cnf , satsolvers, minimization\\
+Target audience: logic researchers, planners etc...\\
+Users: C++ programmers which works with logic and want to represent their formulas and improve their time\\
+Beneficiaries:\\
+\\
+\textbf{Boolean satisfiability problems} \textit{(SAT from now on)} is the problem of finding a model\footnote{An interpretation which satisfies the formula.} for a boolean formula. In other words, it is the result of evaluating the boolean formula after replacing its variables for \emph{true} or \emph{false}. 
+\\
+SAT is widely used in Computer Science because it was the first problem proved to be NP-Complete\cite{Cook1971}\footnote{NP and NP-hard.} which allowed a lot of NP\footnote{Nondeterministic polynomial time.} to be reduced to it.
+
+\subsection{What is a Pseudo-Boolean Formula?}
+In propositional logic, a boolean formula is defined as following\cite{Lpo}:\\
+Let $P$ be a set of predicate symbols like $p,q,r,...$
+\begin{itemize}
+	\item All predicate symbol of $P$ is a formula.
+	\item If $F$ and $G$ are formulae, then $(F \land G)$ and $(F \lor G)$ are formulae to.
+	\item If $F$ is a formula, then $(\neg F)$ is a formula.
+	\item Nothing else is a formula.
+\end{itemize}
+This representation has some limitations because it can only express properties which are \emph{true} or \emph{false}.\\
+
 
 \section{Background}
 
