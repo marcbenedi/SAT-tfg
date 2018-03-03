@@ -140,7 +140,7 @@ private:
         // std::string  s_value = getenv ("D");
         // double value = atof(s_value.c_str());
         // value /= 1000.0;
-        // //TODO: find condition
+
         if (d <= (minValueCover/1000.0))
             hardBDD(f);
         else{

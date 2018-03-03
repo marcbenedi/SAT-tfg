@@ -317,11 +317,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 }
 
 %----------------------------------------------------------------------------------------
-%	ABBREVIATIONS PAGE DESIGN
+%	ABBREVIATIONS PAGE DESIGN - Now glossary
 %----------------------------------------------------------------------------------------
 
-\newcommand{\abbrevname}{List of Definitions}
-\providecaptionname{english,british,american}{\abbrevname}{List of Definitions}
+\newcommand{\abbrevname}{Glossary}
+\providecaptionname{english,british,american}{\abbrevname}{Glossary}
 \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
 \NewDocumentEnvironment{abbreviations}{ m }{%
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}

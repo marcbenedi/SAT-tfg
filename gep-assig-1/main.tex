@@ -70,7 +70,7 @@ headsepline, % Uncomment to get a line under the header
 \thesistitle{Deliverable 1: Context and scope of the project} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Dr. Jordi \textsc{Cortadella}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
-\degree{Computer Science} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\degree{Computer Science Degree} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
 \author{Marc \textsc{Benedí}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
@@ -83,6 +83,7 @@ headsepline, % Uncomment to get a line under the header
 
 \newcommand{\projectTitle}{Design of an environment for solving pseudo-boolean optimization problems}
 \newcommand{\courseName}{GEP}
+\newcommand{\city}{Edinburgh, UK}
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -132,12 +133,32 @@ headsepline, % Uncomment to get a line under the header
 \courseName\\[2cm]
 \vfill
 
-{\large \today}\\[4cm] % Date
-%\includegraphics{Logo} % University/department logo - uncomment to place it
+{\large \today \\ \city}\\[4cm] % Date
+%\includegraphics{UPCLogo.png} % University/department logo - uncomment to place it
  
 \vfill
 \end{center}
 \end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+%	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+	The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	GLOSSARY
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+	
+	\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+	\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+	
+\end{abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -171,9 +192,10 @@ headsepline, % Uncomment to get a line under the header
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
+\include{Chapters/Introduction}
 \include{Chapters/ProjectFormulation}
-\include{Chapters/Scope} 
-\include{Chapters/Methodology} 
+\include{Chapters/Sope}
+\include{Chapters/MethodologyAndRigor}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
