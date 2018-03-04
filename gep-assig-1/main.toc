@@ -13,14 +13,12 @@
 \contentsline {section}{\numberline {3.1}What and how?}{4}{section.21}
 \contentsline {chapter}{\numberline {4}Methodology and Rigor}{5}{chapter.22}
 \contentsline {section}{\numberline {4.1}Methodology}{5}{section.23}
-\contentsline {section}{\numberline {4.2}Tools}{5}{section.24}
-\contentsline {subsection}{\numberline {4.2.1}Git}{5}{subsection.25}
-\contentsline {subsection}{\numberline {4.2.2}Trello}{5}{subsection.27}
-\contentsline {subsection}{\numberline {4.2.3}Mendeley}{5}{subsection.28}
-\contentsline {subsection}{\numberline {4.2.4}CLion}{5}{subsection.29}
-\contentsline {section}{\numberline {4.3}Communication}{5}{section.30}
-\contentsline {section}{\numberline {4.4}Rigor and Validation}{5}{section.31}
-\contentsline {chapter}{\numberline {A}More information}{6}{appendix.32}
-\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{6}{section.33}
-\contentsline {section}{\numberline {A.2}What is Unit Propagation?}{6}{section.35}
-\contentsline {chapter}{Bibliography}{7}{appendix*.36}
+\contentsline {section}{\numberline {4.2}Tools}{5}{section.25}
+\contentsline {subsection}{\numberline {4.2.1}Git}{5}{subsection.26}
+\contentsline {subsection}{\numberline {4.2.2}Trello}{5}{subsection.28}
+\contentsline {section}{\numberline {4.3}Communication}{6}{section.29}
+\contentsline {section}{\numberline {4.4}Rigor and Validation}{6}{section.30}
+\contentsline {chapter}{\numberline {A}More information}{7}{appendix.31}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{7}{section.32}
+\contentsline {section}{\numberline {A.2}What is Unit Propagation?}{7}{section.34}
+\contentsline {chapter}{Bibliography}{8}{appendix*.35}
