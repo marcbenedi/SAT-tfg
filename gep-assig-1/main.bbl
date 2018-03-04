@@ -88,6 +88,47 @@
   \field{year}{2009}
 \endentry
 
+\entry{Mitchell}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Mitchell}{M.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Selman}{S.}%
+     {Bart}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Levesque}{L.}%
+     {Hector}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MDSBLH1}
+  \strng{fullhash}{MDSBLH1}
+  \field{sortinit}{M}
+  \field{abstract}{%
+  We report results from large-scale experiments in satisfiability testing. As
+  has been observed by others, testing the satisfiability of random formu-las
+  often appears surprisingly easy. Here we show that by using the right
+  distribution of instances, and appropriate parameter values, it is possible
+  to generate random formulas that are hard, that is, for which satisfiability
+  testing is quite difficult. Our results provide a benchmark for the
+  evalua-tion of satisfiability-testing procedures.%
+  }
+  \field{title}{{Hard and Easy Distributions of SAT Problems}}
+  \verb{url}
+  \verb https://aaai.org/Papers/AAAI/1992/AAAI92-071.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Mitchell, Selman, Levesque - Unknown - Hard and Easy Distribution
+  \verb s of SAT Problems.pdf:pdf
+  \endverb
+\endentry
+
 \lossort
 \endlossort
 

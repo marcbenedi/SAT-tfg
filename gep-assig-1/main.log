@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  3 MAR 2018 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  4 MAR 2018 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1399,7 +1399,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux
 (./Chapters/Introduction.aux) (./Chapters/ProjectFormulation.aux)
-(./Chapters/Sope.aux) (./Chapters/MethodologyAndRigor.aux))
+(./Chapters/Sope.aux) (./Chapters/MethodologyAndRigor.aux)
+(./Appendices/AppendixA.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
@@ -1677,6 +1678,22 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 1: section
 [3
 
+] (./main.lof)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+1: section
+[4
+
+] (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+
+1: section
+[5
+
 ]
 1: section
 \openout2 = `Chapters/Introduction.aux'.
@@ -1688,32 +1705,27 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--17
-
- []
-
-
-Overfull \hbox (0.48062pt too wide) in paragraph at lines 9--17
+Overfull \hbox (0.48062pt too wide) in paragraph at lines 13--16
 \T1/ppl/b/n/10.95 Boolean sat-is-fi-a-bil-ity prob-lems \T1/ppl/m/it/10.95 (SAT
  from now on) \T1/ppl/m/n/10.95 is the prob-lem of find-ing a model[][][][][]
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 18.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 22.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 17.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 21.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
 
-Overfull \hbox (2.32002pt too wide) in paragraph at lines 27--28
+Overfull \hbox (2.32002pt too wide) in paragraph at lines 26--27
 \T1/ppl/m/n/10.95 This rep-re-sen-ta-tion has some lim-i-ta-tions be-cause it c
 an only ex-press prop-er-ties which
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
@@ -1722,10 +1734,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
 
 
-]) [2]
+]
+<Figures/GraphMitchellSelmanLevesque.png, id=192, 669.50125pt x 492.84125pt>
+File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
+
+<use Figures/GraphMitchellSelmanLevesque.png>
+Package pdftex.def Info: Figures/GraphMitchellSelmanLevesque.png used on input 
+line 36.
+(pdftex.def)             Requested size: 404.02908pt x 297.42912pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 37.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+) [2 <./Figures/GraphMitchellSelmanLevesque.png>]
 \openout2 = `Chapters/ProjectFormulation.aux'.
 
- (./Chapters/ProjectFormulation.tex
+
+(./Chapters/ProjectFormulation.tex
 Chapter 2.
 )
 1: section
@@ -1761,39 +1798,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 207.
+\openout2 = `Appendices/AppendixA.aux'.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+ (./Appendices/AppendixA.tex
+Appendix A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
-
 1: section
 [6
 
 
+
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 208.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+
+1: section
+[7
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
  (./main.aux (./Chapters/Introduction.aux)
 (./Chapters/ProjectFormulation.aux) (./Chapters/Sope.aux)
-(./Chapters/MethodologyAndRigor.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
+(./Chapters/MethodologyAndRigor.aux) (./Appendices/AppendixA.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8E343996D9C08DC53B7C1595C6946894;2296.
+(rerunfilecheck)             Checksum: 66B204FE3AF58A5849918D00AF3E54A8;2893.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
 (\end occurred when \iftrue on line 94 was incomplete) 
 Here is how much of TeX's memory you used:
- 30628 strings out of 494953
- 616398 string characters out of 6180978
- 711668 words of memory out of 5000000
- 33556 multiletter control sequences out of 15000+600000
- 57999 words of font info for 109 fonts, out of 8000000 for 9000
+ 30683 strings out of 494953
+ 617307 string characters out of 6180978
+ 712668 words of memory out of 5000000
+ 33580 multiletter control sequences out of 15000+600000
+ 62733 words of font info for 114 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,21n,76p,10377b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,21n,75p,10377b,2227s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/marcbenedi/.texmf
 -var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-dist/
 fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
@@ -1802,10 +1870,10 @@ msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (10 pages, 111692 bytes).
+Output written on main.pdf (13 pages, 188123 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

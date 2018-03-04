@@ -1,25 +1,34 @@
 % Appendix A
 
-\chapter{Frequently Asked Questions} % Main appendix title
+\chapter{More information} % Main appendix title
 
 \label{AppendixA} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
-\section{How do I change the colors of links?}
+\section{Why SAT Solvers use CNF as input format?}
+\label{A.1}
 
-The color of links can be changed to your liking using:
+There are two mains reasons for this: Equisatisfiability and Computational Complexity. Let us start with the first one: \\\\
 
-{\small\verb!\hypersetup{urlcolor=red}!}, or
+Two \emph{Boolean Formulas} are \textbf{equisatisfiable} if and only if both have the same \emph{models}. This may seem the same as equality but it is not because in an equality relationship both \emph{Boolean Formulas} have to have the same variables. \\
+This is important because between a \emph{Boolean Formula} and its result from a \emph{CNF} transformation the equisatisfiability is preserved which means that if the \emph{SAT Solver} finds a \emph{model} for the \emph{CNF}, then this \emph{interpretation} will be also a \emph{model} for the original \emph{Boolean Formula}.\\\\
 
-{\small\verb!\hypersetup{citecolor=green}!}, or
+The second reason is computational complexity. Let us have a look at the following table:
 
-{\small\verb!\hypersetup{allcolor=blue}!}.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c|c|}
+		\cline{2-3}
+		& DNF & CNF \\ \hline\hline
+		\multicolumn{1}{|c||}{TAUT} & NP  & P   \\ \hline
+		\multicolumn{1}{|c||}{SAT}  & P   & NP  \\ \hline
+	\end{tabular}
+	\caption{Complexity of deciding if a \emph{Boolean Formula} is SAT or TAUT depending of its format.}
+	\label{my-label}
+\end{table}
 
-\noindent If you want to completely hide the links, you can use:
 
-{\small\verb!\hypersetup{allcolors=.}!}, or even better: 
+So as a \emph{Boolean Formula} can be converted into a \emph{CNF} in linear time while preserving equisatisfiability, \emph{SAT Solvers} will use them to target satisfiability.
 
-{\small\verb!\hypersetup{hidelinks}!}.
-
-\noindent If you want to have obvious links in the PDF but not the printed text, use:
-
-{\small\verb!\hypersetup{colorlinks=false}!}.
+\section{What is Unit Propagation?}
+\label{A.2}
+Unit propagation 

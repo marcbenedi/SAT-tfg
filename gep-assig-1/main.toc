@@ -1,23 +1,26 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.5}
-\contentsline {section}{\numberline {1.1}Context}{1}{section.6}
-\contentsline {subsection}{\numberline {1.1.1}What is a Pseudo-Boolean Formula?}{1}{subsection.10}
-\contentsline {section}{\numberline {1.2}Background}{1}{section.11}
-\contentsline {section}{\numberline {1.3}Sate-of-art}{2}{section.12}
-\contentsline {section}{\numberline {1.4}Motivation}{2}{section.13}
-\contentsline {chapter}{\numberline {2}Project Formulation}{3}{chapter.14}
-\contentsline {section}{\numberline {2.1}General objectives}{3}{section.15}
-\contentsline {chapter}{\numberline {3}Scope}{4}{chapter.16}
-\contentsline {section}{\numberline {3.1}What and how?}{4}{section.17}
-\contentsline {chapter}{\numberline {4}Methodology and Rigor}{5}{chapter.18}
-\contentsline {section}{\numberline {4.1}Methodology}{5}{section.19}
-\contentsline {section}{\numberline {4.2}Tools}{5}{section.20}
-\contentsline {subsection}{\numberline {4.2.1}Git}{5}{subsection.21}
-\contentsline {subsection}{\numberline {4.2.2}Trello}{5}{subsection.23}
-\contentsline {subsection}{\numberline {4.2.3}Mendeley}{5}{subsection.24}
-\contentsline {subsection}{\numberline {4.2.4}CLion}{5}{subsection.25}
-\contentsline {section}{\numberline {4.3}Communication}{5}{section.26}
-\contentsline {section}{\numberline {4.4}Rigor and Validation}{5}{section.27}
-\contentsline {chapter}{Bibliography}{6}{chapter*.28}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.7}
+\contentsline {section}{\numberline {1.1}Context}{1}{section.8}
+\contentsline {subsection}{\numberline {1.1.1}What is a Pseudo-Boolean Formula?}{1}{subsection.12}
+\contentsline {section}{\numberline {1.2}Background}{1}{section.13}
+\contentsline {section}{\numberline {1.3}Sate-of-art}{2}{section.15}
+\contentsline {section}{\numberline {1.4}Motivation}{2}{section.16}
+\contentsline {chapter}{\numberline {2}Project Formulation}{3}{chapter.18}
+\contentsline {section}{\numberline {2.1}General objectives}{3}{section.19}
+\contentsline {chapter}{\numberline {3}Scope}{4}{chapter.20}
+\contentsline {section}{\numberline {3.1}What and how?}{4}{section.21}
+\contentsline {chapter}{\numberline {4}Methodology and Rigor}{5}{chapter.22}
+\contentsline {section}{\numberline {4.1}Methodology}{5}{section.23}
+\contentsline {section}{\numberline {4.2}Tools}{5}{section.24}
+\contentsline {subsection}{\numberline {4.2.1}Git}{5}{subsection.25}
+\contentsline {subsection}{\numberline {4.2.2}Trello}{5}{subsection.27}
+\contentsline {subsection}{\numberline {4.2.3}Mendeley}{5}{subsection.28}
+\contentsline {subsection}{\numberline {4.2.4}CLion}{5}{subsection.29}
+\contentsline {section}{\numberline {4.3}Communication}{5}{section.30}
+\contentsline {section}{\numberline {4.4}Rigor and Validation}{5}{section.31}
+\contentsline {chapter}{\numberline {A}More information}{6}{appendix.32}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{6}{section.33}
+\contentsline {section}{\numberline {A.2}What is Unit Propagation?}{6}{section.35}
+\contentsline {chapter}{Bibliography}{7}{appendix*.36}
