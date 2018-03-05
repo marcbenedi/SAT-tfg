@@ -4,19 +4,28 @@
 
 \section{What and how?}
 
-Parlar del que es vol fer i com es fara
-\\
-requirements the project should meet\\
-what to do? meet the requirements established by the client in particular, and by the rest of stakeholders\\
-
-Fases del proyecto:
-- Analizar el codigo del proyecto base y comprovar que sea correcto\\
-- Adaptar el codigo para poder expresar formulas pseudobooleanas (mirar si pblib lo hace ya por defecto)\\
-- Trabajar con la libreria PBLIB para ver las funcionalidades que otorga respecto al blib
-- implementar minimization
-- implementar timeout
-- implementar multithreading
+To achieve all the general objectives\ref{Chapter2} of the project, the following stages have been established:
+\begin{itemize}
+	\item Analyze, refactor\footnote{Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. \href{https://en.wikipedia.org/wiki/Code_refactoring}{(more)}} and test the existing code to have a solid base. 
+	\item Add the functionality of representing \emph{Pseudo-Boolean Formulae}.
+	\item Study \href{http://tools.computational-logic.org/content/pblib.php}{PBLib} library to see which functionalities has to work with \emph{minimization}.
+	\item Implement \emph{minimization} strategies.
+	\item Study timeout strategies and implement them.
+	\item Study and implement multithreading.
+\end{itemize}
 
 \section{Possible obstacles}
 
+In this section the possible obstacles and its solutions are exposed.
 
+\subsection{Base project}
+This project will be build on top of an existing one, as explained in \emph{Background section}\ref{Chapter1}. The existing project could be a source of bugs and other problems caused by not testing the code. For this reason and to solve possible issues, the first stage of the project will be focused on solving this problem.
+\subsection{Schedule}
+Due to the circumstances in which this project will be developed (Erasmus) possible delays could appear. To fix this circumstances, a realistic schedule with weekly communication will be planned. This will support a continuous development and detect as soon as possible delays. 
+
+\subsection{PBLib}
+One of the main requirements of this project, \emph{Pseudo-Boolean minimization}, is planned to be done with \emph{PBLib} library. It could happen that this library does not fit as expected with the project forcing to find a substitute. 
+
+\subsection{Correctness}
+As explained in \emph{Rigor and Validation}\ref{Chapter4}, correctness in this project is very important because of the context it is in. \\
+Guarantee correctness could be hard and take more time than expected. If this happens, formal correctness could be delayed or reduce it. 
