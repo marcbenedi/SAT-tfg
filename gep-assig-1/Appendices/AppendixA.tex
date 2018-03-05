@@ -9,8 +9,8 @@
 
 There are two mains reasons for this: Equisatisfiability and Computational Complexity. Let us start with the first one: \\\\
 
-Two \emph{Boolean Formulas} are \textbf{equisatisfiable} if and only if both have the same \emph{models}. This may seem the same as equality but it is not because in an equality relationship both \emph{Boolean Formulas} have to have the same variables. \\
-This is important because between a \emph{Boolean Formula} and its result from a \emph{CNF} transformation the equisatisfiability is preserved which means that if the \emph{SAT Solver} finds a \emph{model} for the \emph{CNF}, then this \emph{interpretation} will be also a \emph{model} for the original \emph{Boolean Formula}.\\\\
+Two \emph{BF} are \textbf{equisatisfiable} if and only if both have the same \emph{models}. This may seem the same as equality but it is not because in an equality relationship both \emph{BF} have to have the same variables. \\
+This is important because between a \emph{BF} and its result from a \emph{CNF} transformation the equisatisfiability is preserved which means that if the \emph{SAT Solver} finds a \emph{model} for the \emph{CNF}, then this \emph{interpretation} will be also a \emph{model} for the original \emph{BF}.\\\\
 
 The second reason is computational complexity. Let us have a look at the following table:
 
@@ -22,12 +22,12 @@ The second reason is computational complexity. Let us have a look at the followi
 		\multicolumn{1}{|c||}{TAUT} & NP  & P   \\ \hline
 		\multicolumn{1}{|c||}{SAT}  & P   & NP  \\ \hline
 	\end{tabular}
-	\caption{Complexity of deciding if a \emph{Boolean Formula} is SAT or TAUT depending of its format.}
+	\caption{Complexity of deciding if a \emph{BF} is SAT or TAUT depending of its format.}
 	\label{my-label}
 \end{table}
 
 
-So as a \emph{Boolean Formula} can be converted into a \emph{CNF} in linear time while preserving equisatisfiability, \emph{SAT Solvers} will use them to target satisfiability.
+So as a \emph{BF} can be converted into a \emph{CNF} in linear time while preserving equisatisfiability, \emph{SAT Solvers} will use them to target satisfiability.
 
 \section{What is Unit Propagation?}
 \label{A.2}

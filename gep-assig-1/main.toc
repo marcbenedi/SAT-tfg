@@ -24,16 +24,14 @@
 \contentsline {subsection}{\numberline {3.2.2}Schedule}{5}{subsection.29}
 \contentsline {subsection}{\numberline {3.2.3}PBLib}{5}{subsection.30}
 \contentsline {subsection}{\numberline {3.2.4}Correctness}{6}{subsection.31}
-\contentsline {subsection}{\numberline {3.2.5}Unforeseen circumstances}{6}{subsection.32}
-\contentsline {subsection}{\numberline {3.2.6}Computational power}{6}{subsection.33}
-\contentsline {chapter}{\numberline {4}Methodology and Rigor}{7}{chapter.34}
-\contentsline {section}{\numberline {4.1}Methodology}{7}{section.35}
-\contentsline {section}{\numberline {4.2}Tools}{7}{section.37}
-\contentsline {subsection}{\numberline {4.2.1}Git}{7}{subsection.38}
-\contentsline {subsection}{\numberline {4.2.2}Trello}{7}{subsection.40}
-\contentsline {section}{\numberline {4.3}Communication}{8}{section.41}
-\contentsline {section}{\numberline {4.4}Rigor and Validation}{8}{section.42}
-\contentsline {chapter}{\numberline {A}More information}{9}{appendix.43}
-\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{9}{section.44}
-\contentsline {section}{\numberline {A.2}What is Unit Propagation?}{9}{section.46}
-\contentsline {chapter}{Bibliography}{10}{appendix*.47}
+\contentsline {chapter}{\numberline {4}Methodology and Rigor}{7}{chapter.32}
+\contentsline {section}{\numberline {4.1}Methodology}{7}{section.33}
+\contentsline {section}{\numberline {4.2}Tools}{7}{section.35}
+\contentsline {subsection}{\numberline {4.2.1}Git}{7}{subsection.36}
+\contentsline {subsection}{\numberline {4.2.2}Trello}{7}{subsection.38}
+\contentsline {section}{\numberline {4.3}Communication}{8}{section.39}
+\contentsline {section}{\numberline {4.4}Rigor and Validation}{8}{section.40}
+\contentsline {chapter}{\numberline {A}More information}{9}{appendix.41}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{9}{section.42}
+\contentsline {section}{\numberline {A.2}What is Unit Propagation?}{9}{section.44}
+\contentsline {chapter}{Bibliography}{10}{appendix*.45}

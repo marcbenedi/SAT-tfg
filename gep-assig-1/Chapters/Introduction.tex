@@ -2,20 +2,16 @@
 
 \label{Chapter1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-In this chapter a first introduction \ldots
+In this chapter a first introduction to the project context \textcolor{red}{acabar}
 
 \section{Context}
 
-%Explicar que es SAT, la logica, boolean formula, pseudo boolean, cnf , satsolvers, minimization\\
-%Target audience: logic researchers, planners etc...\\
-%Users: C++ programmers which works with logic and want to represent their formulas and improve their time\\
-%Beneficiaries:\\
-\textbf{Boolean satisfiability problems} \textit{(SAT from now on)} is the problem of finding a model\footnote{An interpretation which satisfies the formula.} for a \emph{Boolean Formula}. In other words, it is the result of evaluating the \emph{Boolean Formula} after replacing its variables for \emph{true} or \emph{false}. 
+\textbf{Boolean satisfiability problems} \textit{(SAT from now on)} is the problem of finding a model\footnote{An interpretation which satisfies the formula.} for a \emph{Boolean Formula} (BF from now on). In other words, it is the result of evaluating the \emph{BF} after replacing its variables for \emph{true} or \emph{false}. 
 \\
 \emph{SAT} is widely used in Computer Science because it was the first problem proved to be NP-Complete\cite{Cook1971}\footnote{NP and NP-hard.} which allowed a lot of NP\footnote{Nondeterministic polynomial time.} to be reduced to it.
 
 \subsection{What is a Pseudo-Boolean Formula?}
-In propositional logic, a boolean formula is defined as following\cite{Lpo}:\\
+In propositional logic, a \emph{BF} is defined as following\cite{Lpo}:\\
 Let $P$ be a set of predicate symbols like $p,q,r,...$
 \begin{itemize}
 	\item All predicate symbol of $P$ is a formula.
@@ -27,28 +23,26 @@ This representation has some limitations because it can only express properties 
 
 \textcolor{red}{Cuidado que crec que estic barrejant Formulas amb Functions}\\
 
-\emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula}: $3x+5y$. Therefore, \emph{Boolean Formulas} are a special case of \emph{Pseudo-Boolean Formula} where the domain $d=\{0,1\}$.
+\emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula} (PBF from now on): $3x+5y$. Therefore, \emph{BF} are a special case of \emph{PBF} where the domain is $d=\{0,1\}$.
 
 
 \subsection{Pseudo-Boolean formulae minimization}
-Explicar que es un problema NP-Hard i en que consisteix
+\textcolor{red}{Explicar que es un problema NP-Hard i en que consisteix}
 
 \section{Background}
 
-During the past semester (Q1 2017/2018) I had been developing a C++ library called \_\_\_\_\_.\\
-This tool allows the users to represent \emph{Boolean Formulas} in a C++ program in a intuitive way, do operations between them and convert them into \emph{BDDs}. However, the main functionality of this library is the conversion from a \emph{Boolean Formula} to a \emph{CNF}.  \\
-As previously explained, \emph{CNF} is a particular type of a \emph{Boolean Formula}, a conjunction of disjunctions. \emph{CNF} is an important format because it is the standard input for \emph{SAT Solvers}\ref{A.1}.\\
+During the past semester (Q1 2017/2018) I had been developing a C++ library.\\
+This tool allows the users to represent \emph{BF} in a C++ program in a intuitive way, do operations between them and convert them into \emph{Binary Decision Diagrams} (BDD from now on). However, the main functionality of this library is the conversion from a \emph{BF} to a \emph{CNF}.  \\
+As previously explained, \emph{CNF} is a particular type of a \emph{BF}, a conjunction of disjunctions. \emph{CNF} is an important format because it is the standard input for \emph{SAT Solvers}\ref{A.1}.\\
 As shown in this paper, \emph{Mitchell, Selman, and Levesque\cite{Mitchell}}, there is a correlation between the number of variables, the number of clauses and the hardness of solving the \emph{CNF}.
 \begin{center}
 	\includegraphics[width=1\textwidth]{Figures/GraphMitchellSelmanLevesque.png}
 	\captionof{figure}{Median number of recursive DP calls for Random 3-SAT formulas, as a function of the ratio of clauses-to-variables. \\Extracted from Mitchell, Selman, and Levesque\cite{Mitchell}}
 \end{center}
 Therefore, an improvement of the input \emph{CNF} of the \emph{SAT Solver} can reduce a lot the hardness of the problem. \\
-This is the main goal of the library, try to reduce the size of the final \emph{CNF} resulting from applying different converting methods on the original \emph{Boolean Formula}.
+This is the main goal of the library, try to reduce the size of the final \emph{CNF} resulting from applying different converting methods on the original \emph{BF}.
 
 \section{Sate-of-art}
-
-%Parlar d'alguns papers anteriors i discutirlos una mica per sobre
 
 
 \section{Motivation}
@@ -57,16 +51,18 @@ This is the main goal of the library, try to reduce the size of the final \emph{
 
 In the first coursework we had to code a \emph{SAT Solver} which used \emph{Unit Propagation}\ref{A.2}. With this activity I comprehended how hard and substantial is the study of \emph{logic} and all its context. For example, how \emph{logic} is used in Artificial Intelligence and Planners.\\
 
-When the time of deciding the \emph{TFG} arrived	, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas for projects. Finally, we agreed on doing this project. 
+When the time of deciding the \emph{TFG} arrived	, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas for projects. Finally, we agreed on doing this project. \\
+
+\textcolor{red}{Mirar si la motivation es aixo o el que es vol obtenir, el perque es fa}
 
 \section{Stakeholders}
 
 In this section the Stakeholders of the project are defined. Stakeholders are entities which are effected, directly or indirectly, by the solution developed in this project. 
 \subsection{Target audience}
-This tools tools targets all the entities (researchers, companies, \ldots) which works with Pseudo-Boolean Minimization. 
+This tools tools targets all the entities (researchers, companies, \ldots) which works with \emph{PB minimization}.
 \subsection{Users}
-The users will be C++ programmers due this tool is developed in this language/
+The users will be C++ programmers due this tool is developed in this language.
 \subsection{Beneficiaries}
-All those entities which works with Pseudo-Boolean Minimization. For example AI, SAT Solvers, Planners, \ldots
+All those entities which works with \emph{PB minimization}. For example AI, SAT Solvers, Planners, \ldots
 
 
