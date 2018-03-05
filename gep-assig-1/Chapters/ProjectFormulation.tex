@@ -2,9 +2,23 @@
 
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-Explicar en que consisteix el projecte
+As mentioned before, this project is an extension of a previous C++ library. The main goal of this project is improve the time required to solve a \emph{minimization} problems. To achieve this goal, the following objectives have been established. 
 
 \section{General objectives}
 
-Explicar quins son els objectius generals del treball
+\subsection{Pseudo-Boolean minimization}
+For the problems of the form $min(c_{1}x_{1}+c_{2}x_{2}+\ldots +c_{n}x_{n} \leq k)$, the goal is to find an assignment for $\{x_{1},x_{2},\ldots,x_{n}\}$ so that $k$ is minimum.
 
+Previously\ref{Chapter1}, it has been explained that this types of problems are \emph{NP-Hard}. This project will try to reduce the time to solve this problems by trying two approaches:
+\begin{itemize}
+	\item Binary search:\\
+		Implement the well known \emph{Binary Search}\footnote{Binary search is a search algorithm that finds the position of a target value within a sorted array. \href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{(more)}} algorithm to find the minimum value for $k$.
+	\item Linear search:\\
+		Some \emph{SAT Solvers} can learn and derive new restrictions from previous problems. To take advantage of this ability it is necessary to implement a \emph{Linear Search} algorithm.
+\end{itemize}
+
+\subsection{Timeout}
+For some problems it is more important to find a solution before a deadline than finding the best possible solution. For instance, a delivery company must have all the route planned for all trucks before the journey starts, therefore, they care more about having a solution than finding the best one.\\
+For this, a \emph{Timeout strategy} will be implemented in case that a good enough solution has been found or the problem does not seem to have a solution. 
+\subsection{Multi-threading}
+This tool will take advantage of multi-core processors trying to split the problem and solving each part separately.

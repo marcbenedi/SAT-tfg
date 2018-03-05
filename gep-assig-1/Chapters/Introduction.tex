@@ -25,6 +25,13 @@ Let $P$ be a set of predicate symbols like $p,q,r,...$
 \end{itemize}
 This representation has some limitations because it can only express properties which are \emph{true} or \emph{false}.\\
 
+\textcolor{red}{Cuidado que crec que estic barrejant Formulas amb Functions}\\
+
+\emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula}: $3x+5y$. Therefore, \emph{Boolean Formulas} are a special case of \emph{Pseudo-Boolean Formula} where the domain $d=\{0,1\}$.
+
+
+\subsection{Pseudo-Boolean formulae minimization}
+Explicar que es un problema NP-Hard i en que consisteix
 
 \section{Background}
 
@@ -43,10 +50,23 @@ This is the main goal of the library, try to reduce the size of the final \emph{
 
 %Parlar d'alguns papers anteriors i discutirlos una mica per sobre
 
+
 \section{Motivation}
 
 \href{https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering/curriculum/syllabus/LI}{Informatics Logic} is taught in this\footnote{\href{https://www.fib.upc.edu/en/}{Facultat Informàtica de Barcelona}} faculty. In that course I realized how important is \emph{logic} through its lecturer, \href{http://www.lsi.upc.es/~roberto/}{Dr.Robert Nieuwenhuis}, and its activities. \\
 
 In the first coursework we had to code a \emph{SAT Solver} which used \emph{Unit Propagation}\ref{A.2}. With this activity I comprehended how hard and substantial is the study of \emph{logic} and all its context. For example, how \emph{logic} is used in Artificial Intelligence and Planners.\\
 
-When the time of deciding the \emph{TFG} arrived, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas for projects. Finally, we agreed on doing this project. 
+When the time of deciding the \emph{TFG} arrived	, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas for projects. Finally, we agreed on doing this project. 
+
+\section{Stakeholders}
+
+In this section the Stakeholders of the project are defined. Stakeholders are entities which are effected, directly or indirectly, by the solution developed in this project. 
+\subsection{Target audience}
+This tools tools targets all the entities (researchers, companies, \ldots) which works with Pseudo-Boolean Minimization. 
+\subsection{Users}
+The users will be C++ programmers due this tool is developed in this language/
+\subsection{Beneficiaries}
+All those entities which works with Pseudo-Boolean Minimization. For example AI, SAT Solvers, Planners, \ldots
+
+

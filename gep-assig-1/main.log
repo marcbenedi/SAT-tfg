@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  4 MAR 2018 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  5 MAR 2018 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1655,44 +1655,18 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
---------------------
- Abstract
---------------------
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 147.
-1: section
-[1
-
-]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 160.
-
-1: section
-[2
-
-] (./main.toc)
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 172.
+ (./main.toc
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 4.
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 1: section
-[3
-
-] (./main.lof)
-\tf@lof=\write6
-\openout6 = `main.lof'.
-
-
-1: section
-[4
-
-] (./main.lot)
-\tf@lot=\write7
-\openout7 = `main.lot'.
-
-
-1: section
-[5
+[1
 
 ]
 1: section
@@ -1729,44 +1703,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 30.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
 1: section
 [1
 
 
 
 ]
-<Figures/GraphMitchellSelmanLevesque.png, id=182, 669.50125pt x 492.84125pt>
+<Figures/GraphMitchellSelmanLevesque.png, id=190, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
 Package pdftex.def Info: Figures/GraphMitchellSelmanLevesque.png used on input 
-line 36.
+line 43.
 (pdftex.def)             Requested size: 404.02908pt x 297.42912pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 37.
+(caption)                particular \caption on input line 44.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[2 <./Figures/GraphMitchellSelmanLevesque.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-) [2 <./Figures/GraphMitchellSelmanLevesque.png>]
+) [3]
 \openout2 = `Chapters/ProjectFormulation.aux'.
 
-
-(./Chapters/ProjectFormulation.tex
+ (./Chapters/ProjectFormulation.tex
 Chapter 2.
+
+Overfull \hbox (0.7872pt too wide) in paragraph at lines 14--16
+\T1/ppl/m/n/10.95 Implement the well known \T1/ppl/m/it/10.95 Bi-nary Search[][
+][][][] \T1/ppl/m/n/10.95 al-go-rithm to find the min-i-mum value
+ []
+
 )
 1: section
-[3
+[4
 
 
 
@@ -1775,9 +1764,14 @@ Chapter 2.
 
  (./Chapters/Sope.tex
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
 )
 1: section
-[4
+[5
 
 
 
@@ -1787,11 +1781,11 @@ Chapter 3.
  (./Chapters/MethodologyAndRigor.tex
 Chapter 4.
 1: section
-[5
+[6
 
 
 
-]) [6]
+]) [7]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -1818,7 +1812,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
 )
 1: section
-[7
+[8
 
 
 
@@ -1831,7 +1825,7 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
 
 1: section
-[8
+[9
 
 
 ]
@@ -1842,32 +1836,33 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E7B9CCEB326386B4AB7760CAD2645700;2712.
+(rerunfilecheck)             Checksum: C930F81FE055B826337D2B81E8FD78F1;3978.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
 (\end occurred when \iftrue on line 94 was incomplete) 
 Here is how much of TeX's memory you used:
- 30681 strings out of 494953
- 617270 string characters out of 6180978
- 712668 words of memory out of 5000000
- 33578 multiletter control sequences out of 15000+600000
- 62733 words of font info for 114 fonts, out of 8000000 for 9000
+ 30702 strings out of 494953
+ 617691 string characters out of 6180978
+ 713668 words of memory out of 5000000
+ 33597 multiletter control sequences out of 15000+600000
+ 63167 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,21n,75p,10377b,2227s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,21n,75p,10377b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/marcbenedi/.texmf
 -var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-dist/
 fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (14 pages, 191776 bytes).
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmb
+b.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (11 pages, 197783 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
