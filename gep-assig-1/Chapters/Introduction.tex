@@ -1,4 +1,4 @@
-\chapter{Introduction and Sate-of-art} % Main chapter title
+\chapter{Introduction} % Main chapter title
 
 \label{Chapter1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
@@ -27,7 +27,7 @@ This representation has some limitations because it can only express properties 
 
 
 \subsection{Pseudo-Boolean formulae minimization}
-\emph{PBF minimization} is a well known NP-Hard\footnote{NP-Hard: at least as hard as the hardest problems in NP \href{https://en.wikipedia.org/wiki/NP-hardness}{(more)}}. \\
+\emph{PBF minimization} is a well known NP-Hard\footnote{NP-Hard: at least as hard as the hardest problems in NP \href{https://en.wikipedia.org/wiki/NP-hardness}{(more)}} problem. \\
 It does the following:\\
 Given a \emph{PBF} of the form $\sum_{i=1}^{n} x_{i}w_{i} \leq k$, where $w_{i},k \in \mathbb{I}$ and $x_{i} \in \{0,1\}$, it tries to find the minimum $k$ which satisfies the constraint.\\
 
@@ -46,8 +46,18 @@ As shown in this paper, \emph{Mitchell, Selman, and Levesque\cite{Mitchell}}, th
 Therefore, an improvement of the input \emph{CNF} of the \emph{SAT Solver} can reduce a lot the hardness of the problem. \\
 This is the main goal of the library, try to reduce the size of the final \emph{CNF} resulting from applying different converting methods on the original \emph{BF}.
 
-%\section{Sate-of-art}
+\section{Sate-of-art}
+In this section previous projects are discussed. \\
+The first one is \href{http://tools.computational-logic.org/content/pblib.php}{PBLib}. PBLib is a C++ toolkit for encoding \emph{PB Constraints} into \emph{CNF}.\\
+As explained in \emph{Steinke}\cite{Steinke2015}, PBLib implements a lot of encodings:
+\begin{center}
+	\includegraphics[width=1\textwidth]{Figures/PBLibEncodings.png}
+	\captionof{figure}{PBLib implemented encodings\\Extracted from Steinke\cite{Steinke2015}}
+\end{center}
+PBLib does not only implement this encodings, the most interesting thing is that it can decides which encoder provides the most effective translation.\\
+It is very hard to compete on this aspect against PBLib, but it is not very user friendly. For this reason, on of the goals of this project is to add a layer between the user and PBLib to simplify how the user declares the \emph{PB Constraints}.\\\\
 
+The second project we will talk about is the explained in \emph{Background section}. This project adds a new encoding for \emph{BF} which can be extended to \emph{PB Constraints}. This encoding will be studied and if it achieves good metrics it will be implemented to \emph{PB Constraints}
 
 \section{Motivation}
 

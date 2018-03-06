@@ -181,6 +181,48 @@
   \endverb
 \endentry
 
+\entry{Steinke2015}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Steinke}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Many different encodings for PB constraints into conjunctive normal form
+  (CNF) have been proposed in the past. The PBLib project starts to collect and
+  implement these encodings to be able to encode PB constraints in a very
+  simple, but effective way. The aim is not only to generate as few clauses as
+  possible, but also using encodings that maintain generalized arc consistency
+  by unit propagation, to speedup the run time of the SAT solver, solving the
+  formula. A major issue of the implementation is a high flexibility for the
+  user. Consequently it is not required to bring a PB constraint into a certain
+  normal form. The PBLib automatically normalizes the constraints and decides
+  which encoder provides the most effective translation. The user can also
+  define constraints with two comparators (less equal and greater equal) and
+  each PB constraint can be encoded in an incre-mental way: After an initial
+  encoding it is possible to add a tighter bound with only a few additional
+  clauses. This mechanism allows the user to develop SAT-based solvers for
+  optimization problems with incremental strengthening and to keep the learned
+  clauses for incremental SAT solver calls.%
+  }
+  \field{title}{{PBLib – A C++ Toolkit for Encoding Pseudo-Boolean
+  Constraints into CNF}}
+  \verb{url}
+  \verb http://tools.computational-logic.org/content/pblib/pblib.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Steinke - 2015 - PBLib – A C Toolkit for Encoding Pseudo-Boolea
+  \verb n Constraints into CNF.pdf:pdf
+  \endverb
+  \field{year}{2015}
+\endentry
+
 \lossort
 \endlossort
 
