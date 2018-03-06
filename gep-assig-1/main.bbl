@@ -88,6 +88,58 @@
   \field{year}{2009}
 \endentry
 
+\entry{Holldobler}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {H{\"{o}}lldobler}{H.}%
+     {Steffen}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Manthey}{M.}%
+     {Norbert}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Steinke}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HSMNSP1}
+  \strng{fullhash}{HSMNSP1}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  Many different encodings for pseudo-Boolean constraints to the Boolean
+  satisfiability problem have been proposed in the past. In this work we
+  present a novel small sized and simple to implement encoding. The encoding
+  maintains generalized arc consistency by unit propagation and results in a
+  linear sized formula in conjunctive normal form with respect to the number of
+  input variables. Experimental data confirms the advantages of the encoding
+  over existing ones for most of the relevant PB instances.%
+  }
+  \field{title}{{A Compact Encoding of Pseudo-Boolean Constraints into SAT}}
+  \verb{url}
+  \verb https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2{\&}i
+  \verb k=7328377021{\&}view=att{\&}th=15e2e7b559196d67{\&}attid=0.2{\&}disp=in
+  \verb line{\&}safe=1{\&}zw{\&}saddbat=ANGjdJ9S{\_}JppQCGQWibmAw70nm3SJsSOBhJg
+  \verb 1PGGwc8D5mdov9JRPuNYNPKnUhEwqiRBmWtvbS0tWSUSFbjX2PO6xhByHH1u3uJyl20bqvi
+  \verb e{\_}A5wVWlyGHOKOsaPgNPEw3Y8EjoJoRyRKQ03MZA1Uma98pSK7xDtv5FPsTktHevmFB7
+  \verb ZP79m3vMbP7MvPgILPjcw0ppjmrcPa0T7u08d8WKIaj2ok8ZGK4xizwJ53fwq7jH8zWEgbM
+  \verb LdH3iV0HUpJDN0U619MSv{\_}2u{\_}{\_}eWwhfC14QE82TOnITUjuH7rGsdMKwsKwRrkw
+  \verb i-CoyPoJT8RAmSh2jKobXWTIejzVljGM8WWvOmglerOOPLjVRbR5H{\_}pgrV1LSjW4clhx
+  \verb qLfJfA-jW7Hi-AHADvop{\_}Z{\_}IiGErkOr-rhH9aMR7Z6-pcC4aECx046{\_}NOeCx5F
+  \verb hmf-z71ZuWwUZ3PrMtEdDrDoJrmLDa2sWDQIuNom4yykZjVqBNSNoimvTOdUk31nwa85Bxf
+  \verb {\_}CnkIjv5T15jmLv-hZGLO1f77keyiLsiHKGLZ{\_}HAJGw9oLDXThmzAB0ivSmGjszgd
+  \verb j{\_}X1ODplVtdsqWtqViPDVmbct0tXfd33PYgBil3I08hQ
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/H{\"{o}}lldobler, Manthey, Steinke - Unknown - A Compact Encoding
+  \verb  of Pseudo-Boolean Constraints into SAT.pdf:pdf
+  \endverb
+\endentry
+
 \entry{Mitchell}{article}{}
   \name{author}{3}{}{%
     {{}%
