@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Self-assessment on sustainability}{1}{chapter.2}
+\contentsline {chapter}{\numberline {2}Analysis of the sustainability of the project}{2}{chapter.3}
+\contentsline {section}{\numberline {2.1}Environmental Dimension }{2}{section.4}
+\contentsline {subsection}{\numberline {2.1.1}PPP}{2}{subsection.5}
+\contentsline {subsection}{\numberline {2.1.2}Useful life}{2}{subsection.6}
+\contentsline {subsection}{\numberline {2.1.3}Risks}{2}{subsection.7}
+\contentsline {section}{\numberline {2.2}Economic Dimension }{2}{section.8}
+\contentsline {subsection}{\numberline {2.2.1}Budget}{2}{subsection.9}
+\contentsline {subparagraph}{Direct costs}{2}{section*.10}
+\contentsline {subparagraph}{Indirect costs}{2}{section*.11}
+\contentsline {subparagraph}{Contingency}{2}{section*.12}
+\contentsline {subparagraph}{Unforeseen}{2}{section*.13}
+\contentsline {subparagraph}{Total budget}{2}{section*.14}
+\contentsline {paragraph}{Control management}{2}{section*.15}
+\contentsline {subsection}{\numberline {2.2.2}Reflection}{2}{subsection.16}
+\contentsline {subsubsection}{PPP}{2}{section*.17}
+\contentsline {subsubsection}{Useful life}{2}{section*.18}
+\contentsline {subsubsection}{Risks}{2}{section*.19}

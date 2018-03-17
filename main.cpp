@@ -172,12 +172,27 @@ void mixVSbdd(){
     std::cout << SatSolver::solve2(cnf) << std::endl;
 }
 
+void input1(){
+    Formula f = a*b*c;
+    BDD bdd = BDDConverter::convertFormula(f);
+
+    BDD largestCube = bdd.LargestCube();//maxim 1's restants
+    BDD prime = largestCube.MakePrime(bdd);//extendre'l a altres 1's
+
+    double dd = Cudd_CountMinterm(VarsManager::getCuddMgr(),
+                prime.getNode(),
+                0);
+
+    std::cout<<dd<<std::endl;
+}
+
 int main() {
 
     //tseitinVSbdd();
-    mixMethod();
+    //mixMethod();
     //cnfBDD();
     //mixVSbdd();
+    input1();
 
 
 
