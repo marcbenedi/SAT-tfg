@@ -1,25 +1,166 @@
-% Chapter Template
-
-\chapter{Analysis of the sustainability of the project} % Main chapter title
-
+\chapter{Analysis of the sustainability of the project}
 \label{Chapter2}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|l|l|l|}
+		\cline{2-4}
+											& PPP & Shelf Life & Risks \\ \hline
+		\multicolumn{1}{|l|}{Environmental} &     &            &       \\ \hline
+		\multicolumn{1}{|l|}{Economical}    &     &            &       \\ \hline
+		\multicolumn{1}{|l|}{Social}        &     &            &       \\ \hline
+	\end{tabular}
+	\caption{Sustainability Matrix}
+	\label{SustainabilityMatrix}
+\end{table}
+TODO DELETE: proyecto puesto en produccion
+
+\section{Economic Dimension: Budget}
+\subsection{Direct costs}
+Aquellos atribuibles a una unidad de proyecto. Tienen
+relación directa con la fabricación de un producto
+
+\subsubsection{Human Resources}
+Els sous els hem tret de X
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Role              & \multicolumn{1}{l|}{Estimated hours (h)} & \multicolumn{1}{l|}{Price/hour (€)} & \multicolumn{1}{l|}{Total cost (€)} \\ \hline
+		Project manager   & 136                                      & 46                                  & 6.256                               \\ \hline
+		Software Engineer & 177                                      & 25                                  & 4.425                               \\ \hline
+		Computer Science  & 137                                      & 25                                  & 3.425                               \\ \hline\hline
+		Total             & \multicolumn{3}{r|}{14.106}                                                                                          \\ \hline
+	\end{tabular}
+	\caption{Human resources}
+	\label{HumanResources}
+\end{table}
+
+\subsection{Indirect costs}
+Aquellos NO atribuibles a una unidad de proyecto\\
+
+\href{http://www.agenciatributaria.es/AEAT.internet/Inicio/_Segmentos_/Empresas_y_profesionales/Empresas/Impuesto_sobre_Sociedades/Periodos_impositivos_a_partir_de_1_1_2015/Base_imponible/Amortizacion/Tabla_de_coeficientes_de_amortizacion_lineal_.shtml}{Amortizacion agencia tributaria}\\
+Anos amortizacion maximo 6 per lo tant un 16.66\% per any. Vol dir que valor actual del pc = 431.52€\\
+li queden 3 anys de vida aixo es 11.97 al mes. lutilitzarem durant 5 mesos per tant 58.86 EUR del PC
+
+\subsubsection{Hardware}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|}
+		\hline
+		Product              & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
+		Lenovo IdeaPad U330T & 899                            & 1                          & 6                                    &                                             \\ \hline
+		&                                &                            &                                      &                                             \\ \hline
+		&                                &                            &                                      &                                             \\ \hline\hline
+		Total                                & \multicolumn{4}{r|}{}                                                                                           \\ \hline
+	\end{tabular}
+	\caption{Hardware resources}
+	\label{Hardware resources}
+\end{table}
+
+\subsubsection{Software}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|}
+		\hline
+		Product              & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
+		GitHub	& 6,10/month & 5 & N/A & 30,5 \\ \hline
+		GitHub student pack & -6,10/month & 5 & N/A & -30,5 \\ \hline
+		Clion 	& 6,90/month & 5 & N/A & 34,5 \\ \hline
+		JetBrains Product Pack for Students & -6,90/month & 5 & N/A & -34,5 \\ \hline
+		Atom 	& 0,00 & 1 & N/A & 0,00 \\ \hline
+		TeXstudio 	& 0,00 & 1 & N/A & 0,00 \\ \hline\hline
+		Total	& \multicolumn{4}{r|}{0,00}                                                                                           \\ \hline
+	\end{tabular}
+	\caption{Software resources}
+	\label{SoftwareResources}
+\end{table}
+
+Some text
+\subsubsection{Other}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Internet connexion & & & \\ \hline
+		Power consumption & & & \\ \hline\hline
+		Total & \multicolumn{3}{r|}{}                                                                        \\ \hline
+	\end{tabular}
+	\caption{Other resources}
+	\label{OtherResources}
+\end{table}
+
+\subsection{Contingency}
+Contingencia: permite atenuar errores de información incompleta o descuidos\\
+marcos 15\% sino factor huss 50\%
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Percentage} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Direct costs                  &                                &                                 &                                \\ \hline
+		Indirect costs                &                                &                                 &                                \\ \hline\hline
+		Total                         & \multicolumn{3}{r|}{}                                                                             \\ \hline
+	\end{tabular}
+	\caption{Contingency}
+	\label{Contingency}
+\end{table}
+
+\subsection{Unforeseen}
+some text xD
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Unforeseen      & \multicolumn{1}{l|}{Cost (€)} & \multicolumn{1}{l|}{Probability (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Broken computer & 1.300                         & 5                                     & 65                             \\ \hline
+		Initial stage   &                               &                                       &                                \\ \hline
+		Iteration 1     &                               &                                       &                                \\ \hline
+		Iteration 2     &                               &                                       &                                \\ \hline
+		Iteration 3     &                               &                                       &                                \\ \hline
+		Final stage     &                               &                                       &                          \\ \hline\hline
+		Total           & \multicolumn{3}{r|}{}                                                                                  \\ \hline
+	\end{tabular}
+	\caption{Unforeseen}
+	\label{Unforeseen}
+\end{table}
+
+\subsection{Total budget}
+some text
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|r|}
+		\cline{2-2}
+		& \multicolumn{1}{l|}{Cost (€)} \\ \hline
+		\multicolumn{1}{|l|}{Direct costs}   &                               \\ \hline
+		\multicolumn{1}{|l|}{Indirect costs} &                               \\ \hline
+		\multicolumn{1}{|l|}{Contingency}    &                               \\ \hline
+		\multicolumn{1}{|l|}{Unforeseen}     &                               \\ \hline\hline
+		\multicolumn{1}{|l|}{Total}          &                               \\ \hline
+	\end{tabular}
+	\caption{Total budget}
+	\label{TotalBudget}
+\end{table}
+\subsection{Control management}
+
+\section{Economic Dimension: Reflection}
+\subsection{PPP}
+\subsection{Shelf Life}
+\subsection{Risks}
 
 \section{Environmental Dimension }
 \subsection{PPP}
-\subsection{Useful life}
+Vamos a medir en KWh.
+$$E=W\times T$$
+\subsection{Shelf Life}
 \subsection{Risks}
 
-\section{Economic Dimension }
-
-\subsection{Budget}
-\subparagraph{Direct costs}
-\subparagraph{Indirect costs}
-\subparagraph{Contingency}
-\subparagraph{Unforeseen}
-\subparagraph{Total budget}
-\paragraph{Control management}
-
-\subsection{Reflection}
-\subsubsection{PPP}
-\subsubsection{Useful life}
-\subsubsection{Risks}
+\section{Social Dimension}
+\subsection{PPP}
+\subsection{Shelf Life}
+\subsection{Risks}
