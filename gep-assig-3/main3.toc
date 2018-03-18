@@ -6,24 +6,24 @@
 \contentsline {section}{\numberline {2.1}Economic Dimension: Budget}{2}{section.8}
 \contentsline {subsection}{\numberline {2.1.1}Direct costs}{2}{subsection.9}
 \contentsline {subsubsection}{Human Resources}{2}{section*.10}
-\contentsline {subsection}{\numberline {2.1.2}Indirect costs}{2}{subsection.12}
-\contentsline {subsubsection}{Hardware}{3}{section*.13}
-\contentsline {subsubsection}{Software}{3}{section*.15}
-\contentsline {subsubsection}{Other}{3}{section*.17}
-\contentsline {subsection}{\numberline {2.1.3}Contingency}{3}{subsection.19}
-\contentsline {subsection}{\numberline {2.1.4}Unforeseen}{4}{subsection.21}
-\contentsline {subsection}{\numberline {2.1.5}Total budget}{4}{subsection.23}
-\contentsline {subsection}{\numberline {2.1.6}Control management}{4}{subsection.25}
-\contentsline {section}{\numberline {2.2}Economic Dimension: Reflection}{4}{section.26}
-\contentsline {subsection}{\numberline {2.2.1}PPP}{4}{subsection.27}
-\contentsline {subsection}{\numberline {2.2.2}Shelf Life}{4}{subsection.28}
-\contentsline {subsection}{\numberline {2.2.3}Risks}{4}{subsection.29}
-\contentsline {section}{\numberline {2.3}Environmental Dimension }{4}{section.30}
-\contentsline {subsection}{\numberline {2.3.1}PPP}{4}{subsection.31}
-\contentsline {subsection}{\numberline {2.3.2}Shelf Life}{5}{subsection.32}
-\contentsline {subsection}{\numberline {2.3.3}Risks}{5}{subsection.33}
-\contentsline {section}{\numberline {2.4}Social Dimension}{5}{section.34}
-\contentsline {subsection}{\numberline {2.4.1}PPP}{5}{subsection.35}
-\contentsline {subsection}{\numberline {2.4.2}Shelf Life}{5}{subsection.36}
-\contentsline {subsection}{\numberline {2.4.3}Risks}{5}{subsection.37}
-\contentsline {chapter}{Bibliography}{6}{appendix*.38}
+\contentsline {subsection}{\numberline {2.1.2}Indirect costs}{3}{subsection.13}
+\contentsline {subsubsection}{Hardware}{3}{section*.14}
+\contentsline {subsubsection}{Software}{3}{section*.17}
+\contentsline {subsubsection}{Other}{3}{section*.19}
+\contentsline {subsection}{\numberline {2.1.3}Contingency}{4}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.4}Unforeseen}{4}{subsection.24}
+\contentsline {subsection}{\numberline {2.1.5}Total budget}{4}{subsection.26}
+\contentsline {subsection}{\numberline {2.1.6}Control management}{5}{subsection.28}
+\contentsline {section}{\numberline {2.2}Economic Dimension: Reflection}{5}{section.29}
+\contentsline {subsection}{\numberline {2.2.1}PPP}{5}{subsection.30}
+\contentsline {subsection}{\numberline {2.2.2}Shelf Life}{5}{subsection.31}
+\contentsline {subsection}{\numberline {2.2.3}Risks}{5}{subsection.32}
+\contentsline {section}{\numberline {2.3}Environmental Dimension }{5}{section.33}
+\contentsline {subsection}{\numberline {2.3.1}PPP}{5}{subsection.34}
+\contentsline {subsection}{\numberline {2.3.2}Shelf Life}{6}{subsection.35}
+\contentsline {subsection}{\numberline {2.3.3}Risks}{6}{subsection.36}
+\contentsline {section}{\numberline {2.4}Social Dimension}{6}{section.37}
+\contentsline {subsection}{\numberline {2.4.1}PPP}{6}{subsection.38}
+\contentsline {subsection}{\numberline {2.4.2}Shelf Life}{6}{subsection.39}
+\contentsline {subsection}{\numberline {2.4.3}Risks}{6}{subsection.40}
+\contentsline {chapter}{Bibliography}{7}{appendix*.41}

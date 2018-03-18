@@ -1,67 +1,77 @@
 \chapter{Analysis of the sustainability of the project}
 \label{Chapter2}
-
+TODO: Fill the table with numbers
 \begin{table}[h]
 	\centering
 	\begin{tabular}{l|l|l|l|}
 		\cline{2-4}
-											& PPP & Shelf Life & Risks \\ \hline
-		\multicolumn{1}{|l|}{Environmental} &     &            &       \\ \hline
-		\multicolumn{1}{|l|}{Economical}    &     &            &       \\ \hline
-		\multicolumn{1}{|l|}{Social}        &     &            &       \\ \hline
+		 & PPP & Shelf Life & Risks \\ \hline
+		\multicolumn{1}{|l|}{Environmental} & & & \\ \hline
+		\multicolumn{1}{|l|}{Economical} & & & \\ \hline
+		\multicolumn{1}{|l|}{Social} & & & \\ \hline
 	\end{tabular}
 	\caption{Sustainability Matrix}
 	\label{SustainabilityMatrix}
 \end{table}
-TODO DELETE: proyecto puesto en produccion
 
 \section{Economic Dimension: Budget}
+In this section all the costs of the project are exposed. 
 \subsection{Direct costs}
-Aquellos atribuibles a una unidad de proyecto. Tienen
-relación directa con la fabricación de un producto
+Direct costs are those that have a direct relation with the manufacture of the product. In this case, the only direct costs are the human resources. 
 
 \subsubsection{Human Resources}
-Els sous els hem tret de X
+The cost of the human resources has been estimated with the following expression: $Cost = \frac{Salary}{Hour} \times Expected Hours$. The salaries have been extracted from PagePersonnel study\cite{PagePersonnel}. In this study the salaries are expressed per year. In average, there are 1.500 working hours per year. To obtain the price per hour, the salary per year has been divided by the working hours per year.\\
+
+Taking in consideration the Gantt chart from the previous deliverable, the dedication of each role has been defined as following:
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|}
 		\hline
-		Role              & \multicolumn{1}{l|}{Estimated hours (h)} & \multicolumn{1}{l|}{Price/hour (€)} & \multicolumn{1}{l|}{Total cost (€)} \\ \hline
-		Project manager   & 136                                      & 46                                  & 6.256                               \\ \hline
-		Software Engineer & 177                                      & 25                                  & 4.425                               \\ \hline
-		Computer Science  & 137                                      & 25                                  & 3.425                               \\ \hline\hline
-		Total             & \multicolumn{3}{r|}{14.106}                                                                                          \\ \hline
+		Stage & \multicolumn{1}{l|}{Project Manager} & \multicolumn{1}{l|}{Software Architect} & \multicolumn{1}{l|}{Developer} \\ \hline
+		GEP & 70 & 0 & 0 \\ \hline
+		Initial Stage & 30 & 30 & 30 \\ \hline
+		Iteration 1,2,3 & 6 & 147 & 87 \\ \hline
+		Final Stage & 30 & 0 & 20 \\ \hline
 	\end{tabular}
-	\caption{Human resources}
+	\caption{Hours destined to each stage per Role}
+	\label{StageResources}
+\end{table}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Role & \multicolumn{1}{l|}{Estimated hours (h)} & \multicolumn{1}{l|}{Price/hour (€)} & \multicolumn{1}{l|}{Total cost (€)} \\ \hline
+		Project Manager & 136 & 27  & 3.672 \\ \hline
+		Software Architect & 177 & 25 & 4.425 \\ \hline
+		Developer & 137 & 14 & 1.918 \\ \hline\hline
+		Total & \multicolumn{3}{r|}{10.015} \\ \hline
+	\end{tabular}
+	\caption{Human Resources Budget}
 	\label{HumanResources}
 \end{table}
 
 \subsection{Indirect costs}
-Aquellos NO atribuibles a una unidad de proyecto\\
-
-\href{http://www.agenciatributaria.es/AEAT.internet/Inicio/_Segmentos_/Empresas_y_profesionales/Empresas/Impuesto_sobre_Sociedades/Periodos_impositivos_a_partir_de_1_1_2015/Base_imponible/Amortizacion/Tabla_de_coeficientes_de_amortizacion_lineal_.shtml}{Amortizacion agencia tributaria}\\
-Anos amortizacion maximo 6 per lo tant un 16.66\% per any. Vol dir que valor actual del pc = 431.52€\\
-li queden 3 anys de vida aixo es 11.97 al mes. lutilitzarem durant 5 mesos per tant 58.86 EUR del PC
+Indirect costs are those that does not have a direct relation with the manufacture of the product. In this case, the indirect costs are Hardware, Software, and some others. 
 
 \subsubsection{Hardware}
+
+According to \emph{Agencia Tributaria}\footnote{\href{http://www.agenciatributaria.es/AEAT.internet/en_gb/Inicio/_Segmentos_/Empresas_y_profesionales/Empresas/Impuesto_sobre_Sociedades/Periodos_impositivos_a_partir_de_1_1_2015/Base_imponible/Amortizacion/Tabla_de_coeficientes_de_amortizacion_lineal_.shtml} {Agencia Tributaria - amortizations}}, the maximum number of years to amortize a computer equipment is 8. Therefore the amortization of Hardware resources has been calculated following this expression: $Amortization = \frac{Price}{8\times12} \times 5$
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|r|}
 		\hline
-		Product              & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
-		Lenovo IdeaPad U330T & 899                            & 1                          & 6                                    &                                             \\ \hline
-		&                                &                            &                                      &                                             \\ \hline
-		&                                &                            &                                      &                                             \\ \hline\hline
-		Total                                & \multicolumn{4}{r|}{}                                                                                           \\ \hline
+		Product & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
+		Lenovo IdeaPad U330T & 899 & 1 & 8 & 46,83\\ \hline\hline
+		Total & \multicolumn{4}{r|}{46,83} \\ \hline
 	\end{tabular}
-	\caption{Hardware resources}
-	\label{Hardware resources}
+	\caption{Hardware Resources Budget}
+	\label{HardwareResources}
 \end{table}
 
 \subsubsection{Software}
-
+For software resources, free tools have been selected and student discounts have been used to minimize the total cost.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|r|}
@@ -75,92 +85,120 @@ li queden 3 anys de vida aixo es 11.97 al mes. lutilitzarem durant 5 mesos per t
 		TeXstudio 	& 0,00 & 1 & N/A & 0,00 \\ \hline\hline
 		Total	& \multicolumn{4}{r|}{0,00}                                                                                           \\ \hline
 	\end{tabular}
-	\caption{Software resources}
+	\caption{Software Resources Budget}
 	\label{SoftwareResources}
 \end{table}
 
-Some text
 \subsubsection{Other}
-
+Internet connexion price has been extracted from Pepephone\footnote{\href{https://www.pepephone.com/internet-en-casa}{Pepephone fibra}} plan, which is 34,6€ per month. \\
+kWh price has been extracted from \href{https://tarifasgasluz.com/faq/precio-kwh-espana-2017}{Selectra}. The average price per kWh is 0,12€.
+In office supplies paper packs, books, pens, \ldots \ are included.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|}
 		\hline
-		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Total (€)} \\ \hline
-		Internet connexion & & & \\ \hline
-		Power consumption & & & \\ \hline\hline
-		Total & \multicolumn{3}{r|}{}                                                                        \\ \hline
+		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price(€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Internet connexion & 0,047/h & 450 hours & 21,15\\ \hline
+		Power consumption & 51Wh & 450 hours & 2,75 \\ \hline
+		Print & 0,05/page & 400 pages & 20 \\ \hline
+		Office supplies & 50 & 1 & 50 \\ \hline\hline
+		Total & \multicolumn{3}{r|}{93,9}                                                                        \\ \hline
 	\end{tabular}
-	\caption{Other resources}
+	\caption{Other Resources Budget}
 	\label{OtherResources}
 \end{table}
 
 \subsection{Contingency}
-Contingencia: permite atenuar errores de información incompleta o descuidos\\
-marcos 15\% sino factor huss 50\%
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|}
 		\hline
-		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Percentage} & \multicolumn{1}{l|}{Total (€)} \\ \hline
-		Direct costs                  &                                &                                 &                                \\ \hline
-		Indirect costs                &                                &                                 &                                \\ \hline\hline
-		Total                         & \multicolumn{3}{r|}{}                                                                             \\ \hline
+		\multicolumn{1}{|l|}{Concept} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Percentage (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Direct costs & 10.015 & 30 & 3.004,5 \\ \hline
+		Indirect costs & 140,73 & 15 & 21,11\\ \hline\hline
+		Total & \multicolumn{3}{r|}{3.025,61} \\ \hline
 	\end{tabular}
-	\caption{Contingency}
+	\caption{Contingency Budget}
 	\label{Contingency}
 \end{table}
 
 \subsection{Unforeseen}
-some text xD
+The first unforeseen is that the computer breaks. In this case a new one will be bought. The other unforeseen events are that the stages of the project being extended. For each stage a 50\% delay has been estimated.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|l|r|r|r|}
 		\hline
-		Unforeseen      & \multicolumn{1}{l|}{Cost (€)} & \multicolumn{1}{l|}{Probability (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
-		Broken computer & 1.300                         & 5                                     & 65                             \\ \hline
-		Initial stage   &                               &                                       &                                \\ \hline
-		Iteration 1     &                               &                                       &                                \\ \hline
-		Iteration 2     &                               &                                       &                                \\ \hline
-		Iteration 3     &                               &                                       &                                \\ \hline
-		Final stage     &                               &                                       &                          \\ \hline\hline
-		Total           & \multicolumn{3}{r|}{}                                                                                  \\ \hline
+		Unforeseen & \multicolumn{1}{l|}{Cost (€)} & \multicolumn{1}{l|}{Probability (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Broken computer & 1.300 & 5 & 65 \\ \hline
+		Delay GEP stage & 945 & 15 & 141,75\\ \hline
+		Delay initial stage & 990 & 15 & 148,5\\ \hline
+		Delay iteration 1 & 842,5 & 15 & 126,38\\ \hline
+		Delay iteration 2 & 842,5 & 15 & 126,38\\ \hline
+		Delay iteration 3 & 842,5 & 15 & 126,38\\ \hline
+		Delay final stage & 545 & 15 & 81,75\\ \hline\hline
+		Total & \multicolumn{3}{r|}{816,14} \\ \hline
 	\end{tabular}
-	\caption{Unforeseen}
+	\caption{Unforeseen Budget}
 	\label{Unforeseen}
 \end{table}
 
 \subsection{Total budget}
-some text
+In conclusion, the total budget of the project is:
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{l|r|}
 		\cline{2-2}
 		& \multicolumn{1}{l|}{Cost (€)} \\ \hline
-		\multicolumn{1}{|l|}{Direct costs}   &                               \\ \hline
-		\multicolumn{1}{|l|}{Indirect costs} &                               \\ \hline
-		\multicolumn{1}{|l|}{Contingency}    &                               \\ \hline
-		\multicolumn{1}{|l|}{Unforeseen}     &                               \\ \hline\hline
-		\multicolumn{1}{|l|}{Total}          &                               \\ \hline
+		\multicolumn{1}{|l|}{Direct costs} & 10.015\\ \hline
+		\multicolumn{1}{|l|}{Indirect costs}& 140,73\\ \hline
+		\multicolumn{1}{|l|}{Contingency} & 3.025,61\\ \hline
+		\multicolumn{1}{|l|}{Unforeseen} & 816,14\\ \hline\hline
+		\multicolumn{1}{|l|}{Total} & 13.997,48\\ \hline
 	\end{tabular}
-	\caption{Total budget}
+	\caption{Total Budget}
 	\label{TotalBudget}
 \end{table}
 \subsection{Control management}
+The control management mechanisms which will be used to study and compare deviations.\\
+
+For Human Resources, a follow-up of the hours will be done to see if the planning is accurate or not. With this information, some adjustments could be done. For example add or remove functionalities to achieve the dead line. An other method to solve the possible deviations could be reorganize the Gantt chart. Finally, if the deviations could not be avoided, the contingency budget would be used to compensate them.\\
+
+At the end of the project, the original estimated budget will be compared with the real one. Finally where deviations appeared, why, and how much will be studied. \\
+
+The indicators used for that are: Variance in cost by rate, efficiency variance, variance in totals, \ldots
 
 \section{Economic Dimension: Reflection}
+
 \subsection{PPP}
+The estimated budget of the project can be found in table \ref{TotalBudget}. The estimated budget ascends to 13.997,48€. This number has been estimated taking into account the working hours of each role, the hardware and software used, indirect costs, contingency, and unforeseen events. 
 \subsection{Shelf Life}
+Nowadays, the no optimization of Pseudo-Boolean encodings implies that the problems are bigger and harder which causes a long execution and more consumption of resources. With the optimizations that this project will study, the final execution time could be reduced therefore the power needed to solve the problem which translates in a more reduced cost.
+TODO: Pot ser millorat
+
 \subsection{Risks}
+As exposed previously, some risks are problems with the planning, problems with the tools used,\ldots\\
+The main risk is that the optimizations proposed are not useful in a practical environment. 
 
 \section{Environmental Dimension }
 \subsection{PPP}
-Vamos a medir en KWh.
-$$E=W\times T$$
+The estimated electric usage for this project can be found in this table \ref{OtherResources}. The estimation has been done with this expression: $E=\frac{W}{h} \times T$. In this project $E=\frac{51W}{1h}\times 450h = 22,950kW$\\
+
+It is hard to minimize more the impact of this project. Some strategies are turning off the computer when not using it, minimizing the amount of paper used, \ldots\\
+Some resources are reused, for example, instead of writing all the functionalities, some C++ libraries will be used.
 \subsection{Shelf Life}
-\subsection{Risks}
+It is hard to measure the footprint of this project along all its useful life. It will depend on the success of the project and how many people will use it. \\
+
+Currently SAT problems are executed in SAT-Solvers using some optimizations. This project purposes more optimizations to reduce the execution time. This will have a positive impact in the environment because it will reduce the total $CO^2$ emissions released by the computers used to solve them.
+\subsection{Risks} 
+The footprint of this project could be worst than expected if the development of it is extended.
 
 \section{Social Dimension}
 \subsection{PPP}
+At first, this project will improve my management and planing skills. It will also enhance my knowledge about the subject I will work on.
 \subsection{Shelf Life}
+This project will improve a lot of fields because SAT-Solvers are widely used. For example, Planners, Artificial Intelligence, \ldots \ which can have an unpredictable impact in the life of people.\\
+
+Currently this problem is solved using other techniques. The solution that this project purposes is an addition to them (it is not exclusive). There is a real need for this type of projects because as said previously, SAT is an NP-Complete problem therefore any improvement on this field is welcomed.
+
 \subsection{Risks}
+The only negative impact that this project can have is not being useful. In this case it will not be used and the society will remain the same.

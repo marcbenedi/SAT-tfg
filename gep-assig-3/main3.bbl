@@ -59,6 +59,29 @@
   \endverb
 \endentry
 
+\entry{PagePersonnel}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {PagePersonnel}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{{Selecci{\'{o}}n y trabajo temporal especializado}}
+  \verb{url}
+  \verb https://www.pagepersonnel.es/sites/pagepersonnel.es/files/er{\_}tecnolo
+  \verb gia16.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Unknown - Unknown - Selecci{\'{o}}n y trabajo temporal especializ
+  \verb ado.pdf:pdf
+  \endverb
+\endentry
+
 \entry{Universidad2013}{article}{}
   \name{author}{2}{}{%
     {{}%
