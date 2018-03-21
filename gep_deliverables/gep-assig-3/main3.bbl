@@ -1,0 +1,134 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{UberTaxi}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {ElConfidencial}{E.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{E1}
+  \strng{fullhash}{E1}
+  \field{sortinit}{E}
+  \field{title}{{Uber: Taxis vs. Uber: tres a{\~{n}}os de conflicto. Noticias
+  de Tecnolog{\'{i}}a}}
+  \verb{url}
+  \verb https://www.elconfidencial.com/tecnologia/2017-12-20/uber-conflicto-tax
+  \verb is-espana-sentencia{\_}1495885/
+  \endverb
+\endentry
+
+\entry{Ghana}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GreenPace}{G.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{G1}
+  \strng{fullhash}{G1}
+  \field{sortinit}{G}
+  \field{title}{{greenpeace.es Envenenando la pobreza Residuos
+  electr{\'{o}}nicos en Ghana}}
+  \verb{url}
+  \verb https://www.greenpeace.org/argentina/Global/argentina/report/2008/10/en
+  \verb venenando-la-pobreza-resid.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Unknown - Unknown - greenpeace.es Envenenando la pobreza Residuos
+  \verb  electr{\'{o}}nicos en Ghana.pdf:pdf
+  \endverb
+\endentry
+
+\entry{PagePersonnel}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {PagePersonnel}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{{Selecci{\'{o}}n y trabajo temporal especializado}}
+  \verb{url}
+  \verb https://www.pagepersonnel.es/sites/pagepersonnel.es/files/er{\_}tecnolo
+  \verb gia16.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Unknown - Unknown - Selecci{\'{o}}n y trabajo temporal especializ
+  \verb ado.pdf:pdf
+  \endverb
+\endentry
+
+\entry{Universidad2013}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Universidad}{U.}%
+     {Fernando~Tucho}{F.~T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Carlos}{C.}%
+     {Rey~Juan}{R.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{UFTCRJ1}
+  \strng{fullhash}{UFTCRJ1}
+  \field{sortinit}{U}
+  \field{abstract}{%
+  Este art{\'{i}}culo presenta una serie de datos e informaciones que nos
+  ayudan a tomar conciencia del enorme impacto que tiene la industria de las
+  Tecnolog{\'{i}}as de la Informaci{\'{o}}n y la Comunicaci{\'{o}}n sobre
+  nuestro medioambiente. El objetivo es ayudarnos a reflexionar sobre
+  c{\'{o}}mo podemos reducir nuestra huella ecol{\'{o}}gica en un {\'{a}}mbito
+  que cada d{\'{i}}a utilizamos m{\'{a}}s aunque quiz{\'{a}} muchas veces de
+  manera prescindible. El imparable avance de la " Sociedad de la
+  Informaci{\'{o}}n " Las cifras que nos informan del avance de la " Sociedad
+  de la Informaci{\'{o}}n " en cuanto a penetraci{\'{o}}n y uso de las
+  tecnolog{\'{i}}as de la informaci{\'{o}}n y la comunicaci{\'{o}}n (TICs) en
+  nuestras sociedades no dejan de crecer. Solo en Espa{\~{n}}a, el n{\'{u}}mero
+  de personas de 10 a{\~{n}}os y m{\'{a}}s que han accedido a Internet en
+  alguna ocasi{\'{o}}n alcanz{\'{o}} en el tercer trimestre de 2012 los 29
+  millones de usuarios, lo que representa al 71,2{\%} de la poblaci{\'{o}}n. El
+  65{\%} lo hace de manera frecuente, el 50{\%}, a diario 1%
+  }
+  \field{title}{{El impacto de las TICs sobre el medioambiente}}
+  \verb{url}
+  \verb http://www.ecologiaymedia.info/wp/wp-content/uploads/2015/01/el-impacto
+  \verb -de-las-TICs-sobre-el-medioambiente{\_}mayo13.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Universidad, Carlos - 2013 - El impacto de las TICs sobre el medi
+  \verb oambiente.pdf:pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

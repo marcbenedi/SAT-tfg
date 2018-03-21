@@ -1,0 +1,229 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Cook1971}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Cook}{C.}%
+     {Stephen~A.}{S.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM Press}%
+  }
+  \strng{namehash}{CSA1}
+  \strng{fullhash}{CSA1}
+  \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the third annual ACM symposium on Theory of
+  computing - STOC '71}
+  \verb{doi}
+  \verb 10.1145/800157.805047
+  \endverb
+  \field{pages}{151\bibrangedash 158}
+  \field{title}{{The complexity of theorem-proving procedures}}
+  \verb{url}
+  \verb http://portal.acm.org/citation.cfm?doid=800157.805047
+  \endverb
+  \list{location}{1}{%
+    {New York, New York, USA}%
+  }
+  \field{year}{1971}
+\endentry
+
+\entry{Lpo}{misc}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Farr{\'{e}}}{F.}%
+     {Rafael}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nieuwenhuis}{N.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nivela}{N.}%
+     {Pilar}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Oliveras}{O.}%
+     {Albert}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rodr{\'{i}}guez}{R.}%
+     {Enric}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{FR+1}
+  \strng{fullhash}{FRNRNPOARE1}
+  \field{sortinit}{F}
+  \field{title}{{Notas de Clase para IL - 2.Definici{\'{o}}n de la L{\'{o}}gica
+  Proposicional}}
+  \verb{url}
+  \verb https://app.box.com/file/225148187559
+  \endverb
+  \list{location}{1}{%
+    {Barcelona}%
+  }
+  \field{year}{2009}
+\endentry
+
+\entry{Holldobler}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {H{\"{o}}lldobler}{H.}%
+     {Steffen}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Manthey}{M.}%
+     {Norbert}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Steinke}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HSMNSP1}
+  \strng{fullhash}{HSMNSP1}
+  \field{sortinit}{H}
+  \field{abstract}{%
+  Many different encodings for pseudo-Boolean constraints to the Boolean
+  satisfiability problem have been proposed in the past. In this work we
+  present a novel small sized and simple to implement encoding. The encoding
+  maintains generalized arc consistency by unit propagation and results in a
+  linear sized formula in conjunctive normal form with respect to the number of
+  input variables. Experimental data confirms the advantages of the encoding
+  over existing ones for most of the relevant PB instances.%
+  }
+  \field{title}{{A Compact Encoding of Pseudo-Boolean Constraints into SAT}}
+  \verb{url}
+  \verb https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2{\&}i
+  \verb k=7328377021{\&}view=att{\&}th=15e2e7b559196d67{\&}attid=0.2{\&}disp=in
+  \verb line{\&}safe=1{\&}zw{\&}saddbat=ANGjdJ9S{\_}JppQCGQWibmAw70nm3SJsSOBhJg
+  \verb 1PGGwc8D5mdov9JRPuNYNPKnUhEwqiRBmWtvbS0tWSUSFbjX2PO6xhByHH1u3uJyl20bqvi
+  \verb e{\_}A5wVWlyGHOKOsaPgNPEw3Y8EjoJoRyRKQ03MZA1Uma98pSK7xDtv5FPsTktHevmFB7
+  \verb ZP79m3vMbP7MvPgILPjcw0ppjmrcPa0T7u08d8WKIaj2ok8ZGK4xizwJ53fwq7jH8zWEgbM
+  \verb LdH3iV0HUpJDN0U619MSv{\_}2u{\_}{\_}eWwhfC14QE82TOnITUjuH7rGsdMKwsKwRrkw
+  \verb i-CoyPoJT8RAmSh2jKobXWTIejzVljGM8WWvOmglerOOPLjVRbR5H{\_}pgrV1LSjW4clhx
+  \verb qLfJfA-jW7Hi-AHADvop{\_}Z{\_}IiGErkOr-rhH9aMR7Z6-pcC4aECx046{\_}NOeCx5F
+  \verb hmf-z71ZuWwUZ3PrMtEdDrDoJrmLDa2sWDQIuNom4yykZjVqBNSNoimvTOdUk31nwa85Bxf
+  \verb {\_}CnkIjv5T15jmLv-hZGLO1f77keyiLsiHKGLZ{\_}HAJGw9oLDXThmzAB0ivSmGjszgd
+  \verb j{\_}X1ODplVtdsqWtqViPDVmbct0tXfd33PYgBil3I08hQ
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/H{\"{o}}lldobler, Manthey, Steinke - Unknown - A Compact Encoding
+  \verb  of Pseudo-Boolean Constraints into SAT.pdf:pdf
+  \endverb
+\endentry
+
+\entry{Mitchell}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Mitchell}{M.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Selman}{S.}%
+     {Bart}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Levesque}{L.}%
+     {Hector}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MDSBLH1}
+  \strng{fullhash}{MDSBLH1}
+  \field{sortinit}{M}
+  \field{abstract}{%
+  We report results from large-scale experiments in satisfiability testing. As
+  has been observed by others, testing the satisfiability of random formu-las
+  often appears surprisingly easy. Here we show that by using the right
+  distribution of instances, and appropriate parameter values, it is possible
+  to generate random formulas that are hard, that is, for which satisfiability
+  testing is quite difficult. Our results provide a benchmark for the
+  evalua-tion of satisfiability-testing procedures.%
+  }
+  \field{title}{{Hard and Easy Distributions of SAT Problems}}
+  \verb{url}
+  \verb https://aaai.org/Papers/AAAI/1992/AAAI92-071.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Mitchell, Selman, Levesque - Unknown - Hard and Easy Distribution
+  \verb s of SAT Problems.pdf:pdf
+  \endverb
+\endentry
+
+\entry{Steinke2015}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Steinke}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{sortinit}{S}
+  \field{abstract}{%
+  Many different encodings for PB constraints into conjunctive normal form
+  (CNF) have been proposed in the past. The PBLib project starts to collect and
+  implement these encodings to be able to encode PB constraints in a very
+  simple, but effective way. The aim is not only to generate as few clauses as
+  possible, but also using encodings that maintain generalized arc consistency
+  by unit propagation, to speedup the run time of the SAT solver, solving the
+  formula. A major issue of the implementation is a high flexibility for the
+  user. Consequently it is not required to bring a PB constraint into a certain
+  normal form. The PBLib automatically normalizes the constraints and decides
+  which encoder provides the most effective translation. The user can also
+  define constraints with two comparators (less equal and greater equal) and
+  each PB constraint can be encoded in an incre-mental way: After an initial
+  encoding it is possible to add a tighter bound with only a few additional
+  clauses. This mechanism allows the user to develop SAT-based solvers for
+  optimization problems with incremental strengthening and to keep the learned
+  clauses for incremental SAT solver calls.%
+  }
+  \field{title}{{PBLib – A C++ Toolkit for Encoding Pseudo-Boolean
+  Constraints into CNF}}
+  \verb{url}
+  \verb http://tools.computational-logic.org/content/pblib/pblib.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Steinke - 2015 - PBLib – A C Toolkit for Encoding Pseudo-Boolea
+  \verb n Constraints into CNF.pdf:pdf
+  \endverb
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
