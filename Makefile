@@ -18,12 +18,20 @@ CUDD_LIBS_INCLUDE = -L$(CUDD)/cudd/.libs
 #-L$(CUDD)/cplusplus/.libs  -L$(CUDD)/util -L$(CUDD)/mtr/.libs -L$(CUDD)/st/.libs
 CUDD_LIBS = -lcudd
 #-lobj -lutil -lmtr -lst #-lepd
+#  TEST
+GT_FOLDER = $(DIR)/googletest/googletest
+GT_INCLUDE = -I$(GT_FOLDER)/include
+GT_LIB_INCLUDE = -L$(GT_FOLDER)/make
+GT_LIBS = -lgtest_main
+#TESTING
+TEST_FOLDER = $(DIR)/test_files/
+TEST_BUILD = $(DIR)/test_build/
 
-all: compile_tfg lib_tfg compile_main link_main
-	echo hola
-	
-main: compile_main link_main
-	echo hola
+all:
+	make compile_tfg lib_tfg compile_main link_main
+
+main:
+	make compile_main link_main
 
 compile_main:
 	$(CC) -c -std=c++0x -g $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE)
@@ -47,3 +55,12 @@ lib_tfg:
 clean:
 	rm -f *.o *.gch $(MAIN)
 	rm -f $(TFG_BUILD)*.gch $(TFG_BUILD)*.o $(TFG_BUILD)*.a
+	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
+
+compile_tests:
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+
+link_tests:
+	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+
+	
