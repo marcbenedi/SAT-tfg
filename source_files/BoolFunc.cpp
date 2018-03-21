@@ -8,7 +8,7 @@ BoolFunc::BoolFunc() {}
 BoolFunc::BoolFunc(const std::string & name) {
     //QUESTION: Què passa si name ja existeix a VarsManager?
     type = NOD_ID;
-    value = VarsManager::newId(name);
+    value = VarsManager::getInstance().newId(name);
 }
 
 BoolFunc::BoolFunc(NodeType type, int value): type(type), value(value) {
@@ -28,7 +28,7 @@ BoolFunc::BoolFunc(NodeType param_type, Formula const & left, Formula const & ri
 
 BoolFunc::~BoolFunc() {
     //QUESTION: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
-    if(type == NOD_ID) VarsManager::freeId(value);
+    if(type == NOD_ID) VarsManager::getInstance().freeId(value);
     //delete child1; //BUG: b = !b recursiu
     child1 = NULL;
     //delete child2;
@@ -69,7 +69,7 @@ Formula BoolFunc::newXor(Formula
 }
 
 Formula BoolFunc::newLit(std::string var_name) {
-    int lit = VarsManager::newId(var_name);
+    int lit = VarsManager::getInstance().newId(var_name);
     return std::make_shared<BoolFunc>(NOD_ID,lit);
 }
 

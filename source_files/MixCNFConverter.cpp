@@ -9,7 +9,7 @@ void MixCNFConverter::baseCase(Formula const & f){
     BDD largestCube = bdd.LargestCube();//maxim 1's restants
     BDD prime = largestCube.MakePrime(bdd);//extendre'l a altres 1's
 
-    double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
+    double d = Cudd_CountMinterm(VarsManager::getInstance().getCuddMgr(),
                 prime.getNode(),
                 0);
     //f->print();
@@ -110,7 +110,7 @@ void MixCNFConverter::recursiveCase(Formula const & f){
     BDD largestCube = temp.LargestCube();//maxim 1's restants
     BDD prime = largestCube.MakePrime(temp);//extendre'l a altres 1's
 
-    double d = Cudd_CountMinterm(VarsManager::getCuddMgr(),
+    double d = Cudd_CountMinterm(VarsManager::getInstance().getCuddMgr(),
                 prime.getNode(),
                 0);
     // std::string  s_value = getenv ("D");

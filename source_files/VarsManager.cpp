@@ -2,6 +2,13 @@
 
 VarsManager::VarsManager(){};
 
+VarsManager VarsManager::getInstance(){
+    if(instance == NULL){
+        instance = new VarsManager;
+    }
+    return *instance;
+}
+
 int VarsManager::newId(const std::string & name) {
     //Check if exists in the map
     bool exists = name_to_index.find(name) != name_to_index.end();
@@ -66,9 +73,4 @@ DdManager* VarsManager::getCuddMgr(){
     return mgr.getManager();
 }
 
-
-int VarsManager::last_id = 0;
-std::queue<int> VarsManager::recyclable;
-std::map < std::string, int > VarsManager::name_to_index = {};
-std::map <int,int> VarsManager::cudd_to_index = {};
-Cudd VarsManager::mgr;
+VarsManager* VarsManager::instance = NULL;

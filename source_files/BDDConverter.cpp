@@ -8,9 +8,9 @@ BDD BDDConverter::convertFormulaRec(Formula const & boolFunc){
 
     //Base case
     if(type == NOD_ID) {
-        BDD aux = VarsManager::bddVar();
+        BDD aux = VarsManager::getInstance().bddVar();
         int idx = aux.NodeReadIndex();
-        VarsManager::storeCuddWithId(idx,boolFunc->getValue());
+        VarsManager::getInstance().storeCuddWithId(idx,boolFunc->getValue());
         return aux;//In this case a new var
     }
 

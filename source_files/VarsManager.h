@@ -19,37 +19,34 @@ private:
      * MARC: Realment no faria falta que el 0 i el 1 estiguin exclosos
      *       ja que sabrem si es true o false depenent del      NodeType
      */
-    static int last_id;
+    int last_id;
 
     //When an id is unused is pushed into this queue for a future use.
-    static std::queue<int> recyclable;
+    std::queue<int> recyclable;
 
     /**
      * Var name -> unique int id
      */
-    static std::map < std::string, int > name_to_index;
+    std::map < std::string, int > name_to_index;
     /**
      * BDD Var int -> unique int id
      */
-    static std::map < int, int > cudd_to_index;
+    std::map < int, int > cudd_to_index;
 
-    static Cudd mgr;
+    Cudd mgr;
+
+    static VarsManager* instance;
 
 public:
-
-    static int newId(const std::string & name  = "");
-
-    static void freeId(int id);
-
-    static int getLastId();
-
-    static void storeCuddWithId(int cudd, int id);
-    static int getIdFromCudd(int cudd);
-    static BDD bddVar();
-
-    static BDD bddVar(int i);
-
-    static DdManager* getCuddMgr();
+    static VarsManager getInstance();
+    int newId(const std::string & name  = "");
+    void freeId(int id);
+    int getLastId();
+    void storeCuddWithId(int cudd, int id);
+    int getIdFromCudd(int cudd);
+    BDD bddVar();
+    BDD bddVar(int i);
+    DdManager* getCuddMgr();
 
 };
 

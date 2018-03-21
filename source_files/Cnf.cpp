@@ -7,7 +7,7 @@ Clause Cnf::getClause(int i) const{
 int Cnf::getClauseNumber() const {return cnf.size();}
 
 int Cnf::getNumVars() const {
-    int last_id = VarsManager::getLastId();
+    int last_id = VarsManager::getInstance().getLastId();
     std::vector<bool> counters = std::vector<bool>(last_id+1,false);
     //NOTE: Trobar alguna forma de fer millor aquest mètode
     for (int i = 0; i < getClauseNumber(); ++i ) {
