@@ -37,76 +37,20 @@ private:
 
 public:
 
-    static int newId(const std::string & name = "") {
-        //Check if exists in the map
-        bool exists = name_to_index.find(name) != name_to_index.end();
+    static int newId(const std::string & name);
 
-        if(exists) assert(false);
-        //IDEA: Si existeix es copia
-        //Aleshores hauria de tenir una estructura amb una referència a totes les formules creades
+    static void freeId(int id);
 
-        int id;
+    static int getLastId();
 
-        if(!recyclable.empty()){
-            id = recyclable.front();
-            recyclable.pop();
-        }
-        else{
-            ++last_id;
-            id = last_id;
-        }
+    static void storeCuddWithId(int cudd, int id);
+    static int getIdFromCudd(int cudd);
+    static BDD bddVar();
 
-        //NOTE: "" is used when it does not need to be stored
-        if (name != ""){name_to_index[name] = id;}
-        return id;
+    static BDD bddVar(int i);
 
-    }
-
-    static void freeId(int id){
-        //TODO: if id belongs also to cudd_to_index, delete from it too.
-        recyclable.push(id);
-        //Delete id from the map
-        std::map<std::string,int>::iterator it_delete;
-        bool found = false;
-        for (std::map<std::string,int>::iterator it = name_to_index.begin();
-                it != name_to_index.end() && !found; ++it )
-            if (it->second == id){
-                it_delete = it;
-                found = true;
-            }
-        //If the key is "" we will not find it
-        if (found)
-            name_to_index.erase(it_delete);
-
-    }
-
-    static int getLastId(){return last_id;}
-
-    static void storeCuddWithId(int cudd, int id){
-        cudd_to_index[cudd] = id;
-        //BUG: this map never releases memory
-    }
-    static int getIdFromCudd(int cudd){
-        return cudd_to_index[cudd];
-    }
-    static BDD bddVar(){
-        return mgr.bddVar();
-    }
-
-    static BDD bddVar(int i){
-        return mgr.bddVar(i);
-    }
-
-    static DdManager* getCuddMgr(){
-        return mgr.getManager();
-    }
+    static DdManager* getCuddMgr();
 
 };
-
-int VarsManager::last_id = 0;
-std::queue<int> VarsManager::recyclable;
-std::map < std::string, int > VarsManager::name_to_index = {};
-std::map <int,int> VarsManager::cudd_to_index = {};
-Cudd VarsManager::mgr;
 
 #endif // VARSMANAGER_H

@@ -193,7 +193,4 @@ int main() {
     //cnfBDD();
     //mixVSbdd();
     input1();
-
-
-
 }
