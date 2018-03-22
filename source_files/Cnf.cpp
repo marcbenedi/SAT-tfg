@@ -7,23 +7,18 @@ Clause Cnf::getClause(int i) const{
 int Cnf::getClauseNumber() const {return cnf.size();}
 
 int Cnf::getNumVars() const {
-    int last_id = VarsManager::getInstance().getLastId();
-    std::vector<bool> counters = std::vector<bool>(last_id+1,false);
-    //NOTE: Trobar alguna forma de fer millor aquest mètode
+    std::set<int> myset;
+
     for (int i = 0; i < getClauseNumber(); ++i ) {
         Clause c = cnf[i];
         for (int j = 0; j < c.getNumVars(); ++j) {
             int var = c.getVar(j);
             if(var < 0) var = -var;
-            counters[var]=true;
+            myset.insert(var);
         }
     }
 
-    int suma = 0;
-    for (int i = 0; i < last_id+1; ++i ) {
-        if(counters[i])suma += 1;
-    }
-    return suma;
+    return myset.size();
 }
 
 void Cnf::addClause(Clause const & clause){

@@ -2,8 +2,8 @@
 #define CNF_H
 
 #include <vector>
+#include <set>
 #include "Clause.h"
-#include "VarsManager.h"
 
 class Cnf{
 private:
@@ -14,7 +14,6 @@ public:
     int getNumVars() const;
     void addClause(Clause const & clause);
     void addCnf(Cnf const & param);
-    //NOTE: Assegurar-se de que funciona bé
     void addUnsat();
     void print() const;
     //BUG: Les variables han d'anar entre 1 i num_vars.

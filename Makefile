@@ -8,8 +8,6 @@ CC = g++
 TFG_FOLDER = $(DIR)/source_files/
 TFG_BUILD = $(DIR)/source_build/
 TFG_INCLUDE = -I$(TFG_FOLDER)
-TFG_O = BoolFunc.o VarsManager.o Clause.o Cnf.o CnfConverter.o BDDConverter.o SatSolver.o MixCNFConverter.o
-TFG_OS = $(foreach TFG_O,$(TFG_O),$(TFG_BUILD)$(TFG_O))
 TFG_LIBS = -ltfg
 #CUDD
 CUDD = $(DIR)/cudd-3.0.0
@@ -27,21 +25,18 @@ GT_LIBS = -lgtest_main
 TEST_FOLDER = $(DIR)/test_files/
 TEST_BUILD = $(DIR)/test_build/
 
-all:
-	make compile_tfg lib_tfg compile_main link_main
-
-main:
-	make compile_main link_main
-
 compile_main:
 	$(CC) -c -std=c++0x -g $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE)
 
 link_main:
 	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) -static $(CUDD_LIBS)
 
+main:
+	make compile_main link_main
+
 compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Clause.cpp -o $(TFG_BUILD)Clause.o
-	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Cnf.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)Cnf.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Cnf.cpp -o $(TFG_BUILD)Cnf.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)VarsManager.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)VarsManager.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)BoolFunc.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)BoolFunc.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)CnfConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)CnfConverter.o
@@ -50,7 +45,10 @@ compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
 
 lib_tfg:
-	ar rcs $(TFG_BUILD)libtfg.a $(TFG_OS)
+	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
+
+tfg:
+	make compile_tfg lib_tfg
 
 clean:
 	rm -f *.o *.gch $(MAIN)
@@ -59,8 +57,13 @@ clean:
 
 compile_tests:
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 
 link_tests:
 	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 
-	
+tests:
+	make compile_tests link_tests
+	./test_build/Clause_UT
+	./test_build/Cnf_UT
