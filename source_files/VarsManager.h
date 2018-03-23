@@ -47,6 +47,7 @@ public:
     BDD bddVar();
     BDD bddVar(int i);
     DdManager* getCuddMgr();
+    int getNumIds();
 
 };
 

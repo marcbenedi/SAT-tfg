@@ -57,13 +57,16 @@ clean:
 
 compile_tests:
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 
 link_tests:
 	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 
 tests:
 	make compile_tests link_tests
 	./test_build/Clause_UT
 	./test_build/Cnf_UT
+	./test_build/VarsManager_UT

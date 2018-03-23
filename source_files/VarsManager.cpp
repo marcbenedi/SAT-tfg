@@ -13,9 +13,9 @@ int VarsManager::newId(const std::string & name) {
     //Check if exists in the map
     bool exists = name_to_index.find(name) != name_to_index.end();
 
-    if(exists) assert(false);
-    //IDEA: Si existeix es copia
-    //Aleshores hauria de tenir una estructura amb una referència a totes les formules creades
+    if(exists) {
+        return name_to_index[name];
+    }
 
     int id;
 
@@ -71,6 +71,10 @@ BDD VarsManager::bddVar(int i){
 
 DdManager* VarsManager::getCuddMgr(){
     return mgr.getManager();
+}
+
+int VarsManager::getNumIds(){
+    return name_to_index.size();
 }
 
 VarsManager* VarsManager::instance = NULL;
