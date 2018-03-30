@@ -1,12 +1,12 @@
 #include "VarsManager.h"
 
-VarsManager::VarsManager(){};
+VarsManager::VarsManager(){}
 
-VarsManager VarsManager::getInstance(){
+VarsManager* VarsManager::getInstance(){
     if(instance == NULL){
         instance = new VarsManager;
     }
-    return *instance;
+    return instance;
 }
 
 int VarsManager::newId(const std::string & name) {
@@ -53,6 +53,7 @@ void VarsManager::freeId(int id){
 }
 
 int VarsManager::getLastId(){return last_id;}
+void VarsManager::setLastId(int n){last_id = n;}
 
 void VarsManager::storeCuddWithId(int cudd, int id){
     cudd_to_index[cudd] = id;
@@ -75,6 +76,10 @@ DdManager* VarsManager::getCuddMgr(){
 
 int VarsManager::getNumIds(){
     return name_to_index.size();
+}
+
+void VarsManager::clearInstance(){
+    instance = NULL;
 }
 
 VarsManager* VarsManager::instance = NULL;

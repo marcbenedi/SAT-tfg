@@ -43,14 +43,10 @@ class BoolFunc {
     BoolFunc();
 
     //Converting constructors
-
     BoolFunc(const std::string & name);
-
-    BoolFunc(NodeType type, int value);
-
     BoolFunc(NodeType param_type, Formula const & param_child);
-
     BoolFunc(NodeType param_type, Formula const & left, Formula const & right);
+    BoolFunc(NodeType param_type, Formula const & left, Formula const & right, int param_value);
 
     ~BoolFunc();
 
@@ -83,6 +79,7 @@ class BoolFunc {
 
 //////////////////////////////OTHER FUNCTIONS///////////////////////////////////
     void print(int level=0) const;
+    // BoolFunc & operator = (const BoolFunc & f);
 };
 
 //////////////////////////////FORMULA OPERATORS/////////////////////////////////

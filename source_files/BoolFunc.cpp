@@ -6,13 +6,8 @@ BoolFunc::BoolFunc() {}
 //Converting constructors
 
 BoolFunc::BoolFunc(const std::string & name) {
-    //QUESTION: Què passa si name ja existeix a VarsManager?
     type = NOD_ID;
-    value = VarsManager::getInstance().newId(name);
-}
-
-BoolFunc::BoolFunc(NodeType type, int value): type(type), value(value) {
-    assert(type == NOD_ID);
+    value = VarsManager::getInstance()->newId(name);
 }
 
 BoolFunc::BoolFunc(NodeType param_type, Formula const & param_child): type(param_type), value(UNDEF) {
@@ -25,10 +20,16 @@ BoolFunc::BoolFunc(NodeType param_type, Formula const & left, Formula const & ri
     child1 = left;
     child2 = right;
 }
+BoolFunc::BoolFunc(NodeType param_type, Formula const & left, Formula const & right, int param_value):
+    type(param_type), value(param_value) {
+        child1 = left;
+        child2 = right;
+    }
 
 BoolFunc::~BoolFunc() {
     //QUESTION: En cas que sigui NOD_ID s'ha d'eliminar del map la variable?
-    if(type == NOD_ID) VarsManager::getInstance().freeId(value);
+    // potser no perque potser algu tambe l'esta fent servir ...
+    if(type == NOD_ID) VarsManager::getInstance()->freeId(value);
     //delete child1; //BUG: b = !b recursiu
     child1 = NULL;
     //delete child2;
@@ -69,8 +70,7 @@ Formula BoolFunc::newXor(Formula
 }
 
 Formula BoolFunc::newLit(std::string var_name) {
-    int lit = VarsManager::getInstance().newId(var_name);
-    return std::make_shared<BoolFunc>(NOD_ID,lit);
+    return std::make_shared<BoolFunc>(var_name);
 }
 
 //////////////////////////////OTHER FUNCTIONS///////////////////////////////////
@@ -105,7 +105,7 @@ void BoolFunc::print(int level) const {
     std::cout << "-----------------------" << std::endl;
 }
 
-// BoolFunc & operator = (const BoolFunc & param){
+// BoolFunc & BoolFunc::operator = (const BoolFunc & param){
 //   std::cout << "operator = " << std::endl;
 //   param.print();
 //   if (this == &param) {
@@ -114,18 +114,17 @@ void BoolFunc::print(int level) const {
 //   }
 //   else{
 //       std::cout << "Les adreces son diferents" << std::endl;
-//       //type = param.type;
-//       //value = param.value;
-//       //child1 = param.child1;
-//       //child2 = param.child2;
-//       //child3 = param.child3;
+//       type = param.type;
+//       value = param.value;
+//       child1 = param.child1;
+//       child2 = param.child2;
+//       child3 = param.child3;
 //   }
 //   BoolFunc *t = new BoolFunc(param.type, *param.child1);
 //   std::cout << "pene" << std::endl;
 //   t->print();
 //   return *t;
 // }
-
 
 //////////////////////////////FORMULA OPERATORS/////////////////////////////////
 Formula operator!(Formula const & f) {
@@ -149,15 +148,38 @@ Formula operator + (Formula const & a, Formula const & b) {
 Formula operator ^ (Formula const & a, Formula const & b) {
     return BoolFunc::newXor(a, b);
 }
+
+// Formula operator = (Formula & f){
+//     std::cout<<"copy constructor called\n";
+//     return std::make_shared<BoolFunc>(f->getType(),f->getChild1(),f->getChild2(),f->getValue());
+// }
 //BUG: Els operadors tipus += no funcionen bé
 Formula operator += (const Formula & lhs, const Formula & rhs) {
-    return BoolFunc::newOr(lhs, rhs);
+    Formula old_lhs = std::make_shared<BoolFunc>(lhs->getType(),lhs->getChild1(),lhs->getChild2(),lhs->getValue());
+
+    lhs->setType(NOD_OR);
+    lhs->setChild2(rhs);
+    lhs->setChild1(old_lhs);
+    lhs->setValue(UNDEF);
+    return lhs;
 }
 
 Formula operator *= (const Formula & lhs, const Formula & rhs) {
-    return BoolFunc::newAnd(lhs, rhs);
+    Formula old_lhs = std::make_shared<BoolFunc>(lhs->getType(),lhs->getChild1(),lhs->getChild2(),lhs->getValue());
+
+    lhs->setType(NOD_AND);
+    lhs->setChild2(rhs);
+    lhs->setChild1(old_lhs);
+    lhs->setValue(UNDEF);
+    return lhs;
 }
 
 Formula operator ^= (const Formula & lhs, const Formula & rhs) {
-    return BoolFunc::newXor(lhs, rhs);
+    Formula old_lhs = std::make_shared<BoolFunc>(lhs->getType(),lhs->getChild1(),lhs->getChild2(),lhs->getValue());
+
+    lhs->setType(NOD_XOR);
+    lhs->setChild2(rhs);
+    lhs->setChild1(old_lhs);
+    lhs->setValue(UNDEF);
+    return lhs;
 }

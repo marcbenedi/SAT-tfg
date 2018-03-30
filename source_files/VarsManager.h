@@ -11,6 +11,9 @@
 
 class VarsManager {
 private:
+
+    static VarsManager* instance;
+
     VarsManager();
     /**
      * Used to assign unique int id in name_to_index
@@ -19,7 +22,7 @@ private:
      * MARC: Realment no faria falta que el 0 i el 1 estiguin exclosos
      *       ja que sabrem si es true o false depenent del      NodeType
      */
-    int last_id;
+    int last_id = 0;
 
     //When an id is unused is pushed into this queue for a future use.
     std::queue<int> recyclable;
@@ -35,19 +38,18 @@ private:
 
     Cudd mgr;
 
-    static VarsManager* instance;
-
 public:
-    static VarsManager getInstance();
+    static VarsManager* getInstance();
     int newId(const std::string & name  = "");
     void freeId(int id);
-    int getLastId();
+    int getLastId(); void setLastId(int n);
     void storeCuddWithId(int cudd, int id);
     int getIdFromCudd(int cudd);
     BDD bddVar();
     BDD bddVar(int i);
     DdManager* getCuddMgr();
     int getNumIds();
+    void clearInstance();
 
 };
 

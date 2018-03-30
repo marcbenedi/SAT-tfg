@@ -51,7 +51,7 @@ Cnf CnfConverter::tseitinRec(Formula const & boolFunc, std::map<Formula,int> & a
     else if(type == NOD_AND || type == NOD_OR){
         int varC1 = getNodeVar(child1, auxToNode);
         int varC2 = getNodeVar(child2, auxToNode);
-        int me = VarsManager::getInstance().newId("");
+        int me = VarsManager::getInstance()->newId("");
         //Insert ourself into the map
         auxToNode[boolFunc] = me;
 
@@ -125,8 +125,8 @@ Cnf CnfConverter::convertToCnf(const BDD & f){
         while (not prime.IsOne()) {
 
             int idx = prime.NodeReadIndex();
-            int my_idx = VarsManager::getInstance().getIdFromCudd(idx);
-            BDD v = VarsManager::getInstance().bddVar(idx);
+            int my_idx = VarsManager::getInstance()->getIdFromCudd(idx);
+            BDD v = VarsManager::getInstance()->bddVar(idx);
             BDD cof = prime.Cofactor(v);
             if (not cof.IsZero()) {
                 // Positive literal (negative in the CNF)

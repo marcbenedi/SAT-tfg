@@ -17,33 +17,6 @@ void print(std::string s){
         std::cout << s << std::endl;
 }
 
-void tseitinVSbdd(){
-    Formula a = BoolFunc::newLit("a");
-    Formula b = BoolFunc::newLit("b");
-    Formula c = BoolFunc::newLit("c");
-    Formula d = BoolFunc::newLit("d");
-    Formula rt = BoolFunc::newLit("rt");
-    Formula rc = BoolFunc::newLit("rc");
-    Formula f = a*!b+c*!d;
-    //Formula f = a+b*!c+d*a*b;
-
-    Formula f2 = !rt*!f + rt*f;
-    Formula f3 = !rc*!f + rc*f;
-    Formula f4 = !rc*rt + rc*!rt;
-
-    BDD f3_bdd = BDDConverter::convertFormula(f3);
-
-    Cnf f2_cnf = CnfConverter::tseitin(f2);
-    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
-    Cnf f4_cnf = CnfConverter::tseitin(f4);
-
-    Cnf cnf;
-    cnf.addCnf(f2_cnf);
-    cnf.addCnf(f3_cnf);
-    cnf.addCnf(f4_cnf);
-    std::cout << SatSolver::solve2(cnf) << std::endl;
-}
-
 Formula a = BoolFunc::newLit("a");
 Formula b = BoolFunc::newLit("b");
 Formula c = BoolFunc::newLit("c");
@@ -70,6 +43,31 @@ Formula w = BoolFunc::newLit("w");
 Formula x = BoolFunc::newLit("x");
 Formula y = BoolFunc::newLit("y");
 Formula z = BoolFunc::newLit("z");
+
+void tseitinVSbdd(){
+    Formula rt = BoolFunc::newLit("rt");
+    Formula rc = BoolFunc::newLit("rc");
+    Formula fff = a*!b+c*!d;
+    //Formula f = a+b*!c+d*a*b;
+
+    Formula f2 = !rt*!f + rt*fff;
+    Formula f3 = !rc*!f + rc*fff;
+    Formula f4 = !rc*rt + rc*!rt;
+
+    BDD f3_bdd = BDDConverter::convertFormula(f3);
+
+    Cnf f2_cnf = CnfConverter::tseitin(f2);
+    Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
+    Cnf f4_cnf = CnfConverter::tseitin(f4);
+
+    Cnf cnf;
+    cnf.addCnf(f2_cnf);
+    cnf.addCnf(f3_cnf);
+    cnf.addCnf(f4_cnf);
+    std::cout << SatSolver::solve2(cnf) << std::endl;
+}
+
+
 
 Formula vars[26] = {a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
 
@@ -129,29 +127,20 @@ void mixMethod(){
 }
 
 void cnfBDD(){
-    print("cnfBDD");
-    Formula a = BoolFunc::newLit("a");
-    Formula b = BoolFunc::newLit("b");
-    Formula c = BoolFunc::newLit("c");
-    Formula d = BoolFunc::newLit("d");
-    Formula f = a*!b+c*!d+a+b+c+!d;
-    BDD f3_bdd = BDDConverter::convertFormula(f);
+    Formula ffff = a*!b+c*!d+a+b+c+!d;
+    BDD f3_bdd = BDDConverter::convertFormula(ffff);
     Cnf f3_cnf = CnfConverter::convertToCnf(f3_bdd);
     f3_cnf.print();
 }
 
 void mixVSbdd(){
-    Formula a = BoolFunc::newLit("a");
-    Formula b = BoolFunc::newLit("b");
-    Formula c = BoolFunc::newLit("c");
-    Formula d = BoolFunc::newLit("d");
     Formula rbdd = BoolFunc::newLit("rbdd");
     Formula rmix = BoolFunc::newLit("rmix");
-    Formula f = a*!b+c*!d;
+    Formula ffff = a*!b+c*!d;
 
-    Formula f2 = !rbdd*!f + rbdd*f;
+    Formula f2 = !rbdd*!ffff + rbdd*ffff;
     //Formula f3 = !rmix*!bad + rmix*bad;
-    Formula f3 = !rmix*!f + rmix*f;
+    Formula f3 = !rmix*!ffff + rmix*ffff;
     Formula f4 = !rmix*rbdd + rmix*!rbdd;//XOR
 
     BDD f2_bdd = BDDConverter::convertFormula(f2);
@@ -179,7 +168,7 @@ void input1(){
     BDD largestCube = bdd.LargestCube();//maxim 1's restants
     BDD prime = largestCube.MakePrime(bdd);//extendre'l a altres 1's
 
-    double dd = Cudd_CountMinterm(VarsManager::getInstance().getCuddMgr(),
+    double dd = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
                 prime.getNode(),
                 0);
 
@@ -188,12 +177,10 @@ void input1(){
 
 int main() {
 
-    //tseitinVSbdd();
-    //mixMethod();
-    //cnfBDD();
-    //mixVSbdd();
+    // tseitinVSbdd();
+    // // mixMethod();
+    // // cnfBDD();
+    // // mixVSbdd();
     input1();
-
-
 
 }
