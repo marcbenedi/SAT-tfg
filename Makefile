@@ -35,6 +35,10 @@ main:
 	make compile_main link_main
 	./main
 
+main2:
+	$(CC) -c -std=c++0x -g $(MAIN)2.cpp $(TFG_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -o $(MAIN)2 $(MAIN)2.o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) -static $(CUDD_LIBS)
+
 compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Clause.cpp -o $(TFG_BUILD)Clause.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Cnf.cpp -o $(TFG_BUILD)Cnf.o
@@ -61,12 +65,20 @@ compile_tests:
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BoolFunc_UT.cpp -o $(TEST_BUILD)BoolFunc_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)CnfConverter_UT.cpp -o $(TEST_BUILD)CnfConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BDDConverter_UT.cpp -o $(TEST_BUILD)BDDConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 
 link_tests:
 	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
 	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
 	$(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 	$(CC) -o $(TEST_BUILD)BoolFunc_UT $(TEST_BUILD)BoolFunc_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)CnfConverter_UT $(TEST_BUILD)CnfConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)BDDConverter_UT $(TEST_BUILD)BDDConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 
 tests:
 	make compile_tests link_tests
@@ -74,3 +86,7 @@ tests:
 	./test_build/Cnf_UT
 	./test_build/VarsManager_UT
 	./test_build/BoolFunc_UT
+	./test_build/CnfConverter_UT
+	# ./test_build/BDDConverter_UT
+	# ./test_build/MixCNFConverter_UT
+	# ./test_build/SatSolver_UT

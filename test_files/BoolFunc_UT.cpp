@@ -175,4 +175,16 @@ namespace {
         ASSERT_EQ(a->getChild2(), b);
     }
 
+    void func(){
+        Formula a = BoolFunc::newLit("a");
+        VarsManager* m = VarsManager::getInstance();
+        ASSERT_EQ(m->getNumIds(), 1);
+    }
+
+    TEST(Destructor,destructor){
+        func();
+        VarsManager* m = VarsManager::getInstance();
+        ASSERT_EQ(m->getNumIds(),0);
+    }
+
 }
