@@ -45,6 +45,7 @@ public:
     int getLastId(); void setLastId(int n);
     void storeCuddWithId(int cudd, int id);
     int getIdFromCudd(int cudd);
+    int getCuddFromId(int id);
     BDD bddVar();
     BDD bddVar(int i);
     DdManager* getCuddMgr();

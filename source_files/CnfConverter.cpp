@@ -118,7 +118,7 @@ Cnf CnfConverter::convertToCnf(const BDD & f){
     while (not remainder.IsZero()) {
         BDD prime = remainder.LargestCube();
         prime = prime.MakePrime(g);
-        remainder *= !prime;
+        remainder *= !prime;//li elimina el prime (extreure)?
 
         clause.clear();
         // Store the cube as a clause

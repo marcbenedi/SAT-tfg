@@ -3,10 +3,22 @@
 
 namespace {
 
-    TEST(Constructors,node_id){
-        BoolFunc f = BoolFunc("a");
-        ASSERT_EQ(f.getType(),NOD_ID);
-        ASSERT_EQ(f.getValue(),1);
+    //TODO: this
+
+    TEST(Convert,var){
+
+    }
+
+    TEST(Convert,node_not){
+    }
+
+    TEST(Convert,node_and){
+    }
+
+    TEST(Convert,node_or){
+    }
+
+    TEST(Convert,node_xor){
     }
 
 }

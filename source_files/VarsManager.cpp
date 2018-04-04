@@ -62,6 +62,15 @@ void VarsManager::storeCuddWithId(int cudd, int id){
 int VarsManager::getIdFromCudd(int cudd){
     return cudd_to_index[cudd];
 }
+int VarsManager::getCuddFromId(int id){
+    std::map<int,int>::iterator it = cudd_to_index.begin();
+    while (it != cudd_to_index.end()) {
+        if(it->second == id)
+            return it->first;
+        it++;
+    }
+    return -1;
+}
 BDD VarsManager::bddVar(){
     return mgr.bddVar();
 }

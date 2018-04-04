@@ -35,6 +35,7 @@ public:
     void clear();
     void convert(Formula const & f);
     void setValueCover(int i);
+    bool worthToConvert(BDD const & f);
 };
 
 #endif // MIXCNFCONVERTER_H

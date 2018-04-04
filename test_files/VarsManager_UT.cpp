@@ -38,6 +38,8 @@ namespace {
         v->clearInstance();
     }
 
+    //TODO: new ID quan n'hi ha per reciclar
+
     TEST(NewId,repeatedId){
         VarsManager* v = VarsManager::getInstance();
         int a1 = v->newId("a");

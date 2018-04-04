@@ -56,7 +56,7 @@ tfg:
 	make compile_tfg lib_tfg
 
 clean:
-	rm -f *.o *.gch $(MAIN)
+	rm -f *.o *.gch $(MAIN) main2
 	rm -f $(TFG_BUILD)*.gch $(TFG_BUILD)*.o $(TFG_BUILD)*.a
 	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
 
@@ -86,7 +86,7 @@ tests:
 	./test_build/Cnf_UT
 	./test_build/VarsManager_UT
 	./test_build/BoolFunc_UT
-	./test_build/CnfConverter_UT
-	# ./test_build/BDDConverter_UT
+	# ./test_build/CnfConverter_UT
+	./test_build/BDDConverter_UT
 	# ./test_build/MixCNFConverter_UT
 	# ./test_build/SatSolver_UT
