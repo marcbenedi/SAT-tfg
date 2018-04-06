@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  3 APR 2018 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  5 APR 2018 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2044,6 +2044,11 @@ Chapter 2.
 
  (./Chapters/Ch3-Courses.tex
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
 )
 1: section
 [4
@@ -2127,20 +2132,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `main5.out' has not changed.
-(rerunfilecheck)             Checksum: E2D0CFFFC9EAF83EB27549214EB9710A;1902.
+(rerunfilecheck)             Checksum: 137814D61FD2C22BFDCCD21190508933;2150.
 Package logreq Info: Writing requests to 'main5.run.xml'.
 \openout1 = `main5.run.xml'.
 
  )
 (\end occurred when \iftrue on line 96 was incomplete) 
 Here is how much of TeX's memory you used:
- 31121 strings out of 494953
- 624920 string characters out of 6180978
+ 31125 strings out of 494953
+ 624964 string characters out of 6180978
  717487 words of memory out of 5000000
- 34028 multiletter control sequences out of 15000+600000
+ 34030 multiletter control sequences out of 15000+600000
  72181 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,21n,75p,10378b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,19n,76p,10378b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf
 -dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
@@ -2148,10 +2153,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main5.pdf (8 pages, 95732 bytes).
+Output written on main5.pdf (8 pages, 96598 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -57,15 +57,12 @@ Cnf CnfConverter::tseitinRec(Formula const & boolFunc, std::map<Formula,int> & a
 
         Clause c1,c2,c3;
 
-        //IDEA: Depenent de quin operador és i de si hi ha algun fill true o false, ja podem saber si es complirà o no
         if (type == NOD_AND) {
-            //Si un child és false ja sabem que no es complirà
             c1 = Clause(2,-me,varC1); //c1.addVar(-me);c1.addVar(varC1);
             c2 = Clause(2,-me,varC2); //c2.addVar(-me);c2.addVar(varC2);
             c3 = Clause(3,-varC1,-varC2,me); //c3.addVar(-varC1);c3.addVar(-varC2);c3.addVar(me);
         }
         else { //OR
-            //Si un dels childs es true ja sabem que es complirà
             c1 = Clause(2,me,-varC1); //c1.addVar(me);c1.addVar(-varC1);
             c2 = Clause(2,me,-varC2); //c2.addVar(me);c2.addVar(-varC2);
             c3 = Clause(3,varC1,varC2,-me); //c3.addVar(varC1);c3.addVar(varC2);c3.addVar(-me);
@@ -118,7 +115,7 @@ Cnf CnfConverter::convertToCnf(const BDD & f){
     while (not remainder.IsZero()) {
         BDD prime = remainder.LargestCube();
         prime = prime.MakePrime(g);
-        remainder *= !prime;//li elimina el prime (extreure)?
+        remainder *= !prime;
 
         clause.clear();
         // Store the cube as a clause

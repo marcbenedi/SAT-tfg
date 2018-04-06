@@ -165,55 +165,23 @@ bool MixCNFConverter::worthToConvert(const BDD & f){
 
     BDD remainder = f;
 
-    double d2 = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                f.getNode(),
-                0);
-    std::cout << "Original\t" <<d2 << '\n';
-    std::cout << '\n';
-
     while(not remainder.IsZero()){
         BDD cube = remainder.LargestCube();
         BDD prime = cube.MakePrime(f);
-        BDD prime2 = cube.MakePrime(remainder);
-        BDD remainderactual = remainder;
-        BDD primeremainder = remainder*prime;
-
-        remainder *= !prime;
-
-        double d5 = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                    remainderactual.getNode(),
-                    0);
-        std::cout << "Remainder Actual\t" <<d5 << '\n';
-
-        double d4 = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                    cube.getNode(),
-                    0);
-        std::cout << "Cube\t" <<d4 << '\n';
-
-        double d3 = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                    remainder.getNode(),
-                    0);
-        std::cout << "Remainder\t" <<d3 << '\n';
+        BDD primeremainder = prime*remainder;
 
         double d = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                    prime.getNode(),
-                    0);
-        std::cout << "Prime\t" << d << '\n';
-
-        double d6 = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
-                    prime2.getNode(),
-                    0);
-        std::cout << "Prime2\t" << d6 << '\n';
-
-        double pr = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
                     primeremainder.getNode(),
                     0);
-        std::cout << "PrimeRemainder\t" << pr << '\n';
 
-        if (d < X)
+        double dr = Cudd_CountMinterm(VarsManager::getInstance()->getCuddMgr(),
+                    remainder.getNode(),
+                    0);
+
+        if (d/dr < X)
             return false;
 
-        std::cout << '\n';
+        remainder *= !prime;
     }
 
     return true;

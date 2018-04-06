@@ -23,20 +23,16 @@ int main() {
     Formula f6 = a+b+c;
     Formula f7 = (a*b) + (c*d);
     Formula f8 = !f7;
+
     Formula f9 = ((!a)*b*(!c)*d) + (a*c);
     Formula f10 = !a*!b*d + a*b;
     Formula f11 = b*d + !b*!d;
 
-    BDD bdd = BDDConverter::convertFormula(f8);
-
-    BDD aa = VarsManager::getInstance()->bddVar();
-    BDD bb = VarsManager::getInstance()->bddVar();
-    BDD cc = VarsManager::getInstance()->bddVar();
-    BDD dd = VarsManager::getInstance()->bddVar();
-
-    BDD bdd2 = ((~aa)*bb*(~cc)*dd) + (aa*cc);
+    BDD bdd = BDDConverter::convertFormula(f6);
 
     MixCNFConverter mixCNFConverter;
     mixCNFConverter.worthToConvert(bdd);
+
+    Cnf cnf = CnfConverter::convertToCnf(bdd);
 
 }

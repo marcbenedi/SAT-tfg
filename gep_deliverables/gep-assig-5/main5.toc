@@ -14,5 +14,7 @@
 \contentsline {subsection}{\numberline {2.2.3}PBLib}{3}{subsection.14}
 \contentsline {subsection}{\numberline {2.2.4}Correctness}{3}{subsection.15}
 \contentsline {chapter}{\numberline {3}Computer science courses}{4}{chapter.16}
-\contentsline {chapter}{\numberline {4}Computer Science Adequacy}{5}{chapter.17}
-\contentsline {chapter}{\numberline {5}Technical Competences}{6}{chapter.18}
+\contentsline {section}{\numberline {3.1}Informatics Logic}{4}{section.17}
+\contentsline {section}{\numberline {3.2}Algorithms}{4}{section.18}
+\contentsline {chapter}{\numberline {4}Computer Science Adequacy}{5}{chapter.19}
+\contentsline {chapter}{\numberline {5}Technical Competences}{6}{chapter.20}

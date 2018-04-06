@@ -1,0 +1,85 @@
+\chapter{Project Scope}
+\label{Chapter2}
+
+\section{Project Formulation}
+
+As mentioned before\ref{Chapter1}, this project is an extension of a previous C++ library. The main goal of this project is to improve the time required to solve \emph{minimization} problems. To achieve this goal, the following objectives have been established. 
+
+\subsection{General objectives}
+
+\subsubsection{Pseudo-Boolean minimization}
+For the problems of the form $min(c_{1}x_{1}+c_{2}x_{2}+\ldots +c_{n}x_{n} \leq k)$, the goal is to find an assignment for $\{x_{1},x_{2},\ldots,x_{n}\}$ so that $k$ is minimum.
+
+Previously\ref{Chapter1}, it has been explained that this types of problems are \emph{NP-Hard}. This project will try to reduce the time to solve these problems through two approaches:
+\begin{itemize}
+	\item Binary search:\\
+	Implement the well known \emph{Binary Search}\footnote{Binary search is a search algorithm that finds the position of a target value within a sorted array. \href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{(more)}} algorithm to find the minimum value for $k$.
+	\item Linear search:\\
+	Some \emph{SAT Solvers} can learn and derive new restrictions from previous problems. To take advantage of this ability it is necessary to implement a \emph{Linear Search} algorithm.
+\end{itemize}
+
+\subsubsection{Timeout}
+For some problems, it is more important to find a solution before a deadline than finding the best possible solution. For instance, a delivery company must have all the route planned for all trucks before the journey starts, therefore, they care more about having a solution than finding the best one.\\
+For this, a \emph{Timeout strategy} will be implemented in case that a good enough solution has been found or the problem does not seem to have one. 
+\subsubsection{Multi-threading}
+This tool will take advantage of multi-core processors trying to split the problem and solving each part separately.
+
+\section{Scope}
+\subsection{What and how?}
+
+To achieve all the general objectives\ref{Chapter2} of the project, the following stages have been established:
+\begin{itemize}
+	\item Analyze, refactor\footnote{Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. \href{https://en.wikipedia.org/wiki/Code_refactoring}{(more)}} and test the existing code to have a solid base. 
+	\item Add the functionality of representing \emph{PBF}.
+	\item Study \href{http://tools.computational-logic.org/content/pblib.php}{PBLib} library to see which functionalities it has available to work with \emph{minimization}.
+	\item Implement \emph{minimization} strategies.
+	\item Study timeout strategies and implement them.
+	\item Study and implement multithreading.
+\end{itemize}
+
+\subsection{Possible obstacles}
+
+In this section, the possible obstacles and its solutions are exposed.
+
+\subsubsection{Base project}
+This project will be built on top of an existing one, as explained in \emph{Background section}\ref{Chapter1}. The existing project could be a source of bugs and other problems caused by not following an adequate methodology. For this reason and to solve possible issues, the first stage of the project will be focused on solving them.
+\subsubsection{Schedule}
+Due to the circumstances in which this project will be developed (Erasmus) possible delays could appear. To fix this circumstance, a realistic schedule with weekly communication will be planned. This will support a continuous development and detect as soon as possible delays. 
+
+\subsubsection{PBLib}
+One of the main requirements of this project, \emph{Pseudo-Boolean minimization}, is planned to be done with \emph{PBLib} library. It may be this library does not fit as expected with the project forcing to find a substitute. 
+
+\subsubsection{Correctness}
+As explained in \emph{Rigor and Validation}\ref{Chapter4}, correctness in this project is very important because of the context it is in. \\
+Guarantee correctness could be hard and take more time than expected. If this happens, formal correctness could be delayed or reduced. 
+
+\section{Methodology and Rigor}
+Research is a vast process with no clear path between \emph{a} and \emph{b}. For this, it is important to follow some directions. A methodology will provide some guidelines to avoid possible problems, be more efficient and do the project more manageable. 
+
+\subsection{Methodology}
+The methodology adopted for this project will be Agile\footnote{Methodology based on the on the adaptability in front of any change to improve exit possibilities.}. It is important to clarify that this methodology will not be followed strictly but adapted to this particular case where there is only one developer and all the objectives are well defined. The main characteristics followed from Agile in this project will be:
+\begin{itemize}
+	\item Short cycles
+	\item TDD (Test-Driven Development)
+	\item Weekly scrums with the supervisor
+\end{itemize}
+
+\subsection{Tools}
+In this chapter the, development tools will be introduced. 
+\subsubsection{Git}
+%\href{https://git-scm.com/}{Git} is a well known version control system developed by Linus Torvalds\footnote{Linux creator. \href{https://en.wikipedia.org/wiki/Linus_Torvalds}{(more)}}.\\
+\href{https://git-scm.com/}{Git} will be used in this project as a Version Control System because it allows maintaining a tracking of all the changes made (commits), and what is more important, return to them at any time. In addition to this, it enforces a short cycle development (because commits are small units of work) and the developer has to document them which matches perfectly with Agile methodology. \href{https://github.com}{GitHub} will be the repository service used.
+\subsubsection{Trello}
+\href{https://trello.com}{Trello} is a simple and flexible web board which helps to organize tasks and its state. It will be used in this project to manage tasks and priorities.  
+%\subsection{Mendeley}
+%\subsection{CLion}
+
+\subsection{Communication}
+Due to my conditions, I'm currently studying abroad in an Erasmus program, all the communication will be made through electronic means. The majority of it will be made using e-mail but if it is necessary a video conference could be done. \\
+The minimum communication with the supervisor will be a weekly e-mail report where all the tasks done during this period will be explained. Problems or questions will be also exposed if any.
+
+\subsection{Rigour and Validation}
+Rigor and Validation for this project are relevant. \\
+The surrounding of it, such as \emph{Artificial Intelligence, Planners, Cryptographic Protocols verification, \ldots}, are widely used nowadays and have been becoming more popular lately. This means that this project could have a big repercussion and be used by some professionals. For this, it is important to guarantee the validation and correctness of the project. \\
+During the development, TDD will be used to avoid unnecessary code (possible origin of bugs) and assure the correctness of the implementation. It is also possible to formalize and prove all the operations done by the software.\\
+Finally, my supervisor could give me some orientation and validate, if necessary, the operations done.
