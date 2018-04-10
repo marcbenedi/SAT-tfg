@@ -10,9 +10,8 @@ int CnfConverter::getNodeVar(Formula const & boolFunc, std::map<Formula,int> & a
 void CnfConverter::tseitinNOT(Formula const & boolFunc,
     std::map<Formula,int> & auxToNode, Formula const & child1){
 
-    NodeType typeChild = child1->getType();
+    //NodeType typeChild = child1->getType();
     int varChild = getNodeVar(child1, auxToNode);
-
     auxToNode[boolFunc] = -varChild;
 }
 
@@ -50,8 +49,11 @@ Cnf CnfConverter::tseitinRec(Formula const & boolFunc, std::map<Formula,int> & a
 
     else if(type == NOD_AND || type == NOD_OR){
         int varC1 = getNodeVar(child1, auxToNode);
+        std::cout << varC1 << '\n';
         int varC2 = getNodeVar(child2, auxToNode);
+        std::cout << varC2 << '\n';
         int me = VarsManager::getInstance()->newId("");
+        std::cout << me << '\n';
         //Insert ourself into the map
         auxToNode[boolFunc] = me;
 
@@ -89,7 +91,7 @@ Cnf CnfConverter::CnfConverter::tseitin(Formula const & boolFunc){
     Cnf result = tseitinRec(boolFunc,auxToNode);
     //We add a new Clause which is the aux var of the root node
     //Root node must be satisfied
-    int varRoot = auxToNode[boolFunc];
+    int varRoot = getNodeVar(boolFunc,auxToNode);
     Clause c = Clause(1, varRoot);
     result.addClause(c);
     return result;

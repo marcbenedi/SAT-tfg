@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  5 APR 2018 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  9 APR 2018 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2014,11 +2014,11 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 11.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 16.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 17.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (0.7872pt too wide) in paragraph at lines 16--18
+Overfull \hbox (0.7872pt too wide) in paragraph at lines 17--19
 \T1/ppl/m/n/10.95 Implement the well known \T1/ppl/m/it/10.95 Bi-nary Search[][
 ][][][] \T1/ppl/m/n/10.95 al-go-rithm to find the min-i-mum value
  []
@@ -2034,12 +2034,13 @@ Overfull \hbox (0.7872pt too wide) in paragraph at lines 16--18
 
  (./Chapters/Ch2-Scope.tex
 Chapter 2.
+)
 1: section
 [2
 
 
 
-]) [3]
+]
 \openout2 = `Chapters/Ch3-Courses.aux'.
 
  (./Chapters/Ch3-Courses.tex
@@ -2049,9 +2050,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
 )
 1: section
-[4
+[3
 
 
 
@@ -2060,32 +2071,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  (./Chapters/Ch4-ComputerScience.tex
 Chapter 4.
-
-Overfull \hbox (167.2466pt too wide) in paragraph at lines 7--8
-\T1/ppl/m/n/10.95 https://www.fib.upc.edu/ca/estudis/graus/grau-en-enginyeria-i
-nformatica/pla-destudis/especialitats/computacio 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Overfull \hbox (16.21039pt too wide) in paragraph at lines 12--13
-[]\T1/ppl/m/n/10.95 Un grad-uat es-pe-cial-itzat en Com-putació haurà adquirit 
-els coneix-e-ments necessàries
- []
-
-
-Overfull \hbox (17.35448pt too wide) in paragraph at lines 12--13
-\T1/ppl/m/n/10.95 cions cada cop més efi-cients, en-ergèti-ca-ment o econòmica 
-per ex-em-ple, fa de l'informàtic
- []
-
 )
 1: section
-[5
+[4
 
 
 
@@ -2095,28 +2083,19 @@ per ex-em-ple, fa de l'informàtic
  (./Chapters/Ch5-Competences.tex
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
-
+Overfull \hbox (2.42293pt too wide) in paragraph at lines 7--7
+\T1/ppl/b/n/14.4 mend, de-velop and im-ple-ment the so-lu-tion which as-sures
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
+Overfull \hbox (4.25127pt too wide) in paragraph at lines 7--7
+\T1/ppl/b/n/14.4 the best per-for-mance ac-cord-ing to the es-tab-lished re-qui
+re-
  []
 
 )
 1: section
-[6
+[5
 
 
 
@@ -2132,31 +2111,30 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `main5.out' has not changed.
-(rerunfilecheck)             Checksum: 137814D61FD2C22BFDCCD21190508933;2150.
+(rerunfilecheck)             Checksum: A466B416CAC87DF04F3ED9FA4B0F612D;3537.
 Package logreq Info: Writing requests to 'main5.run.xml'.
 \openout1 = `main5.run.xml'.
 
  )
 (\end occurred when \iftrue on line 96 was incomplete) 
 Here is how much of TeX's memory you used:
- 31125 strings out of 494953
- 624964 string characters out of 6180978
+ 31118 strings out of 494953
+ 624877 string characters out of 6180978
  717487 words of memory out of 5000000
- 34030 multiletter control sequences out of 15000+600000
- 72181 words of font info for 108 fonts, out of 8000000 for 9000
+ 34028 multiletter control sequences out of 15000+600000
+ 71468 words of font info for 107 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,19n,76p,10378b,1729s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,21n,69p,10378b,1505s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf
 -dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main5.pdf (8 pages, 96598 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main5.pdf (7 pages, 85458 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

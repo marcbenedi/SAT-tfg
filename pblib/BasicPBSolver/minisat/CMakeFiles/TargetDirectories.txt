@@ -1,0 +1,8 @@
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/rebuild_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/edit_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/install.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/list_install_components.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/minisat-lib-static.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/minisat-lib-shared.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/install/local.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat/CMakeFiles/install/strip.dir

@@ -24,20 +24,21 @@ GT_LIBS = -lgtest_main
 #TESTING
 TEST_FOLDER = $(DIR)/test_files/
 TEST_BUILD = $(DIR)/test_build/
+#PBLIB
+PBLIB = $(DIR)/pblib
+PBLIB_INCLUDE = -I$(PBLIB)/lib
+PBLIB_LIBS_INCLUDE = -L$(PBLIB)/lib
+PBLIB_LIBS = -lpblib
 
 compile_main:
-	$(CC) -c -std=c++0x -g $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
 
 link_main:
-	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) -static $(CUDD_LIBS)
+	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) $(PBLIB_LIBS_INCLUDE) -static $(CUDD_LIBS) $(PBLIB_LIBS)
 
 main:
 	make compile_main link_main
 	./main
-
-main2:
-	$(CC) -c -std=c++0x -g $(MAIN)2.cpp $(TFG_INCLUDE) $(CUDD_INCLUDE)
-	$(CC) -o $(MAIN)2 $(MAIN)2.o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) -static $(CUDD_LIBS)
 
 compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Clause.cpp -o $(TFG_BUILD)Clause.o
@@ -49,6 +50,11 @@ compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)MixCNFConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)MixCNFConverter.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
 
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBCostFunction.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBCostFunction.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
+
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
 
@@ -56,29 +62,34 @@ tfg:
 	make compile_tfg lib_tfg
 
 clean:
-	rm -f *.o *.gch $(MAIN) main2
+	rm -f *.o *.gch $(MAIN)
 	rm -f $(TFG_BUILD)*.gch $(TFG_BUILD)*.o $(TFG_BUILD)*.a
 	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
 
 compile_tests:
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BoolFunc_UT.cpp -o $(TEST_BUILD)BoolFunc_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BoolFunc_UT.cpp -o $(TEST_BUILD)BoolFunc_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)CnfConverter_UT.cpp -o $(TEST_BUILD)CnfConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BDDConverter_UT.cpp -o $(TEST_BUILD)BDDConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BDDConverter_UT.cpp -o $(TEST_BUILD)BDDConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+    #
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
 
 link_tests:
-	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	$(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	$(CC) -o $(TEST_BUILD)BoolFunc_UT $(TEST_BUILD)BoolFunc_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	# $(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	# $(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	# $(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	# $(CC) -o $(TEST_BUILD)BoolFunc_UT $(TEST_BUILD)BoolFunc_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 	$(CC) -o $(TEST_BUILD)CnfConverter_UT $(TEST_BUILD)CnfConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	$(CC) -o $(TEST_BUILD)BDDConverter_UT $(TEST_BUILD)BDDConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	$(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	$(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	# $(CC) -o $(TEST_BUILD)BDDConverter_UT $(TEST_BUILD)BDDConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	# $(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	# $(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+    #
+	# $(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+
 
 tests:
 	make compile_tests link_tests
@@ -86,7 +97,8 @@ tests:
 	./test_build/Cnf_UT
 	./test_build/VarsManager_UT
 	./test_build/BoolFunc_UT
-	# ./test_build/CnfConverter_UT
-	./test_build/BDDConverter_UT
+	./test_build/CnfConverter_UT
+	# ./test_build/BDDConverter_UT
 	# ./test_build/MixCNFConverter_UT
 	# ./test_build/SatSolver_UT
+	# ./test_build/PBFormula_UT

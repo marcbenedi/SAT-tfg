@@ -8,12 +8,12 @@ As mentioned before\ref{Chapter1}, this project is an extension of a previous C+
 \subsection{General objectives}
 
 \subsubsection{Pseudo-Boolean minimization}
-For the problems of the form $min(c_{1}x_{1}+c_{2}x_{2}+\ldots +c_{n}x_{n} \leq k)$, the goal is to find an assignment for $\{x_{1},x_{2},\ldots,x_{n}\}$ so that $k$ is minimum.
+For the problems of the formed by some \emph{PB Constraints} $min(c_{1}x_{1}+c_{2}x_{2}+\ldots +c_{n}x_{n} \leq k)$ and a cost function , the goal is to find and assignment for $\{x_{1},x_{2},\ldots,x_{n}\}$ in a way that the cost function is minimum. $$min(a_{1}x{1} + ... + a_{n}x_{n})$$
 
 Previously\ref{Chapter1}, it has been explained that this types of problems are \emph{NP-Hard}. This project will try to reduce the time to solve these problems through two approaches:
 \begin{itemize}
 	\item Binary search:\\
-	Implement the well known \emph{Binary Search}\footnote{Binary search is a search algorithm that finds the position of a target value within a sorted array. \href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{(more)}} algorithm to find the minimum value for $k$.
+	Implement the well known \emph{Binary Search}\footnote{Binary search is a search algorithm that finds the position of a target value within a sorted array. \href{https://en.wikipedia.org/wiki/Binary_search_algorithm}{(more)}} algorithm to find the minimum value for the cost function.	
 	\item Linear search:\\
 	Some \emph{SAT Solvers} can learn and derive new restrictions from previous problems. To take advantage of this ability it is necessary to implement a \emph{Linear Search} algorithm.
 \end{itemize}
@@ -21,7 +21,7 @@ Previously\ref{Chapter1}, it has been explained that this types of problems are 
 \subsubsection{Timeout}
 For some problems, it is more important to find a solution before a deadline than finding the best possible solution. For instance, a delivery company must have all the route planned for all trucks before the journey starts, therefore, they care more about having a solution than finding the best one.\\
 For this, a \emph{Timeout strategy} will be implemented in case that a good enough solution has been found or the problem does not seem to have one. 
-\subsubsection{Multi-threading}
+\subsubsection{Multi-threading (Optional)}
 This tool will take advantage of multi-core processors trying to split the problem and solving each part separately.
 
 \section{Scope}
@@ -34,7 +34,7 @@ To achieve all the general objectives\ref{Chapter2} of the project, the followin
 	\item Study \href{http://tools.computational-logic.org/content/pblib.php}{PBLib} library to see which functionalities it has available to work with \emph{minimization}.
 	\item Implement \emph{minimization} strategies.
 	\item Study timeout strategies and implement them.
-	\item Study and implement multithreading.
+	\item Study and implement multithreading. (Optional)
 \end{itemize}
 
 \subsection{Possible obstacles}
@@ -42,12 +42,15 @@ To achieve all the general objectives\ref{Chapter2} of the project, the followin
 In this section, the possible obstacles and its solutions are exposed.
 
 \subsubsection{Base project}
-This project will be built on top of an existing one, as explained in \emph{Background section}\ref{Chapter1}. The existing project could be a source of bugs and other problems caused by not following an adequate methodology. For this reason and to solve possible issues, the first stage of the project will be focused on solving them.
+The existing project \emph{Background section}\ref{Chapter1} has not been developed following an adequate methodology. This could be responsible for a poor code quality. Building on top of a program with this characteristics could have terrible consequences because it would produce a lot of bugs and malfunctions hard to solve in the future. \\
+For this reason, it is better to improve the quality of the existing code because it will avoid problems in the future.
+
 \subsubsection{Schedule}
-Due to the circumstances in which this project will be developed (Erasmus) possible delays could appear. To fix this circumstance, a realistic schedule with weekly communication will be planned. This will support a continuous development and detect as soon as possible delays. 
+Because this is a final degree project the scope is limited, in this case until June of 2018. Considering the learning stage, analysis, requirements study, and other deviations which could appear, the time available to develop the project could be drastically reduced.  Moreover, this project will be developed in an Erasmus stay which makes harder the planning. 
+For these reasons, a good and realistic planning are key steps to take advantage of time and reduce contingencies. 
 
 \subsubsection{PBLib}
-One of the main requirements of this project, \emph{Pseudo-Boolean minimization}, is planned to be done with \emph{PBLib} library. It may be this library does not fit as expected with the project forcing to find a substitute. 
+One of the main requirements of this project, \emph{Pseudo-Boolean minimization}, is planned to be done with \emph{PBLib} library. This is an obstacle because \emph{PBLib} could not be compatible with the project causing compiling errors and therefore some time would have to be spent solving them. Also, \emph{PBLib} could not have the expected functionalities, in which case a substitute should be found or, even worst, having to implement \emph{PBLib} functionalities which would take a lot of time. 
 
 \subsubsection{Correctness}
 As explained in \emph{Rigor and Validation}\ref{Chapter4}, correctness in this project is very important because of the context it is in. \\

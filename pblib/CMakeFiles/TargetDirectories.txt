@@ -1,0 +1,10 @@
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/rebuild_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/tar.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/setup.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/pbencoder.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/cpfiles.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/pblib.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/fuzzer.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/edit_cache.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/tar_lib.dir
+/home/marcbenedi/Desktop/SAT-tfg/pblib/CMakeFiles/pbo2maxsat.dir

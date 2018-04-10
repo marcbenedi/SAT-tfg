@@ -90,7 +90,6 @@ Formula operator * (Formula const & a, Formula const & b);
 Formula operator | (Formula const & a, Formula const & b);
 Formula operator + (Formula const & a, Formula const & b);
 Formula operator ^ (Formula const & a, Formula const & b);
-//BUG: Els operadors tipus += no funcionen bé
 Formula operator += (const Formula & lhs, const Formula & rhs);
 Formula operator *= (const Formula & lhs, const Formula & rhs);
 Formula operator ^= (const Formula & lhs, const Formula & rhs);

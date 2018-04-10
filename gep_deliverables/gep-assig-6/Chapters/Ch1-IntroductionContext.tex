@@ -30,7 +30,7 @@ This representation has some limitations because it can only express properties 
 \subsubsection{Pseudo-Boolean formulae minimization}
 \emph{PBF minimization} is a well known NP-Hard\footnote{NP-Hard: at least as hard as the hardest problems in NP \href{https://en.wikipedia.org/wiki/NP-hardness}{(more)}} problem. \\
 It does the following:\\
-Given a \emph{PBF} of the form $\sum_{i=1}^{n} x_{i}w_{i} \leq k$, where $w_{i},k \in \mathbb{I}$ and $x_{i} \in \{0,1\}$, it tries to find the minimum $k$ which satisfies the constraint.\\
+Given some \emph{PB Constraints} of the form $\sum_{i=1}^{n} x_{i}w_{i} \leq k$, where $w_{i},k \in \mathbb{I}$ and $x_{i} \in \{0,1\}$, and a cost function , the goal is minimize it  $min(a_{1}x{1} + ... + a_{n}x_{n})$ in a way that all the restrictions are satisfied.\\
 
 There is a big research in this field, more specifically in encoding \emph{PBF} into \emph{CNF}. In this paper, Hölldobler, Manthey, Steinke\cite{Holldobler}, some relevant \emph{PBF} into \emph{SAT} encodings are explained and a new one is proposed. One of the authors of this paper, Steinke, is also the author of \emph{PBLib}.  
 

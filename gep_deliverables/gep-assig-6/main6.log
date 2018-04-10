@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  6 APR 2018 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  9 APR 2018 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1792,7 +1792,8 @@ Package csquotes Info: ... found 'babel' package.
  (./main6.aux (./Chapters/Ch1-IntroductionContext.aux) (./Chapters/Ch2-ProjectS
 cope.aux)
 (./Chapters/Ch3-ProjectPlanning.aux) (./Chapters/Ch4-EconomicManagement.aux)
-(./Chapters/Ch5-SustainabilitySocialCommitment.aux))
+(./Chapters/Ch5-SustainabilitySocialCommitment.aux) (./Appendices/AppendixA.aux
+))
 \openout1 = `main6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
@@ -1809,8 +1810,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
 LaTeX Font Info:    ... okay on input line 96.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 96.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 96.
@@ -2056,10 +2056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
 
 ]
-
-LaTeX Warning: Reference `A.1' on page 2 undefined on input line 41.
-
-<Figures/GraphMitchellSelmanLevesque.png, id=424, 669.50125pt x 492.84125pt>
+<Figures/GraphMitchellSelmanLevesque.png, id=450, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
@@ -2073,7 +2070,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [2 <./Figures/GraphMitchellSelmanLevesque.png>]
-<Figures/PBLibEncodings.png, id=439, 726.715pt x 274.02374pt>
+<Figures/PBLibEncodings.png, id=465, 726.715pt x 274.02374pt>
 File: Figures/PBLibEncodings.png Graphic file (type png)
 
 <use Figures/PBLibEncodings.png>
@@ -2129,7 +2126,7 @@ Overfull \hbox (0.7872pt too wide) in paragraph at lines 15--17
 
 
 
-] [6]) [7] [8]
+] [6] [7]) [8]
 \openout2 = `Chapters/Ch3-ProjectPlanning.aux'.
 
  (./Chapters/Ch3-ProjectPlanning.tex
@@ -2189,17 +2186,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<Figures/GanttTable2.png, id=497, 454.69875pt x 1027.84pt>
+[10] <Figures/GanttTable2.png, id=532, 454.69875pt x 1027.84pt>
 File: Figures/GanttTable2.png Graphic file (type png)
 
 <use Figures/GanttTable2.png>
 Package pdftex.def Info: Figures/GanttTable2.png used on input line 73.
 (pdftex.def)             Requested size: 224.30296pt x 507.03326pt.
- [10] [11 <./Figures/GanttTable2.png>]) [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+[11 <./Figures/GanttTable2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+) [12] [13]
 \openout2 = `Chapters/Ch4-EconomicManagement.aux'.
 
-
-(./Chapters/Ch4-EconomicManagement.tex
+ (./Chapters/Ch4-EconomicManagement.tex
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -2207,7 +2223,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 1: section
-[13
+[14
 
 
 
@@ -2216,50 +2232,84 @@ Overfull \hbox (64.81873pt too wide) in paragraph at lines 63--74
  [][] 
  []
 
-[14]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-) [16]
+) [17]
 \openout2 = `Chapters/Ch5-SustainabilitySocialCommitment.aux'.
 
  (./Chapters/Ch5-SustainabilitySocialCommitment.tex
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 1: section
-[17
+[18
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
-) [18] [19]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[19]) [20]
+\openout2 = `Appendices/AppendixA.aux'.
+
+ (./Appendices/AppendixA.tex
+Appendix A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+)
+1: section
+[21
+
+
+
+]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 211.
 
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
@@ -2317,7 +2367,7 @@ Overfull \hbox (6.68138pt too wide) in paragraph at lines 211--211
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
 1: section
-[20
+[22
 
 
 ]
@@ -2325,26 +2375,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./main6.aux (./Chapters/Ch1-IntroductionContext.aux)
 (./Chapters/Ch2-ProjectScope.aux) (./Chapters/Ch3-ProjectPlanning.aux)
 (./Chapters/Ch4-EconomicManagement.aux)
-(./Chapters/Ch5-SustainabilitySocialCommitment.aux))
+(./Chapters/Ch5-SustainabilitySocialCommitment.aux) (./Appendices/AppendixA.aux
+))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `main6.out' has not changed.
-(rerunfilecheck)             Checksum: 3C8665046CBCFDDF4AE2B56440E12802;9483.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: FD7665AF8DD52A9D10AEA7AF9375195A;10470.
 Package logreq Info: Writing requests to 'main6.run.xml'.
 \openout1 = `main6.run.xml'.
 
  )
 (\end occurred when \iftrue on line 96 was incomplete) 
 Here is how much of TeX's memory you used:
- 31501 strings out of 494953
- 631266 string characters out of 6180978
- 722355 words of memory out of 5000000
- 34282 multiletter control sequences out of 15000+600000
- 78769 words of font info for 126 fonts, out of 8000000 for 9000
+ 31534 strings out of 494953
+ 631837 string characters out of 6180978
+ 725355 words of memory out of 5000000
+ 34296 multiletter control sequences out of 15000+600000
+ 80322 words of font info for 128 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,21n,82p,10378b,2240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/e
@@ -2357,10 +2404,10 @@ public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
 lb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main6.pdf (23 pages, 333702 bytes).
+Output written on main6.pdf (25 pages, 342323 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 131 named destinations out of 1000 (max. 500000)
- 616 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 654 compressed objects within 7 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 656 words of extra memory for PDF output out of 10000 (max. 10000000)
 

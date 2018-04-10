@@ -4,35 +4,16 @@
 
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\section{What and how?}
-
-To achieve all the general objectives\ref{Chapter1} of the project, the following stages have been established:
 \begin{itemize}
-	\item Analyze, refactor\footnote{Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behaviour. \href{https://en.wikipedia.org/wiki/Code_refactoring}{(more)}} and test the existing code to have a solid base. 
-	\item Add the functionality of representing \emph{PBF}.
-	\item Study \href{http://tools.computational-logic.org/content/pblib.php}{PBLib} library to see which functionalities it has available to work with \emph{minimization}.
-	\item Implement \emph{minimization} strategies.
-	\item Study timeout strategies and implement them.
-	\item Study and implement multithreading.
+	\item GEP
+	\item Initial Stage\\
+	In this stage, the previous code will be tested and refactored\footnote{Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behaviour. \href{https://en.wikipedia.org/wiki/Code_refactoring}{(more)}} to assure a solid base and the requirements and architecture of the system will be defined.
+	\item Iteration 1: Pseudo-boolean minimization\\
+	This iteration will be for the first objective: Pseudo-boolean minimization. In this stage we will work with PBLib, first adding a layer between the user and PBLib to make it more user-firendly and implementing search strategies to find the minimum value.
+	\item Iteration 2: Timeout\\
+	This iteration will be for the second objective: Timeout
+	\item Iteration 3: Multithreading (Optional)\\
+	This iteration will be for the third objective: Multi-threading. Here, some existing SAT solver will be modified to support multithreading techniques.
+	\item Final stage\\
+	In this stage, all possible bugs will be solved and feedback from the supervisor will be taken. Also, the final document and presentation will be finished. 
 \end{itemize}
-
-\section{Possible obstacles}
-
-TODO: Possible obstacles that
-may hinder the execution of the
-project are \underline{briefly} stated.
-
-
-In this section, the possible obstacles and its solutions are exposed.
-
-\subsection{Base project}
-The existing project could be a source of bugs and other problems caused by not following an adequate methodology. For this reason and to solve possible issues, the first stage of the project will be focused on solving them.
-\subsection{Schedule}
-Due to the circumstances in which this project will be developed (Erasmus) possible delays could appear. To fix these circumstances, a realistic schedule with weekly communication will be planned. This will support a continuous development and detect as soon as possible delays. 
-
-\subsection{PBLib}
-One of the main requirements of this project, \emph{Pseudo-Boolean minimization}, is planned to be done with \emph{PBLib} library. It may be this library does not fit as expected with the project forcing to find a substitute. 
-
-\subsection{Correctness}
-As explained in \emph{Rigor and Validation}\ref{Chapter4}, correctness in this project is very important because of the context it is in. \\
-Guarantee correctness could be hard and take more time than expected. If this happens, formal correctness could be delayed or reduced. 

@@ -153,7 +153,7 @@ Formula operator ^ (Formula const & a, Formula const & b) {
 //     std::cout<<"copy constructor called\n";
 //     return std::make_shared<BoolFunc>(f->getType(),f->getChild1(),f->getChild2(),f->getValue());
 // }
-//BUG: Els operadors tipus += no funcionen bé
+
 Formula operator += (const Formula & lhs, const Formula & rhs) {
     Formula old_lhs = std::make_shared<BoolFunc>(lhs->getType(),lhs->getChild1(),lhs->getChild2(),lhs->getValue());
 

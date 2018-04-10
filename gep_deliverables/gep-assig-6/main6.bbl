@@ -88,6 +88,98 @@
   \field{year}{2009}
 \endentry
 
+\entry{MatrixPoints}{article}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Garcia}{G.}%
+     {Jordi}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Garc{\'{i}}a}{G.}%
+     {Helena}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {L{\'{o}}pez}{L.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {S{\'{a}}nchez}{S.}%
+     {Ferm{\'{i}}n}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Vidal}{V.}%
+     {Eva}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Alier}{A.}%
+     {Marc}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cabr{\'{e}}}{C.}%
+     {Jose}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GJ+1}
+  \strng{fullhash}{GJGHLDSFVEAMCJ1}
+  \field{sortinit}{G}
+  \field{abstract}{%
+  Resumen El Trabajo de Fin de Grado representa la {\'{u}}ltima prueba para que
+  el estudiante de grado demuestre que est{\'{a}} preparado para ejercer como
+  ingeniero, elaborando y defendiendo un proyecto de envergadura. El proyecto
+  debe cumplir todos los requisitos que se exigen a un proyecto de
+  ingenier{\'{i}}a, desde el an{\'{a}}lisis del problema hasta la
+  presentaci{\'{o}}n de una soluci{\'{o}}n. Los autores del presente trabajo
+  pensamos que todo proyecto de ingenier{\'{i}}a debe incorporar un informe de
+  sostenibilidad que demuestre que el proyecto es sostenible en los
+  {\'{a}}mbitos social, ambiental y econ{\'{o}}mico. Existe poca experiencia en
+  este tema, tanto en la empresa como en la universidad, ya que las empresas
+  (algunas) hace pocos a{\~{n}}os que han incorporado la sostenibilidad como
+  uno de los criterios de realizaci{\'{o}}n de sus proyectos y las
+  universidades apenas han comenzado a trabajar en esa direcci{\'{o}}n. En este
+  trabajo se presentan algunas reflexiones sobre c{\'{o}}mo deber{\'{i}}a ser
+  tratada la sostenibilidad en un proyecto de ingenier{\'{i}}a, y en particular
+  c{\'{o}}mo se pueden aplicar estas ideas al Trabajo de Fin de Grado. Palabras
+  clave: Sostenibilidad, proyectos de ingenier{\'{i}}a, trabajo final de grado,
+  compromiso social. 1. Introducci{\'{o}}n La sostenibilidad es uno de los
+  principales retos del si-glo XXI. A partir de la publicaci{\'{o}}n en 1987
+  del informe Brundtland, existe un gran consenso en que debemos ser
+  cons-cientes de los l{\'{i}}mites del planeta y de las injusticias sociales
+  que se cometen cada d{\'{i}}a, y de que es importante trabajar de una manera
+  sostenible. Sin embargo el concepto sostenibili-dad ha recibido muchas
+  cr{\'{i}}ticas, la mayor{\'{i}}a de ellas relacio-nadas con la vaguedad del
+  t{\'{e}}rmino, al ser aparentemente con-fuso y estar lleno de
+  contradicciones, con la falta de operativi-dad, con la indefinici{\'{o}}n de
+  lo que se debe o no sostener, o con las lista de necesidades que se han de
+  satisfacer. De hecho, sostenibilidad es una palabra pl{\'{a}}stica. Las
+  palabras pl{\'{a}}sticas son aquellas de significado ambiguo pero con una
+  connota-ci{\'{o}}n inequ{\'{i}}vocamente positiva, que hacen sonar mejor
+  aquello a lo que acompa{\~{n}}an. Lamentablemente los pol{\'{i}}ticos y
+  empre-sarios se aprovechan de la plasticidad de la palabra sostenibi-lidad,
+  us{\'{a}}ndola de forma fr{\'{i}}vola para vender mejor sus ideas y
+  productos. As{\'{i}}, nos encontramos con t{\'{e}}rminos como «coches
+  sostenibles» (pueden ser el{\'{e}}ctricos, o de bajo consumo, o de bajas
+  emisiones, pero decir que son sostenibles no tiene sen-tido) o incluso
+  expresiones tan curiosas como «crecimiento sostenible».%
+  }
+  \field{title}{{Art{\'{i}}culo invitado La sostenibilidad en los proyectos de
+  ingenier{\'{i}}a}}
+  \verb{url}
+  \verb https://upcommons.upc.edu/bitstream/handle/2117/23240/127-1047-1-PB.pdf
+  \endverb
+  \verb{file}
+  \verb :home/marcbenedi/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downl
+  \verb oaded/Garcia et al. - Unknown - Art{\'{i}}culo invitado La sostenibilid
+  \verb ad en los proyectos de ingenier{\'{i}}a.pdf:pdf
+  \endverb
+\endentry
+
 \entry{Holldobler}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -138,6 +230,19 @@
   \verb oaded/H{\"{o}}lldobler, Manthey, Steinke - Unknown - A Compact Encoding
   \verb  of Pseudo-Boolean Constraints into SAT.pdf:pdf
   \endverb
+\endentry
+
+\entry{MareNostrum}{misc}{}
+  \field{sortinit}{M}
+  \field{title}{{MareNostrum 4 supercomputer to be 12 times more powerful than
+  MareNostrum 3 | BSC-CNS}}
+  \verb{url}
+  \verb https://www.bsc.es/news/bsc-news/marenostrum-4-supercomputer-be-12-time
+  \verb s-more-powerful-marenostrum-3
+  \endverb
+  \field{urlday}{06}
+  \field{urlmonth}{04}
+  \field{urlyear}{2018}
 \endentry
 
 \entry{Mitchell}{article}{}

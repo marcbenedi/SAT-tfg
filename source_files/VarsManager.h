@@ -8,12 +8,13 @@
 #include "util.h"
 #include "cudd.h"
 #include "cuddObj.hh"
+#include <memory>
 
 class VarsManager {
 private:
 
-    static VarsManager* instance;
-
+    // static VarsManager* instance;
+    static std::unique_ptr<VarsManager> instance;
     VarsManager();
     /**
      * Used to assign unique int id in name_to_index
@@ -51,6 +52,7 @@ public:
     DdManager* getCuddMgr();
     int getNumIds();
     void clearInstance();
+    ~VarsManager();
 
 };
 

@@ -21,7 +21,7 @@ private:
 
     static Cnf tseitinRec(Formula const & boolFunc, std::map<Formula,int> & auxToNode);
 public:
-
+    
     static Cnf tseitin(Formula const & boolFunc);
 
     static Cnf convertToCnf(const BDD & f);

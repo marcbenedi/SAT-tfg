@@ -4,7 +4,15 @@ VarsManager::VarsManager(){}
 
 VarsManager* VarsManager::getInstance(){
     if(instance == NULL){
+        std::cout << "new instance" << '\n';
         instance = new VarsManager;
+        std::cout << "hem creat de nou i getLastID" <<instance->getLastId() << '\n';
+        std::cout << "ladreca es " << instance << '\n';
+        std::cout << "pero la cola es" << '\n';
+        while (!instance->recyclable.empty()) {
+            std::cout << instance->recyclable.front() << '\n';
+            instance->recyclable.pop();
+        }
     }
     return instance;
 }
@@ -20,6 +28,7 @@ int VarsManager::newId(const std::string & name) {
     int id;
 
     if(!recyclable.empty()){
+        std::cout << "pene2lol" << '\n';
         id = recyclable.front();
         recyclable.pop();
     }
@@ -27,7 +36,6 @@ int VarsManager::newId(const std::string & name) {
         ++last_id;
         id = last_id;
     }
-
     //NOTE: "" is used when it does not need to be stored
     if (name != ""){name_to_index[name] = id;}
     return id;
@@ -88,7 +96,13 @@ int VarsManager::getNumIds(){
 }
 
 void VarsManager::clearInstance(){
+    delete instance;
     instance = NULL;
 }
 
-VarsManager* VarsManager::instance = NULL;
+VarsManager::~VarsManager(){
+    std::cout << "me destruyen primo" << '\n';
+}
+
+// VarsManager* VarsManager::instance = NULL;
+std::unique_ptr<VarsManager> VarsManager::instance;

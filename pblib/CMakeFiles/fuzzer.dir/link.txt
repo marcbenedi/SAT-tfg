@@ -1,0 +1,1 @@
+g++   -O3 -std=c++11 -O3 -DNDEBUG   CMakeFiles/fuzzer.dir/fuzzer.cpp.o CMakeFiles/fuzzer.dir/BasicPBSolver/SATSolverClauseDatabase.cpp.o  -o fuzzer  -L/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat -rdynamic -lminisat -lz libpblib.a -lpthread -Wl,-rpath,/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat 
