@@ -1,18 +1,14 @@
 #include "VarsManager.h"
 
-VarsManager::VarsManager(){}
+VarsManager::VarsManager(){
+    last_id = 0;
+
+
+}
 
 VarsManager* VarsManager::getInstance(){
     if(instance == NULL){
-        std::cout << "new instance" << '\n';
         instance = new VarsManager;
-        std::cout << "hem creat de nou i getLastID" <<instance->getLastId() << '\n';
-        std::cout << "ladreca es " << instance << '\n';
-        std::cout << "pero la cola es" << '\n';
-        while (!instance->recyclable.empty()) {
-            std::cout << instance->recyclable.front() << '\n';
-            instance->recyclable.pop();
-        }
     }
     return instance;
 }
@@ -28,7 +24,6 @@ int VarsManager::newId(const std::string & name) {
     int id;
 
     if(!recyclable.empty()){
-        std::cout << "pene2lol" << '\n';
         id = recyclable.front();
         recyclable.pop();
     }
@@ -101,8 +96,6 @@ void VarsManager::clearInstance(){
 }
 
 VarsManager::~VarsManager(){
-    std::cout << "me destruyen primo" << '\n';
 }
 
-// VarsManager* VarsManager::instance = NULL;
-std::unique_ptr<VarsManager> VarsManager::instance;
+VarsManager* VarsManager::instance = NULL;
