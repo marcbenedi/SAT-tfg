@@ -1,36 +1,35 @@
 #include <iostream>
 #include <string>
-#include "VarsManager.h"
+#include <vector>
+#include "pb2cnf.h"
 
-void func1(){
-    VarsManager* m = VarsManager::getInstance();
-    m->newId("a");
-}
-
-void func2(){
-    VarsManager *m = VarsManager::getInstance();
-    m->newId("b");
-    std::cout << m->getLastId() << '\n';
-    m->clearInstance();
-}
-
-void func3(){
-    VarsManager *m = VarsManager::getInstance();
-    std::cout << m->getLastId() << '\n';
-    m->newId("c");
-}
-
-void func4(){
-    VarsManager *m = VarsManager::getInstance();
-    m->newId("d");
-    std::cout <<"ddsdsffd"<< m->getLastId() << '\n';
-    m->clearInstance();
-}
-
+using namespace std;
 
 int main() {
-    func1();
-    func2();
-    func3();
-    func4();
+
+    PB2CNF pb2cnf;
+
+    vector< int64_t > weights = {3,2};
+    vector< int32_t > literals = {-1,2};
+    vector< vector< int32_t > > formula;
+    int32_t firstFreshVariable = 3;
+    firstFreshVariable = pb2cnf.encodeLeq(weights, literals, 1, formula, firstFreshVariable) + 1;
+
+    weights = {2};
+    literals = {2};
+    firstFreshVariable = pb2cnf.encodeGeq(weights, literals, 2, formula, firstFreshVariable) + 1;
+
+    weights = {3};
+    literals = {1};
+    firstFreshVariable = pb2cnf.encodeGeq(weights, literals, 3  , formula, firstFreshVariable) + 1;
+
+
+    for (size_t i = 0; i < formula.size(); i++) {
+        std::vector< int32_t > *clause = &formula[i];
+        for (size_t j = 0; j < clause->size(); j++) {
+            std::cout << (*clause)[j] << " ";
+        }
+        std::cout << '\n';
+    }
+    std::cout << "pene" << '\n';
 }
