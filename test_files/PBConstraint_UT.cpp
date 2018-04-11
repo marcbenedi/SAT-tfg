@@ -39,4 +39,10 @@ namespace {
         EXPECT_EQ(expected, s);
     }
 
+    TEST(SetK, setK){
+        PBConstraint c = PBConstraint(PBFormula({3,2},{1,2}),1);
+        c.setK(3);
+        EXPECT_EQ(c.getK(), 3);
+    }
+
 }

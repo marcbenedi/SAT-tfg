@@ -16,3 +16,7 @@ void PBConstraint::encode(std::vector< std::vector< int32_t > > & cnf, int32_t &
     firstFreshVariable = pb2cnf.encodeLeq(formula.getWeights(), formula.getLiterals(), k, cnf, firstFreshVariable) + 1;
 
 }
+
+void PBConstraint::setK(int64_t p_k){
+    k = p_k;
+}
