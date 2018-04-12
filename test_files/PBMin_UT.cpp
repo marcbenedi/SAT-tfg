@@ -130,7 +130,7 @@ namespace {
         EXPECT_EQ(m.getCostFunctionMin(), -8);
     }
 
-    TEST(Solve,solve){
+    TEST(SolveBinary,solve){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({1,2},{1,2}),1),
             PBConstraint(PBFormula({3,4},{2,3}),1),
@@ -149,7 +149,7 @@ namespace {
         }
     }
 
-    TEST(Solve,solve2){
+    TEST(SolveBinary,solve2){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({2,2},{1,-1}),1),
             PBConstraint(PBFormula({3,4},{2,3}),1),
@@ -165,7 +165,7 @@ namespace {
         EXPECT_EQ(model.size(), 0);
     }
 
-    TEST(Solve,solve3){
+    TEST(SolveBinary,solve3){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({4},{1}),3)
         };
@@ -182,7 +182,7 @@ namespace {
         }
     }
 
-    TEST(Solve,solve4){
+    TEST(SolveBinary,solve4){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({4},{1}),3),
             PBConstraint(PBFormula({4},{-2}),3),
@@ -200,12 +200,100 @@ namespace {
         }
     }
 
-    TEST(Solve,solve5){
+    TEST(SolveBinary,solve5){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({4},{-1}),3),
             PBConstraint(PBFormula({4},{-2}),3),
         };
         PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}));
+
+        int64_t min;
+        std::vector< int32_t > model;
+        std::vector< int32_t > expected_model = {1,2,0};
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(true, sat);
+        EXPECT_EQ(min, 3);
+        for (size_t i = 0; i < model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,solve){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({1,2},{1,2}),1),
+            PBConstraint(PBFormula({3,4},{2,3}),1),
+            PBConstraint(PBFormula({3,7},{1,3}),1)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}),LINEAR_SEARCH);
+
+        int64_t min;
+        std::vector< int32_t > model;
+        std::vector< int32_t > expected_model = {-1,-2,-3,0};
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(true, sat);
+        EXPECT_EQ(min, -8);
+        for (size_t i = 0; i < model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,solve2){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({2,2},{1,-1}),1),
+            PBConstraint(PBFormula({3,4},{2,3}),1),
+            PBConstraint(PBFormula({3,7},{1,3}),1)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}),LINEAR_SEARCH);
+
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        bool expected_sat = false;
+        EXPECT_EQ(expected_sat, sat);
+        EXPECT_EQ(model.size(), 0);
+    }
+
+    TEST(SolveLinear,solve3){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{1}),3)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}),LINEAR_SEARCH);
+
+        int64_t min;
+        std::vector< int32_t > model;
+        std::vector< int32_t > expected_model = {-1,-2,0};
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(true, sat);
+        EXPECT_EQ(min, -3);
+        for (size_t i = 0; i < model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,solve4){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{1}),3),
+            PBConstraint(PBFormula({4},{-2}),3),
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}),LINEAR_SEARCH);
+
+        int64_t min;
+        std::vector< int32_t > model;
+        std::vector< int32_t > expected_model = {-1,2,0};
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(true, sat);
+        EXPECT_EQ(min, 7);
+        for (size_t i = 0; i < model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,solve5){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{-1}),3),
+            PBConstraint(PBFormula({4},{-2}),3),
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}),LINEAR_SEARCH);
 
         int64_t min;
         std::vector< int32_t > model;

@@ -119,7 +119,62 @@ bool PBMin::minisat(std::vector< int32_t > & model, const std::vector< std::vect
 }
 
 bool PBMin::solve(std::vector< int32_t > & model, int64_t & min){
-    //TODO: falta fer depen searchtype
+    if (searchType == BINARY_SEARCH) {
+        return binarySearch(model, min);
+    }
+    else{
+        return linearSearch(model, min);
+    }
+}
+
+bool PBMin::linearSearch(std::vector< int32_t > & model, int64_t & min){
+    int32_t firstFreshVariable = getFirstFreshVariable();
+    std::vector< std::vector< int32_t > > cnf_constraints;
+
+    PB2CNF pb2cnf;
+
+    //Encoding constraints
+    for (size_t i = 0; i < constraints.size(); i++) {
+        firstFreshVariable = pb2cnf.encodeLeq(constraints[i].getPBFormula().getWeights(), constraints[i].getPBFormula().getLiterals(), constraints[i].getK(), cnf_constraints, firstFreshVariable) + 1;
+    }
+
+    std::vector< std::vector< int32_t > > cnf;
+    std::vector< int32_t > temp_model;
+    int64_t min_costFunc = getCostFunctionMin();
+    int64_t k = getCostFunctionMax();
+    min = getCostFunctionMax()+1;
+
+    bool end = false;
+    while (!end) {
+        if (k == min_costFunc) {
+            end = true;
+        }
+        cnf.clear();
+        cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
+
+        firstFreshVariable = pb2cnf.encodeLeq(costFunction.getWeights(), costFunction.getLiterals(), k, cnf, firstFreshVariable) + 1;
+
+        bool sat = minisat(temp_model, cnf);
+
+        if (sat) {
+            model = temp_model;
+            min = k;
+            k--;
+        }
+        else{
+            end = true;
+        }
+    }
+    if (model.size() != 0) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool PBMin::binarySearch(std::vector< int32_t > & model, int64_t & min){
+
     int32_t firstFreshVariable = getFirstFreshVariable();
     std::vector< std::vector< int32_t > > cnf_constraints;
 
@@ -179,5 +234,4 @@ bool PBMin::solve(std::vector< int32_t > & model, int64_t & min){
         // std::cout << "UNSAT" << '\n';
         return false;
     }
-
 }

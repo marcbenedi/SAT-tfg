@@ -18,6 +18,8 @@ private:
     PBFormula costFunction;
     SEARCH_TYPE searchType;
     bool minisat(std::vector< int32_t > & model, const std::vector< std::vector< int32_t > > & cnf);
+    bool binarySearch(std::vector< int32_t > & model, int64_t & min);
+    bool linearSearch(std::vector< int32_t > & model, int64_t & min);
 public:
     PBMin(std::vector<PBConstraint> p_constraints, PBFormula p_costFunction, SEARCH_TYPE search = BINARY_SEARCH);
     std::vector<PBConstraint> getConstraints();
