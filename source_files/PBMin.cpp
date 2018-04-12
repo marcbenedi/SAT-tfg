@@ -118,7 +118,7 @@ bool PBMin::minisat(std::vector< int32_t > & model, const std::vector< std::vect
     return sat;
 }
 
-void PBMin::solve(){
+bool PBMin::solve(std::vector< int32_t > & model, int64_t & min){
     //TODO: falta fer depen searchtype
     int32_t firstFreshVariable = getFirstFreshVariable();
     std::vector< std::vector< int32_t > > cnf_constraints;
@@ -131,10 +131,9 @@ void PBMin::solve(){
     }
 
     std::vector< std::vector< int32_t > > cnf;
-    std::vector< int32_t > model;
     int64_t left = getCostFunctionMin();
     int64_t right = getCostFunctionMax();
-    int64_t min = right + 1;
+    min = right + 1;
 
     bool end = false;
     while (not end) {
@@ -143,7 +142,7 @@ void PBMin::solve(){
         cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
 
         int64_t k = (left+right)/2;
-        std::cout << k << '\n';
+        // std::cout << k << '\n';
 
         if (left == right) {
             //no more values to try
@@ -168,15 +167,17 @@ void PBMin::solve(){
     }
 
     if (model.size() != 0) {
-        std::cout << "SAT" << '\n';
-        std::cout << "min " << std::to_string(min) << '\n';
-        for (size_t i = 0; i < model.size(); i++) {
-            std::cout << std::to_string(model[i]) << " ";
-        }
-        std::cout << '\n';
+        // std::cout << "SAT" << '\n';
+        // std::cout << "min " << std::to_string(min) << '\n';
+        // for (size_t i = 0; i < model.size(); i++) {
+        //     std::cout << std::to_string(model[i]) << " ";
+        // }
+        // std::cout << '\n';
+        return true;
     }
     else{
-        std::cout << "UNSAT" << '\n';
+        // std::cout << "UNSAT" << '\n';
+        return false;
     }
 
 }

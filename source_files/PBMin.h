@@ -24,7 +24,7 @@ public:
     PBFormula getCostFunction();
     SEARCH_TYPE getSearchType();
     int32_t getFirstFreshVariable();
-    void solve();
+    bool solve(std::vector< int32_t > & model, int64_t & min);
     int64_t getCostFunctionMax();
     int64_t getCostFunctionMin();
 };
