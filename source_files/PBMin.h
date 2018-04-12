@@ -5,6 +5,7 @@
 #include <set>
 #include "pb2cnf.h"
 #include <map>
+#include <fstream>
 
 enum SEARCH_TYPE {
     BINARY_SEARCH,
@@ -16,6 +17,7 @@ private:
     std::vector<PBConstraint> constraints;
     PBFormula costFunction;
     SEARCH_TYPE searchType;
+    bool minisat(std::vector< int32_t > & model, const std::vector< std::vector< int32_t > > & cnf);
 public:
     PBMin(std::vector<PBConstraint> p_constraints, PBFormula p_costFunction, SEARCH_TYPE search = BINARY_SEARCH);
     std::vector<PBConstraint> getConstraints();

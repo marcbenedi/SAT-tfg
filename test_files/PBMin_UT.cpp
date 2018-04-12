@@ -130,6 +130,24 @@ namespace {
         EXPECT_EQ(m.getCostFunctionMin(), -8);
     }
 
+    TEST(Solve,solve){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({1,2},{1,2}),1),
+            PBConstraint(PBFormula({3,4},{2,3}),1),
+            PBConstraint(PBFormula({3,7},{1,3}),1)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}));
+        m.solve();
+    }
 
+    TEST(Solve,solve2){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({2,2},{1,-1}),1),
+            PBConstraint(PBFormula({3,4},{2,3}),1),
+            PBConstraint(PBFormula({3,7},{1,3}),1)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}));
+        m.solve();
+    }
 
 }
