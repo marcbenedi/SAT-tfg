@@ -143,6 +143,7 @@ void PBMin::solve(){
         cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
 
         int64_t k = (left+right)/2;
+        std::cout << k << '\n';
 
         if (left == right) {
             //no more values to try

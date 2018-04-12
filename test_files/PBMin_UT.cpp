@@ -138,6 +138,7 @@ namespace {
         };
         PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}));
         m.solve();
+        //TODO: expect
     }
 
     TEST(Solve,solve2){
@@ -148,6 +149,36 @@ namespace {
         };
         PBMin m = PBMin(e_constraints, PBFormula({-1,-3,7,-5},{1,-1,2,-2}));
         m.solve();
+        //TODO: expect
+    }
+
+    TEST(Solve,solve3){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{1}),3)
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}));
+        m.solve();
+        //TODO: expect
+    }
+
+    TEST(Solve,solve4){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{1}),3),
+            PBConstraint(PBFormula({4},{-2}),3),
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}));
+        m.solve();
+        //TODO: expect
+    }
+
+    TEST(Solve,solve5){
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{-1}),3),
+            PBConstraint(PBFormula({4},{-2}),3),
+        };
+        PBMin m = PBMin(e_constraints, PBFormula({-7,-3,10},{1,-1,2}));
+        m.solve();
+        //TODO: expect
     }
 
 }
