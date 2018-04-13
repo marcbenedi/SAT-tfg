@@ -75,8 +75,8 @@ compile_tests:
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBMin_UT.cpp -o $(TEST_BUILD)PBMin_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 
 link_tests:
@@ -89,8 +89,8 @@ link_tests:
 	# $(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 	# $(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 
-	# $(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	# $(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 	$(CC) -o $(TEST_BUILD)PBMin_UT $(TEST_BUILD)PBMin_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 
@@ -105,6 +105,6 @@ tests:
 	# ./test_build/MixCNFConverter_UT
 	# ./test_build/SatSolver_UT
 
-	# ./test_build/PBFormula_UT
-	# ./test_build/PBConstraint_UT
+	./test_build/PBFormula_UT
+	./test_build/PBConstraint_UT
 	./test_build/PBMin_UT
