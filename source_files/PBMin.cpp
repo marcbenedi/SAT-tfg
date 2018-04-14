@@ -144,17 +144,35 @@ bool PBMin::linearSearch(std::vector< int32_t > & model, int64_t & min){
     int64_t k = getCostFunctionMax();
     min = getCostFunctionMax()+1;
 
+    //1) Do initial encoding
+    std::vector< PBLib::WeightedLit> w_costFunction;
+    for (size_t i = 0; i < costFunction.getWeights().size(); i++) {
+        w_costFunction.push_back(PBLib::WeightedLit(costFunction.getLiterals()[i],costFunction.getWeights()[i]));
+    }
+
+    AuxVarManager auxVarManager(firstFreshVariable);
+    PBConfig config = std::make_shared< PBConfigClass >();
+    VectorClauseDatabase cdb(config, &cnf_constraints);
+    // for (size_t i = 0; i < cnf_constraints.size(); i++) {
+    //     cdb.addClause(cnf_constraints[i]);
+    // }
+
+    IncPBConstraint inc_costFunction = IncPBConstraint(w_costFunction, PBLib::LEQ, k);
+    pb2cnf.encodeIncInital(inc_costFunction, cdb, auxVarManager);
+    //2) for each iteration do encodeNewLeq
+
+
+
+
     bool end = false;
     while (!end) {
         if (k == min_costFunc) {
             end = true;
         }
-        cnf.clear();
-        cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
 
-        firstFreshVariable = pb2cnf.encodeLeq(costFunction.getWeights(), costFunction.getLiterals(), k, cnf, firstFreshVariable) + 1;
+        inc_costFunction.encodeNewLeq(k, cdb, auxVarManager);
 
-        bool sat = minisat(temp_model, cnf);
+        bool sat = minisat(temp_model, cdb.getClauses());
 
         if (sat) {
             model = temp_model;

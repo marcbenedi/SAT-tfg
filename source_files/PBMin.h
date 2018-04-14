@@ -6,6 +6,10 @@
 #include "pb2cnf.h"
 #include <map>
 #include <fstream>
+#include "weightedlit.h"
+#include "incpbconstraint.h"
+#include <memory>
+
 
 enum SEARCH_TYPE {
     BINARY_SEARCH,

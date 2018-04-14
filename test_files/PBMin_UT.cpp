@@ -350,11 +350,11 @@ namespace {
 
         int64_t min;
         std::vector< int32_t > model;
-        std::vector< int32_t > expected_model = {-1,-2,-3,0};
+        std::vector< int32_t > expected_model = {-1,-2,-3};
         bool sat = m.solve(model, min);
         EXPECT_EQ(true, sat);
         EXPECT_EQ(min, -8);
-        for (size_t i = 0; i < model.size(); i++) {
+        for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
     }
@@ -383,11 +383,11 @@ namespace {
 
         int64_t min;
         std::vector< int32_t > model;
-        std::vector< int32_t > expected_model = {-1,-2,0};
+        std::vector< int32_t > expected_model = {-1,-2};
         bool sat = m.solve(model, min);
         EXPECT_EQ(true, sat);
         EXPECT_EQ(min, -3);
-        for (size_t i = 0; i < model.size(); i++) {
+        for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
     }
@@ -401,11 +401,11 @@ namespace {
 
         int64_t min;
         std::vector< int32_t > model;
-        std::vector< int32_t > expected_model = {-1,2,0};
+        std::vector< int32_t > expected_model = {-1,2};
         bool sat = m.solve(model, min);
         EXPECT_EQ(true, sat);
         EXPECT_EQ(min, 7);
-        for (size_t i = 0; i < model.size(); i++) {
+        for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
     }
@@ -419,11 +419,11 @@ namespace {
 
         int64_t min;
         std::vector< int32_t > model;
-        std::vector< int32_t > expected_model = {1,2,0};
+        std::vector< int32_t > expected_model = {1,2};
         bool sat = m.solve(model, min);
         EXPECT_EQ(true, sat);
         EXPECT_EQ(min, 3);
-        for (size_t i = 0; i < model.size(); i++) {
+        for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
     }
