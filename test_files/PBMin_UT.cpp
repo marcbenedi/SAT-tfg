@@ -240,6 +240,106 @@ namespace {
         }
     }
 
+    TEST(SolveBinary,minimumIsTheFirstK){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{-1}),0)
+        };
+        PBFormula costFunction = PBFormula({5,5},{1,2});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = true;
+        int64_t e_min = 5;
+        std::vector< int32_t > expected_model = {1,-2};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveBinary,minimumIsTheLastK){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{-1}),0)
+        };
+        PBFormula costFunction = PBFormula({3,7},{1,2});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = true;
+        int64_t e_min = 3;
+        std::vector< int32_t > expected_model = {1,-2};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveBinary,minimumIsTheLastK2){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{1}),0)
+        };
+        PBFormula costFunction = PBFormula({1},{1});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = true;
+        int64_t e_min = 0;
+        std::vector< int32_t > expected_model = {-1};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveBinary,minimumIsTheLastK3){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{-1}),0)
+        };
+        PBFormula costFunction = PBFormula({8,2},{1,2});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = true;
+        int64_t e_min = 8;
+        std::vector< int32_t > expected_model = {1,-2};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveBinary,unsat){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({2},{1}),1),
+            PBConstraint(PBFormula({2},{-1}),1)
+        };
+        PBFormula costFunction = PBFormula({1},{1});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = false;
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+    }
+
     TEST(SolveLinear,solve){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({1,2},{1,2}),1),
@@ -349,6 +449,67 @@ namespace {
         for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
+    }
+
+    TEST(SolveLinear,minimumIsTheFirstK){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{-1}),0)
+        };
+        PBFormula costFunction = PBFormula({1},{1});
+        PBMin m = PBMin(constraints, costFunction,LINEAR_SEARCH);
+        bool e_sat = true;
+        int64_t e_min = 1;
+        std::vector< int32_t > expected_model = {1};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,minimumIsTheLastK){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1},{1}),0)
+        };
+        PBFormula costFunction = PBFormula({1},{1});
+        PBMin m = PBMin(constraints, costFunction,LINEAR_SEARCH);
+        bool e_sat = true;
+        int64_t e_min = 0;
+        std::vector< int32_t > expected_model = {-1};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,unsat){
+        //problem definition
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({2},{1}),1),
+            PBConstraint(PBFormula({2},{-1}),1)
+        };
+        PBFormula costFunction = PBFormula({1},{1});
+        PBMin m = PBMin(constraints, costFunction,LINEAR_SEARCH);
+        bool e_sat = false;
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
     }
 
 }

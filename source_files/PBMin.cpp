@@ -193,39 +193,39 @@ bool PBMin::binarySearch(std::vector< int32_t > & model, int64_t & min){
 
     bool end = false;
     while (not end) {
-        assert(left<=right);
-        cnf.clear();
-        cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
+        // std::cout << "left i right " << left << " "<<right << '\n';
+        // assert(left<=right);
+        if(left<=right){
+            cnf.clear();
+            cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
 
-        int64_t k = (left+right)/2;
+            int64_t k = (left+right)/2;
 
-        if (left == right) {
-            //no more values to try
-            end = true;
-        }
+            // std::cout << "k "<< k << '\n';
 
-        firstFreshVariable = pb2cnf.encodeLeq(costFunction.getWeights(), costFunction.getLiterals(), k, cnf, firstFreshVariable) + 1;
-
-        // //print cnf_constraints
-        // for (size_t i = 0; i < cnf.size(); i++) {
-        //     for (size_t j = 0; j < cnf[i].size(); j++) {
-        //         std::cout << cnf[i][j] << ' ';
-        //     }
-        //     std::cout << '\n';
-        // }
-
-        bool sat = minisat(temp_model, cnf);
-
-        if (sat) {
-            min = k;
-            right = k-1;
-            model = temp_model;
-        }
-        else{
-            if (min == k + 1) {
+            if (left == right) {
+                //no more values to try
                 end = true;
             }
-            left = k+1;
+
+            firstFreshVariable = pb2cnf.encodeLeq(costFunction.getWeights(), costFunction.getLiterals(), k, cnf, firstFreshVariable) + 1;
+
+            bool sat = minisat(temp_model, cnf);
+
+            if (sat) {
+                min = k;
+                right = k-1;
+                model = temp_model;
+            }
+            else{
+                if (min == k + 1) {
+                    end = true;
+                }
+                left = k+1;
+            }
+        }
+        else{
+            end = true;
         }
 
     }
