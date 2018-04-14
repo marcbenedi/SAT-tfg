@@ -144,7 +144,6 @@ bool PBMin::linearSearch(std::vector< int32_t > & model, int64_t & min){
     int64_t k = getCostFunctionMax();
     min = getCostFunctionMax()+1;
 
-    //1) Do initial encoding
     std::vector< PBLib::WeightedLit> w_costFunction;
     for (size_t i = 0; i < costFunction.getWeights().size(); i++) {
         w_costFunction.push_back(PBLib::WeightedLit(costFunction.getLiterals()[i],costFunction.getWeights()[i]));
@@ -153,16 +152,9 @@ bool PBMin::linearSearch(std::vector< int32_t > & model, int64_t & min){
     AuxVarManager auxVarManager(firstFreshVariable);
     PBConfig config = std::make_shared< PBConfigClass >();
     VectorClauseDatabase cdb(config, &cnf_constraints);
-    // for (size_t i = 0; i < cnf_constraints.size(); i++) {
-    //     cdb.addClause(cnf_constraints[i]);
-    // }
 
     IncPBConstraint inc_costFunction = IncPBConstraint(w_costFunction, PBLib::LEQ, k);
     pb2cnf.encodeIncInital(inc_costFunction, cdb, auxVarManager);
-    //2) for each iteration do encodeNewLeq
-
-
-
 
     bool end = false;
     while (!end) {
