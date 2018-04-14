@@ -177,6 +177,7 @@ bool PBMin::binarySearch(std::vector< int32_t > & model, int64_t & min){
 
     int32_t firstFreshVariable = getFirstFreshVariable();
     std::vector< std::vector< int32_t > > cnf_constraints;
+    std::vector< int32_t > temp_model;
 
     PB2CNF pb2cnf;
 
@@ -197,7 +198,6 @@ bool PBMin::binarySearch(std::vector< int32_t > & model, int64_t & min){
         cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_constraints.end());
 
         int64_t k = (left+right)/2;
-        // std::cout << k << '\n';
 
         if (left == right) {
             //no more values to try
@@ -206,11 +206,20 @@ bool PBMin::binarySearch(std::vector< int32_t > & model, int64_t & min){
 
         firstFreshVariable = pb2cnf.encodeLeq(costFunction.getWeights(), costFunction.getLiterals(), k, cnf, firstFreshVariable) + 1;
 
-        bool sat = minisat(model, cnf);
+        // //print cnf_constraints
+        // for (size_t i = 0; i < cnf.size(); i++) {
+        //     for (size_t j = 0; j < cnf[i].size(); j++) {
+        //         std::cout << cnf[i][j] << ' ';
+        //     }
+        //     std::cout << '\n';
+        // }
+
+        bool sat = minisat(temp_model, cnf);
 
         if (sat) {
             min = k;
             right = k-1;
+            model = temp_model;
         }
         else{
             if (min == k + 1) {

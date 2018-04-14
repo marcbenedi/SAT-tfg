@@ -49,11 +49,8 @@ Cnf CnfConverter::tseitinRec(Formula const & boolFunc, std::map<Formula,int> & a
 
     else if(type == NOD_AND || type == NOD_OR){
         int varC1 = getNodeVar(child1, auxToNode);
-        std::cout << varC1 << '\n';
         int varC2 = getNodeVar(child2, auxToNode);
-        std::cout << varC2 << '\n';
         int me = VarsManager::getInstance()->newId("");
-        std::cout << me << '\n';
         //Insert ourself into the map
         auxToNode[boolFunc] = me;
 

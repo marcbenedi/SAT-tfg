@@ -51,8 +51,8 @@ compile_tfg:
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
 
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
 
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
@@ -64,6 +64,8 @@ clean:
 	rm -f *.o *.gch $(MAIN)
 	rm -f $(TFG_BUILD)*.gch $(TFG_BUILD)*.o $(TFG_BUILD)*.a
 	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
+	rm -f output.txt
+	rm -f input.txt
 
 compile_tests:
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)

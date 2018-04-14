@@ -218,6 +218,28 @@ namespace {
         }
     }
 
+    TEST(SolveBinary,knapsackProblem){
+        //problem definition
+        //http://www.mafy.lut.fi/study/DiscreteOpt/DYNKNAP.pdf
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1,5,3,4},{1,2,3,4}),8)
+        };
+        PBFormula costFunction = PBFormula({-15,-10,-9,-5},{1,2,3,4});
+        PBMin m = PBMin(constraints, costFunction);
+        bool e_sat = true;
+        int64_t e_min = -29;
+        std::vector< int32_t > expected_model = {1,-2,3,4};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
     TEST(SolveLinear,solve){
         std::vector< PBConstraint > e_constraints = {
             PBConstraint(PBFormula({1,2},{1,2}),1),
@@ -302,6 +324,29 @@ namespace {
         EXPECT_EQ(true, sat);
         EXPECT_EQ(min, 3);
         for (size_t i = 0; i < model.size(); i++) {
+            EXPECT_EQ(model[i],expected_model[i]);
+        }
+    }
+
+    TEST(SolveLinear,knapsackProblem){
+        //problem definition
+        //http://www.mafy.lut.fi/study/DiscreteOpt/DYNKNAP.pdf
+        std::vector< PBConstraint > constraints = {
+            PBConstraint(PBFormula({1,5,3,4},{1,2,3,4}),8)
+        };
+        PBFormula costFunction = PBFormula({-15,-10,-9,-5},{1,2,3,4});
+        PBMin m = PBMin(constraints, costFunction,LINEAR_SEARCH);
+        bool e_sat = true;
+        int64_t e_min = -29;
+        std::vector< int32_t > expected_model = {1,-2,3,4};
+        //execution and check
+        int64_t min;
+        std::vector< int32_t > model;
+
+        bool sat = m.solve(model, min);
+        EXPECT_EQ(e_sat, sat);
+        EXPECT_EQ(min, e_min);
+        for (size_t i = 0; i < expected_model.size(); i++) {
             EXPECT_EQ(model[i],expected_model[i]);
         }
     }
