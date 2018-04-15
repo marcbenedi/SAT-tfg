@@ -1,0 +1,155 @@
+\chapter{Economic Management}
+\label{Chapter4}
+
+In this section, all the costs of the project are exposed. 
+\section{Direct costs}
+Direct costs are those that have a direct relationship with the manufacture of the product. In this case, the only direct costs are the human resources. 
+
+\subsection{Human resources}
+The cost of the human resources has been estimated with the following expression: $Cost = \frac{Salary}{Hour} \times Expected Hours$. The salaries have been extracted from PagePersonnel study\cite{PagePersonnel}. In this study, the salaries are expressed per year. In average, there are 1.500 working hours per year. To obtain the price per hour, the salary per year has been divided by the working hours per year.\\
+
+Taking into consideration the Gantt chart from the previous deliverable, the dedication of each role has been defined as follows:
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Stage & \multicolumn{1}{l|}{Project Manager} & \multicolumn{1}{l|}{Software Architect} & \multicolumn{1}{l|}{Developer} \\ \hline
+		GEP & 70 & 0 & 0 \\ \hline
+		Initial Stage & 30 & 30 & 30 \\ \hline
+		Iteration 1,2,3 & 6 & 147 & 87 \\ \hline
+		Final Stage & 30 & 0 & 20 \\ \hline
+	\end{tabular}
+	\caption{Hours destined to each stage per role}
+	\label{StageResources}
+\end{table}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Role & \multicolumn{1}{l|}{Estimated hours (h)} & \multicolumn{1}{l|}{Price/hour (€)} & \multicolumn{1}{l|}{Total cost (€)} \\ \hline
+		Project Manager & 136 & 27  & 3.672 \\ \hline
+		Software Architect & 177 & 25 & 4.425 \\ \hline
+		Developer & 137 & 14 & 1.918 \\ \hline\hline
+		Total & \multicolumn{3}{r|}{10.015} \\ \hline
+	\end{tabular}
+	\caption{Human resources budget}
+	\label{HumanResources}
+\end{table}
+
+\section{Indirect costs}
+Indirect costs are those that do not have a direct relationship with the manufacture of the product. In this case, the indirect costs are Hardware, Software, and some others. 
+
+\subsection{Hardware}
+
+According to \emph{Agencia Tributaria}\footnote{\href{http://www.agenciatributaria.es/AEAT.internet/en_gb/Inicio/_Segmentos_/Empresas_y_profesionales/Empresas/Impuesto_sobre_Sociedades/Periodos_impositivos_a_partir_de_1_1_2015/Base_imponible/Amortizacion/Tabla_de_coeficientes_de_amortizacion_lineal_.shtml} {Agencia Tributaria - amortizations}}, the maximum number of years to amortize a computer equipment is 8. Therefore the amortization of Hardware resources has been calculated following this expression: $Amortization = \frac{Price}{8\times12} \times 5$
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|}
+		\hline
+		Product & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
+		Lenovo IdeaPad U330T & 899 & 1 & 8 & 46,83\\ \hline\hline
+		Total & \multicolumn{4}{r|}{46,83} \\ \hline
+	\end{tabular}
+	\caption{Hardware resources budget}
+	\label{HardwareResources}
+\end{table}
+
+\subsection{Software}
+For software resources, free tools have been selected and student discounts have been used to minimize the total cost.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|}
+		\hline
+		Product              & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Useful life (y)} & \multicolumn{1}{l|}{Amortization (€)} \\ \hline
+		GitHub	& 6,10/month & 5 & N/A & 30,5 \\ \hline
+		GitHub student pack & -6,10/month & 5 & N/A & -30,5 \\ \hline
+		Clion 	& 6,90/month & 5 & N/A & 34,5 \\ \hline
+		JetBrains Product Pack for Students & -6,90/month & 5 & N/A & -34,5 \\ \hline
+		Atom 	& 0,00 & 1 & N/A & 0,00 \\ \hline
+		TeXstudio 	& 0,00 & 1 & N/A & 0,00 \\ \hline\hline
+		Total	& \multicolumn{4}{r|}{0,00}                                                                                           \\ \hline
+	\end{tabular}
+	\caption{Software resources budget}
+	\label{SoftwareResources}
+\end{table}
+
+\subsection{Other resources}
+Internet connexion price has been extracted from Pepephone\footnote{\href{https://www.pepephone.com/internet-en-casa}{Pepephone fibra}} plan, which is 34,6€ per month. \\
+kWh price has been extracted from \href{https://tarifasgasluz.com/faq/precio-kwh-espana-2017}{Selectra}. The average price per kWh is 0,12€.
+In office supplies paper packs, books, pens, \ldots \ are included.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{Product} & \multicolumn{1}{l|}{Price(€)} & \multicolumn{1}{l|}{Units} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Internet connexion & 0,047/h & 450 hours & 21,15\\ \hline
+		Power consumption & 51Wh & 450 hours & 2,75 \\ \hline
+		Print & 0,05/page & 400 pages & 20 \\ \hline
+		Office supplies & 50 & 1 & 50 \\ \hline\hline
+		Total & \multicolumn{3}{r|}{93,9}                                                                        \\ \hline
+	\end{tabular}
+	\caption{Other resources budget}
+	\label{OtherResources}
+\end{table}
+
+\section{Contingency}
+The contingency percentage for direct costs has been estimated following my experience on past projects. For indirect costs, the budget is easier to estimate therefore a small percentage has been selected.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{Concept} & \multicolumn{1}{l|}{Price (€)} & \multicolumn{1}{l|}{Percentage (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Direct costs & 10.015 & 30 & 3.004,5 \\ \hline
+		Indirect costs & 140,73 & 15 & 21,11\\ \hline\hline
+		Total & \multicolumn{3}{r|}{3.025,61} \\ \hline
+	\end{tabular}
+	\caption{Contingency budget}
+	\label{Contingency}
+\end{table}
+
+\section{Unforeseen}
+The first unforeseen is that the computer breaks. In this case, a new one will be bought. The other unforeseen events are that the stages of the project being extended. For each stage, a 50\% delay has been estimated.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|r|r|r|}
+		\hline
+		Unforeseen & \multicolumn{1}{l|}{Cost (€)} & \multicolumn{1}{l|}{Probability (\%)} & \multicolumn{1}{l|}{Total (€)} \\ \hline
+		Broken computer & 1.300 & 5 & 65 \\ \hline
+		Delay GEP stage & 945 & 15 & 141,75\\ \hline
+		Delay initial stage & 990 & 15 & 148,5\\ \hline
+		Delay iteration 1 & 842,5 & 15 & 126,38\\ \hline
+		Delay iteration 2 & 842,5 & 15 & 126,38\\ \hline
+		Delay iteration 3 & 842,5 & 15 & 126,38\\ \hline
+		Delay final stage & 545 & 15 & 81,75\\ \hline\hline
+		Total & \multicolumn{3}{r|}{816,14} \\ \hline
+	\end{tabular}
+	\caption{Unforeseen budget}
+	\label{Unforeseen}
+\end{table}
+
+\section{Total budget}
+In conclusion, the total budget of the project is:
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|r|}
+		\cline{2-2}
+		& \multicolumn{1}{l|}{Cost (€)} \\ \hline
+		\multicolumn{1}{|l|}{Direct costs} & 10.015\\ \hline
+		\multicolumn{1}{|l|}{Indirect costs}& 140,73\\ \hline
+		\multicolumn{1}{|l|}{Contingency} & 3.025,61\\ \hline
+		\multicolumn{1}{|l|}{Unforeseen} & 816,14\\ \hline\hline
+		\multicolumn{1}{|l|}{Total} & 13.997,48\\ \hline
+	\end{tabular}
+	\caption{Total budget}
+	\label{TotalBudget}
+\end{table}
+\section{Control management}
+The control management mechanisms will be used to study and compare deviations.\\
+
+The Human Resources is an initial estimation, therefore, the estimated cost and the real cost obtained once the project is finished will be compared. In any case, an hour follow-up will be done for each iteration and the functionalities implemented to see if the planning is accurate, or correct possible deviations and decide which functionalities could be added or deleted in order to accomplish the planning. Another method to solve the possible deviations could be reorganizing the Gantt chart. 
+
+At the end of the project, the original estimated budget will be compared with the real one. Finally, a study of which deviations and unforeseen appeared will be done and check if they can be covered by the contingency budget. This analysis will be very useful to realize future budgets and to apply the extracted conclusions. \\
+
+The indicators used for that are: Variance in cost by rate, efficiency variance, variance in totals, \ldots

@@ -144,6 +144,7 @@ bool PBMin::linearSearch(std::vector< int32_t > & model, int64_t & min){
     int64_t k = getCostFunctionMax();
     min = getCostFunctionMax()+1;
 
+    //Convert costFunction to vector< WeightedLit>
     std::vector< PBLib::WeightedLit> w_costFunction;
     for (size_t i = 0; i < costFunction.getWeights().size(); i++) {
         w_costFunction.push_back(PBLib::WeightedLit(costFunction.getLiterals()[i],costFunction.getWeights()[i]));
