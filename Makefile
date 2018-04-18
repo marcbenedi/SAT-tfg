@@ -31,10 +31,10 @@ PBLIB_LIBS_INCLUDE = -L$(PBLIB)/lib
 PBLIB_LIBS = -lpblib
 
 compile_main:
-	$(CC) -c -std=c++0x -g $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g -fpermissive   $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
 
 link_main:
-	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) $(PBLIB_LIBS_INCLUDE) -static $(CUDD_LIBS) $(PBLIB_LIBS)
+	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) $(PBLIB_LIBS_INCLUDE)  -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -static $(CUDD_LIBS) $(PBLIB_LIBS)
 
 main:
 	make compile_main link_main
@@ -50,9 +50,9 @@ compile_tfg:
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)MixCNFConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)MixCNFConverter.o
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
 
-	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
-	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
-	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
+	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
+	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
+	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
 
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
@@ -77,9 +77,9 @@ compile_tests:
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
 
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBMin_UT.cpp -o $(TEST_BUILD)PBMin_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBMin_UT.cpp -o $(TEST_BUILD)PBMin_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 
 link_tests:
 	# $(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
@@ -91,10 +91,9 @@ link_tests:
 	# $(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 	# $(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
 
-	$(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	$(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	$(CC) -o $(TEST_BUILD)PBMin_UT $(TEST_BUILD)PBMin_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-
+	# $(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	# $(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	# $(CC) -o $(TEST_BUILD)PBMin_UT $(TEST_BUILD)PBMin_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 tests:
 	make compile_tests link_tests
@@ -107,6 +106,6 @@ tests:
 	# ./test_build/MixCNFConverter_UT
 	# ./test_build/SatSolver_UT
 
-	./test_build/PBFormula_UT
-	./test_build/PBConstraint_UT
-	./test_build/PBMin_UT
+	# ./test_build/PBFormula_UT
+	# ./test_build/PBConstraint_UT
+	# ./test_build/PBMin_UT

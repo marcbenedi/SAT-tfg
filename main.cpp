@@ -1,35 +1,66 @@
 #include <iostream>
-#include <string>
+// #include <string>
+// #include <stdio.h>
+#include <unistd.h> //sleep
+// #include <stdlib.h>
 #include <vector>
-#include "pb2cnf.h"
+#include <pthread.h> //pthread
+#include <signal.h>
+#include <time.h>
 
-using namespace std;
+struct thread_data {
+   std::vector<int> v;
+   bool sat;
+   bool finished = false;
+};
+
+void timeout(int signum)
+{
+    printf("Hello from handler\n");
+    pthread_exit(NULL);
+}
+
+void *calc(void * p){
+
+    signal(SIGTERM,timeout);
+
+    struct thread_data *my_data;
+    my_data = (struct thread_data *) p;
+    my_data -> sat = true;
+    for (size_t i = 0; i < 10; i++) {
+        (my_data->v).push_back(i);
+    }
+    std::cout << "before sleep" << '\n';
+    sleep(15);
+    std::cout << "after sleep" << '\n';
+    my_data->finished = true;
+    pthread_exit(NULL);
+}
 
 int main() {
+    pthread_t first;
+    struct thread_data td;
+    int c = pthread_create(&first, NULL, calc, &td);
+    std::cout << "c "<<c << '\n';
 
-    PB2CNF pb2cnf;
 
-    vector< vector< int32_t > > formula;
-    int32_t firstFreshVariable = 4;
-
-    vector< int64_t > weights = {1,2};
-    vector< int32_t > literals = {1,2};
-
-    vector< int64_t > weights2 = {3,4};
-    vector< int32_t > literals2 = {2,3};
-
-    vector< int64_t > weights3 = {3,7};
-    vector< int32_t > literals3 = {1,3};
-
-    firstFreshVariable = pb2cnf.encodeLeq(weights, literals, 1, formula, firstFreshVariable) + 1;
-    firstFreshVariable = pb2cnf.encodeLeq(weights2, literals2, 1, formula, firstFreshVariable) + 1;
-    firstFreshVariable = pb2cnf.encodeLeq(weights3, literals3, 1, formula, firstFreshVariable) + 1;
-
-    for (size_t i = 0; i < formula.size(); i++) {
-        std::vector< int32_t > *clause = &formula[i];
-        for (size_t j = 0; j < clause->size(); j++) {
-            std::cout << (*clause)[j] << " ";
+    time_t seconds;
+    seconds = time (NULL);
+    int timeout = 20+seconds;
+    while (!td.finished) {
+        seconds = time (NULL);
+        if(timeout == seconds ){
+            int k = pthread_kill(first, SIGTERM);
+            std::cout << "k " << k << '\n';
+            td.finished = true;
         }
-        std::cout << '\n';
+        sleep(1);
     }
+
+    std::cout << "SAT " <<td.sat << '\n';
+    for (size_t i = 0; i < td.v.size();i++) {
+        std::cout << td.v[i] << '\n';
+    }
+
+
 }
