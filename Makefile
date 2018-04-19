@@ -53,6 +53,7 @@ compile_tfg:
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
 	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Solver.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)Solver.o
 
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
