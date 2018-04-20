@@ -14,7 +14,6 @@ void LinearSearchStrategy::init(const PBMin & p){
 }
 
 void LinearSearchStrategy::loop(void (Solver::*solver)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *s, const PBMin & pm){
-
     PB2CNF pb2cnf;
     std::vector< std::vector< int32_t > > cnf;
     std::vector< int32_t > temp_model;

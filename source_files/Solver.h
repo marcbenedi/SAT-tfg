@@ -5,7 +5,7 @@
 #include "PBMin.h"
 
 class Solver {
-private:
+protected:
     //Pointer to use inheritance
     SearchStrategy *searchStrategy;
     PBMin pbmin;
