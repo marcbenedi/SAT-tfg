@@ -5,15 +5,15 @@ PBMin::PBMin(std::vector<PBConstraint> p_constraints, PBFormula p_costFunction):
 
 }
 
-std::vector<PBConstraint> PBMin::getConstraints(){
+std::vector<PBConstraint> PBMin::getConstraints() const{
     return constraints;
 }
 
-PBFormula PBMin::getCostFunction(){
+PBFormula PBMin::getCostFunction() const{
     return costFunction;
 }
 
-int32_t PBMin::getFirstFreshVariable(){
+int32_t PBMin::getFirstFreshVariable() const{
     int32_t max = -1;
     for (size_t i = 0; i < constraints.size(); i++) {
         for (size_t k = 0; k < constraints[i].getPBFormula().getLiterals().size(); k++) {
@@ -30,7 +30,7 @@ int32_t PBMin::getFirstFreshVariable(){
     return max+1;
 }
 
-int64_t PBMin::getCostFunctionMax(){
+int64_t PBMin::getCostFunctionMax() const{
     std::map<int32_t,int64_t> positive;
     std::map<int32_t,int64_t> negative;
     std::set<int32_t> lits;
@@ -52,7 +52,7 @@ int64_t PBMin::getCostFunctionMax(){
 
     return max;
 }
-int64_t PBMin::getCostFunctionMin(){
+int64_t PBMin::getCostFunctionMin() const{
     std::map<int32_t,int64_t> positive;
     std::map<int32_t,int64_t> negative;
     std::set<int32_t> lits;

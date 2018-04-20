@@ -10,8 +10,8 @@ private:
     std::vector< int32_t > literals;
 public:
     PBFormula(const std::vector< int64_t > & weights, const std::vector< int32_t > & literals);
-    std::vector< int64_t > getWeights();
-    std::vector< int32_t > getLiterals();
+    std::vector< int64_t > getWeights() const;
+    std::vector< int32_t > getLiterals() const;
     void addPair(int64_t weight, int32_t literal);
 
 };

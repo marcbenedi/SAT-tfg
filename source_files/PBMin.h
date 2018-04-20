@@ -16,11 +16,11 @@ private:
     PBFormula costFunction;
 public:
     PBMin(std::vector<PBConstraint> p_constraints, PBFormula p_costFunction);
-    std::vector<PBConstraint> getConstraints();
-    PBFormula getCostFunction();
-    int32_t getFirstFreshVariable();
-    int64_t getCostFunctionMax();
-    int64_t getCostFunctionMin();
+    std::vector<PBConstraint> getConstraints() const;
+    PBFormula getCostFunction() const;
+    int32_t getFirstFreshVariable() const;
+    int64_t getCostFunctionMax() const;
+    int64_t getCostFunctionMin() const;
 };
 
 #endif // PBMIN_H

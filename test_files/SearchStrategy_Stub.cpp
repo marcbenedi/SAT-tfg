@@ -6,10 +6,10 @@
 class SearchStrategy_Stub : public SearchStrategy {
 private:
 public:
-    void init(const std::vector<PBConstraint> & constraints, const PBFormula & costFunction) override{
+    void init(const PBMin & p) override{
 
     }
-    void loop(void (Solver::*solver)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat) override {
+    void loop(void (Solver::*solver)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *s, const PBMin &p) override {
         model.clear();
         model.push_back(1);
         model.push_back(2);

@@ -4,8 +4,8 @@ Solver::Solver(SearchStrategy *p_searchStrategy, const PBMin & p_pbmin):searchSt
 
 bool Solver::run(std::vector< int32_t > & model, int64_t & min){
     bool sat = false;
-    searchStrategy->init(pbmin.getConstraints(),pbmin.getCostFunction());
-    searchStrategy->loop(&Solver::solver, model, min, sat);
+    searchStrategy->init(pbmin);
+    searchStrategy->loop(&Solver::solver, model, min, sat, this, pbmin);
     searchStrategy->end();
     return sat;
 }

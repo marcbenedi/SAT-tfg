@@ -6,6 +6,7 @@
 
 class Solver {
 private:
+    //Pointer to use inheritance
     SearchStrategy *searchStrategy;
     PBMin pbmin;
 public:

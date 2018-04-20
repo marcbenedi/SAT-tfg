@@ -3,7 +3,7 @@
 PBConstraint::PBConstraint(const PBFormula & p_formula, int64_t p_k):formula(p_formula), k(p_k)
 {}
 
-PBFormula PBConstraint::getPBFormula(){
+PBFormula PBConstraint::getPBFormula() const{
     return formula;
 }
 int64_t PBConstraint::getK(){

@@ -17,10 +17,10 @@ PBFormula::PBFormula(const std::vector< int64_t > & p_weights, const std::vector
     literals = p_literals;
 }
 
-std::vector< int64_t > PBFormula::getWeights(){
+std::vector< int64_t > PBFormula::getWeights() const{
     return weights;
 }
-std::vector< int32_t > PBFormula::getLiterals(){
+std::vector< int32_t > PBFormula::getLiterals() const{
     return literals;
 }
 
