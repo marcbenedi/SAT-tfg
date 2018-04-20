@@ -56,6 +56,7 @@ compile_tfg:
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Solver.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)Solver.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)SearchStrategy.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)BinarySearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)BinarySearchStrategy.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)LinearSearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)LinearSearchStrategy.o
 
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
@@ -86,7 +87,8 @@ compile_tests:
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_UT.cpp -o $(TEST_BUILD)Solver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SearchStrategy_Stub.cpp -o $(TEST_BUILD)SearchStrategy_Stub.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BinarySearchStrategy_UT.cpp -o $(TEST_BUILD)BinarySearchStrategy_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_LinearSearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 
 link_tests:
 	# $(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
@@ -104,7 +106,8 @@ link_tests:
 	# $(CC) -o $(TEST_BUILD)Solver_UT $(TEST_BUILD)Solver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 	# $(CC) -o $(TEST_BUILD)SearchStrategy_Stub $(TEST_BUILD)SearchStrategy_Stub.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
 	# $(CC) -o $(TEST_BUILD)BinarySearchStrategy_UT $(TEST_BUILD)BinarySearchStrategy_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	$(CC) -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	# $(CC) -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 tests:
 	make compile_tests link_tests
@@ -122,4 +125,5 @@ tests:
 	# ./test_build/PBMin_UT
 	# ./test_build/Solver_UT
 	# ./test_build/BinarySearchStrategy_UT
-	./test_build/Solver_BinarySearchStrategy_INT
+	# ./test_build/Solver_BinarySearchStrategy_INT
+	./test_build/Solver_LinearSearchStrategy_INT
