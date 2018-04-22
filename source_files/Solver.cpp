@@ -44,3 +44,7 @@ void Solver::solver(std::vector< int32_t > & model, const std::vector< std::vect
     }
 
 }
+
+bool Solver::hasTimeoutOccurred(){
+    return timeoutOccurred;
+}

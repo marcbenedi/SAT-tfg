@@ -41,23 +41,24 @@ main:
 	./main
 
 compile_tfg:
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)Clause.cpp -o $(TFG_BUILD)Clause.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)Cnf.cpp -o $(TFG_BUILD)Cnf.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)VarsManager.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)VarsManager.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)BoolFunc.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)BoolFunc.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)CnfConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)CnfConverter.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)BDDConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)BDDConverter.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)MixCNFConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)MixCNFConverter.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
-    #
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
-	# $(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Clause.cpp -o $(TFG_BUILD)Clause.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Cnf.cpp -o $(TFG_BUILD)Cnf.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)VarsManager.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)VarsManager.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)BoolFunc.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)BoolFunc.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)CnfConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)CnfConverter.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)BDDConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)BDDConverter.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)MixCNFConverter.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)MixCNFConverter.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SatSolver.cpp $(CUDD_INCLUDE) -o $(TFG_BUILD)SatSolver.o
+
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBMin.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBMin.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBConstraint.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBConstraint.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)PBFormula.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)PBFormula.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)Solver.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)Solver.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)SearchStrategy.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)BinarySearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)BinarySearchStrategy.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)LinearSearchStrategy.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)LinearSearchStrategy.o
 	$(CC) -c -std=c++0x -g $(TFG_FOLDER)SimpleTimeoutSolver.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)SimpleTimeoutSolver.o
+	$(CC) -c -std=c++0x -g $(TFG_FOLDER)GeneralTimeoutSolver.cpp $(PBLIB_INCLUDE) -o $(TFG_BUILD)GeneralTimeoutSolver.o
 
 lib_tfg:
 	ar rcs $(TFG_BUILD)libtfg.a $(TFG_BUILD)*.o
@@ -73,44 +74,52 @@ clean:
 	rm -f input.txt
 
 compile_tests:
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BoolFunc_UT.cpp -o $(TEST_BUILD)BoolFunc_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)CnfConverter_UT.cpp -o $(TEST_BUILD)CnfConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BDDConverter_UT.cpp -o $(TEST_BUILD)BDDConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
-    #
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)PBMin_UT.cpp -o $(TEST_BUILD)PBMin_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_UT.cpp -o $(TEST_BUILD)Solver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)SearchStrategy_Stub.cpp -o $(TEST_BUILD)SearchStrategy_Stub.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)BinarySearchStrategy_UT.cpp -o $(TEST_BUILD)BinarySearchStrategy_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
-	# $(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_LinearSearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Cnf_UT.cpp -o $(TEST_BUILD)Cnf_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)VarsManager_UT.cpp -o $(TEST_BUILD)VarsManager_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BoolFunc_UT.cpp -o $(TEST_BUILD)BoolFunc_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)CnfConverter_UT.cpp -o $(TEST_BUILD)CnfConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BDDConverter_UT.cpp -o $(TEST_BUILD)BDDConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)MixCNFConverter_UT.cpp -o $(TEST_BUILD)MixCNFConverter_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SatSolver_UT.cpp -o $(TEST_BUILD)SatSolver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(CUDD_INCLUDE)
+
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBFormula_UT.cpp -o $(TEST_BUILD)PBFormula_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBConstraint_UT.cpp -o $(TEST_BUILD)PBConstraint_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)PBMin_UT.cpp -o $(TEST_BUILD)PBMin_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_UT.cpp -o $(TEST_BUILD)Solver_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SearchStrategy_Stub.cpp -o $(TEST_BUILD)SearchStrategy_Stub.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)BinarySearchStrategy_UT.cpp -o $(TEST_BUILD)BinarySearchStrategy_UT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Solver_LinearSearchStrategy_INT.cpp -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SimpleTimeoutSolver_LinearSearchStrategy_INT.cpp -o $(TEST_BUILD)SimpleTimeoutSolver_LinearSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SimpleTimeoutSolver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)SimpleTimeoutSolver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)GeneralTimeoutSolver_LinearSearchStrategy_INT.cpp -o $(TEST_BUILD)GeneralTimeoutSolver_LinearSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)GeneralTimeoutSolver_BinarySearchStrategy_INT.cpp -o $(TEST_BUILD)GeneralTimeoutSolver_BinarySearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)SlowSearchStrategy_Stub.cpp -o $(TEST_BUILD)SlowSearchStrategy_Stub.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(TEST_FOLDER)GeneralTimeoutSolver_SlowSearchStrategy_INT.cpp -o $(TEST_BUILD)GeneralTimeoutSolver_SlowSearchStrategy_INT.o $(TFG_INCLUDE) $(GT_INCLUDE) $(PBLIB_INCLUDE)
 
 link_tests:
-	# $(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	# $(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	# $(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	# $(CC) -o $(TEST_BUILD)BoolFunc_UT $(TEST_BUILD)BoolFunc_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	# $(CC) -o $(TEST_BUILD)CnfConverter_UT $(TEST_BUILD)CnfConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	# $(CC) -o $(TEST_BUILD)BDDConverter_UT $(TEST_BUILD)BDDConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	# $(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-	# $(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
-    #
-	# $(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	# $(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	# $(CC) -o $(TEST_BUILD)PBMin_UT $(TEST_BUILD)PBMin_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	# $(CC) -o $(TEST_BUILD)Solver_UT $(TEST_BUILD)Solver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	# $(CC) -o $(TEST_BUILD)SearchStrategy_Stub $(TEST_BUILD)SearchStrategy_Stub.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
-	# $(CC) -o $(TEST_BUILD)BinarySearchStrategy_UT $(TEST_BUILD)BinarySearchStrategy_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	# $(CC) -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	# $(CC) -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)Clause_UT $(TEST_BUILD)Clause_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)Cnf_UT $(TEST_BUILD)Cnf_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)VarsManager_UT $(TEST_BUILD)VarsManager_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)BoolFunc_UT $(TEST_BUILD)BoolFunc_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)CnfConverter_UT $(TEST_BUILD)CnfConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)BDDConverter_UT $(TEST_BUILD)BDDConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)MixCNFConverter_UT $(TEST_BUILD)MixCNFConverter_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+	$(CC) -o $(TEST_BUILD)SatSolver_UT $(TEST_BUILD)SatSolver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread  $(CUDD)/cudd/.libs/libcudd.a
+
+	$(CC) -o $(TEST_BUILD)PBFormula_UT $(TEST_BUILD)PBFormula_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread
+	$(CC) -o $(TEST_BUILD)PBConstraint_UT $(TEST_BUILD)PBConstraint_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)PBMin_UT $(TEST_BUILD)PBMin_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)Solver_UT $(TEST_BUILD)Solver_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)BinarySearchStrategy_UT $(TEST_BUILD)BinarySearchStrategy_UT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)Solver_BinarySearchStrategy_INT $(TEST_BUILD)Solver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)Solver_LinearSearchStrategy_INT $(TEST_BUILD)Solver_LinearSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 	$(CC) -o $(TEST_BUILD)SimpleTimeoutSolver_LinearSearchStrategy_INT $(TEST_BUILD)SimpleTimeoutSolver_LinearSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)SimpleTimeoutSolver_BinarySearchStrategy_INT $(TEST_BUILD)SimpleTimeoutSolver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)GeneralTimeoutSolver_LinearSearchStrategy_INT $(TEST_BUILD)GeneralTimeoutSolver_LinearSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)GeneralTimeoutSolver_BinarySearchStrategy_INT $(TEST_BUILD)GeneralTimeoutSolver_BinarySearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(TEST_BUILD)GeneralTimeoutSolver_SlowSearchStrategy_INT $(TEST_BUILD)GeneralTimeoutSolver_SlowSearchStrategy_INT.o -L$(TFG_BUILD) $(TFG_LIBS) $(GT_LIB_INCLUDE) $(GT_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 tests:
 	make compile_tests link_tests
@@ -131,3 +140,7 @@ tests:
 	# ./test_build/Solver_BinarySearchStrategy_INT
 	# ./test_build/Solver_LinearSearchStrategy_INT
 	./test_build/SimpleTimeoutSolver_LinearSearchStrategy_INT
+	./test_build/SimpleTimeoutSolver_BinarySearchStrategy_INT
+	./test_build/GeneralTimeoutSolver_LinearSearchStrategy_INT
+	./test_build/GeneralTimeoutSolver_BinarySearchStrategy_INT
+	./test_build/GeneralTimeoutSolver_SlowSearchStrategy_INT

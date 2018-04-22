@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "SimpleTimeoutSolver.h"
+#include "GeneralTimeoutSolver.h"
 #include "LinearSearchStrategy.h"
 
 namespace {
@@ -17,7 +17,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
         std::vector< int32_t > model;
         int64_t min;
         bool sat = s.run(model,min);
@@ -41,7 +41,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -67,7 +67,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -87,7 +87,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -112,7 +112,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -137,7 +137,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -163,7 +163,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -187,7 +187,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -211,7 +211,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;
@@ -236,7 +236,7 @@ namespace {
 
         LinearSearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
-        SimpleTimeoutSolver s(5,&bs,m);
+        GeneralTimeoutSolver s(5,&bs,m);
 
         std::vector< int32_t > model;
         int64_t min;

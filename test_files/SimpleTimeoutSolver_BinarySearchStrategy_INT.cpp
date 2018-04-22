@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 
 #include "SimpleTimeoutSolver.h"
-#include "LinearSearchStrategy.h"
+#include "BinarySearchStrategy.h"
 
 namespace {
     //TODO: test timouts
@@ -15,7 +15,7 @@ namespace {
         int64_t e_min = 0;
         std::vector< int32_t > e_model = {-1};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
         std::vector< int32_t > model;
@@ -39,7 +39,7 @@ namespace {
         int64_t e_min = -8;
         std::vector< int32_t > e_model = {-1,-2,-3};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -65,7 +65,7 @@ namespace {
         int64_t e_min = -8;
         std::vector< int32_t > e_model = {-1};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -85,7 +85,7 @@ namespace {
         int64_t e_min = -3;
         std::vector< int32_t > e_model =  {-1,-2};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -110,7 +110,7 @@ namespace {
         int64_t e_min = 7;
         std::vector< int32_t > e_model =  {-1,2};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -135,7 +135,7 @@ namespace {
         int64_t e_min = 3;
         std::vector< int32_t > e_model =  {1,2};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -161,7 +161,7 @@ namespace {
         int64_t e_min = -29;
         std::vector< int32_t > e_model =  {1,-2,3,4};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -185,7 +185,7 @@ namespace {
         int64_t e_min = 1;
         std::vector< int32_t > e_model =  {1};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -209,7 +209,7 @@ namespace {
         int64_t e_min = 0;
         std::vector< int32_t > e_model =  {-1};
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 
@@ -234,7 +234,7 @@ namespace {
         int64_t e_min;
         std::vector< int32_t > e_model;
 
-        LinearSearchStrategy bs;
+        BinarySearchStrategy bs;
         PBMin m = PBMin(constraints, costFunction);
         SimpleTimeoutSolver s(5,&bs,m);
 

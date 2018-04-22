@@ -140,4 +140,25 @@ namespace {
         EXPECT_EQ(min, e_min);
     }
 
+    TEST(HasTimeoutOccurred,hasTimeoutOccurred){
+
+        std::vector< PBConstraint > e_constraints = {
+            PBConstraint(PBFormula({4},{1}),3),
+            PBConstraint(PBFormula({4},{-2}),3),
+        };
+        PBFormula costFunction({-7,-3,10},{1,-1,2});
+
+        SearchStrategy_Stub stub;
+        PBMin m = PBMin(e_constraints, costFunction);
+        Solver solver(&stub,m);
+
+        std::vector< int32_t > model;
+        int64_t min;
+        EXPECT_EQ(solver.hasTimeoutOccurred(), false);
+        bool sat = solver.run(model,min);
+        EXPECT_EQ(solver.hasTimeoutOccurred(), false);
+    }
+
+
+
 }

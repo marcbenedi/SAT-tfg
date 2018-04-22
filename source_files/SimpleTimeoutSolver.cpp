@@ -1,6 +1,11 @@
 #include "SimpleTimeoutSolver.h"
 
-SimpleTimeoutSolver::SimpleTimeoutSolver(SearchStrategy *p_searchStrategy, const PBMin & p_pbmin):Solver(p_searchStrategy,p_pbmin){}
+SimpleTimeoutSolver::SimpleTimeoutSolver(int p_seconds, SearchStrategy *p_searchStrategy, const PBMin & p_pbmin):seconds(p_seconds),Solver(p_searchStrategy,p_pbmin){
+    if (seconds <= 0) {
+        //NOTE: At least one second or the thread will not have enough time to register signal
+        seconds = 1;
+    }
+}
 
 void SimpleTimeoutSolver::solver(std::vector< int32_t > & model, const std::vector< std::vector< int32_t > > & cnf, bool & sat){
     pthread_t thread;
@@ -10,18 +15,17 @@ void SimpleTimeoutSolver::solver(std::vector< int32_t > & model, const std::vect
     td.sat = sat;
     td.pbm = &pbmin;
     int c = pthread_create(&thread, NULL, SimpleTimeoutSolver::minisat, &td);
-    time_t seconds;
-    seconds = time (NULL);
-    int timeout = 20+seconds;
+    time_t start;
+    start = time (NULL);
+    int timeout = start+seconds;
     while (!td.finished) {
-        // std::cout << "soc el pare i estic esperant" << '\n';
-        seconds = time (NULL);
-        if(timeout == seconds ){
+        start = time (NULL);
+        if(timeout <= start ){
             int k = pthread_kill(thread, SIGTERM);
-            std::cout << "k " << k << '\n';
             td.finished = true;
+            td.sat = false; //if time is over then unsat
+            timeoutOccurred = true;
         }
-        // sleep(1);
     }
     model = td.model;
     sat = td.sat;
