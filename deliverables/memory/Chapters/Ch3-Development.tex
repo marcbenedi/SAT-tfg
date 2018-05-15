@@ -1,0 +1,104 @@
+\chapter{Development} 
+\label{Chapter3}
+
+\section{Initial Stage} %TODO: Buscarli un nom mes atractiu
+
+Agafar codi actual i "acabarlo"
+%TODO: Pensar si en algun punt posar larquitectura del codi base
+Google tests
+Comencar a fer unit testing
+Makefile
+
+Analitzar requisits
+Preparar editor
+
+
+\section{Objective 1: Pseudo-boolean Minimization}
+
+Problema:
+Voliem crear una capa per expressar problemes de pseudo minimizatcio pseudo booleana en el nostre software. 
+Expressar facil i clarament.
+
+Possibles solucions:
+Crear des de zero tot el codi. Requereix molt de temps i impossible de millorar PBLIB.
+
+Utilitzar PBLIB. una llibreria que ja existeix i coneguda dins del secotor. Implementa molts encoding i es una bona eina.
+
+Es tria utilitzar PBLib perque sera menys costos en temps i la solucio sera de millor qualitat.
+
+Pla per executar la solucio:
+
+Planning:
+
+Llegir sobre PBLib i com funciona (adjuntar link als papers)
+Compilar-lo, jugar una miqueta, incorporarlo al makefile
+Mirar les part mes rellevants del codi i entendre com funcionen.
+Estudiar els requeriments que volem i veure si pblib els pot oferir
+Dissenyar larquitectura
+%TODO adjuntar larquitectura de la primera part.
+
+Development and TDD:
+
+Es va utilitzar metodologia TDD per tant:
+com que teniem pensades les funcionalitats que voliem, esolliem la primera i escribiem els tests per aquesta. Despres el codi per passar aquests tests, refactor i passar a la seguent specification.
+Design tests for PBFormula
+Implement PBFormula
+Design tests for PBConstraint
+Implement PBConstraing
+Design tests for PBMin
+Implement PBMin
+Design tests for PBMin binary search
+Implement binary search
+Design tests for PBMin linear search
+Implement linear search
+
+Finalization:
+Escriure uns quants tests mes, els quals han permes trobar bugs.
+%TODO: parlar una de les estrategies de cerca, el perque sutilitza linear search p.e
+
+\section{Objective 2: Timeout}
+
+Problema:
+els problemes poden tardar molt en executarse (dir una mesura de temps, algun exemple potser, ...) i per tant shauria de poder parar si ja no interessa.
+
+Possibles solucions:
+Implementar timeouts per parar lexecucio
+timeout per tot el bucle senser, timeout per cada execucio del minisat
+
+Pla per executar la solucio:
+
+Planning:
+buscar informacio sobre estrategies de timout
+no vaig trobar molta info (mirar el Diary per mes info)
+es van acabar pensant els dos timeout anomenats abans
+
+A l'hora de pensar en larquitectura es va haver de pensar com implementar els timeouts. Vaig pensar en threads o processos fill. Es va acabar triant threads perque comparteixen memoria.
+
+(Al Diary esta explicat que vaig pensant)
+
+Explicar larquitectura 
+%TODO adjuntar arquitectura
+explicar el refactor del codi anterior
+explicar els patrons utilitzats
+
+Development and TDD:
+
+explicar la creacio de stubs per fer el testing correctament.
+
+
+Finalization:
+
+
+\section{Objective 3: Multi-threading}
+
+Problema:
+
+Possibles solucions:
+
+Pla per executar la solucio:
+
+Planning:
+
+Development and TDD:
+
+Finalization:

@@ -47,7 +47,7 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage[backend=bibtex]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-\addbibresource{assig6.bib} % The filename of the bibliography
+\addbibresource{main.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -69,7 +69,7 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Deliverable 6: Final document} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{\projectTitle} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Dr. Jordi \textsc{Cortadella}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Computer Science Degree} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -146,26 +146,33 @@ headsepline, % Uncomment to get a line under the header
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
 
-%\begin{abstract}
-%	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-%	In this deliverable, a first introduction into the project context\ref{Chapter1} will be made. \emph{Boolean Satisfiability Problems} are explained together with other important concepts for this project like \emph{Boolean Formula, Pseudo-Boolean Formula, Conjunctive Normal Form, Minimization, \ldots} The background for this project and motivations will also be detailed. \\
-%	Next, the Project Formulation\ref{Chapter2} will be exposed, where the general objectives of it will be defined. \\
-%	Later, the Scope\ref{Chapter3} of the project will be discussed together with what requirements the project should meet, how are they going to be made and what obstacles could be found.\\
-%	Finally, the used methodology, the tools and the rigor will be exposed in Methodology and Rigor\ref{Chapter4}.
+\begin{abstract}
+	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+    TEXT DEL ABSTRACTE
 	
-%\end{abstract}
+\end{abstract}
 
 %----------------------------------------------------------------------------------------
 %	GLOSSARY
 %----------------------------------------------------------------------------------------
 
-%\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 	
-%	\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
-%	\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
-%	bdd, cnf, sat ,boolean formula, pseudo boolean formula, minimization, modelo, interpretacion
+	\textbf{Abbreviation} & Description of the abbreviation\\
 	
-%\end{abbreviations}
+	\textbf{} & \\
+	\textbf{CNF} & \\
+	\textbf{DNF} & \\
+	\textbf{PB} & \\
+	\textbf{PBF} & \\
+	\textbf{SAT} & \\
+	\textbf{PB-Min} & \\
+	\textbf{BF} & \textbf{B}oolean \textbf{F}ormula \\
+	\textbf{NP} & \\
+	\textbf{BDD} & \\
+	\textbf{AI} & \\
+	\textbf{TDD} & \\
+\end{abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -173,9 +180,9 @@ headsepline, % Uncomment to get a line under the header
 
 \tableofcontents % Prints the main table of contents
 
-%\listoffigures % Prints the list of figures
+\listoffigures % Prints the list of figures
 
-%\listoftables % Prints the list of tables
+\listoftables % Prints the list of tables
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
@@ -190,9 +197,11 @@ headsepline, % Uncomment to get a line under the header
 
 \include{Chapters/Ch1-IntroductionContext}
 \include{Chapters/Ch2-ProjectScope}
-\include{Chapters/Ch3-ProjectPlanning}
-\include{Chapters/Ch4-EconomicManagement}
-\include{Chapters/Ch5-SustainabilitySocialCommitment}
+\include{Chapters/Ch3-Development}
+\include{Chapters/Ch4-ProjectPlanning}
+\include{Chapters/Ch5-EconomicManagement}
+\include{Chapters/Ch6-SustainabilitySocialCommitment}
+\include{Chapters/Ch7-Conclusions}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
