@@ -2,16 +2,28 @@
 \label{Chapter1}
 
 \section{Introduction}
+Technology's world is evolving very fast. Every year new tools, frameworks\footnote{A software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. \href{https://en.wikipedia.org/wiki/Software_framework}{Wikipedia}} programming languages, etc. are released. Some of them are living they gold's era, such as blockchain and machine learning,  while others are forgotten.  
 
-\section{Context}
+This makes hard for universities decide what to teach: the tools used by companies or the fundaments of informatics.  
 
-Before explaining the main problem which this project is about, \emph{Pseudo-Boolean Minimization}, it necessary to do a quick introduction to a much wider topic.\\
+This project works with the fundaments of informatics and logic which won't change either be forgotten.  
 
-\textbf{Boolean satisfiability problems} \textit{(SAT from now on)} is the problem of finding a model\footnote{An interpretation which satisfies the formula.} for a \emph{Boolean Formula} (BF from now on). In other words, it is the result of evaluating the \emph{BF} after replacing its variables for \emph{true} or \emph{false}. 
-\\
-\emph{SAT} is widely used in Computer Science because it was the first problem proved to be NP-Complete\cite{Cook1971}\footnote{NP and NP-Hard.} which allowed a lot of NP\footnote{Nondeterministic polynomial time.} problems be reduced to it.
 
-\subsubsection{What is a Pseudo-Boolean Formula?}
+In this project, we will work with Pseudo-Boolean Minimization widely used by a lot of technologies such as Artifical Intelligence, Planners, Computer Vision,  Circuit design, ... 
+
+%TODO: Appendix with an example
+
+\section{Context} 
+
+
+But before being able to explain the main problem which this project is about, Pseudo-Boolean Minimization, it necessary to do a quick introduction to a much wider topic. 
+
+
+Boolean satisfiability problems (SAT from now on) is the problem of finding a model for a Boolean Formula (BF from now on). In other words, it is the result of evaluating the BF after replacing its variables for true or false. 
+
+SAT is widely used in Computer Science because it was the first problem proved to be NP-Complete which allowed a lot of NP problems be reduced to it\cite{Cook1971}
+
+\subsection{What is a Pseudo-Boolean Formula?}
 In propositional logic, a \emph{BF} is defined as following\cite{Lpo}:\\
 Let $P$ be a set of predicate symbols like $p,q,r,...$
 \begin{itemize}
@@ -22,17 +34,64 @@ Let $P$ be a set of predicate symbols like $p,q,r,...$
 \end{itemize}
 This representation has some limitations because it can only express properties which are \emph{true} or \emph{false}.\\
 
+%TODO: Example of boolean formula: variables, predicate symbols, interpretations, models, etc...
+
+\subsection{What are pseudo-boolean formulae?}
+
 \emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula} (PBF from now on): $3x+5y$. Therefore, \emph{BF} are a special case of \emph{PBF} where the domain is $d=\{0,1\}$.\\
 
 %TODO: potser explicar que son cardinality constraints
 
 
-\subsubsection{Pseudo-Boolean formulae minimization}
-\emph{PBF minimization} is a well known NP-Hard\footnote{NP-Hard: at least as hard as the hardest problems in NP \href{https://en.wikipedia.org/wiki/NP-hardness}{(more)}} problem. \\
-It does the following:\\
-Given some \emph{PB Constraints} of the form $\sum_{i=1}^{n} x_{i}w_{i} \leq k$, where $w_{i},k \in \mathbb{I}$ and $x_{i} \in \{0,1\}$, and a cost function , the goal is minimize it  $min(a_{1}x{1} + ... + a_{n}x_{n})$ in a way that all the restrictions are satisfied.\\
+\subsection{Pseudo-Boolean minimization}
+Pseudo-boolean optimizations is a linear programming problem: \\\\
+\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
+Linear programming (LP, also called linear optimization) is a method to achieve the best
+outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements
+are represented by linear relationships. 
 
-There is a big research in this field, more specifically in encoding \emph{PBF} into \emph{CNF}. In this paper, Hölldobler, Manthey, Steinke\cite{Holldobler}, some relevant \emph{PBF} into \emph{SAT} encodings are explained and a new one is proposed. One of the authors of this paper, Steinke, is also the author of \emph{PBLib}.  
+Linear programs are problems that can be expressed in canonical formas
+
+\begin{center}
+	\includegraphics[width=0.3\textwidth]{Figures/linearProgramming.png}
+	\captionof{figure}{Linear programming canonical form representation}
+\end{center}
+
+where x represents the vector of variables (to be determined), c and bare vectors of (known)
+coefficients, A is a (known) matrix of coefficients, and is the matrix transpose. The expression to be maximized or minimized is called the objective function (c Tx in this case). The inequalities Ax $\leq$ b and x $\geq$ 0 are the constraints which specify a convex polytope over which the
+objective function is to be optimized.
+\begin{center}
+	\href{https://en.wikipedia.org/wiki/Linear\_programming}{https://en.wikipedia.org/wiki/Linear\_programming}
+\end{center}
+\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
+
+
+Pseudo-boolean minimization is a particular case where the objective function (also called) cost function is minimized, the variables are boolean {0,1} and the variable’s coefficients are integers.  
+
+In other words, a pseudo-boolean minimization problem has two components: 
+\begin{itemize}
+	\item A set of pseudo-boolean constraints \\
+	of the form $\sum_{i=1}^{n} x_{i}w_{i} \leq k$, where $w_{i},k \in \mathbb{I}$ and $x_{i} \in \{0,1\}$
+	\item A cost function
+\end{itemize}
+
+
+%TODO: Example of the two things
+
+
+
+The goal is to minimize the cost function $min(a_{1}x{1} + ... + a_{n}x_{n})$. Find an assignment for the problem’s variables in a way that all the constraints are satisfied and the evaluation of the cost function is minimum.  
+
+The value m is minimum, if m-1 is unsatisfiable.  
+
+
+
+%TODO: Example of pseudo-boolean minimization problem, variables, constraints, cost function and solutions. Also optimal solution) 
+
+
+
+There is a big research in this field, more specifically in encoding PBF into CNF. In this paper, Hölldobler, Manthey, Steinke\cite{Holldobler}, some relevant PBF into SAT encodings are explained and a new one is proposed. One of the authors of this paper, Steinke, is also the author of PBLib. 
+ 
 
 \section{Background}
 
@@ -49,15 +108,24 @@ This is the main goal of the library, try to reduce the size of the final \emph{
 
 \section{State-of-the-art}
 
-In this section, previous projects are discussed. \\
-The first one is \href{http://tools.computational-logic.org/content/pblib.php}{PBLib}. PBLib is a C++ toolkit for encoding \emph{PB Constraints} into \emph{CNF}.\\
-As explained in \emph{Steinke}\cite{Steinke2015}, PBLib implements a lot of encodings:
+%TODO: explicar encodings que hi ha per sat (que implementi PBLib per exemple)
+%TODO: explicar minisat
+
+
+Nowadays there is a well known C++ library called \href{http://tools.computational-logic.org/content/pblib.php}{PBLib} developed by Peter Steinke. PBLib allows its users to represent pseudo-boolean constraints and encode them into a CNF.  
+It possesses a big repertory of encodings which have been proposed in the past in different papers\cite{Steinke2015}.  
 \begin{center}
 	\includegraphics[width=1\textwidth]{Figures/PBLibEncodings.png}
 	\captionof{figure}{PBLib implemented encodings\\Extracted from Steinke\cite{Steinke2015}}
 \end{center}
-PBLib does not only implement these encodings, the most interesting thing is that it can decide which encoder provides the most effective translation.\\
-It is very hard to compete on this aspect against PBLib, but it is not very user-friendly. For this reason, on of the goals of this project is to add a layer between the user and PBLib to simplify how the user declares the \emph{PB Constraints}.\\\\
+Apart from having these encodings, PBLib applies the best one for the given pseudo-boolean constraint in a way that provides the most effective translation. 
+
+In Chapter3 - Development \ref{Chapter3} PBLib is discussed as a tool for this project. In a nutshell, PBLib is a very good tool developed by professionals and it will be hard to try to do the same with the same quality. For these reasons, and some others explained in more detail in Chapter 3, PBLib has been incorporated in this project as a translator of pseudo-boolean constraints to CNF.  
+
+One of the downsides of PBLib is the interface which is not very user-friendly. As can be seen in Chapter 2 Objectives\ref{Chapter2}, one of the objectives of this project is offering a good interface which means that a layer between the user and PBLib will be added to simplify how the users declare pseudo-boolean constraints.  
+
+%TODO: maybe an appendix or something explaining PBlib encodings in more detail
+
 
 The second project we will talk about is the explained in the \emph{Background section}. This project adds a new encoding for \emph{BF} which can be extended to \emph{PB Constraints}. This encoding will be studied and if it achieves good metrics it will be implemented to \emph{PB Constraints}
 
@@ -73,6 +141,10 @@ With this activity, I comprehended how hard and substantial is the study of \emp
 When the time of deciding the \emph{TFG} arrived, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas. Finally, we agreed on doing this project. \\
 
 The motivation for this project is trying to deepen into the topic and contribute on it.
+
+Also during the studies, with the transversal competencies, there has been an intention to teach students about sustainability and its importance. %TODO: if found, attach a link to some environmental talk
+
+As previously told, the subject of this project is widely used in many other areas which have a big footprint because of electricity consumption. This is also a motivation for this project because reducing the execution time will become in a decrease of electricity spent and that will be beneficial for the climate.  
 
 \section{Stakeholders}
 

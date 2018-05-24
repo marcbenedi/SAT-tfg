@@ -51,6 +51,13 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
+\usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{\shortstack{
+		Document \\[1em] in progress 
+	}}
+\SetWatermarkScale{1}
+
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -84,7 +91,7 @@ headsepline, % Uncomment to get a line under the header
 \faculty{\href{https://www.google.co.uk/search?ei=y0GXWteBJsXSwQLJ8IGIDA&q=fib&oq=fib&gs_l=psy-ab.3..35i39k1l2j0i67k1j0l7.1898.2078.0.2162.3.3.0.0.0.0.92.172.2.2.0....0...1.1.64.psy-ab..1.2.172....0.Ha_7J3E1vcI}{Facultat Informàtica de Barcelona}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \newcommand{\projectTitle}{Design of an environment for solving pseudo-boolean optimization problems}
-\newcommand{\courseName}{GEP}
+\newcommand{\courseName}{Disseration}
 \newcommand{\city}{Edinburgh, UK}
 
 \AtBeginDocument{
@@ -117,7 +124,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{https://marcb.pro}{\authorname} % Author name - remove the \href bracket to remove the link
+\href{http://marcb.pro}{\authorname} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
@@ -149,6 +156,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{abstract}
 	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
     TEXT DEL ABSTRACTE
+    explicar amb molt poques paraules el que es veu a cada capitol
 	
 \end{abstract}
 
@@ -208,9 +216,6 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
-
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
 
 \include{Appendices/AppendixA}
 
