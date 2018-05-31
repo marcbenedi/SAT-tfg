@@ -21,10 +21,20 @@ private:
 
     static Cnf tseitinRec(Formula const & boolFunc, std::map<Formula,int> & auxToNode);
 public:
-    
+
+    /**
+     * Generates a cnf equisatisfiable with the boolfunc using the tesitin transformation
+     * @param boolFunc
+     * @return cnf equisatisfiable with the boolFunc
+     */
     static Cnf tseitin(Formula const & boolFunc);
 
-    static Cnf convertToCnf(const BDD & f);
+    /**
+     * Converts the BDD into a CNF
+     * @param bdd 
+     * @return cnf equisatisfiable with the boolFunc
+     */
+    static Cnf convertToCnf(const BDD & bdd);
 };
 
 #endif // CNFCONVERTER_H

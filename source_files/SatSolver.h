@@ -23,7 +23,16 @@ class SatSolver{
 private:
     SatSolver();
 public:
+    /**
+     * Calls the command picosat with the cnf as input
+     *@param cnf
+     */
     static void solve(Cnf cnf);
+    /**
+     * Calls the command picosat with the cnf as input and returns the result
+     *@param cnf
+     *@return string : result from picosat
+     */
     static std::string solve2(Cnf cnf);
 };
 

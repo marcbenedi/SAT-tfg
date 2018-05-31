@@ -1,104 +1,383 @@
 \chapter{Development} 
 \label{Chapter3}
 
-\section{Initial Stage || Requirement analysis, architecture and debugging } %TODO: Buscarli un nom mes atractiu
+\section{Requirement analysis, architecture and debugging} 
+As previously mentioned, here, this stage has been dedicated to four points: 
+%TODO reference chapter) 
 
-Agafar codi actual i "acabarlo"
-%TODO: Pensar si en algun punt posar larquitectura del codi base
-Google tests
-Comencar a fer unit testing
-Makefile
+- Environment preparation 
 
-Analitzar requisits
-Preparar editor
+- Refactor 
+
+- Requirements 
+
+- Architecture 
+
+\subsection{Environment configuration}
+First things first, before being able to start working I needed to prepare and set up all the tools needed for the project. Some of them were already configured from the previous project, such as the Control Version System, but some others would need to be configured from scratch or modified.  
+
+
+
+Makefile: 
+
+The existing Makefile at the moment was deleted and a new one was created. The goal of a Makefile is to automatize the build of the software and save time. The Makefile would be modified during the development stages to incorporate the new targets/goals. (%TODO: Footnote makefiles) 
+
+
+
+Google Test: 
+
+TDD (Test Driven Development) was adopted as part of the methodology for the development stages. For this, a testing framework was required. Not many options were considered because Google Test is highly popular and widely used.  
+
+
+
+%TODO: Explain Google Testing and put some code example 
+
+
+
+Adopting and learning a new framework has some costs, but here the trade-off was clear because the time required for learning it was smaller than the time required for finding and solving bugs. It is also very important that using a testing framework gives confidence in the code because it guarantees that it works.  
+
+\subsection{Refactor}
+
+A refactor of the existing code was needed. As it has been previously mentioned, this project has been built onto an existing code which needed to be tested.  
+
+
+
+Once the Google Test framework was set up I started creating Unit Tests (%TODO explain unit test) for each functionality of the existing code.  
+
+
+
+%TODO: Explain some software testing techniques adopted in order to test functionalities (ex. loop boundary coverage, category partition coverage, etc.) 
+
+
+
+Some bugs were found and corrected. Doing this at the beginning of the project was an excellent decision because those bugs would have caused erroneous behaviour difficult to track once the project became bigger. 
+
+\subsection{Requirements}
+For the requirements, a deeper look at them was done. At this point, it was time to list them and plan how to achieve them. It was important to bear in mind that for each iteration there would be a planning substage, therefore, the requirements mentioned at that point were the global ones which would affect the architecture. It would have been difficult trying to think about all the requirements at the beginning and inefficient because of the Agile methodology. The global requirements for the software were: 
+
+- Testability, upgradeability, etc. For development purposes 
+
+- Easy to use 
+
+- Fast 
+
+- %TODO: Think other requirements 
+
+
+
+As you can see, the first requirements are software/development related. Those have been very important during the development stages and they have influenced a lot the architecture.  
+
+\subsection{Architecture}
+
+The main goal for the architecture at this point was to respect the SOLID principle.  
+
+SOLID stands from: 
+
+- Single responsibility principle: A class should have only a single responsibility.  
+
+- Open/closed principle: Software entities should be open for extension but closed for modification. 
+
+- Liskov substitution principle: Objects should be replaceable by instances of their subtypes.  
+
+- Interface segregation principle: "many client-specific interfaces are better than one general-purpose interface." %TODO: reference to Robert C. Martin (2000), "Design Principles and Design Patterns" 
+
+- Dependency inversion principle: The dependencies should depend upon abstractions and not concretions.  
+
+
+
+(%TODO: Pensar si en algun punt posar larquitectura del codi base i compararla amb la final (aqui no lhauria de comparar amb la final) 
+
+(%TODO: talk about the base architecture) 
 
 
 \section{Objective 1: Pseudo-boolean Minimization}
 
-Problema:
-Voliem crear una capa per expressar problemes de pseudo minimizatcio pseudo booleana en el nostre software. 
-Expressar facil i clarament.
+\subsection{Problem}
+This iteration addressed some problems: First, make the software easy to use while efficient to work with and second, find the optimal value of a PBMin problem using different techniques.  
 
-Possibles solucions:
-Crear des de zero tot el codi. Requereix molt de temps i impossible de millorar PBLIB.
+\subsection{Possible solutions}
+One solution was creating from zero the software required to represent PBFormulae and their encoding to CNF or use a well-known C++ library, PBLib, into the project. 
 
-Utilitzar PBLIB. una llibreria que ja existeix i coneguda dins del secotor. Implementa molts encoding i es una bona eina.
+The first option was quickly dismissed because it would have taken a lot of time and the existing alternatives were very good and very hard to compete against them. Therefore, the second option was the chosen one because it would be faster and it would provide a better quality solution. 
 
-Es tria utilitzar PBLib perque sera menys costos en temps i la solucio sera de millor qualitat.
 
-Pla per executar la solucio:
 
-Planning:
+(%TODO: At this point, PBLib should be explained previously in more detail) 
 
-Llegir sobre PBLib i com funciona (adjuntar link als papers)
-Compilar-lo, jugar una miqueta, incorporarlo al makefile
-Mirar les part mes rellevants del codi i entendre com funcionen.
-Estudiar els requeriments que volem i veure si pblib els pot oferir
-Dissenyar larquitectura
-%TODO adjuntar larquitectura de la primera part.
 
-Development and TDD:
+\subsection{Planning}
 
-Es va utilitzar metodologia TDD per tant:
-com que teniem pensades les funcionalitats que voliem, esolliem la primera i escribiem els tests per aquesta. Despres el codi per passar aquests tests, refactor i passar a la seguent specification.
-Design tests for PBFormula
-Implement PBFormula
-Design tests for PBConstraint
-Implement PBConstraing
-Design tests for PBMin
-Implement PBMin
-Design tests for PBMin binary search
-Implement binary search
-Design tests for PBMin linear search
-Implement linear search
+First of all, it was required to add PBLib to the tool's set with the following steps: download and install it.  
 
-Finalization:
-Escriure uns quants tests mes, els quals han permes trobar bugs.
-%TODO: parlar una de les estrategies de cerca, el perque sutilitza linear search p.e
+(%TODO: attach PBLib papers and talk about it if not previously done) 
+
+Then modify the Makefile to add the new dependence and compile a simple C++ program which used PBLib and saw if it worked.  
+
+Once the whole project was compiling and executing without errors, it was time to start designing the architecture for this first iteration: 
+
+
+
+(%TODO: Attach architecture of the first part) 
+
+
+
+PBFormula:  
+
+This class is the one responsible for representing a Pseudo-Boolean Formula. In order to make it more interoperable with PBLib, it adopted the same representation for variables and weights which are int32\_t and int64\_t respectively.  
+
+(%TODO: it is possible to talk in more detail about it) 
+
+
+
+PBConstraint: 
+
+A Pseudo-Boolean Constraint is represented as a PBFormula and a boundary.  
+
+The function encode is responsible to convert the Pseudo-Boolean Constraints into a CNF. This is the part done with PBLib. 
+
+Note that there is no way of specifying the relational operator of the constraint because it will always be "less equal".  Other constraints can be easily converted into this type as specified in (%TODO: Reference Robert paper)  
+
+(%TODO: it is possible to talk in more detail about it) 
+
+
+
+PBMin: 
+
+This class is responsible for representing a Pseudo-Boolean Minimization problem.  It is formed by a vector of PBConstraint, the cost function which is a PBFormula and the search type which is defined by the enum SEARCH\_TYPE.  
+
+This enum has two values, BINARY\_SEARCH and LINEAR\_SEARCH, which are the search strategies specified in the objectives of the project.  
+
+
+
+This class has the following methods: 
+
+-minisat: This method is responsible for calling the solver, Minisat, and get the model back if it exists.  
+
+-binary Search: This method is responsible for executing the Binary Search algorithm to find the optimal value for the problem.  
+
+-linear Search: This method is responsible for executing the Linear Search algorithm to find the optimal value for the problem.  
+
+(%TODO: at this point, binary search and linear search should be explained) 
+
+-getFirstFreshVariable: This method returns a value called first fresh variable which is required by PBLib in order to encode the constraints into a CNF.  
+
+-solve: This is the method called by the user once he/she wants to solve the problem. 
+
+-getCostFunctionMax: This method returns the maximum possible value for the cost function.  
+
+-getCostFunctionMin: This method returns the minimum possible value for the cost function.  
+
+
+
+As the reader may have noticed, this contradicts the initial intention which was that this class should be only responsible for representing a Pseudo-Boolean Minimization problem. The methods listed above show that the class is also responsible for calling Minisat, implementing the search strategies and, as a consequence of this, calling PBLib for encoding the problem into a CNF.  
+
+(%TODO: see how to format, in which style, put the following lines) 
+
+This had a negative impact on the next iteration which required a redesign of the architecture. It will be explained in (%TODO: Link reference to section) 
+
+\subsection{Development and TDD}
+
+(%TODO: At this point, TDD should be already explained) 
+
+The developed started with the leaf class at the hierarchy, as seen in the architecture (%TODO: Figure X), PBFormula.  
+
+
+
+(%TODO: Explain in more detail the development) 
+
+Following the hierarchy, the next one was PBConstraint and the last one PBMin. 
+
+
+
+The first implemented method from PBMin was int32\_t PBMin::getFirstFreshVariable(). This method has to return the next available literal to be used in the future by PBLib. To achieve this behaviour, this method looks at all the literals that are in the PBMin (constraints and cost function) and returns the maximum absolute literal found plus one.  
+
+(%TODO: show an example) 
+
+
+
+The methods int64\_t PBMin::getCostFunctionMax() and int64\_t PBMin::getCostFunctionMin() are required to limit the search strategies. The optimal value has to be comprehended between these limits.  
+
+(%TODO: explain these methods in more detail) 
+
+(%TODO: show an example) 
+
+
+
+bool PBMin::binarySearch(std::vector< int32\_t > \& model, int64\_t \& min) 
+
+
+
+bool PBMin::linearSearch(std::vector< int32\_t > \& model, int64\_t \& min) 
+
+\subsection{Finalization}
+
+At this substage, some techniques learned at the Erasmus course, Software Testing, such as Category Partition Testing were applied.  
+
+(%TODO: At this point, Category Partition Testing should already be explained) 
+
+These new tests revealed some bugs in the search strategies implementation for special values for the algorithms. 
+
+(%TODO: Attach CPT for the algorithms) 
 
 \section{Objective 2: Timeout}
 
-Problema:
-els problemes poden tardar molt en executarse (dir una mesura de temps, algun exemple potser, ...) i per tant shauria de poder parar si ja no interessa.
+\subsection{Problem}
+It has been previously explained that SAT is an NP-Complete problem which means that there is no known algorithm which can solve it in polynomial time. In other words it can take a lot of time to solve this types of problems. (%TODO: Buscar un exemple de temps) 
 
-Possibles solucions:
-Implementar timeouts per parar lexecucio
-timeout per tot el bucle senser, timeout per cada execucio del minisat
+Some users need a result before certain time. For instance, a delivery companie need a plan every morning before 08:00 AM for their trucks,packages and drivers. Therefore some users need a result before certain time even if it is not the optimal one.  
 
-Pla per executar la solucio:
+In order that the software was able to work with this new feature, it needed a new parameter from the user and timeout strategies.
 
-Planning:
-buscar informacio sobre estrategies de timout
-no vaig trobar molta info (mirar el Diary per mes info)
-es van acabar pensant els dos timeout anomenats abans
+\subsection{Possible solutions}
+Two different timeout strategies were considered:  
 
-A l'hora de pensar en larquitectura es va haver de pensar com implementar els timeouts. Vaig pensar en threads o processos fill. Es va acabar triant threads perque comparteixen memoria.
+- A maximum time for each call to the solver. 
 
-(Al Diary esta explicat que vaig pensant)
+- A maximum time for the whole problem. 
 
-Explicar larquitectura 
-%TODO adjuntar arquitectura
-explicar el refactor del codi anterior
-explicar els patrons utilitzats
+Both options were considered useful hence they become a goal for the development substage.  
 
-Development and TDD:
+\subsection{Planning}
+Some research was done about timeout strategies for solvers.  
 
-explicar la creacio de stubs per fer el testing correctament.
+(%TODO: Explain sat solvers resets) 
+
+In order to implement the asynchronous behaviour two different approaches were considered:  
+
+- Threads: 
+
+Threads within the same process can communicate using shared memory.  
+
+Threads share the same memory space which could be a source of problems if not handled carefully. In this particular case, this is helpful because the thread would execute the solver call while the parent is waiting for the timeout.  
 
 
-Finalization:
 
+- Processes: 
+
+Child processes are easier to work with but in general, they are more expensive. This is because processes have their own code, memory space, files, registers and stack which implies that every time a new child process is created, some of the listed elements need to be copied.  
+
+
+
+
+
+Finally, Threads was the chosen option because of the following reasons: 
+
+- They sharer memory within a process which makes communication much easier. In this particular project, this allowed the code to be more simple.  
+
+- They are less expensive to create because no copy of memory is done.  
+
+
+
+The timeout was thought to be implemented as a signal sent from the parent thread to the child thread.  
+
+
+
+What happens when there is a timeout? 
+
+The answer depends on the timeout strategy selected for the problem: GeneralTimeoutSolver or SimpleTimeoutSolver. 
+
+In the first case, the flag timeoutOccurred is set to true and the last found solution is returned. With the flag, the user can know if the timeout occurred and therefore the solution may not be optimal.  
+
+In the second case, the flag timeoutOccurred is also set to true and the current solver execution is killed. However, the search algorithm will keep running with the next values.  
+
+
+
+(%TODO: Attach iteration 2 architecture) 
+
+
+
+As can be seen, the architecture suffered an evolution from the previous iteration. As previously mentioned in Iteration 1 (%TODO: Ref) the class PBMin was not respecting the Single responsibility principle because apart from representing the problem, it also was responsible for implementing the search strategies, calling PBLib encodings, etc. 
+
+That architecture would have resulted in a much complex PBMin class because it would have to be responsible for the timeouts.  
+
+
+
+For these reasons the following classes were modified or added: 
+
+- PBMin: After the refactor, this class is only responsible for representing a Pseudo-boolean minimization problem which was its original mission.  
+
+- SearchStrategy: One of the functionalities moved outside the PBMin class was the search strategy selection and implementation which needed to be moved to another class. For that reason, a hierarchy of classes was created: SearchStrategy, BinarySearchStrategy and LinearSearchStrategy.  These set of classes have three methods: 
+
+· init(...) : The purpose of this method is to prepare the class for the execution of the search algorithm. For example, encode the PBConstraints   into a CNF.  
+
+· loop(...) : The purpose of this method is to execute the search algorithm.  
+
+· end(...) : This method is executed after the loop once the optimal solution is found, there is no solution or a timeout occurred. It has no use by default.  
+
+- BinarySearchStrategy: This class uses the loop(...) method to implement the binary search algorithm. 
+
+- LinearSearchStrategy: This class uses the loop(...) method to implement the linear search algorithm. 
+
+- Solver: Another behaviour removed from the PBMin class is the actual execution of the problem solver. This behaviour was moved to a new class, Solver, which is responsible for calling the SAT solver. This class is the solver without a timeout, that it is implemented by its children SimpleTimeoutSolver and GeneralTimeoutSolver. The main methods are: 
+
+· run(...): This is the function called by the user once he/she wants to solve the problem.  
+
+· solve(...): This method is responsible for calling the SAT solver, passing the CNF and getting back the result. 
+
+- SimpleTimeoutSolver: This solver overrides the method solve(...) and adds the creation of a thread which calls the solver while it counts for the timeout.  
+
+- GeneralTimeoutSolver: This solver overrides the method run(...) and adds the creation of a thread which calls the selected search algorithm while it counts for the timeout. 
+
+\subsection{Development and TDD}
+The first thing to do was refactor the class PBMin and move all the functionalities previously mentioned to the new classes. This also implied a refactor to the PBMin tests.  
+
+
+
+As the previous iteration, the development was done selecting classes in a bottom-up way.  
+
+
+
+The first class created was Solver which does not implement a timeout strategy, therefore it has the same functionality as the old PBMin: call the search algorithm and the sat solver. As seen in the architecture diagram (%TODO: Ref) this class has a dependency in the SearchStrategy class which was not implemented at that time. To apply TDD methodology it was necessary to create a stub (%TODO: explain stub). As a stub, the only purpose of SearchStrategy_Stub was to implement a fake behaviour in order to test the Solver class. 
+
+
+
+The next implemented classes were SearchStrategy, BinarySearchStrategy and LinearSearchStrategy hierarchy.  
+
+SearchStrategy is an abstract class which means it cannot be instantiated. Its purpose is to be a "contract" between search strategies, such as linear search and binary search, and classes which use them. Because it has no code, it is not necessary to be tested.  
+
+
+
+However, for its children it is mandatory. The first child, LinearSearch implements the linear search algorithm which was in the old PBMin class. The method init(...) encodes the PBConstraints of the problem into a CNF. This was done at the init(...) method because it has to be done only once.  
+
+The method loop(...) is the one which actually implements the algorithm. It starts defining the boundaries of the search with the maximum possible value for the cost function and its minimum.  
+
+Because of the values given by the algorithm only differ in one unit, starting on the maximum and ending on the minimum, the functionality "Incremental constraints" from PBLib could be used. (%TODO: Explain incremental constraints PBLib)  
+
+(%TODO: explain at some point how the search algorithms work. they create a new constraint with the value X, if it now works they try the next value etc...) 
+
+Finally, the method end(...) does nothing. 
+
+
+
+The other child, BinarySearchSolver, implements the binary search algorithm. As before, the method init(...) encode the problem constraints into a CNF. The loop(...) method implements the binary search algorithm taking as the left value the minimum possible value of the cost function and as the right value its maximum. Unlike before, the Incremental constraints functionality could not be used because the search is not "constant".  Finally, as before, the method end(...) does nothing.  
+
+
+
+Finally, the last classes to be implemented were SimpleTimeoutSolver and GeneralTimeoutSolver. 
+
+The Template pattern (%TODO: explain) could be applied because the children of Solver are a specialization of it. In other words, all the hierarchy shares a lot of behaviour.  
+
+The SimpleTimeoutSolver only redefines the method solve(...) to a creation of a thread which calls the sat solver with all its implications. 
+
+The GeneralTimeoutSolver only redefines the method run(...) to a creation of a thread which calls the function loop(...) from the SearchStrategy class.  
+
+\subsection{Finalization}
+The classes Solver, SimpleTimeoutSolver and GeneralTimeoutSolver, apart from their unit tests required by TDD, were tested with integration tests.  
+
+(%TODO: attach table with the combination of integration tests) 
+
+
+
+Integration testing was done to expose defects in the communication of classes and also test the Solver hierarchy with real implementations of SearchStrategy and see that the timeout was working as expected. 
 
 \section{Objective 3: Multi-threading}
+\subsection{Problem}
 
-Problema:
 
-Possibles solucions:
+\subsection{Possible solutions}
 
-Pla per executar la solucio:
+\subsection{Planning}
 
-Planning:
+\subsection{Development and TDD}
 
-Development and TDD:
-
-Finalization:
+\subsection{Finalization}

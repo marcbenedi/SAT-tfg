@@ -15,11 +15,30 @@ private:
     std::vector<PBConstraint> constraints;
     PBFormula costFunction;
 public:
+    /**
+     *Constructs a pseudo-boolean minimization problem with
+     *@param p_constraints
+     *@param p_costFunction
+     */
     PBMin(std::vector<PBConstraint> p_constraints, PBFormula p_costFunction);
+
     std::vector<PBConstraint> getConstraints() const;
+
     PBFormula getCostFunction() const;
+
+    /**
+     *@return the biggest literal+1
+     */
     int32_t getFirstFreshVariable() const;
+
+    /**
+     *@return the maximum possible value of the cost function
+     */
     int64_t getCostFunctionMax() const;
+
+    /**
+     *@return the minimum possible value of the cost function
+     */
     int64_t getCostFunctionMin() const;
 };
 

@@ -13,7 +13,7 @@ void LinearSearchStrategy::init(const PBMin & p){
     }
 }
 
-void LinearSearchStrategy::loop(void (Solver::*solver)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *s, const PBMin & pm){
+void LinearSearchStrategy::loop(void (Solver::*solve)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *solver, const PBMin & pm){
     PB2CNF pb2cnf;
     std::vector< std::vector< int32_t > > cnf;
     std::vector< int32_t > temp_model;
@@ -43,7 +43,7 @@ void LinearSearchStrategy::loop(void (Solver::*solver)(std::vector< int32_t > &,
         inc_costFunction.encodeNewLeq(k, cdb, auxVarManager);
 
         bool t_sat;
-        (s->*solver)(temp_model, cdb.getClauses(),t_sat);
+        (solver->*solve)(temp_model, cdb.getClauses(),t_sat);
 
         if (t_sat) {
             model = temp_model;

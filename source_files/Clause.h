@@ -11,11 +11,21 @@ private:
     std::vector<int> lits;
 public:
     Clause();
-    //n is the number of elements in the list
+
+    /**
+     * Initializes the class with n literals
+     * @param n
+     * @param ... an array of literals
+     */
     Clause(int n, ...);
+
     void addVar(int v);
     void print() const;
+    /**
+     * Represents the Clause in picosat format
+     */
     std::string picosat() const;
+    
     void clear();
     int getNumVars() const;
     int getVar(int i) const;

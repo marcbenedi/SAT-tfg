@@ -123,22 +123,22 @@ link_tests:
 
 tests:
 	make compile_tests link_tests
-	# ./test_build/Clause_UT
-	# ./test_build/Cnf_UT
-	# ./test_build/VarsManager_UT
-	# ./test_build/BoolFunc_UT
-	# ./test_build/CnfConverter_UT
-	# ./test_build/BDDConverter_UT
-	# ./test_build/MixCNFConverter_UT
-	# ./test_build/SatSolver_UT
-    #
-	# ./test_build/PBFormula_UT
-	# ./test_build/PBConstraint_UT
-	# ./test_build/PBMin_UT
-	# ./test_build/Solver_UT
-	# ./test_build/BinarySearchStrategy_UT
-	# ./test_build/Solver_BinarySearchStrategy_INT
-	# ./test_build/Solver_LinearSearchStrategy_INT
+	./test_build/Clause_UT
+	./test_build/Cnf_UT
+	./test_build/VarsManager_UT
+	./test_build/BoolFunc_UT
+	./test_build/CnfConverter_UT
+	./test_build/BDDConverter_UT
+	./test_build/MixCNFConverter_UT
+	./test_build/SatSolver_UT
+
+	./test_build/PBFormula_UT
+	./test_build/PBConstraint_UT
+	./test_build/PBMin_UT
+	./test_build/Solver_UT
+	./test_build/BinarySearchStrategy_UT
+	./test_build/Solver_BinarySearchStrategy_INT
+	./test_build/Solver_LinearSearchStrategy_INT
 	./test_build/SimpleTimeoutSolver_LinearSearchStrategy_INT
 	./test_build/SimpleTimeoutSolver_BinarySearchStrategy_INT
 	./test_build/GeneralTimeoutSolver_LinearSearchStrategy_INT

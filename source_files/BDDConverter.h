@@ -10,6 +10,11 @@ private:
     static BDD convertFormulaRec(Formula const & boolFunc);
 
 public:
+    /**
+     * Converts the given formula to a BDD
+     * @param boolean formula to be converted
+     * @return the boolean formula converted to a BDD
+     */
     static BDD convertFormula(Formula const & boolFunc);
 };
 

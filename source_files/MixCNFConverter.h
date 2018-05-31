@@ -31,11 +31,36 @@ private:
     void convertRec(Formula const & f);
 
 public:
+    /**
+     * Must be called after convert()
+     * @return cnf resulting from converting the given boolean formula
+     */
     Cnf getResult();
+
+    /**
+     * Clears the class internally
+     */
     void clear();
+
+    /**
+     * Converts the given boolean formula to a CNF which can be get with getResult().
+     * The method applies different methods depending on the formula characteristics.
+     *@param f : Formula to be converted
+     */
     void convert(Formula const & f);
+
+    /**
+     * If the number of minterms of the function is LEQ than i/10000 the function will be converted using a different method
+     *@param i: between 0 and 10000
+     */
     void setValueCover(int i);
-    bool worthToConvert(BDD const & f);
+
+    /**
+     * 
+     *@param bdd
+     *@return true if the bdd's primes cover enough 1's
+     */
+    bool worthToConvert(BDD const & bdd);
 };
 
 #endif // MIXCNFCONVERTER_H

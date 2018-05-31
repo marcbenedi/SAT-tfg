@@ -16,7 +16,7 @@ void BinarySearchStrategy::init(const PBMin & p){
     right = p.getCostFunctionMax();
 }
 
-void BinarySearchStrategy::loop(void (Solver::*solver)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *s, const PBMin & pm){
+void BinarySearchStrategy::loop(void (Solver::*solve)(std::vector< int32_t > &, const std::vector< std::vector< int32_t > > &, bool &),std::vector< int32_t > & model, int64_t & min, bool &sat, Solver *solver, const PBMin & pm){
 
     std::vector< int32_t > temp_model;
     PB2CNF pb2cnf;
@@ -39,7 +39,7 @@ void BinarySearchStrategy::loop(void (Solver::*solver)(std::vector< int32_t > &,
             firstFreshVariable = pb2cnf.encodeLeq(pm.getCostFunction().getWeights(), pm.getCostFunction().getLiterals(), k, cnf, firstFreshVariable) + 1;
 
             bool t_sat;
-            (s->*solver)(temp_model, cnf,t_sat);
+            (solver->*solve)(temp_model, cnf,t_sat);
 
             if (t_sat) {
                 min = k;
