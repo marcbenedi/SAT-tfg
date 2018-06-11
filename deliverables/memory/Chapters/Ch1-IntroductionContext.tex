@@ -2,29 +2,27 @@
 \label{Chapter1}
 
 \section{Introduction}
-Technology's world is evolving very fast. Every year new tools, frameworks\footnote{A software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. \href{https://en.wikipedia.org/wiki/Software_framework}{Wikipedia}} programming languages, etc. are released. Some of them are living they gold's era, such as blockchain and machine learning,  while others are forgotten.  
+Technology's world is evolving very fast. Every year new tools, frameworks\footnote{A software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. \href{https://en.wikipedia.org/wiki/Software_framework}{Wikipedia}} programming languages,\ldots are released. Some of them are living they gold's era, such as blockchain and machine learning,  while others are forgotten.  
 
-This makes hard for universities decide what to teach: the tools used by companies or the fundaments of informatics.  
+Because of its fast evolution, this makes hard for universities decide what to teach: the tools used by companies or the fundaments of informatics. 
+This project works with the fundaments of informatics and logic which won't change either be forgotten.
 
-This project works with the fundaments of informatics and logic which won't change either be forgotten.  
-
-
-In this project, we will work with Pseudo-Boolean Minimization widely used by a lot of technologies such as Artifical Intelligence, Planners, Computer Vision,  Circuit design, ... 
+In this project, we will work with Pseudo-Boolean Minimization widely used by many technologies such as Artifical Intelligence, Planners, Computer Vision,  Circuit design, ... 
 
 %TODO: Appendix with an example
 
 \section{Context} 
 
+However, before being able to explain the main problem which this project is about, Pseudo-Boolean Minimization, it is necessary to do a quick introduction to a much broader topic. 
 
-But before being able to explain the main problem which this project is about, Pseudo-Boolean Minimization, it necessary to do a quick introduction to a much wider topic. 
 
 
 Boolean satisfiability problems (SAT from now on) is the problem of finding a model for a Boolean Formula (BF from now on). In other words, it is the result of evaluating the BF after replacing its variables for true or false. 
 
-SAT is widely used in Computer Science because it was the first problem proved to be NP-Complete which allowed a lot of NP problems be reduced to it\cite{Cook1971}
+SAT is widely used in Computer Science because it was the first problem proved to be NP-Complete which allowed reducing many NP problems to it\cite{Cook1971}.
 
 \subsection{What is a Pseudo-Boolean Formula?}
-In propositional logic, a \emph{BF} is defined as following\cite{Lpo}:\\
+In propositional logic, a \emph{BF} is defined as follows\cite{Lpo}:\\
 Let $P$ be a set of predicate symbols like $p,q,r,...$
 \begin{itemize}
 	\item All predicate symbol of $P$ is a formula.
@@ -34,13 +32,19 @@ Let $P$ be a set of predicate symbols like $p,q,r,...$
 \end{itemize}
 This representation has some limitations because it can only express properties which are \emph{true} or \emph{false}.\\
 
-%TODO: Example of boolean formula: variables, predicate symbols, interpretations, models, etc...
+For example, given the variables $a,b,c$, $a \vee b \wedge c$ is a BF. The interpretation $a = b =c = false$ is not a model because the formula's evaluation is $false$ whereas the interpretation $a = b = true $ and $c=true$ is a model.
+
+This representation has many uses for example in propositional logic, i.e. specification and verification of circuits and systems, programming languages, databases, \ldots
+
 
 \subsection{What are pseudo-boolean formulae?}
 
 \emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula} (PBF from now on): $3x+5y$. Therefore, \emph{BF} are a special case of \emph{PBF} where the domain is $d=\{0,1\}$.\\
 
-%TODO: potser explicar que son cardinality constraints
+\subsection{What are pseudo-boolean constraints}
+\emph{Pseudo-Boolean constraints} are derived from PBF. They are expressions of the form $PBF \leq k$, where $k\in \mathbb{Z}$.There are used to express restrictions because to satisfy them it is necessary to find an assignment which its evaluation is exactly $k$.
+
+For example, given the variables $a,b,c \in \mathbb{B}$, and the PBC $3a+5b+c \leq 7$, the interpretation $a = b = c = true$ does not satisfy the constraint because $ 9 \nleq 7 $, whereas the interpretation $a =b =c = false$ does satisfy it.
 
 
 \subsection{Pseudo-Boolean minimization}
@@ -57,8 +61,7 @@ Linear programs are problems that can be expressed in canonical formas
 	\captionof{figure}{Linear programming canonical form representation}
 \end{center}
 
-where x represents the vector of variables (to be determined), c and bare vectors of (known)
-coefficients, A is a (known) matrix of coefficients, and is the matrix transpose. The expression to be maximized or minimized is called the objective function (c Tx in this case). The inequalities Ax $\leq$ b and x $\geq$ 0 are the constraints which specify a convex polytope over which the
+where $x$ represents the vector of variables (to be determined), $c$ and $b$ are vectors of (known) coefficients, $A$ is a (known) matrix of coefficients, and $T$ is the matrix transpose. The expression to be maximized or minimized is called the objective function ($c^Tx$ in this case). The inequalities $Ax \leq b $ and $x \geq 0$ are the constraints which specify a convex polytope over which the
 objective function is to be optimized.
 \begin{center}
 	\href{https://en.wikipedia.org/wiki/Linear\_programming}{https://en.wikipedia.org/wiki/Linear\_programming}
@@ -66,7 +69,7 @@ objective function is to be optimized.
 \noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
 
 
-Pseudo-boolean minimization is a particular case where the objective function (also called) cost function is minimized, the variables are boolean {0,1} and the variable’s coefficients are integers.  
+Pseudo-boolean minimization is a particular case where the objective function (also called) cost function is minimized, the variables are boolean $\mathbb{B} \in {0,1}$ and the variable’s coefficients are integers $\mathbb{Z}$.  
 
 In other words, a pseudo-boolean minimization problem has two components: 
 \begin{itemize}
@@ -75,18 +78,21 @@ In other words, a pseudo-boolean minimization problem has two components:
 	\item A cost function
 \end{itemize}
 
-
-%TODO: Example of the two things
-
-
-
 The goal is to minimize the cost function $min(a_{1}x{1} + ... + a_{n}x_{n})$. Find an assignment for the problem’s variables in a way that all the constraints are satisfied and the evaluation of the cost function is minimum.  
 
-The value m is minimum, if m-1 is unsatisfiable.  
+The value $m$ is minimum, if $m-1$ is unsatisfiable and $m$ satisfiable.  
 
+An example of a problem which can be solved with Pseudo-Boolean minimisation is the Knapsack problem\footnote{https://en.wikipedia.org/wiki/Knapsack\_problem}.
+The problem consists of the following: Given a set of items, each one with a value and a weight, and a knapsack with a maximum capacity, the goal is to select some objects to put inside the knapsack in a way that the weight is not bigger than the knapsack's capacity and the total value is maximised. \\
 
-
-%TODO: Example of pseudo-boolean minimization problem, variables, constraints, cost function and solutions. Also optimal solution) 
+The variables for this problem, given $n$ objects, are:
+$$o_1, o_2, \ldots , o_n \text{for the objects}$$
+$$w_1, w_2, \ldots , w_n \text{for the weights}$$
+$$v_1, v_2, \ldots , v_n \text{for the values}$$
+There is only one constraint which represent the maximum capacity of the knapsack problem:
+$$w_0 o_0 + w_1 o_1+  \ldots w_n o_n \leq knapsack's capacity$$
+And the cost function:
+$$v_0 o_0 + v_1 o_1+  \ldots v_n o_n $$
 
 
 
@@ -95,16 +101,16 @@ There is a big research in this field, more specifically in encoding PBF into CN
 
 \section{Background}
 
-During the past semester (Q1 2017/2018), under the supervision of \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, I had been developing a C++ library.\\
+During the past semester (Q1 2017/2018), under the supervision of \href{https://www.cs.upc.edu/~jordicf/}{Dr Jordi Cortadella}, I had been developing a C++ library.\\
 This tool allows the users to represent \emph{BF} in a C++ program in an intuitive way, do operations between them and convert them into \emph{Binary Decision Diagrams} (BDD from now on). However, the main functionality of this library is the conversion from a \emph{BF} to \emph{CNF}.  \\
-As previously explained, \emph{CNF} is a particular type of a \emph{BF}, a conjunction of disjunctions. \emph{CNF} is an important format because it is the standard input for \emph{SAT Solvers}\ref{A.1}.\\
+As previously explained, \emph{CNF} is a particular type of a \emph{BF}, a conjunction of disjunctions. \emph{CNF} is an essential format because it is the standard input for \emph{SAT Solvers}\ref{A.1}.\\
 As shown in this paper, \emph{Mitchell, Selman, and Levesque\cite{Mitchell}}, there is a correlation between the number of variables, the number of clauses and the hardness of solving the \emph{CNF}.
 \begin{center}
 	\includegraphics[width=1\textwidth]{Figures/GraphMitchellSelmanLevesque.png}
 	\captionof{figure}{Median number of recursive DP calls for Random 3-SAT formulas, as a function of the ratio of clauses-to-variables. \\Extracted from Mitchell, Selman, and Levesque\cite{Mitchell}}
 \end{center}
 Therefore, an improvement of the input \emph{CNF} of the \emph{SAT Solver} can reduce a lot the hardness of the problem. \\
-This is the main goal of the library, try to reduce the size of the final \emph{CNF} resulting from applying different converting methods on the original BF.
+This is the primary goal of the library, try to reduce the size of the final \emph{CNF} resulting from applying different converting methods on the original BF.
 
 \section{State-of-the-art}
 
@@ -118,27 +124,27 @@ It possesses a big repertory of encodings which have been proposed in the past i
 	\includegraphics[width=1\textwidth]{Figures/PBLibEncodings.png}
 	\captionof{figure}{PBLib implemented encodings\\Extracted from Steinke\cite{Steinke2015}}
 \end{center}
-Apart from having these encodings, PBLib applies the best one for the given pseudo-boolean constraint in a way that provides the most effective translation. 
+Apart from having these encodings, PBLib applies the best one for the given pseudo-boolean constraint in a way that provides the most efficient translation. 
 
-In Chapter3 - Development \ref{Chapter3} PBLib is discussed as a tool for this project. In a nutshell, PBLib is a very good tool developed by professionals and it will be hard to try to do the same with the same quality. For these reasons, and some others explained in more detail in Chapter 3, PBLib has been incorporated in this project as a translator of pseudo-boolean constraints to CNF.  
+In Chapter3 - Development \ref{Chapter3} PBLib is discussed as a tool for this project. In a nutshell, PBLib is an excellent tool developed by professionals, and it will be hard to try to do the same with the same quality. For these reasons, and some others explained in more detail in Chapter 3\ref{Chapter3}, PBLib has been incorporated in this project as a translator of pseudo-boolean constraints to CNF.  
 
-One of the downsides of PBLib is the interface which is not very user-friendly. As can be seen in Chapter 2 Objectives\ref{Chapter2}, one of the objectives of this project is offering a good interface which means that a layer between the user and PBLib will be added to simplify how the users declare pseudo-boolean constraints.  
+One of the downsides of PBLib is the interface which is not very user-friendly. As can be seen in Chapter 2 Objectives\ref{Chapter2}, one of the objectives of this project is offering a better interface which means that a layer between the user and PBLib will be added to simplify how the users declare pseudo-boolean constraints.  
 
 %TODO: maybe an appendix or something explaining PBlib encodings in more detail
 
 
-The second project we will talk about is the explained in the \emph{Background section}. This project adds a new encoding for \emph{BF} which can be extended to \emph{PB Constraints}. This encoding will be studied and if it achieves good metrics it will be implemented to \emph{PB Constraints}
+%The second project we will talk about is the explained in the \emph{Background section}. This project adds a new encoding for \emph{BF} which can be extended to \emph{PB Constraints}. This encoding will be studied and if it achieves good metrics it will be implemented to \emph{PB Constraints}
 
 
 \section{Motivations}
 
-\href{https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering/curriculum/syllabus/LI}{Informatics Logic} is taught in this\footnote{\href{https://www.fib.upc.edu/en/}{Facultat Informàtica de Barcelona}} faculty. In that course, I realized how important is \emph{logic} through its lecturer, \href{http://www.lsi.upc.es/~roberto/}{Dr. Robert Nieuwenhuis}, and its activities. \\
+\href{https://www.fib.upc.edu/en/studies/bachelors-degrees/bachelor-degree-informatics-engineering/curriculum/syllabus/LI}{Informatics Logic} is taught in this\footnote{\href{https://www.fib.upc.edu/en/}{Facultat Informàtica de Barcelona}} faculty. In that course, the author realised how relevant is \emph{logic} through its lecturer, \href{http://www.lsi.upc.es/~roberto/}{Dr Robert Nieuwenhuis}, and its activities. \\
 
 In the first coursework, we had to code a \emph{SAT Solver} which used \emph{Unit Propagation}.
 %\ref{A.2}. 
-With this activity, I comprehended how hard and substantial is the study of \emph{logic} and all its context. For example, how \emph{logic} is used in Artificial Intelligence and Planners.\\
+With this activity, the author comprehended how hard and substantial is the study of \emph{logic} and all its context. For example, how \emph{logic} is used in Artificial Intelligence and Planners.\\
 
-When the time of deciding the \emph{TFG} arrived, I contacted my actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr. Jordi Cortadella}, and he proposed me some topics and ideas. Finally, we agreed on doing this project. \\
+When the time of deciding the \emph{TFG} arrived, he contacted his actual supervisor, \href{https://www.cs.upc.edu/~jordicf/}{Dr Jordi Cortadella}, and he proposed him some topics and ideas. Finally, they agreed on doing this project. \\
 
 The motivation for this project is trying to deepen into the topic and contribute on it.
 
@@ -154,4 +160,4 @@ This tools targets all the entities (researchers, companies, \ldots) which work 
 \subsection{Users}
 The users will be C++ programmers due this tool is developed in this language.
 \subsection{Beneficiaries}
-All those entities which work with \emph{PB minimization}. For example AI, SAT Solvers, Planners, \ldots
+All those entities which work with \emph{PB minimisation}. For example AI, SAT Solvers, Planners, \ldots

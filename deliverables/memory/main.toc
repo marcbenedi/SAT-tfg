@@ -7,109 +7,112 @@
 \contentsline {section}{\numberline {1.2}Context}{1}{section.10}
 \contentsline {subsection}{\numberline {1.2.1}What is a Pseudo-Boolean Formula?}{1}{subsection.11}
 \contentsline {subsection}{\numberline {1.2.2}What are pseudo-boolean formulae?}{2}{subsection.12}
-\contentsline {subsection}{\numberline {1.2.3}Pseudo-Boolean minimization}{2}{subsection.13}
-\contentsline {section}{\numberline {1.3}Background}{3}{section.15}
-\contentsline {section}{\numberline {1.4}State-of-the-art}{3}{section.17}
-\contentsline {section}{\numberline {1.5}Motivations}{4}{section.19}
-\contentsline {section}{\numberline {1.6}Stakeholders}{5}{section.21}
-\contentsline {subsection}{\numberline {1.6.1}Target audience}{5}{subsection.22}
-\contentsline {subsection}{\numberline {1.6.2}Users}{5}{subsection.23}
-\contentsline {subsection}{\numberline {1.6.3}Beneficiaries}{5}{subsection.24}
-\contentsline {chapter}{\numberline {2}Project Scope}{6}{chapter.25}
-\contentsline {section}{\numberline {2.1}Project Formulation}{6}{section.26}
-\contentsline {subsection}{\numberline {2.1.1}General objectives}{6}{subsection.27}
-\contentsline {subsubsection}{Pseudo-Boolean minimization}{6}{section*.28}
-\contentsline {subsubsection}{Timeout}{6}{section*.30}
-\contentsline {subsubsection}{Multi-threading (Optional)}{7}{section*.31}
-\contentsline {section}{\numberline {2.2}Scope}{7}{section.32}
-\contentsline {subsection}{\numberline {2.2.1}What and how?}{7}{subsection.33}
-\contentsline {subsection}{\numberline {2.2.2}Possible obstacles}{7}{subsection.35}
-\contentsline {subsubsection}{Base project}{7}{section*.36}
-\contentsline {subsubsection}{Schedule}{7}{section*.37}
-\contentsline {subsubsection}{PBLib}{8}{section*.38}
-\contentsline {subsubsection}{Correctness}{8}{section*.39}
-\contentsline {section}{\numberline {2.3}Methodology and Rigor}{8}{section.40}
-\contentsline {subsection}{\numberline {2.3.1}Methodology}{8}{subsection.41}
-\contentsline {subsection}{\numberline {2.3.2}Tools}{8}{subsection.43}
-\contentsline {subsubsection}{Git}{8}{section*.44}
-\contentsline {subsubsection}{Trello}{8}{section*.45}
-\contentsline {subsection}{\numberline {2.3.3}Communication}{9}{subsection.46}
-\contentsline {subsection}{\numberline {2.3.4}Rigour and Validation}{9}{subsection.47}
-\contentsline {chapter}{\numberline {3}Development}{10}{chapter.48}
-\contentsline {section}{\numberline {3.1}Requirement analysis, architecture and debugging}{10}{section.49}
-\contentsline {subsection}{\numberline {3.1.1}Environment configuration}{10}{subsection.50}
-\contentsline {subsection}{\numberline {3.1.2}Refactor}{10}{subsection.51}
-\contentsline {subsection}{\numberline {3.1.3}Requirements}{10}{subsection.52}
-\contentsline {subsection}{\numberline {3.1.4}Architecture}{11}{subsection.53}
-\contentsline {section}{\numberline {3.2}Objective 1: Pseudo-boolean Minimization}{11}{section.54}
-\contentsline {subsection}{\numberline {3.2.1}Problem}{11}{subsection.55}
-\contentsline {subsection}{\numberline {3.2.2}Possible solutions}{11}{subsection.56}
-\contentsline {subsection}{\numberline {3.2.3}Planning}{11}{subsection.57}
-\contentsline {subsection}{\numberline {3.2.4}Development and TDD}{13}{subsection.58}
-\contentsline {subsection}{\numberline {3.2.5}Finalization}{13}{subsection.59}
-\contentsline {section}{\numberline {3.3}Objective 2: Timeout}{13}{section.60}
-\contentsline {subsection}{\numberline {3.3.1}Problem}{13}{subsection.61}
-\contentsline {subsection}{\numberline {3.3.2}Possible solutions}{13}{subsection.62}
-\contentsline {subsection}{\numberline {3.3.3}Planning}{14}{subsection.63}
-\contentsline {subsection}{\numberline {3.3.4}Development and TDD}{15}{subsection.64}
-\contentsline {subsection}{\numberline {3.3.5}Finalization}{16}{subsection.65}
-\contentsline {section}{\numberline {3.4}Objective 3: Multi-threading}{16}{section.66}
-\contentsline {subsection}{\numberline {3.4.1}Problem}{16}{subsection.67}
-\contentsline {subsection}{\numberline {3.4.2}Possible solutions}{16}{subsection.68}
-\contentsline {subsection}{\numberline {3.4.3}Planning}{16}{subsection.69}
-\contentsline {subsection}{\numberline {3.4.4}Development and TDD}{16}{subsection.70}
-\contentsline {subsection}{\numberline {3.4.5}Finalization}{16}{subsection.71}
-\contentsline {chapter}{\numberline {4}Project Planning}{17}{chapter.72}
-\contentsline {section}{\numberline {4.1}Schedule}{17}{section.73}
-\contentsline {subsection}{\numberline {4.1.1}Estimated project duration}{17}{subsection.74}
-\contentsline {subsection}{\numberline {4.1.2}Considerations}{17}{subsection.75}
-\contentsline {section}{\numberline {4.2}Resources}{17}{section.76}
-\contentsline {subsection}{\numberline {4.2.1}Human Resources}{17}{subsection.77}
-\contentsline {subsection}{\numberline {4.2.2}Material Resources}{17}{subsection.78}
-\contentsline {subsection}{\numberline {4.2.3}Software Resources}{17}{subsection.79}
-\contentsline {section}{\numberline {4.3}Project Planning}{18}{section.80}
-\contentsline {subsubsection}{GEP}{18}{section*.81}
-\contentsline {subsubsection}{Initial Stage}{18}{section*.82}
-\contentsline {subsubsection}{Iterations}{18}{section*.83}
-\contentsline {paragraph}{Planning\\}{18}{section*.84}
-\contentsline {paragraph}{Development and TDD\\}{18}{section*.85}
-\contentsline {paragraph}{Finalization\\}{18}{section*.86}
-\contentsline {subsubsection}{Final Stage}{19}{section*.87}
-\contentsline {subsection}{\numberline {4.3.1}Gantt Diagram}{19}{subsection.88}
-\contentsline {section}{\numberline {4.4}Alternatives and Action Plans}{20}{section.90}
-\contentsline {subsection}{\numberline {4.4.1}Potential deviations}{20}{subsection.91}
-\contentsline {subsubsection}{Incorrect estimations}{20}{section*.92}
-\contentsline {subsubsection}{Summer internship}{20}{section*.93}
-\contentsline {subsubsection}{Compatibility issues}{20}{section*.94}
-\contentsline {subsubsection}{Base project code quality}{20}{section*.95}
-\contentsline {chapter}{\numberline {5}Economic Management}{22}{chapter.96}
-\contentsline {section}{\numberline {5.1}Direct costs}{22}{section.97}
-\contentsline {subsection}{\numberline {5.1.1}Human resources}{22}{subsection.98}
-\contentsline {section}{\numberline {5.2}Indirect costs}{23}{section.101}
-\contentsline {subsection}{\numberline {5.2.1}Hardware}{23}{subsection.102}
-\contentsline {subsection}{\numberline {5.2.2}Software}{23}{subsection.105}
-\contentsline {subsection}{\numberline {5.2.3}Other resources}{23}{subsection.107}
-\contentsline {section}{\numberline {5.3}Contingency}{23}{section.110}
-\contentsline {section}{\numberline {5.4}Unforeseen}{24}{section.112}
-\contentsline {section}{\numberline {5.5}Total budget}{24}{section.114}
-\contentsline {section}{\numberline {5.6}Control management}{25}{section.116}
-\contentsline {section}{\numberline {5.7}COMPARACIO EXPECTED VS REAL}{25}{section.117}
-\contentsline {chapter}{\numberline {6}Sustainability and Social Commitment}{26}{chapter.118}
-\contentsline {section}{\numberline {6.1}Sustainability Matrix}{26}{section.119}
-\contentsline {section}{\numberline {6.2}Economic dimension}{26}{section.121}
-\contentsline {subsection}{\numberline {6.2.1}PPP}{26}{subsection.122}
-\contentsline {subsection}{\numberline {6.2.2}Shelf life}{26}{subsection.123}
-\contentsline {subsection}{\numberline {6.2.3}Risks}{26}{subsection.124}
-\contentsline {section}{\numberline {6.3}Environmental dimension }{27}{section.125}
-\contentsline {subsection}{\numberline {6.3.1}PPP}{27}{subsection.126}
-\contentsline {subsection}{\numberline {6.3.2}Shelf life}{27}{subsection.127}
-\contentsline {subsection}{\numberline {6.3.3}Risks}{27}{subsection.128}
-\contentsline {section}{\numberline {6.4}Social dimension}{27}{section.129}
-\contentsline {subsection}{\numberline {6.4.1}PPP}{27}{subsection.130}
-\contentsline {subsection}{\numberline {6.4.2}Shelf life}{27}{subsection.131}
-\contentsline {subsection}{\numberline {6.4.3}Risks}{28}{subsection.132}
-\contentsline {chapter}{\numberline {7}Conclusions}{29}{chapter.133}
-\contentsline {section}{\numberline {7.1}Future Work}{29}{section.134}
-\contentsline {chapter}{\numberline {A}More information}{30}{appendix.135}
-\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{30}{section.136}
-\contentsline {chapter}{Bibliography}{31}{appendix*.138}
+\contentsline {subsection}{\numberline {1.2.3}What are pseudo-boolean constraints}{2}{subsection.13}
+\contentsline {subsection}{\numberline {1.2.4}Pseudo-Boolean minimization}{2}{subsection.14}
+\contentsline {section}{\numberline {1.3}Background}{3}{section.17}
+\contentsline {section}{\numberline {1.4}State-of-the-art}{4}{section.19}
+\contentsline {section}{\numberline {1.5}Motivations}{5}{section.21}
+\contentsline {section}{\numberline {1.6}Stakeholders}{5}{section.23}
+\contentsline {subsection}{\numberline {1.6.1}Target audience}{5}{subsection.24}
+\contentsline {subsection}{\numberline {1.6.2}Users}{5}{subsection.25}
+\contentsline {subsection}{\numberline {1.6.3}Beneficiaries}{6}{subsection.26}
+\contentsline {chapter}{\numberline {2}Project Scope}{7}{chapter.27}
+\contentsline {section}{\numberline {2.1}Project Formulation}{7}{section.28}
+\contentsline {subsection}{\numberline {2.1.1}General objectives}{7}{subsection.29}
+\contentsline {subsubsection}{Pseudo-Boolean minimization}{7}{section*.30}
+\contentsline {subsubsection}{Timeout}{7}{section*.31}
+\contentsline {subsubsection}{Multi-threading (Optional)}{7}{section*.32}
+\contentsline {section}{\numberline {2.2}Scope}{8}{section.33}
+\contentsline {subsection}{\numberline {2.2.1}What and how?}{8}{subsection.34}
+\contentsline {subsection}{\numberline {2.2.2}Possible obstacles}{8}{subsection.36}
+\contentsline {subsubsection}{Base project}{8}{section*.37}
+\contentsline {subsubsection}{Schedule}{8}{section*.38}
+\contentsline {subsubsection}{PBLib}{8}{section*.39}
+\contentsline {subsubsection}{Correctness}{9}{section*.40}
+\contentsline {section}{\numberline {2.3}Methodology and Rigor}{9}{section.41}
+\contentsline {subsection}{\numberline {2.3.1}Methodology}{9}{subsection.42}
+\contentsline {subsection}{\numberline {2.3.2}Tools}{9}{subsection.44}
+\contentsline {subsubsection}{Git}{9}{section*.45}
+\contentsline {subsubsection}{Trello}{9}{section*.46}
+\contentsline {subsection}{\numberline {2.3.3}Communication}{9}{subsection.47}
+\contentsline {subsection}{\numberline {2.3.4}Rigour and Validation}{10}{subsection.48}
+\contentsline {chapter}{\numberline {3}Development}{11}{chapter.49}
+\contentsline {section}{\numberline {3.1}Requirement analysis, architecture and debugging}{11}{section.50}
+\contentsline {subsection}{\numberline {3.1.1}Environment configuration}{11}{subsection.51}
+\contentsline {subsubsection}{Makefile}{11}{section*.52}
+\contentsline {subsubsection}{Google Test}{11}{section*.54}
+\contentsline {subsection}{\numberline {3.1.2}Refactor}{11}{subsection.55}
+\contentsline {subsection}{\numberline {3.1.3}Requirements}{12}{subsection.56}
+\contentsline {subsection}{\numberline {3.1.4}Architecture}{12}{subsection.57}
+\contentsline {section}{\numberline {3.2}Objective 1: Pseudo-boolean Minimization}{12}{section.58}
+\contentsline {subsection}{\numberline {3.2.1}Problem}{12}{subsection.59}
+\contentsline {subsection}{\numberline {3.2.2}Possible solutions}{13}{subsection.60}
+\contentsline {subsection}{\numberline {3.2.3}Planning}{13}{subsection.61}
+\contentsline {subsection}{\numberline {3.2.4}Development and TDD}{14}{subsection.62}
+\contentsline {subsection}{\numberline {3.2.5}Finalization}{14}{subsection.63}
+\contentsline {section}{\numberline {3.3}Objective 2: Timeout}{14}{section.64}
+\contentsline {subsection}{\numberline {3.3.1}Problem}{14}{subsection.65}
+\contentsline {subsection}{\numberline {3.3.2}Possible solutions}{15}{subsection.66}
+\contentsline {subsection}{\numberline {3.3.3}Planning}{15}{subsection.67}
+\contentsline {subsection}{\numberline {3.3.4}Development and TDD}{16}{subsection.68}
+\contentsline {subsection}{\numberline {3.3.5}Finalization}{17}{subsection.69}
+\contentsline {section}{\numberline {3.4}Objective 3: Multi-threading}{17}{section.70}
+\contentsline {subsection}{\numberline {3.4.1}Problem}{17}{subsection.71}
+\contentsline {subsection}{\numberline {3.4.2}Possible solutions}{17}{subsection.72}
+\contentsline {subsection}{\numberline {3.4.3}Planning}{17}{subsection.73}
+\contentsline {subsection}{\numberline {3.4.4}Development and TDD}{17}{subsection.74}
+\contentsline {subsection}{\numberline {3.4.5}Finalization}{17}{subsection.75}
+\contentsline {chapter}{\numberline {4}Project Planning}{18}{chapter.76}
+\contentsline {section}{\numberline {4.1}Schedule}{18}{section.77}
+\contentsline {subsection}{\numberline {4.1.1}Estimated project duration}{18}{subsection.78}
+\contentsline {subsection}{\numberline {4.1.2}Considerations}{18}{subsection.79}
+\contentsline {section}{\numberline {4.2}Resources}{18}{section.80}
+\contentsline {subsection}{\numberline {4.2.1}Human Resources}{18}{subsection.81}
+\contentsline {subsection}{\numberline {4.2.2}Material Resources}{18}{subsection.82}
+\contentsline {subsection}{\numberline {4.2.3}Software Resources}{18}{subsection.83}
+\contentsline {section}{\numberline {4.3}Project Planning}{19}{section.84}
+\contentsline {subsubsection}{GEP}{19}{section*.85}
+\contentsline {subsubsection}{Initial Stage}{19}{section*.86}
+\contentsline {subsubsection}{Iterations}{19}{section*.87}
+\contentsline {paragraph}{Planning\\}{19}{section*.88}
+\contentsline {paragraph}{Development and TDD\\}{19}{section*.89}
+\contentsline {paragraph}{Finalization\\}{19}{section*.90}
+\contentsline {subsubsection}{Final Stage}{20}{section*.91}
+\contentsline {subsection}{\numberline {4.3.1}Gantt Diagram}{20}{subsection.92}
+\contentsline {section}{\numberline {4.4}Alternatives and Action Plans}{21}{section.94}
+\contentsline {subsection}{\numberline {4.4.1}Potential deviations}{21}{subsection.95}
+\contentsline {subsubsection}{Incorrect estimations}{21}{section*.96}
+\contentsline {subsubsection}{Summer internship}{21}{section*.97}
+\contentsline {subsubsection}{Compatibility issues}{21}{section*.98}
+\contentsline {subsubsection}{Base project code quality}{21}{section*.99}
+\contentsline {chapter}{\numberline {5}Economic Management}{23}{chapter.100}
+\contentsline {section}{\numberline {5.1}Direct costs}{23}{section.101}
+\contentsline {subsection}{\numberline {5.1.1}Human resources}{23}{subsection.102}
+\contentsline {section}{\numberline {5.2}Indirect costs}{24}{section.105}
+\contentsline {subsection}{\numberline {5.2.1}Hardware}{24}{subsection.106}
+\contentsline {subsection}{\numberline {5.2.2}Software}{24}{subsection.109}
+\contentsline {subsection}{\numberline {5.2.3}Other resources}{24}{subsection.111}
+\contentsline {section}{\numberline {5.3}Contingency}{24}{section.114}
+\contentsline {section}{\numberline {5.4}Unforeseen}{25}{section.116}
+\contentsline {section}{\numberline {5.5}Total budget}{25}{section.118}
+\contentsline {section}{\numberline {5.6}Control management}{26}{section.120}
+\contentsline {section}{\numberline {5.7}COMPARACIO EXPECTED VS REAL}{26}{section.121}
+\contentsline {chapter}{\numberline {6}Sustainability and Social Commitment}{27}{chapter.122}
+\contentsline {section}{\numberline {6.1}Sustainability Matrix}{27}{section.123}
+\contentsline {section}{\numberline {6.2}Economic dimension}{27}{section.125}
+\contentsline {subsection}{\numberline {6.2.1}PPP}{27}{subsection.126}
+\contentsline {subsection}{\numberline {6.2.2}Shelf life}{27}{subsection.127}
+\contentsline {subsection}{\numberline {6.2.3}Risks}{27}{subsection.128}
+\contentsline {section}{\numberline {6.3}Environmental dimension }{28}{section.129}
+\contentsline {subsection}{\numberline {6.3.1}PPP}{28}{subsection.130}
+\contentsline {subsection}{\numberline {6.3.2}Shelf life}{28}{subsection.131}
+\contentsline {subsection}{\numberline {6.3.3}Risks}{28}{subsection.132}
+\contentsline {section}{\numberline {6.4}Social dimension}{28}{section.133}
+\contentsline {subsection}{\numberline {6.4.1}PPP}{28}{subsection.134}
+\contentsline {subsection}{\numberline {6.4.2}Shelf life}{28}{subsection.135}
+\contentsline {subsection}{\numberline {6.4.3}Risks}{29}{subsection.136}
+\contentsline {chapter}{\numberline {7}Conclusions}{30}{chapter.137}
+\contentsline {section}{\numberline {7.1}Future Work}{30}{section.138}
+\contentsline {chapter}{\numberline {A}More information}{31}{appendix.139}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{31}{section.140}
+\contentsline {chapter}{Bibliography}{32}{appendix*.142}
