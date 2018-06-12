@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  11 JUN 2018 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  12 JUN 2018 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2124,7 +2124,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--56
 
  []
 
-<Figures/linearProgramming.png, id=663, 843.15pt x 332.24126pt>
+<Figures/linearProgramming.png, id=632, 843.15pt x 332.24126pt>
 File: Figures/linearProgramming.png Graphic file (type png)
 
 <use Figures/linearProgramming.png>
@@ -2141,7 +2141,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-<Figures/GraphMitchellSelmanLevesque.png, id=677, 669.50125pt x 492.84125pt>
+<Figures/GraphMitchellSelmanLevesque.png, id=646, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
@@ -2160,7 +2160,7 @@ Overfull \hbox (6.09819pt too wide) in paragraph at lines 121--123
 ][] de-vel-oped by Pe-ter Steinke.
  []
 
-<Figures/PBLibEncodings.png, id=690, 726.715pt x 274.02374pt>
+<Figures/PBLibEncodings.png, id=660, 726.715pt x 274.02374pt>
 File: Figures/PBLibEncodings.png Graphic file (type png)
 
 <use Figures/PBLibEncodings.png>
@@ -2213,108 +2213,113 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
 
 
 
-] [12] [13]
-Overfull \hbox (30.07338pt too wide) in paragraph at lines 175--176
-[]\T1/ppl/m/n/10.95 The first im-ple-mented method from PB-Min was int32_t PB-M
-in::getFirstFreshVariable().
+] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
  []
 
 
-Overfull \hbox (63.89723pt too wide) in paragraph at lines 181--182
-[]\T1/ppl/m/n/10.95 The meth-ods int64_t PB-Min::getCostFunctionMax() and int64
-_t PB-Min::getCostFunctionMin()
+Overfull \hbox (5.972pt too wide) in paragraph at lines 110--111
+[]\T1/ppl/m/n/10.95 The func-tion \T1/ppl/m/it/10.95 en-code() \T1/ppl/m/n/10.9
+5 is re-spon-si-ble for con-vert-ing the Pseudo-Boolean Con-straints
  []
 
-[14] [15]
-Overfull \hbox (5.33731pt too wide) in paragraph at lines 280--281
-[]\T1/ppl/m/n/10.95 - PB-Min: Af-ter the refac-tor, this class is only re-spon-
-si-ble for rep-re-sent-ing a Pseudo-
+[13]
+Overfull \hbox (21.7074pt too wide) in paragraph at lines 157--158
+[]\T1/ppl/m/n/10.95 The first im-ple-mented method from PB-Min was \T1/ppl/m/it
+/10.95 int32_t PB-Min::getFirstFreshVariable()\T1/ppl/m/n/10.95 .
  []
 
 
-Overfull \hbox (3.90254pt too wide) in paragraph at lines 309--310
-[]\T1/ppl/m/n/10.95 As the pre-vi-ous it-er-a-tion, the de-vel-op-ment was done
- se-lect-ing classes in a bottom-
+Overfull \hbox (49.19208pt too wide) in paragraph at lines 163--164
+[]\T1/ppl/m/n/10.95 The meth-ods \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFunc
+tionMax() \T1/ppl/m/n/10.95 and \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFunct
+ionMin()
  []
 
-[16]
-Overfull \hbox (2.39668pt too wide) in paragraph at lines 348--349
-\T1/ppl/m/n/10.95 The classes Solver, Sim-ple-Time-out-Solver and Gen-er-al-Tim
-e-out-Solver, apart from their
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--175
+
  []
 
-) [17]
+[14]
+Overfull \hbox (2.46375pt too wide) in paragraph at lines 244--245
+[]\T1/ppl/m/n/10.95 They sharer mem-ory within a pro-cess which makes com-mu-ni
+-ca-tion much more
+ []
+
+[15] [16]) [17] [18]
 \openout2 = `Chapters/Ch4-ProjectPlanning.aux'.
 
  (./Chapters/Ch4-ProjectPlanning.tex
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
 1: section
-[18
+[19
 
 
 
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 41.
+(hyperref)                than one, level fixed on input line 39.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-[19] <Figures/GanttTable2.png, id=790, 454.69875pt x 1027.84pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+[20] <Figures/GanttTable2.png, id=771, 454.69875pt x 1027.84pt>
 File: Figures/GanttTable2.png Graphic file (type png)
 
 <use Figures/GanttTable2.png>
-Package pdftex.def Info: Figures/GanttTable2.png used on input line 75.
+Package pdftex.def Info: Figures/GanttTable2.png used on input line 73.
 (pdftex.def)             Requested size: 224.30296pt x 507.03326pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[20 <./Figures/GanttTable2.png>]
+[21 <./Figures/GanttTable2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
@@ -2329,7 +2334,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-) [21] [22]
+) [22] [23]
 \openout2 = `Chapters/Ch5-EconomicManagement.aux'.
 
  (./Chapters/Ch5-EconomicManagement.tex
@@ -2340,7 +2345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 1: section
-[23
+[24
 
 
 
@@ -2355,17 +2360,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-) [26]
+) [27]
 \openout2 = `Chapters/Ch6-SustainabilitySocialCommitment.aux'.
 
  (./Chapters/Ch6-SustainabilitySocialCommitment.tex
@@ -2376,7 +2381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 1: section
-[27
+[28
 
 
 
@@ -2395,14 +2400,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[28]) [29]
+[29]) [30]
 \openout2 = `Chapters/Ch7-Conclusions.aux'.
 
  (./Chapters/Ch7-Conclusions.tex
 Chapter 7.
 )
 1: section
-[30
+[31
 
 
 
@@ -2433,7 +2438,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
 )
 1: section
-[31
+[32
 
 
 
@@ -2495,7 +2500,7 @@ Overfull \hbox (6.68138pt too wide) in paragraph at lines 226--226
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 1: section
-[32
+[33
 
 
 ]
@@ -2507,9 +2512,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 (./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 743A37AACDEDE16A6FEEA254EB8DFFA5;15086.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: FC908F46CF3956A586EBD7BA6D651917;14260
+(rerunfilecheck)             After:  665C8C0F433AE9BAAA9A475C7241F0E7;14449.
 
 LaTeX Warning: There were undefined references.
 
@@ -2524,28 +2535,29 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 104 was incomplete) 
 Here is how much of TeX's memory you used:
- 32007 strings out of 494953
- 638208 string characters out of 6180978
+ 32001 strings out of 494953
+ 638098 string characters out of 6180978
  728808 words of memory out of 5000000
- 34678 multiletter control sequences out of 15000+600000
+ 34671 multiletter control sequences out of 15000+600000
  88309 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  64i,21n,88p,10377b,2243s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/
 enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
-lb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (40 pages, 407118 bytes).
+nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (41 pages, 418475 bytes).
 PDF statistics:
- 969 PDF objects out of 1000 (max. 8388607)
- 901 compressed objects within 10 object streams
- 191 named destinations out of 1000 (max. 500000)
- 917 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 952 PDF objects out of 1000 (max. 8388607)
+ 883 compressed objects within 9 object streams
+ 192 named destinations out of 1000 (max. 500000)
+ 869 words of extra memory for PDF output out of 10000 (max. 10000000)
 
