@@ -4,18 +4,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Category partition testing for \emph {Linear search} and \emph {Binary search}\relax }}{15}{table.caption.68}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Planned time and real time per stage\relax }}{25}{table.caption.104}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Hours destined to each stage per role\relax }}{26}{table.caption.108}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Human resources budget\relax }}{26}{table.caption.109}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Hardware resources budget\relax }}{27}{table.caption.113}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Software resources budget\relax }}{27}{table.caption.115}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Other resources budget\relax }}{28}{table.caption.118}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Contingency budget\relax }}{28}{table.caption.120}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Unforeseen budget\relax }}{28}{table.caption.122}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Total budget\relax }}{28}{table.caption.124}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Hours per role\relax }}{29}{table.caption.128}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Real cost of human resources\relax }}{29}{table.caption.129}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Other resources budget\relax }}{30}{table.caption.132}
+\contentsline {table}{\numberline {5.12}{\ignorespaces Total cost\relax }}{30}{table.caption.135}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Sustainability matrix\relax }}{31}{table.caption.138}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Hours destined to each stage per role\relax }}{24}{table.caption.103}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Human resources budget\relax }}{24}{table.caption.104}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Hardware resources budget\relax }}{25}{table.caption.108}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Software resources budget\relax }}{25}{table.caption.110}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Other resources budget\relax }}{26}{table.caption.113}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Contingency budget\relax }}{26}{table.caption.115}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Unforeseen budget\relax }}{26}{table.caption.117}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Total budget\relax }}{26}{table.caption.119}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Sustainability matrix\relax }}{28}{table.caption.124}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Complexity of deciding if a \emph {BF} is SAT or TAUT depending of its format.\relax }}{35}{table.caption.155}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Complexity of deciding if a \emph {BF} is SAT or TAUT depending of its format.\relax }}{32}{table.caption.141}

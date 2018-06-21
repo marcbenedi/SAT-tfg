@@ -6,8 +6,7 @@
 For this project there have been estimated 450 hours of work, starting on \textbf{19th of February} and ending on \textbf{23rd of June}.\\
 
 \subsection{Considerations}
-The original plan could be modified to be adapted to deviations. Agile methodology implies that some new requirements can appear which could modify the planning. It is hard to do a realistic planning with Agile methodology because the iteration's requirements are not fully known until the Planning stage.\\
-
+The original plan could be modified to be adapted to deviations. Agile methodology implies that some new requirements can appear which could modify the planning. It is hard to do a realistic planning with Agile methodology because the iteration's requirements are not fully known until the Planning stage.\\\\
 Because this project will be developed sequentially by only one person, the creation of a PERT diagram has been discarded. Nevertheless, some part of the documentation will be done in parallel.
 
 \section{Resources}
@@ -82,27 +81,50 @@ Because of using an Agile methodology, the project functionalities can be easily
 
 \subsection{Potential deviations}
 \subsubsection{Incorrect estimations}
-It could be that the purposed estimations are not correct and be underestimated or overestimated. In the first case, if some iteration takes less time than expected, the next iteration will be started immediately. On the other case, if an iteration takes more time than expected, more hours will be added, for example, weekend hours. //
+It could be that the purposed estimations are not correct and be underestimated or overestimated. In the first case, if some iteration takes less time than expected, the next iteration will be started immediately. On the other case, if an iteration takes more time than expected, more hours will be added, for example, weekend hours. \\
 If even with this countermeasures the iteration is delaying the project some optional improvements will be discarded in order to guarantee the main functionalities and the project would be finished before the deadline. 
 The effect on the resources would be more electricity consumed by the laptop on the added hours. 
 
 \subsubsection{Summer internship}
 
 The deadline for this project is the 23rd of June. 
-The author applied for a CERN internship from 4th of June until 31st of August. 
-
-In case of being accepted into the program, the final stage would have to be done during the internship. Since the final stage is for doing the final document and the final presentation, it can be lightened by paralleling part of its work during other stages.
-
+The author applied for a CERN internship from 4th of June until 31st of August. \\\
+In case of being accepted into the program, the final stage would have to be done during the internship. Since the final stage is for doing the final document and the final presentation, it can be lightened by paralleling part of its work during other stages.\\
 The duration of the project is not affected because the only thing that would be done is a different distribution of the work. For the same reason, it would not have any effect on the resources.
 
 \subsubsection{Compatibility issues}
 
-As explained before, in section X, PBLib could cause some compatibility issues with the existing software which works with another library, Cudd. 
+As explained before, in section X, PBLib could cause some compatibility issues with the existing software which works with another library, Cudd. \\
 If this happens, in the best situation some hours will be spent fixing this issue or finding a substitute. In the worst situation, the functionalities of PBLib would have to be implemented which would take much time. The project duration could be affected, but it would be always be finished before the deadline using weekend hours. The resources which will be used in addition is more electricity consumed by the laptop.
 
 \subsubsection{Base project code quality}
 The existing project could have some quality issues and be a source of bugs which would cause many delays. For this reasons, and as explained in section Y, the first stage of this project will be focused on assuring quality code of the existing project.  The project duration would not be affected because part of the first stage is focused on that guaranteeing project finalization.\\\\\\
-
 As explained in each possible deviation, the priority is to finish the project before the deadline.  As said, extra-hours from the weekend can be used to work on the project to accomplish all the objectives. If even these hours are not enough, then the optional objective \emph{Multithreading} will not be done. 
 
 \section{Project execution}%TODO: name, maybe real plan
+
+In this section, an analysis of the project execution is done.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[hbtp]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|r|r|}
+			\hline
+			\multicolumn{1}{|c|}{Stage}  & \multicolumn{1}{c|}{Expected hours} & \multicolumn{1}{c|}{Real hours} \\ \hline
+			GEP & 70 & 70 \\ \hline
+			Requirement analysis, architecture and debugging &   90 & 75 \\ \hline
+			Iteration 1: PB Minimisation & 80 & 85 \\ \hline
+			Iteration 2: Timeout  & 80 & 90 \\ \hline
+			Iteration 3: Multithreading  & 80 & - \\ \hline
+			Finalization & 50 &  \\ \hline\hline
+			Total & 450 & \\ \hline
+		\end{tabular}%
+	}
+	\caption{Planned time and real time per stage}
+		\label{planned-real-time}
+\end{table}
+The first deviation is at \emph{Requirement analysis, architecture and debugging}. The expected hours were 90 but the required were 75. This is because when applying testing methods to the code the amount of errors found was less than expected.\\\\
+\emph{Iteration 1: Pseudo-Boolean minimisation} and \emph{Iteration 2: Timeout} took more time than expected specially the second one because of the refactor of the architecture.\\\\
+In the original plan, after the second iteration came \emph{Iteration 3: Multi-threading}. As already said, the third iteration was optional so instead of it, the author started the final stage. The decision was made knowing that during June he would be doing a full-time internship which would reduce the available time to work on the project significantly.

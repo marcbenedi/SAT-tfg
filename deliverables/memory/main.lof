@@ -4,12 +4,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Linear programming canonical form representation\relax }}{2}{figure.15}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Median number of recursive DP calls for Random 3-SAT formulas, as a function of the ratio of clauses-to-variables. Extracted from Mitchell, Selman, and Levesque\cite {Mitchell}\relax }}{4}{figure.18}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces PBLib implemented encodings Extracted from Steinke\cite {Steinke2015}\relax }}{4}{figure.20}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces PBLib implemented encodings Extracted from Steinke\cite {Steinke2015}\relax }}{5}{figure.20}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Iteration 1 architecture\relax }}{13}{figure.62}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Iteration 2 architecture\relax }}{18}{figure.76}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Gantt diagram of the project\relax }}{23}{figure.caption.96}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gantt diagram of the project\relax }}{21}{figure.caption.93}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Search Space\relax }}{36}{figure.157}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Google Test results from command line\relax }}{40}{figure.165}

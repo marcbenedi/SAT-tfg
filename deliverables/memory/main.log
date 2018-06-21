@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  12 JUN 2018 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  20 JUN 2018 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1815,7 +1815,8 @@ Package csquotes Info: ... found 'babel' package.
 (./Chapters/Ch3-Development.aux) (./Chapters/Ch4-ProjectPlanning.aux)
 (./Chapters/Ch5-EconomicManagement.aux)
 (./Chapters/Ch6-SustainabilitySocialCommitment.aux)
-(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux))
+(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux)
+(./Appendices/SearchAlgorithms.aux) (./Appendices/GoogleTest.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
@@ -2037,7 +2038,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 168.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 167.
 
 1: section
 [2
@@ -2088,19 +2089,34 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 5.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--17
+
+ []
+
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 24.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 28.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 18.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 22.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (2.32002pt too wide) in paragraph at lines 33--34
+Overfull \hbox (2.32002pt too wide) in paragraph at lines 27--30
 \T1/ppl/m/n/10.95 This rep-re-sen-ta-tion has some lim-i-ta-tions be-cause it c
 an only ex-press prop-er-ties which
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
@@ -2110,84 +2126,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
 
 ]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 42.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 34.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
 
  []
 
-<Figures/linearProgramming.png, id=632, 843.15pt x 332.24126pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+
+ []
+
+<Figures/linearProgramming.png, id=713, 843.15pt x 332.24126pt>
 File: Figures/linearProgramming.png Graphic file (type png)
 
 <use Figures/linearProgramming.png>
-Package pdftex.def Info: Figures/linearProgramming.png used on input line 60.
+Package pdftex.def Info: Figures/linearProgramming.png used on input line 50.
 (pdftex.def)             Requested size: 121.20995pt x 47.76057pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 61.
+(caption)                particular \caption on input line 51.
 See the caption package documentation for explanation.
 
 [2 <./Figures/linearProgramming.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 
  []
 
-<Figures/GraphMitchellSelmanLevesque.png, id=646, 669.50125pt x 492.84125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
+
+ []
+
+[3]
+<Figures/GraphMitchellSelmanLevesque.png, id=735, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
 Package pdftex.def Info: Figures/GraphMitchellSelmanLevesque.png used on input 
-line 109.
+line 88.
 (pdftex.def)             Requested size: 404.02908pt x 297.42912pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 110.
+(caption)                particular \caption on input line 89.
 See the caption package documentation for explanation.
 
-[3]
-Overfull \hbox (6.09819pt too wide) in paragraph at lines 121--123
+
+Overfull \hbox (6.09819pt too wide) in paragraph at lines 100--102
 \T1/ppl/m/n/10.95 Nowadays there is a well known C++ li-brary called [][]PBLib[
 ][] de-vel-oped by Pe-ter Steinke.
  []
 
-<Figures/PBLibEncodings.png, id=660, 726.715pt x 274.02374pt>
+<Figures/PBLibEncodings.png, id=740, 726.715pt x 274.02374pt>
 File: Figures/PBLibEncodings.png Graphic file (type png)
 
 <use Figures/PBLibEncodings.png>
-Package pdftex.def Info: Figures/PBLibEncodings.png used on input line 124.
+Package pdftex.def Info: Figures/PBLibEncodings.png used on input line 103.
 (pdftex.def)             Requested size: 404.02908pt x 152.35257pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 125.
+(caption)                particular \caption on input line 104.
 See the caption package documentation for explanation.
 
-[4 <./Figures/GraphMitchellSelmanLevesque.png> <./Figures/PBLibEncodings.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[4 <./Figures/GraphMitchellSelmanLevesque.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--146
+Underfull \hbox (badness 10000) in paragraph at lines 118--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 118--126
 
  []
 
-) [5] [6]
+[5 <./Figures/PBLibEncodings.png>]) [6]
 \openout2 = `Chapters/Ch2-ProjectScope.aux'.
 
  (./Chapters/Ch2-ProjectScope.tex
@@ -2208,47 +2235,154 @@ efined on input line 19.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+
+ []
+
 1: section
 [11
 
 
 
-] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+]
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
+
+ []
+
+<Figures/Iteration_1_Architecture.png, id=812, 746.79pt x 539.01375pt>
+File: Figures/Iteration_1_Architecture.png Graphic file (type png)
+
+<use Figures/Iteration_1_Architecture.png>
+Package pdftex.def Info: Figures/Iteration_1_Architecture.png used on input lin
+e 74.
+(pdftex.def)             Requested size: 404.02908pt x 291.61414pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 75.
+See the caption package documentation for explanation.
+
+[13 <./Figures/Iteration_1_Architecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
 
-Overfull \hbox (5.972pt too wide) in paragraph at lines 110--111
-[]\T1/ppl/m/n/10.95 The func-tion \T1/ppl/m/it/10.95 en-code() \T1/ppl/m/n/10.9
-5 is re-spon-si-ble for con-vert-ing the Pseudo-Boolean Con-straints
- []
+Underfull \hbox (badness 10000) in paragraph at lines 120--139
 
-[13]
-Overfull \hbox (21.7074pt too wide) in paragraph at lines 157--158
-[]\T1/ppl/m/n/10.95 The first im-ple-mented method from PB-Min was \T1/ppl/m/it
-/10.95 int32_t PB-Min::getFirstFreshVariable()\T1/ppl/m/n/10.95 .
  []
 
 
-Overfull \hbox (49.19208pt too wide) in paragraph at lines 163--164
-[]\T1/ppl/m/n/10.95 The meth-ods \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFunc
-tionMax() \T1/ppl/m/n/10.95 and \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFunct
-ionMin()
+Overfull \hbox (4.7074pt too wide) in paragraph at lines 120--139
+\T1/ppl/m/n/10.95 The first im-ple-mented method from PB-Min was \T1/ppl/m/it/1
+0.95 int32_t PB-Min::getFirstFreshVariable()\T1/ppl/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--175
+Underfull \hbox (badness 10000) in paragraph at lines 120--139
+
+ []
+
+
+Overfull \hbox (32.19208pt too wide) in paragraph at lines 120--139
+\T1/ppl/m/n/10.95 The meth-ods \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFuncti
+onMax() \T1/ppl/m/n/10.95 and \T1/ppl/m/it/10.95 int64_t PB-Min::getCostFunctio
+nMin()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--139
 
  []
 
 [14]
-Overfull \hbox (2.46375pt too wide) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--165
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+
+Overfull \hbox (2.46375pt too wide) in paragraph at lines 191--192
 []\T1/ppl/m/n/10.95 They sharer mem-ory within a pro-cess which makes com-mu-ni
 -ca-tion much more
  []
 
-[15] [16]) [17] [18]
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
+ []
+
+[16]
+<Figures/Iteration_2_Architecture-UML.png, id=842, 2189.17876pt x 1024.82875pt>
+File: Figures/Iteration_2_Architecture-UML.png Graphic file (type png)
+<use Figures/Iteration_2_Architecture-UML.png>
+Package pdftex.def Info: Figures/Iteration_2_Architecture-UML.png used on input
+ line 202.
+(pdftex.def)             Requested size: 646.44899pt x 302.61897pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 203.
+See the caption package documentation for explanation.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
+
+ []
+
+[18 <./Figures/Iteration_2_Architecture-UML.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 230--243
+
+ []
+
+
+Overfull \hbox (19.9932pt too wide) in paragraph at lines 230--243
+\T1/ppl/m/n/10.95 The next im-ple-mented classes were \T1/ppl/m/it/10.95 Search
+-Strat-egy\T1/ppl/m/n/10.95 , \T1/ppl/m/it/10.95 Bi-na-ry-Search-Strat-egy \T1/
+ppl/m/n/10.95 and \T1/ppl/m/it/10.95 Lin-earSearch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--243
+
+ []
+
+[19]) [20]
 \openout2 = `Chapters/Ch4-ProjectPlanning.aux'.
 
  (./Chapters/Ch4-ProjectPlanning.tex
@@ -2259,98 +2393,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 1: section
-[19
+[21
 
 
 
 ]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 39.
+(hyperref)                than one, level fixed on input line 38.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[20] <Figures/GanttTable2.png, id=771, 454.69875pt x 1027.84pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[22] <Figures/GanttTable2.png, id=876, 454.69875pt x 1027.84pt>
 File: Figures/GanttTable2.png Graphic file (type png)
 
 <use Figures/GanttTable2.png>
-Package pdftex.def Info: Figures/GanttTable2.png used on input line 73.
+Package pdftex.def Info: Figures/GanttTable2.png used on input line 72.
 (pdftex.def)             Requested size: 224.30296pt x 507.03326pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[21 <./Figures/GanttTable2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+[23 <./Figures/GanttTable2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
-) [22] [23]
+[24])
+Underfull \hbox (badness 10000) in paragraph at lines 128--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--209
+
+ []
+
+[25]
 \openout2 = `Chapters/Ch5-EconomicManagement.aux'.
 
  (./Chapters/Ch5-EconomicManagement.tex
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 1: section
-[24
+[26
 
 
 
 ]
-Overfull \hbox (64.81873pt too wide) in paragraph at lines 63--74
+Overfull \hbox (64.81873pt too wide) in paragraph at lines 62--73
  [][] 
  []
 
@@ -2360,54 +2499,74 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
 
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
 
  []
 
-) [27]
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
+
+ []
+
+[28]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 157.
+
+
+Overfull \hbox (16.51424pt too wide) in paragraph at lines 161--170
+ [][] 
+ []
+
+[29])
+Underfull \hbox (badness 10000) in paragraph at lines 218--210
+
+ []
+
+[30]
 \openout2 = `Chapters/Ch6-SustainabilitySocialCommitment.aux'.
 
  (./Chapters/Ch6-SustainabilitySocialCommitment.tex
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
 1: section
-[28
+[31
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-[29]) [30]
+[32]) [33]
 \openout2 = `Chapters/Ch7-Conclusions.aux'.
 
  (./Chapters/Ch7-Conclusions.tex
 Chapter 7.
 )
 1: section
-[31
+[34
 
 
 
@@ -2416,91 +2575,113 @@ Chapter 7.
 
  (./Appendices/AppendixA.tex
 Appendix A.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
- []
-
 )
+Underfull \hbox (badness 10000) in paragraph at lines 10--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--220
+
+ []
+
 1: section
-[32
+[35
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 226.
+\openout2 = `Appendices/SearchAlgorithms.aux'.
 
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+ (./Appendices/SearchAlgorithms.tex
+Appendix B.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+<Figures/Search_space.png, id=952, 379.4175pt x 269.005pt>
+File: Figures/Search_space.png Graphic file (type png)
+
+<use Figures/Search_space.png>
+Package pdftex.def Info: Figures/Search_space.png used on input line 11.
+(pdftex.def)             Requested size: 323.22449pt x 229.1684pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 12.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+1: section
+[36
+
+
+
+ <./Figures/Search_space.png>]) [37]
+\openout2 = `Appendices/GoogleTest.aux'.
+
+ (./Appendices/GoogleTest.tex
+Appendix C.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 17.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (504.99348pt too wide) in paragraph at lines 226--226
-\T1/lmtt/m/n/10.95 }disp = inline{\ & }safe = 1{\ & }zw{\ & }saddbat = ANGjdJ9S
-{\ _ }JppQCGQWibmAw70nm3SJsSOBhJg1PGGwc8D5mdov9JRPuNYNPKnUhEwqiRBmWtvbS0tWSUSFb
-jX2PO6xhByHH1u3uJyl20bqvie{\ _
+1: section
+[38
+
+
+
+]
+Overfull \hbox (45.02377pt too wide) in paragraph at lines 49--52
+\T1/ppl/m/n/10.95 An ex-am-ple of INT in this project could be \T1/ppl/m/it/10.
+95 Gen-er-al-Time-out-Solver_BinarySearchStrategy_INT.cpp\T1/ppl/m/n/10.95 : 
  []
 
 
-Overfull \hbox (550.98335pt too wide) in paragraph at lines 226--226
-\T1/lmtt/m/n/10.95 }A5wVWlyGHOKOsaPgNPEw3Y8EjoJoRyRKQ03MZA1Uma98pSK7xDtv5FPsTkt
-HevmFB7ZP79m3vMbP7MvPgILPjcw0ppjmrcPa0T7u08d8WKIaj2ok8ZGK4xizwJ53fwq7jH8zWEgbML
-dH3iV0HUpJDN0U619MSv{\ _
+Overfull \hbox (15.62846pt too wide) in paragraph at lines 87--87
+[]\T1/lmtt/m/n/10.95 std::vector< std::vector< int32_t > > &, bool &),std::vect
+or< int32_t > &[] 
+ []
+
+[39] <Figures/google-test-output.png, id=972, 530.98375pt x 235.88126pt>
+File: Figures/google-test-output.png Graphic file (type png)
+
+<use Figures/google-test-output.png>
+Package pdftex.def Info: Figures/google-test-output.png used on input line 93.
+(pdftex.def)             Requested size: 363.6237pt x 161.53809pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 94.
+See the caption package documentation for explanation.
+
+)
+Overfull \hbox (11.02525pt too wide) in paragraph at lines 97--222
+\T1/ppl/m/n/10.95 The fig-ure above[][]C.1[][] was the out-put from \T1/ppl/m/i
+t/10.95 Gen-er-al-Time-out-Solver_SlowSearchStrategy_INT
+ []
+
+[40 <./Figures/google-test-output.png>]
+Overfull \hbox (4.91273pt too wide) in paragraph at lines 226--226
+[]\T1/ppl/m/n/10.95 PagePersonnel. ^^P  Se-lec-ción y tra-bajo tem-po-ral es-pe
+-cial-izado^^Q. In: (). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/lmtt
+/m/n/10.95 https :
  []
 
 
-Overfull \hbox (212.30807pt too wide) in paragraph at lines 226--226
-\T1/lmtt/m/n/10.95 }2u{\ _ }{\ _ }eWwhfC14QE82TOnITUjuH7rGsdMKwsKwRrkwi -[] Coy
-PoJT8RAmSh2jKobXWTIejzVljGM8WWvOmglerOOPLjVRbR5H{\ _
- []
-
-
-Overfull \hbox (172.06694pt too wide) in paragraph at lines 226--226
-\T1/lmtt/m/n/10.95 pcC4aECx046{\ _ }NOeCx5Fhmf -[] z71ZuWwUZ3PrMtEdDrDoJrmLDa2s
-WDQIuNom4yykZjVqBNSNoimvTOdUk31nwa85Bxf{\ _
- []
-
-
-Overfull \hbox (34.09734pt too wide) in paragraph at lines 226--226
-\T1/lmtt/m/n/10.95 }CnkIjv5T15jmLv -[] hZGLO1f77keyiLsiHKGLZ{\ _ }HAJGw9oLDXThm
-zAB0ivSmGjszgdj{\ _
- []
-
-
-Overfull \hbox (27.8486pt too wide) in paragraph at lines 226--226
+Overfull \hbox (33.3236pt too wide) in paragraph at lines 226--226
 \T1/lmtt/m/n/10.95 / / www . pagepersonnel . es / sites / pagepersonnel . es / 
 files / er{\ _ }tecnologia16 .
  []
 
-
-Overfull \hbox (1.55814pt too wide) in paragraph at lines 226--226
-[]\T1/ppl/m/n/10.95 Peter Steinke. ^^P  PBLib ^^U A C++ Toolkit for En-cod-ing 
-Pseudo-Boolean Con-straints
- []
-
-
-Overfull \hbox (6.68138pt too wide) in paragraph at lines 226--226
-\T1/ppl/m/n/10.95 into CNF^^Q. In: (2015). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10
-.95 : [][]$\T1/lmtt/m/n/10.95 http : / / tools . computational -[] logic . org 
-/ content /
- []
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 1: section
-[33
+[41
 
 
 ]
@@ -2509,18 +2690,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 (./Chapters/Ch2-ProjectScope.aux) (./Chapters/Ch3-Development.aux)
 (./Chapters/Ch4-ProjectPlanning.aux) (./Chapters/Ch5-EconomicManagement.aux)
 (./Chapters/Ch6-SustainabilitySocialCommitment.aux)
-(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux))
+(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux)
+(./Appendices/SearchAlgorithms.aux) (./Appendices/GoogleTest.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 35136EE7F8957B6BBA3E98B467065DD8;16051.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: FC908F46CF3956A586EBD7BA6D651917;14260
-(rerunfilecheck)             After:  665C8C0F433AE9BAAA9A475C7241F0E7;14449.
 
 LaTeX Warning: There were undefined references.
 
@@ -2535,10 +2711,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 104 was incomplete) 
 Here is how much of TeX's memory you used:
- 32001 strings out of 494953
- 638098 string characters out of 6180978
- 728808 words of memory out of 5000000
- 34671 multiletter control sequences out of 15000+600000
+ 32107 strings out of 494953
+ 640223 string characters out of 6180978
+ 732568 words of memory out of 5000000
+ 34724 multiletter control sequences out of 15000+600000
  88309 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  64i,21n,88p,10377b,2243s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2554,10 +2730,10 @@ ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (41 pages, 418475 bytes).
+Output written on main.pdf (49 pages, 681483 bytes).
 PDF statistics:
- 952 PDF objects out of 1000 (max. 8388607)
- 883 compressed objects within 9 object streams
- 192 named destinations out of 1000 (max. 500000)
- 869 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1087 PDF objects out of 1200 (max. 8388607)
+ 1001 compressed objects within 11 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 985 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -93,7 +93,7 @@ headsepline, % Uncomment to get a line under the header
 
 \newcommand{\projectTitle}{Design of an environment for solving pseudo-boolean optimization problems}
 \newcommand{\courseName}{Disseration}
-\newcommand{\city}{Edinburgh, UK}
+\newcommand{\city}{Geneva, Switzerland}
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -156,8 +156,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-    TEXT DEL ABSTRACTE
-    explicar amb molt poques paraules el que es veu a cada capitol
+    This dissertation addresses several approaches with the common goal of reducing the time required to solve Pseudo-Boolean minimisation problems.  A C++ library has been developed which allows representing Pseudo-Boolean minimisation problems smoothly. The problem entered for the user is encoded into a CNF using PBLib. Two different algorithms are used to search for the minimum value for the cost function: Linear search and Binary search. Finally, two timeout strategies are implemented: General timeout and Simple timeout which stops the solver and returns the last minimum value find. 
 	
 \end{abstract}
 
@@ -219,7 +218,8 @@ headsepline, % Uncomment to get a line under the header
 \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
 
 \include{Appendices/AppendixA}
-
+\include{Appendices/SearchAlgorithms}
+\include{Appendices/GoogleTest}
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
