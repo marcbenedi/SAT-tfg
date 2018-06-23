@@ -29,45 +29,45 @@ Warning--I didn't find a database entry for "https://en.wikipedia.org/wiki/Makef
 Biblatex version: 3.3
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 12 entries,
+You've used 13 entries,
             6047 wiz_defined-function locations,
-            1204 strings with 11509 characters,
-and the built_in function-call counts, 35604 in all, are:
-= -- 1226
-> -- 1398
-< -- 338
-+ -- 606
-- -- 705
-* -- 2573
-:= -- 2435
+            1215 strings with 11832 characters,
+and the built_in function-call counts, 40149 in all, are:
+= -- 1464
+> -- 1544
+< -- 396
++ -- 670
+- -- 752
+* -- 2914
+:= -- 2669
 add.period$ -- 0
-call.type$ -- 12
-change.case$ -- 129
+call.type$ -- 13
+change.case$ -- 173
 chr.to.int$ -- 58
-cite$ -- 22
-duplicate$ -- 3971
-empty$ -- 3720
-format.name$ -- 759
-if$ -- 7781
+cite$ -- 24
+duplicate$ -- 4477
+empty$ -- 4153
+format.name$ -- 846
+if$ -- 8828
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 28
 missing$ -- 0
-newline$ -- 336
-num.names$ -- 458
-pop$ -- 3676
+newline$ -- 379
+num.names$ -- 537
+pop$ -- 3993
 preamble$ -- 1
-purify$ -- 162
+purify$ -- 209
 quote$ -- 0
-skip$ -- 2001
+skip$ -- 2291
 stack$ -- 0
-substring$ -- 635
-swap$ -- 1224
-text.length$ -- 328
-text.prefix$ -- 11
+substring$ -- 834
+swap$ -- 1412
+text.length$ -- 356
+text.prefix$ -- 12
 top$ -- 1
-type$ -- 444
+type$ -- 482
 warning$ -- 0
-while$ -- 247
+while$ -- 268
 width$ -- 0
-write$ -- 323
+write$ -- 365
 (There was 1 warning)

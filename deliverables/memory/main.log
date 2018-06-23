@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  20 JUN 2018 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  23 JUN 2018 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1812,11 +1812,15 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux
 (./Chapters/Ch1-IntroductionContext.aux) (./Chapters/Ch2-ProjectScope.aux)
-(./Chapters/Ch3-Development.aux) (./Chapters/Ch4-ProjectPlanning.aux)
-(./Chapters/Ch5-EconomicManagement.aux)
-(./Chapters/Ch6-SustainabilitySocialCommitment.aux)
-(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux)
-(./Appendices/SearchAlgorithms.aux) (./Appendices/GoogleTest.aux))
+(./Chapters/Ch3-Development.aux) (./Chapters/Ch4-SearchAlgorithms.aux)
+(./Chapters/Ch5-Timeouts.aux) (./Chapters/Ch6-ProjectPlanning.aux
+
+LaTeX Warning: Label `Chapter4' multiply defined.
+
+) (./Chapters/Ch7-EconomicManagement.aux)
+(./Chapters/Ch8-SustainabilitySocialCommitment.aux)
+(./Chapters/Ch9-Conclusions.aux) (./Appendices/AppendixA.aux)
+(./Appendices/GoogleTest.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
@@ -2145,7 +2149,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--48
 
  []
 
-<Figures/linearProgramming.png, id=713, 843.15pt x 332.24126pt>
+<Figures/linearProgramming.png, id=758, 843.15pt x 332.24126pt>
 File: Figures/linearProgramming.png Graphic file (type png)
 
 <use Figures/linearProgramming.png>
@@ -2168,7 +2172,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--71
  []
 
 [3]
-<Figures/GraphMitchellSelmanLevesque.png, id=735, 669.50125pt x 492.84125pt>
+<Figures/GraphMitchellSelmanLevesque.png, id=780, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
@@ -2187,7 +2191,7 @@ Overfull \hbox (6.09819pt too wide) in paragraph at lines 100--102
 ][] de-vel-oped by Pe-ter Steinke.
  []
 
-<Figures/PBLibEncodings.png, id=740, 726.715pt x 274.02374pt>
+<Figures/PBLibEncodings.png, id=785, 726.715pt x 274.02374pt>
 File: Figures/PBLibEncodings.png Graphic file (type png)
 
 <use Figures/PBLibEncodings.png>
@@ -2255,7 +2259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
-<Figures/Iteration_1_Architecture.png, id=812, 746.79pt x 539.01375pt>
+<Figures/Iteration_1_Architecture.png, id=857, 746.79pt x 539.01375pt>
 File: Figures/Iteration_1_Architecture.png Graphic file (type png)
 
 <use Figures/Iteration_1_Architecture.png>
@@ -2343,7 +2347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--201
  []
 
 [16]
-<Figures/Iteration_2_Architecture-UML.png, id=842, 2189.17876pt x 1024.82875pt>
+<Figures/Iteration_2_Architecture-UML.png, id=888, 2189.17876pt x 1024.82875pt>
 File: Figures/Iteration_2_Architecture-UML.png Graphic file (type png)
 <use Figures/Iteration_2_Architecture-UML.png>
 Package pdftex.def Info: Figures/Iteration_2_Architecture-UML.png used on input
@@ -2383,10 +2387,269 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--243
  []
 
 [19]) [20]
-\openout2 = `Chapters/Ch4-ProjectPlanning.aux'.
+\openout2 = `Chapters/Ch4-SearchAlgorithms.aux'.
 
- (./Chapters/Ch4-ProjectPlanning.tex
+ (./Chapters/Ch4-SearchAlgorithms.tex
 Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+<Figures/Search_space.png, id=910, 379.4175pt x 269.005pt>
+File: Figures/Search_space.png Graphic file (type png)
+
+<use Figures/Search_space.png>
+Package pdftex.def Info: Figures/Search_space.png used on input line 11.
+(pdftex.def)             Requested size: 323.22449pt x 229.1684pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 12.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+<Figures/SearchSpace2.png, id=911, 251.94125pt x 96.36pt>
+File: Figures/SearchSpace2.png Graphic file (type png)
+
+<use Figures/SearchSpace2.png>
+Package pdftex.def Info: Figures/SearchSpace2.png used on input line 20.
+(pdftex.def)             Requested size: 323.22449pt x 123.62411pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 21.
+See the caption package documentation for explanation.
+
+1: section
+[21
+
+
+
+ <./Figures/Search_space.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 28--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--36
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 36.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (67.36707pt too wide) in paragraph at lines 50--50
+[]\T1/lmtt/m/n/10.95 IncPBConstraint inc_costFunction = IncPBConstraint(w_costF
+unction, PBLib::LEQ, k);[] 
+ []
+
+[22 <./Figures/SearchSpace2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--93
+
+ []
+
+[23]
+Overfull \hbox (32.87466pt too wide) in paragraph at lines 136--136
+[]        \T1/lmtt/m/n/10.95 cnf.insert(cnf.end(),cnf_constraints.begin(),cnf_c
+onstraints.end());[] 
+ []
+
+
+Overfull \hbox (452.53221pt too wide) in paragraph at lines 136--136
+[]        \T1/lmtt/m/n/10.95 firstFreshVariable = pb2cnf.encodeLeq(pm.getCostFu
+nction().getWeights(), pm.getCostFunction().getLiterals(), k, cnf, firstFreshVa
+riable) + 1;[] 
+ []
+
+[24])
+Underfull \hbox (badness 10000) in paragraph at lines 143--209
+
+ []
+
+[25]
+\openout2 = `Chapters/Ch5-Timeouts.aux'.
+
+ (./Chapters/Ch5-Timeouts.tex
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
+
+ []
+
+<Figures/SimpleTimeoutLinearSearch.png, id=943, 450.68375pt x 245.91875pt>
+File: Figures/SimpleTimeoutLinearSearch.png Graphic file (type png)
+
+<use Figures/SimpleTimeoutLinearSearch.png>
+Package pdftex.def Info: Figures/SimpleTimeoutLinearSearch.png used on input li
+ne 17.
+(pdftex.def)             Requested size: 323.22449pt x 176.37842pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 18.
+See the caption package documentation for explanation.
+
+1: section
+[26
+
+
+
+ <./Figures/SimpleTimeoutLinearSearch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
+
+ []
+
+
+Overfull \hbox (1.40794pt too wide) in paragraph at lines 21--27
+\T1/ppl/m/n/10.95 At the sec-ond it-er-a-tion, \T1/ppl/m/it/10.95 1:\T1/ppl/m/n
+/10.95 , the CNF Pseudo-Boolean con-straints AND $\OML/zplm/m/it/10.95 costfunc
+tion \OMS/zplm/m/n/10.95 ^^T
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
+
+ []
+
+<Figures/SimpleTimeoutBinarySearch.png, id=950, 444.66125pt x 278.03876pt>
+File: Figures/SimpleTimeoutBinarySearch.png Graphic file (type png)
+
+<use Figures/SimpleTimeoutBinarySearch.png>
+Package pdftex.def Info: Figures/SimpleTimeoutBinarySearch.png used on input li
+ne 30.
+(pdftex.def)             Requested size: 323.22449pt x 202.10536pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 31.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
+
+ []
+
+[27 <./Figures/SimpleTimeoutBinarySearch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+<Figures/GeneralTimeoutLinearSearch.png, id=956, 380.42125pt x 245.91875pt>
+File: Figures/GeneralTimeoutLinearSearch.png Graphic file (type png)
+
+<use Figures/GeneralTimeoutLinearSearch.png>
+Package pdftex.def Info: Figures/GeneralTimeoutLinearSearch.png used on input l
+ine 47.
+(pdftex.def)             Requested size: 323.22449pt x 208.94936pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 48.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
+
+ []
+
+
+Overfull \hbox (1.40794pt too wide) in paragraph at lines 51--57
+\T1/ppl/m/n/10.95 At the sec-ond it-er-a-tion, \T1/ppl/m/it/10.95 1:\T1/ppl/m/n
+/10.95 , the CNF Pseudo-Boolean con-straints AND $\OML/zplm/m/it/10.95 costfunc
+tion \OMS/zplm/m/n/10.95 ^^T
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
+
+ []
+
+[28 <./Figures/GeneralTimeoutLinearSearch.png>]
+<Figures/GeneralTimeoutBinarySearch.png, id=963, 444.66125pt x 230.8625pt>
+File: Figures/GeneralTimeoutBinarySearch.png Graphic file (type png)
+
+<use Figures/GeneralTimeoutBinarySearch.png>
+Package pdftex.def Info: Figures/GeneralTimeoutBinarySearch.png used on input l
+ine 60.
+(pdftex.def)             Requested size: 323.22449pt x 167.81311pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 61.
+See the caption package documentation for explanation.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 64--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--210
+
+ []
+
+[29 <./Figures/GeneralTimeoutBinarySearch.png>]
+\openout2 = `Chapters/Ch6-ProjectPlanning.aux'.
+
+
+(./Chapters/Ch6-ProjectPlanning.tex
+Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
@@ -2398,7 +2661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
  []
 
 1: section
-[21
+[30
 
 
 
@@ -2442,7 +2705,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[22] <Figures/GanttTable2.png, id=876, 454.69875pt x 1027.84pt>
+[31] <Figures/GanttTable2.png, id=981, 454.69875pt x 1027.84pt>
 File: Figures/GanttTable2.png Graphic file (type png)
 
 <use Figures/GanttTable2.png>
@@ -2453,7 +2716,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[23 <./Figures/GanttTable2.png>]
+[32 <./Figures/GanttTable2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
@@ -2463,28 +2726,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
-[24])
-Underfull \hbox (badness 10000) in paragraph at lines 128--209
+[33])
+Underfull \hbox (badness 10000) in paragraph at lines 128--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--209
+Underfull \hbox (badness 10000) in paragraph at lines 128--211
 
  []
 
-[25]
-\openout2 = `Chapters/Ch5-EconomicManagement.aux'.
+[34]
+\openout2 = `Chapters/Ch7-EconomicManagement.aux'.
 
- (./Chapters/Ch5-EconomicManagement.tex
-Chapter 5.
+ (./Chapters/Ch7-EconomicManagement.tex
+Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 1: section
-[26
+[35
 
 
 
@@ -2499,7 +2762,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 148--152
 
  []
@@ -2514,7 +2777,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--152
 
  []
 
-[28]
+[37]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 157.
@@ -2524,23 +2787,23 @@ Overfull \hbox (16.51424pt too wide) in paragraph at lines 161--170
  [][] 
  []
 
-[29])
-Underfull \hbox (badness 10000) in paragraph at lines 218--210
+[38])
+Underfull \hbox (badness 10000) in paragraph at lines 218--212
 
  []
 
-[30]
-\openout2 = `Chapters/Ch6-SustainabilitySocialCommitment.aux'.
+[39]
+\openout2 = `Chapters/Ch8-SustainabilitySocialCommitment.aux'.
 
- (./Chapters/Ch6-SustainabilitySocialCommitment.tex
-Chapter 6.
+ (./Chapters/Ch8-SustainabilitySocialCommitment.tex
+Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
 1: section
-[31
+[40
 
 
 
@@ -2559,14 +2822,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-[32]) [33]
-\openout2 = `Chapters/Ch7-Conclusions.aux'.
+[41]) [42]
+\openout2 = `Chapters/Ch9-Conclusions.aux'.
 
- (./Chapters/Ch7-Conclusions.tex
-Chapter 7.
+ (./Chapters/Ch9-Conclusions.tex
+Chapter 9.
 )
 1: section
-[34
+[43
 
 
 
@@ -2576,63 +2839,27 @@ Chapter 7.
  (./Appendices/AppendixA.tex
 Appendix A.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--220
+Underfull \hbox (badness 10000) in paragraph at lines 10--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--220
+Underfull \hbox (badness 10000) in paragraph at lines 10--222
 
  []
 
 1: section
-[35
+[44
 
 
 
 ]
-\openout2 = `Appendices/SearchAlgorithms.aux'.
-
- (./Appendices/SearchAlgorithms.tex
-Appendix B.
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-
- []
-
-<Figures/Search_space.png, id=952, 379.4175pt x 269.005pt>
-File: Figures/Search_space.png Graphic file (type png)
-
-<use Figures/Search_space.png>
-Package pdftex.def Info: Figures/Search_space.png used on input line 11.
-(pdftex.def)             Requested size: 323.22449pt x 229.1684pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 12.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
-
- []
-
-1: section
-[36
-
-
-
- <./Figures/Search_space.png>]) [37]
 \openout2 = `Appendices/GoogleTest.aux'.
 
  (./Appendices/GoogleTest.tex
-Appendix C.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 17.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+Appendix B.
 1: section
-[38
+[45
 
 
 
@@ -2648,7 +2875,7 @@ Overfull \hbox (15.62846pt too wide) in paragraph at lines 87--87
 or< int32_t > &[] 
  []
 
-[39] <Figures/google-test-output.png, id=972, 530.98375pt x 235.88126pt>
+[46] <Figures/google-test-output.png, id=1065, 530.98375pt x 235.88126pt>
 File: Figures/google-test-output.png Graphic file (type png)
 
 <use Figures/google-test-output.png>
@@ -2661,44 +2888,48 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 )
-Overfull \hbox (11.02525pt too wide) in paragraph at lines 97--222
-\T1/ppl/m/n/10.95 The fig-ure above[][]C.1[][] was the out-put from \T1/ppl/m/i
+Overfull \hbox (9.95218pt too wide) in paragraph at lines 97--224
+\T1/ppl/m/n/10.95 The fig-ure above[][]B.1[][] was the out-put from \T1/ppl/m/i
 t/10.95 Gen-er-al-Time-out-Solver_SlowSearchStrategy_INT
  []
 
-[40 <./Figures/google-test-output.png>]
-Overfull \hbox (4.91273pt too wide) in paragraph at lines 226--226
+[47 <./Figures/google-test-output.png>]
+Overfull \hbox (4.91273pt too wide) in paragraph at lines 228--228
 []\T1/ppl/m/n/10.95 PagePersonnel. ^^P  Se-lec-ción y tra-bajo tem-po-ral es-pe
 -cial-izado^^Q. In: (). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/lmtt
 /m/n/10.95 https :
  []
 
 
-Overfull \hbox (33.3236pt too wide) in paragraph at lines 226--226
+Overfull \hbox (33.3236pt too wide) in paragraph at lines 228--228
 \T1/lmtt/m/n/10.95 / / www . pagepersonnel . es / sites / pagepersonnel . es / 
 files / er{\ _ }tecnologia16 .
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 1: section
-[41
+[48
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (./main.aux (./Chapters/Ch1-IntroductionContext.aux)
 (./Chapters/Ch2-ProjectScope.aux) (./Chapters/Ch3-Development.aux)
-(./Chapters/Ch4-ProjectPlanning.aux) (./Chapters/Ch5-EconomicManagement.aux)
-(./Chapters/Ch6-SustainabilitySocialCommitment.aux)
-(./Chapters/Ch7-Conclusions.aux) (./Appendices/AppendixA.aux)
-(./Appendices/SearchAlgorithms.aux) (./Appendices/GoogleTest.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+(./Chapters/Ch4-SearchAlgorithms.aux) (./Chapters/Ch5-Timeouts.aux)
+(./Chapters/Ch6-ProjectPlanning.aux) (./Chapters/Ch7-EconomicManagement.aux)
+(./Chapters/Ch8-SustainabilitySocialCommitment.aux)
+(./Chapters/Ch9-Conclusions.aux) (./Appendices/AppendixA.aux)
+(./Appendices/GoogleTest.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 35136EE7F8957B6BBA3E98B467065DD8;16051.
+(rerunfilecheck)             Checksum: D95F1911F47053C7050424C3A8356B56;16928.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -2711,10 +2942,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 104 was incomplete) 
 Here is how much of TeX's memory you used:
- 32107 strings out of 494953
- 640223 string characters out of 6180978
- 732568 words of memory out of 5000000
- 34724 multiletter control sequences out of 15000+600000
+ 32183 strings out of 494953
+ 642019 string characters out of 6180978
+ 735188 words of memory out of 5000000
+ 34766 multiletter control sequences out of 15000+600000
  88309 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  64i,21n,88p,10377b,2243s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2730,10 +2961,10 @@ ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (49 pages, 681483 bytes).
+Output written on main.pdf (56 pages, 774488 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 1001 compressed objects within 11 object streams
- 227 named destinations out of 1000 (max. 500000)
- 985 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1185 PDF objects out of 1200 (max. 8388607)
+ 1082 compressed objects within 11 object streams
+ 249 named destinations out of 1000 (max. 500000)
+ 1066 words of extra memory for PDF output out of 10000 (max. 10000000)
 

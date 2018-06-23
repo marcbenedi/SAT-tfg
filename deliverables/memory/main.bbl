@@ -312,6 +312,51 @@
   \endverb
 \endentry
 
+\entry{pblib.sat2015}{incollection}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Philipp}{P.}%
+     {Tobias}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Steinke}{S.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{2}{}{%
+    {{}%
+     {Heule}{H.}%
+     {Marijn}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Weaver}{W.}%
+     {Sean}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer International Publishing}%
+  }
+  \strng{namehash}{PTSP1}
+  \strng{fullhash}{PTSP1}
+  \field{sortinit}{P}
+  \field{booktitle}{Theory and Applications of Satisfiability Testing -- SAT
+  2015}
+  \verb{doi}
+  \verb 10.1007/978-3-319-24318-4_2
+  \endverb
+  \field{isbn}{978-3-319-24317-7}
+  \field{pages}{9\bibrangedash 16}
+  \field{series}{Lecture Notes in Computer Science}
+  \field{title}{PBLib -- A Library for Encoding Pseudo-Boolean Constraints into
+  CNF}
+  \field{volume}{9340}
+  \field{year}{2015}
+\endentry
+
 \entry{Steinke2015}{article}{}
   \name{author}{1}{}{%
     {{}%
