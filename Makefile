@@ -29,6 +29,9 @@ PBLIB = $(DIR)/pblib
 PBLIB_INCLUDE = -I$(PBLIB)/lib
 PBLIB_LIBS_INCLUDE = -L$(PBLIB)/lib
 PBLIB_LIBS = -lpblib
+#BENCHMARKS
+BENCH = $(DIR)/benchmarks_files/
+BENCH_BUILD = $(DIR)/benchmarks_build/
 
 compile_main:
 	$(CC) -c -std=c++0x -g -fpermissive   $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
@@ -72,6 +75,8 @@ clean:
 	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
 	rm -f output.txt
 	rm -f input.txt
+	rm -f $(BENCH_BUILD)*.gch $(BENCH_BUILD)*.o $(BENCH_BUILD)*.a
+
 
 compile_tests:
 	$(CC) -c -std=c++0x -g $(TEST_FOLDER)Clause_UT.cpp -o $(TEST_BUILD)Clause_UT.o $(TFG_INCLUDE) $(GT_INCLUDE)
@@ -144,3 +149,47 @@ tests:
 	./test_build/GeneralTimeoutSolver_LinearSearchStrategy_INT
 	./test_build/GeneralTimeoutSolver_BinarySearchStrategy_INT
 	./test_build/GeneralTimeoutSolver_SlowSearchStrategy_INT
+
+compile_benchmarks:
+	$(CC) -c -std=c++0x -g $(BENCH)bench_1_lin.cpp -o $(BENCH_BUILD)bench_1_lin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(BENCH)bench_1_bin.cpp -o $(BENCH_BUILD)bench_1_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+
+	$(CC) -c -std=c++0x -g $(BENCH)bench_2_lin.cpp -o $(BENCH_BUILD)bench_2_lin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(BENCH)bench_2_bin.cpp -o $(BENCH_BUILD)bench_2_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+
+	$(CC) -c -std=c++0x -g $(BENCH)bench_3_lin.cpp -o $(BENCH_BUILD)bench_3_lin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(BENCH)bench_3_bin.cpp -o $(BENCH_BUILD)bench_3_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+
+	$(CC) -c -std=c++0x -g $(BENCH)bench_4_lin.cpp -o $(BENCH_BUILD)bench_4_lin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(BENCH)bench_4_bin.cpp -o $(BENCH_BUILD)bench_3_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+
+
+
+link_benchmarks:
+	$(CC) -o $(BENCH_BUILD)bench_1_lin $(BENCH_BUILD)bench_1_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(BENCH_BUILD)bench_1_bin $(BENCH_BUILD)bench_1_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+
+	$(CC) -o $(BENCH_BUILD)bench_2_lin $(BENCH_BUILD)bench_2_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(BENCH_BUILD)bench_2_bin $(BENCH_BUILD)bench_2_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+
+	$(CC) -o $(BENCH_BUILD)bench_3_lin $(BENCH_BUILD)bench_3_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(BENCH_BUILD)bench_3_bin $(BENCH_BUILD)bench_3_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+
+	$(CC) -o $(BENCH_BUILD)bench_4_lin $(BENCH_BUILD)bench_4_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(BENCH_BUILD)bench_4_bin $(BENCH_BUILD)bench_3_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+
+
+
+benchmarks:
+	make compile_benchmarks link_benchmarks
+	$(BENCH_BUILD)bench_1_lin
+	$(BENCH_BUILD)bench_1_bin
+
+	$(BENCH_BUILD)bench_2_lin
+	$(BENCH_BUILD)bench_2_bin
+
+	$(BENCH_BUILD)bench_3_lin
+	$(BENCH_BUILD)bench_3_bin
+
+	$(BENCH_BUILD)bench_4_lin
+	$(BENCH_BUILD)bench_4_bin

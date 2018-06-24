@@ -129,10 +129,10 @@
 \contentsline {subsection}{\numberline {8.4.3}Risks}{42}{subsection.169}
 \contentsline {chapter}{\numberline {9}Conclusions}{43}{chapter.170}
 \contentsline {section}{\numberline {9.1}Future Work}{43}{section.171}
-\contentsline {chapter}{\numberline {A}More information}{44}{appendix.172}
-\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{44}{section.173}
-\contentsline {chapter}{\numberline {B}Google Test}{45}{appendix.175}
-\contentsline {section}{\numberline {B.1}Google Test}{45}{section.176}
-\contentsline {section}{\numberline {B.2}Google Test for this project}{45}{section.177}
-\contentsline {section}{\numberline {B.3}Google Test results}{47}{section.178}
-\contentsline {chapter}{Bibliography}{48}{appendix*.180}
+\contentsline {chapter}{\numberline {A}More information}{45}{appendix.172}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{45}{section.173}
+\contentsline {chapter}{\numberline {B}Google Test}{46}{appendix.175}
+\contentsline {section}{\numberline {B.1}Google Test}{46}{section.176}
+\contentsline {section}{\numberline {B.2}Google Test for this project}{46}{section.177}
+\contentsline {section}{\numberline {B.3}Google Test results}{48}{section.178}
+\contentsline {chapter}{Bibliography}{49}{appendix*.180}

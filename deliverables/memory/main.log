@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  23 JUN 2018 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  24 JUN 2018 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2792,6 +2792,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--212
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--212
+
+ []
+
 [39]
 \openout2 = `Chapters/Ch8-SustainabilitySocialCommitment.aux'.
 
@@ -2827,13 +2832,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  (./Chapters/Ch9-Conclusions.tex
 Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+
+ []
+
+
+Overfull \hbox (9.87592pt too wide) in paragraph at lines 12--17
+\T1/ppl/m/n/10.95 Altogether, this project ended in a C++ frame-work which al-l
+ows work-ing with Boolean
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
+
+ []
+
 )
 1: section
 [43
 
 
 
-]
+] [44]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -2849,7 +2885,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--222
  []
 
 1: section
-[44
+[45
 
 
 
@@ -2859,7 +2895,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--222
  (./Appendices/GoogleTest.tex
 Appendix B.
 1: section
-[45
+[46
 
 
 
@@ -2875,7 +2911,7 @@ Overfull \hbox (15.62846pt too wide) in paragraph at lines 87--87
 or< int32_t > &[] 
  []
 
-[46] <Figures/google-test-output.png, id=1065, 530.98375pt x 235.88126pt>
+[47] <Figures/google-test-output.png, id=1070, 530.98375pt x 235.88126pt>
 File: Figures/google-test-output.png Graphic file (type png)
 
 <use Figures/google-test-output.png>
@@ -2893,7 +2929,7 @@ Overfull \hbox (9.95218pt too wide) in paragraph at lines 97--224
 t/10.95 Gen-er-al-Time-out-Solver_SlowSearchStrategy_INT
  []
 
-[47 <./Figures/google-test-output.png>]
+[48 <./Figures/google-test-output.png>]
 Overfull \hbox (4.91273pt too wide) in paragraph at lines 228--228
 []\T1/ppl/m/n/10.95 PagePersonnel. ^^P  Se-lec-ción y tra-bajo tem-po-ral es-pe
 -cial-izado^^Q. In: (). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/lmtt
@@ -2908,7 +2944,7 @@ files / er{\ _ }tecnologia16 .
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 1: section
-[48
+[49
 
 
 ]
@@ -2942,8 +2978,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 104 was incomplete) 
 Here is how much of TeX's memory you used:
- 32183 strings out of 494953
- 642019 string characters out of 6180978
+ 32184 strings out of 494953
+ 642026 string characters out of 6180978
  735188 words of memory out of 5000000
  34766 multiletter control sequences out of 15000+600000
  88309 words of font info for 147 fonts, out of 8000000 for 9000
@@ -2961,10 +2997,10 @@ ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (56 pages, 774488 bytes).
+Output written on main.pdf (57 pages, 777167 bytes).
 PDF statistics:
- 1185 PDF objects out of 1200 (max. 8388607)
- 1082 compressed objects within 11 object streams
- 249 named destinations out of 1000 (max. 500000)
+ 1189 PDF objects out of 1200 (max. 8388607)
+ 1085 compressed objects within 11 object streams
+ 250 named destinations out of 1000 (max. 500000)
  1066 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,6 +9,11 @@
 
 %comentar la importancia del testing TDD i de disenyar be larquitectura
 
+This work was focused on a set of topics with the common goal of improving the overall time required to solve Pseudo-Boolean minimisation problems, and to introduce a more user-friendly interface to define these problems.\\\\
+The first goal was creating a layer between the user and PBLib which hid it and simplified the variable's management. 
+This layer allows the definition of Pseudo-Boolean formulae, Pseudo-Boolean constraints, and Pseudo-Boolean minimisation problems. This layer also allows defining which search strategy algorithm is used to find the minimum value for the cost function. Two algorithms have been implemented, \emph{linear search} and \emph{binary search}. With the first one, the functionality Incremental Constraints could be used in order to optimise the encoding into CNF for each iteration. In both cases, the software takes advantages of PBLib encodings in order to generate the CNF. \\\\
+The second part of this project was focused on incorporating timeout strategies. This goal was set for users who needed results before a specific deadline and valued more time than the optimal result. The first type, general timeout, stops the execution of the search algorithm and return the last minimum value found. On the other hand, simple timeout, stops the execution of the solver for the selected value and continues the search as if that CNF was unsatisfiable. \\\\
+Altogether, this project ended in a C++ framework which allows working with Boolean formulae and Pseudo-Boolean formulae. 
 
 
 \section{Future Work}
@@ -19,3 +24,11 @@
 %TODO afegir a aquest document documentacio de com utilitzar el software (potser com anex?)
 
 %Altres estrategies de timeout mes inteligents?
+
+As previously explained in Project Scope, one of the goals of this project was implementing multi-threading techniques to split the work and solve the problems in less time. 
+Due to time restrictions, this goal could not be done. Although it was optional, the author expects to add this functionality and keep improving the tool. \\\\
+In order to make this tool usable by other people, it is necessary to create an installer which simplifies all the process.  Even though the header files are documented, it would be great to create some documentation with code examples, and more in in-depth explanations were done. \\\\
+Currently, the software only supports pseudo-boolean minimisation but no pseudo-boolean maximisation even maximisation problems can be easily converted to minimisation and the inverse.  
+Finally, support other relational operators for the constraints, such as greater equal ($\geq$) and equal ($=$), although all the constraints can be converted to less equal. 
+
+
