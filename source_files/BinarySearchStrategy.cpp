@@ -60,16 +60,9 @@ void BinarySearchStrategy::loop(void (Solver::*solve)(std::vector< int32_t > &, 
     }
 
     if (model.size() != 0) {
-        // std::cout << "SAT" << '\n';
-        // std::cout << "min " << std::to_string(min) << '\n';
-        // for (size_t i = 0; i < model.size(); i++) {
-        //     std::cout << std::to_string(model[i]) << " ";
-        // }
-        // std::cout << '\n';
         sat = true;
     }
     else{
-        // std::cout << "UNSAT" << '\n';
         sat = false;
     }
 

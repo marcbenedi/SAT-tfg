@@ -195,7 +195,6 @@ int main() {
 
     BinarySearchStrategy bs;
     PBMin m = PBMin(constraints, costFunction);
-    std::cout << m.getCostFunctionMax() << " " << m.getCostFunctionMin() << "\n";
     Solver s(&bs,m);
 
     std::vector< int32_t > model;

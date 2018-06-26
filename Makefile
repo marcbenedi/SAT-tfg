@@ -75,7 +75,7 @@ clean:
 	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
 	rm -f output.txt
 	rm -f input.txt
-	rm -f $(BENCH_BUILD)*.gch $(BENCH_BUILD)*.o $(BENCH_BUILD)*.a
+	rm -f $(BENCH_BUILD)*
 
 
 compile_tests:
@@ -161,7 +161,7 @@ compile_benchmarks:
 	$(CC) -c -std=c++0x -g $(BENCH)bench_3_bin.cpp -o $(BENCH_BUILD)bench_3_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
 
 	$(CC) -c -std=c++0x -g $(BENCH)bench_4_lin.cpp -o $(BENCH_BUILD)bench_4_lin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
-	$(CC) -c -std=c++0x -g $(BENCH)bench_4_bin.cpp -o $(BENCH_BUILD)bench_3_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g $(BENCH)bench_4_bin.cpp -o $(BENCH_BUILD)bench_4_bin.o $(TFG_INCLUDE) $(PBLIB_INCLUDE)
 
 
 
@@ -176,7 +176,7 @@ link_benchmarks:
 	$(CC) -o $(BENCH_BUILD)bench_3_bin $(BENCH_BUILD)bench_3_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 	$(CC) -o $(BENCH_BUILD)bench_4_lin $(BENCH_BUILD)bench_4_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
-	$(CC) -o $(BENCH_BUILD)bench_4_bin $(BENCH_BUILD)bench_3_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
+	$(CC) -o $(BENCH_BUILD)bench_4_bin $(BENCH_BUILD)bench_4_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
 
 

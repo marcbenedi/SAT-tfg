@@ -3,14 +3,14 @@
 
 \section{Project Formulation}
 
-As mentioned before\ref{Chapter1}, this project is an extension of a previous C++ library. The main goal of this project is to improve the time required to solve \emph{Pseudo-Boolean minimisation} problems. \\
+As previously mentioned [\ref{Chapter1}], this project is an extension of a previous C++ library. The main goal of this project is to improve the time required to solve \emph{Pseudo-Boolean minimisation} problems. \\
 To achieve this goal the following objectives have been established. 
 
 \subsection{General objectives}
 
 \subsubsection{Pseudo-Boolean minimisation}
 For the problems formed by some \emph{PB Constraints} $c_{1}x_{1}+c_{2}x_{2}+\ldots +c_{n}x_{n} \leq k$ and a cost function , the goal is to find and assignment for $\{x_{1},x_{2},\ldots,x_{n}\}$ in a way that the cost function is minimised. $$min(a_{1}x{1} + ... + a_{n}x_{n})$$
-Previously\ref{Chapter1}, it has been explained that this types of problems are \emph{NP-Hard}. This project will try to reduce the time to solve these problems through two approaches:
+Previously [\ref{Chapter1}], it has been explained that these types of problems are \emph{NP-Hard}. This project will try to reduce the required time to solve these problems through two approaches:
 \begin{itemize}
 	\item Binary search:\\
 	Implement the well known \emph{Binary Search} algorithm to find the minimum value for the cost function.	
@@ -27,7 +27,7 @@ This tool will take advantage of multi-core processors trying to split the probl
 \section{Scope}
 \subsection{What and how?}
 
-To achieve all the general objectives\ref{Chapter2} of the project the following stages have been established:
+To achieve all the general objectives [\ref{Chapter2}] of the project the following stages have been established:
 \begin{itemize}
 	\item Analyze, refactor\footnote{Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. \href{https://en.wikipedia.org/wiki/Code_refactoring}{(more)}} and test the existing code to have a solid base. 
 	\item Add the functionality of representing \emph{PBF}.
@@ -42,19 +42,19 @@ To achieve all the general objectives\ref{Chapter2} of the project the following
 In this section, the possible obstacles and its solutions are exposed.
 
 \subsubsection{Base project}
-The existing project \emph{Background section}\ref{Chapter1} has not been developed following an adequate methodology. This bad practice could be responsible for a poor code quality. Building on top of a program with this characteristics could have terrible consequences because it would produce a lot of bugs and malfunctions hard to solve in the future. \\
-For this reason, it is better to improve the quality of the existing code because it will avoid problems in the future.
+The existing project \emph{Background section} [\ref{Chapter1}] has not been developed following an adequate methodology. This bad practice could be responsible for a poor code quality. Building on top of a program with this characteristics could have terrible consequences because it would produce a lot of bugs and malfunctions hard to solve in the future. \\
+For this reason, it is better to improve the quality of the existing code, because it will avoid problems in the future.
 
 \subsubsection{Schedule}
-Because this is a final degree project, the scope is limited, in this case until June of 2018. Considering the learning stage, analysis, requirements study, and other deviations which could appear, the time available to develop the project could be drastically reduced.  Moreover, this project will be developed in an Erasmus stay which makes more laborious the planning. 
+Because this is a final degree project, the scope is limited, in this case until June of 2018. Considering the learning stage, analysis, requirements study, and other deviations which could appear, the time available to develop the project could be drastically reduced.  Moreover, this project will be developed in an Erasmus stay which makes the planning more laborious. 
 For these reasons, a good and realistic planning are key steps to take advantage of time and reduce contingencies. 
 
 \subsubsection{PBLib}
-One of the main requirements of this project, \emph{Pseudo-Boolean minimisation}, is planned to be done with \emph{PBLib} library. This decision could be an obstacle because \emph{PBLib} could not be compatible with the project causing compiling errors and therefore some time would have to be spent solving them. Also, \emph{PBLib} could not have the expected functionalities, in which case a substitute should be found or, even worst, having to implement \emph{PBLib} functionalities which would take too much time. 
+One of the main requirements of this project, \emph{Pseudo-Boolean minimisation}, is planned to be done with \emph{PBLib} library. This decision could be an obstacle because \emph{PBLib} could not be compatible with the project causing compiling errors and therefore some time would have to be spent solving them. Also, \emph{PBLib} could not have the expected functionalities, in which case a substitute should be found or, even worse, having to implement \emph{PBLib} functionalities which would take too much time. 
 
 \subsubsection{Correctness}
-As explained in \emph{Rigor and Validation}\ref{Chapter4}, correctness in this project is fundamental because of the context it is in. \\
-Guarantee correctness could be hard and take more time than expected. If this happens, formal correctness could be delayed or reduced. 
+As explained in \emph{Rigor and Validation} [\ref{Chapter4}], correctness in this project is fundamental because of the context it is in. \\
+Guaranteeing correctness could be hard and take more time than expected. If this happens, formal correctness could be delayed or reduced. 
 
 \section{Methodology and Rigor}
 Research is a vast process with no clear path between \emph{a} and \emph{b}. For this, it is important to follow some directions. A methodology will provide some guidelines to avoid possible problems, be more efficient and do the project more manageable. 
@@ -69,7 +69,7 @@ The methodology adopted for this project will be Agile\footnote{Methodology base
 \end{itemize}
 
 \subsection{Tools}
-In this chapter the, development tools will be introduced. 
+In this chapter the development tools will be introduced. 
 \subsubsection{Git}
 %\href{https://git-scm.com/}{Git} is a well known version control system developed by Linus Torvalds\footnote{Linux creator. \href{https://en.wikipedia.org/wiki/Linus_Torvalds}{(more)}}.\\
 \href{https://git-scm.com/}{Git} will be used in this project as a Version Control System because it allows maintaining tracking of all the changes made (commits), and what is more important, return to them at any time. In addition to this, it enforces a short cycle development (because commits are small units of work) and the developer has to document them which matches perfectly with Agile methodology. \href{https://github.com}{GitHub} will be the repository service used.
@@ -78,11 +78,11 @@ In this chapter the, development tools will be introduced.
 %\subsection{Mendeley}
 
 \subsection{Communication}
-Due to the author conditions, who has been studying abroad in an Erasmus program, all the communication has been made through electronic means. The majority of it has been made using e-mail but when necessary a video conference was done. \\
+Due to the author conditions, who has been studying abroad in an Erasmus program, all the communication has been made through electronic means. The majority of it has been made using e-mail but when necessary video conferences were done. \\
 The minimum communication with the supervisor has been a weekly e-mail report where all the tasks completed during that period were explained. Problems or questions were also exposed if any.
 
 \subsection{Rigour and Validation}
 Rigor and Validation for this project are relevant. \\
 The surrounding of it, such as \emph{Artificial Intelligence, Planners, Cryptographic Protocols verification, \ldots}, are widely used nowadays and have been becoming more popular lately. This means that this project could have a significant repercussion and be used by some professionals. For this, it is important to guarantee the validation and correctness of the project. \\
 During the development, TDD will be used to avoid unnecessary code (possible origin of bugs) and assure the correctness of the implementation. It is also possible to formalize and prove all the operations done by the software.\\
-Finally, the project's supervisor could give me some orientation and validate, if necessary, the operations done.
+Finally, the project's supervisor could give some orientation and validate, if necessary, the operations done.
