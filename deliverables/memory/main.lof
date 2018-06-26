@@ -8,20 +8,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Iteration 1 architecture\relax }}{13}{figure.62}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Iteration 2 architecture\relax }}{18}{figure.76}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Iteration 2 architecture\relax }}{17}{figure.76}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Search Space\relax }}{21}{figure.80}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Satisfiability of the search space given a minimum value\relax }}{22}{figure.82}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Search Space\relax }}{20}{figure.80}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Satisfiability of the search space given a minimum value\relax }}{21}{figure.82}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simple timeout with linear search\relax }}{26}{figure.90}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simple timeout with binary search\relax }}{27}{figure.92}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces General timeout with linear search\relax }}{28}{figure.95}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces General timeout with binary search\relax }}{29}{figure.97}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simple timeout with linear search\relax }}{25}{figure.90}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simple timeout with binary search\relax }}{26}{figure.92}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces General timeout with linear search\relax }}{27}{figure.95}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces General timeout with binary search\relax }}{28}{figure.97}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Gantt diagram of the project\relax }}{32}{figure.caption.115}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Gantt diagram of the project\relax }}{31}{figure.caption.115}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Google Test results from command line\relax }}{48}{figure.179}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Google Test results from command line\relax }}{47}{figure.179}

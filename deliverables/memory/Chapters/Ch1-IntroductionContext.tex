@@ -15,7 +15,7 @@ However, before being able to explain the main problem which this project is abo
 Boolean satisfiability problems (SAT from now on) is the problem of finding a model for a Boolean Formula (BF from now on). In other words, it is the result of evaluating the BF after replacing its variables for \emph{true} or \emph{false}. \\
 SAT is widely used in Computer Science because it was the first problem proved to be NP-Complete which allowed reducing many NP problems to it\cite{Cook1971}.
 
-\subsection{What is a Pseudo-Boolean Formula?}
+\subsection{What is a Boolean Formula?}
 In propositional logic, a \emph{BF} is defined as follows\cite{Lpo}:\\
 Let $P$ be a set of predicate symbols like $p,q,r,...$
 \begin{itemize}
@@ -29,11 +29,11 @@ For example, given the variables $a,b,c$, $a \vee b \wedge c$ is a BF. The inter
 This representation has many uses for example in propositional logic, i.e. specification and verification of circuits and systems, programming languages, databases, \ldots
 
 
-\subsection{What are pseudo-boolean formulae?}
+\subsection{What are Pseudo-Boolean Formulae?}
 
 \emph{Pseudo-Boolean Formulas} are functions of the form $f:B^n \rightarrow \mathbb{R}$. For example, the following formula is a \emph{Pseudo-Boolean Formula} (PBF from now on): $3x+5y$. Therefore, \emph{BF} are a special case of \emph{PBF} where the domain is $d=\{0,1\}$.\\
 
-\subsection{What are pseudo-boolean constraints}
+\subsection{What are Pseudo-Boolean constraints}
 \emph{Pseudo-Boolean constraints} are derived from PBF. They are expressions of the form $PBF \leq k$, where $k\in \mathbb{Z}$.There are used to express restrictions because to satisfy them it is necessary to find an assignment which its evaluation is $\leq k$.\\
 For example, given the variables $a,b,c \in \mathbb{B}$, and the PBC $3a+5b+c \leq 7$, the interpretation $a = b = c = true$ does not satisfy the constraint because $ 9 \nleq 7 $, whereas the interpretation $a =b =c = false$ does satisfy it.
 

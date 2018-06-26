@@ -33,7 +33,7 @@ The folder contains three types of files:
 	\item *\_INT.cpp : Integration Tests
 	\item *\_Stup.cpp : Stub class
 \end{itemize}
-Unit testing is a software testing where individual units/components of the software are tested. Its purpose is to validate that each component works as expected. The majority of tests done for this project are Unit Tests. The first reason is that of the methodology which has been Test Driven Development. The second reason is that Unit Tests are more straightforward to generate and they reveal unexpected beahviour closer to the source.\\
+Unit testing is a software testing technique where individual units/components of the software are tested. Its purpose is to validate that each component works as expected. The majority of tests done for this project are Unit Tests. The first reason is that the used methodology has been Test Driven Development. The second reason is that Unit Tests are more straightforward to generate and they reveal unexpected beahviour closer to the source.\\
 An example of UT in this project could be \emph{PBMin\_UT.cpp}:
 \begin{verbatim}
 TEST(GetFirstFreshVariable,getFirstFreshVariable){
@@ -94,4 +94,4 @@ Once a test file is compiled, it can be executed. Google Test framework will exe
 	\captionof{figure}{Google Test results from command line}
 	\label{google-test-output}
 \end{center}
-The figure above\ref{google-test-output} was the output from \emph{GeneralTimeoutSolver\_SlowSearchStrategy\_INT} test suite. As the reader can see, the output from the test suite was the name of the test executed and if it passed the checks or not.  If a test does not pass the checks, the output becomes red, and the comparison which failed is printed. 
+The figure above [\ref{google-test-output}] was the output from \emph{GeneralTimeoutSolver\_SlowSearchStrategy\_INT} test suite. As the reader can see, the output from the test suite was the name of the test executed and if it passed the checks or not.  If a test does not pass the checks, the output becomes red, and the comparison which failed is printed. 
