@@ -128,13 +128,14 @@
 \contentsline {subsection}{\numberline {8.4.2}Shelf life}{40}{subsection.168}
 \contentsline {subsection}{\numberline {8.4.3}Risks}{41}{subsection.169}
 \contentsline {chapter}{\numberline {9}Experiments and results}{42}{chapter.170}
-\contentsline {section}{\numberline {9.1}Pseudo-Boolean Minimisation benchmarks}{42}{section.171}
-\contentsline {chapter}{\numberline {10}Conclusions}{44}{chapter.174}
-\contentsline {section}{\numberline {10.1}Future Work}{44}{section.175}
-\contentsline {chapter}{\numberline {A}More information}{46}{appendix.176}
-\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{46}{section.177}
-\contentsline {chapter}{\numberline {B}Google Test}{47}{appendix.179}
-\contentsline {section}{\numberline {B.1}Google Test}{47}{section.180}
-\contentsline {section}{\numberline {B.2}Google Test for this project}{47}{section.181}
-\contentsline {section}{\numberline {B.3}Google Test results}{49}{section.182}
-\contentsline {chapter}{Bibliography}{50}{appendix*.184}
+\contentsline {section}{\numberline {9.1}Encoding Boolean formulas to CNF}{42}{section.171}
+\contentsline {section}{\numberline {9.2}Pseudo-Boolean Minimisation benchmarks}{43}{section.173}
+\contentsline {chapter}{\numberline {10}Conclusions}{45}{chapter.176}
+\contentsline {section}{\numberline {10.1}Future Work}{45}{section.177}
+\contentsline {chapter}{\numberline {A}More information}{47}{appendix.178}
+\contentsline {section}{\numberline {A.1}Why SAT Solvers use CNF as input format?}{47}{section.179}
+\contentsline {chapter}{\numberline {B}Google Test}{48}{appendix.181}
+\contentsline {section}{\numberline {B.1}Google Test}{48}{section.182}
+\contentsline {section}{\numberline {B.2}Google Test for this project}{48}{section.183}
+\contentsline {section}{\numberline {B.3}Google Test results}{50}{section.184}
+\contentsline {chapter}{Bibliography}{51}{appendix*.186}

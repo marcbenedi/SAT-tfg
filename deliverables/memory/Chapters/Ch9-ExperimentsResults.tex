@@ -12,6 +12,19 @@ All these experiments were done on a laptop with the following characteristics:
 	\item Ubuntu 16.04 LTS
 \end{itemize}
 
+\section{Encoding Boolean formulas to CNF}
+
+The goal of this experiment was trying to find the best value to decide which type of encoding use to convert Boolean formulas into CNFs. This value represent the portion of 1s function's primes cover. If the portion is small enough, then a lot of clauses are generated.\\
+To do that, some Boolean formulas were randomly generated and some portion values between 0,0001 and 1 were tried.\\
+For each value, the number of variables and clauses of the generated CNFs were stored.
+
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{Figures/value-cover.png}
+	\captionof{figure}{Number of clauses and variables for each portion value}
+	\label{value-cover}
+\end{center}
+As the reader can see in the figure above [\ref{value-cover}], the number of clauses rapidly decreases because of the addition of new variables.\\
+Between 2620 and 5220, the CNFs were generated with the minimum number of clauses, i.e. the recommended portion is one between 0,262 and 0,522.
 
 \section{Pseudo-Boolean Minimisation benchmarks}
 
@@ -27,7 +40,7 @@ From that problems, four of them were selected:
 To convert these benchmarks to a syntax which could be understood by the software, a python script was made.
 \begin{itemize}
 	\item The constraints and the cost function were not linear, i.e. of the form $w_1 v_1 v_2 + w_2 v_2 v_3 \geq k$. These expressions were simplified keeping only the first variable of each term: $w_1 v_1+ w_2 v_2 \geq k$ 
-	\item The relational operator in the constraints was $\geq$. These were converted to equivalent constraints with $\leq$. To do that, the script negates all the weights. 
+	\item The relational operator in the constraints was $\geq$. These were converted to equivalent constraints with $\leq$. To do that, the script negated all the weights. 
 \end{itemize}
 For each benchmark, two files were created: one using the Linear search algorithm and the other using Binary search algorithm.\\
 For minlplib2-pb-0.1.0/opb/autocorr\_bern20-03.opb:

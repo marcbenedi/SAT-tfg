@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  26 JUN 2018 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.2)  26 JUN 2018 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2037,12 +2037,82 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 157.
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
 1: section
 [1
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 167.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 170.
 
 1: section
 [2
@@ -2149,7 +2219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--48
 
  []
 
-<Figures/linearProgramming.png, id=770, 843.15pt x 332.24126pt>
+<Figures/linearProgramming.png, id=778, 843.15pt x 332.24126pt>
 File: Figures/linearProgramming.png Graphic file (type png)
 
 <use Figures/linearProgramming.png>
@@ -2172,7 +2242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--71
  []
 
 [3]
-<Figures/GraphMitchellSelmanLevesque.png, id=792, 669.50125pt x 492.84125pt>
+<Figures/GraphMitchellSelmanLevesque.png, id=800, 669.50125pt x 492.84125pt>
 File: Figures/GraphMitchellSelmanLevesque.png Graphic file (type png)
 
 <use Figures/GraphMitchellSelmanLevesque.png>
@@ -2191,7 +2261,7 @@ Overfull \hbox (6.09819pt too wide) in paragraph at lines 100--102
 ][] de-vel-oped by Pe-ter Steinke.
  []
 
-<Figures/PBLibEncodings.png, id=797, 726.715pt x 274.02374pt>
+<Figures/PBLibEncodings.png, id=805, 726.715pt x 274.02374pt>
 File: Figures/PBLibEncodings.png Graphic file (type png)
 
 <use Figures/PBLibEncodings.png>
@@ -2259,7 +2329,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
-<Figures/Iteration_1_Architecture.png, id=869, 746.79pt x 539.01375pt>
+<Figures/Iteration_1_Architecture.png, id=877, 746.79pt x 539.01375pt>
 File: Figures/Iteration_1_Architecture.png Graphic file (type png)
 
 <use Figures/Iteration_1_Architecture.png>
@@ -2349,7 +2419,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--201
  []
 
 [16]
-<Figures/Iteration_2_Architecture-UML.png, id=900, 2189.17876pt x 1024.82875pt>
+<Figures/Iteration_2_Architecture-UML.png, id=908, 2189.17876pt x 1024.82875pt>
 File: Figures/Iteration_2_Architecture-UML.png Graphic file (type png)
 <use Figures/Iteration_2_Architecture-UML.png>
 Package pdftex.def Info: Figures/Iteration_2_Architecture-UML.png used on input
@@ -2398,7 +2468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-<Figures/Search_space.png, id=918, 379.4175pt x 269.005pt>
+<Figures/Search_space.png, id=926, 379.4175pt x 269.005pt>
 File: Figures/Search_space.png Graphic file (type png)
 
 <use Figures/Search_space.png>
@@ -2415,7 +2485,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<Figures/SearchSpace2.png, id=919, 251.94125pt x 96.36pt>
+<Figures/SearchSpace2.png, id=927, 251.94125pt x 96.36pt>
 File: Figures/SearchSpace2.png Graphic file (type png)
 
 <use Figures/SearchSpace2.png>
@@ -2485,7 +2555,7 @@ riable) + 1;[]
  []
 
 [23])
-Underfull \hbox (badness 10000) in paragraph at lines 143--210
+Underfull \hbox (badness 10000) in paragraph at lines 143--213
 
  []
 
@@ -2514,7 +2584,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
-<Figures/SimpleTimeoutLinearSearch.png, id=951, 450.68375pt x 245.91875pt>
+<Figures/SimpleTimeoutLinearSearch.png, id=959, 450.68375pt x 245.91875pt>
 File: Figures/SimpleTimeoutLinearSearch.png Graphic file (type png)
 
 <use Figures/SimpleTimeoutLinearSearch.png>
@@ -2549,7 +2619,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--27
 
  []
 
-<Figures/SimpleTimeoutBinarySearch.png, id=958, 444.66125pt x 278.03876pt>
+<Figures/SimpleTimeoutBinarySearch.png, id=966, 444.66125pt x 278.03876pt>
 File: Figures/SimpleTimeoutBinarySearch.png Graphic file (type png)
 
 <use Figures/SimpleTimeoutBinarySearch.png>
@@ -2587,7 +2657,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
-<Figures/GeneralTimeoutLinearSearch.png, id=964, 380.42125pt x 245.91875pt>
+<Figures/GeneralTimeoutLinearSearch.png, id=972, 380.42125pt x 245.91875pt>
 File: Figures/GeneralTimeoutLinearSearch.png Graphic file (type png)
 
 <use Figures/GeneralTimeoutLinearSearch.png>
@@ -2618,7 +2688,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--57
  []
 
 [27 <./Figures/GeneralTimeoutLinearSearch.png>]
-<Figures/GeneralTimeoutBinarySearch.png, id=971, 444.66125pt x 230.8625pt>
+<Figures/GeneralTimeoutBinarySearch.png, id=979, 444.66125pt x 230.8625pt>
 File: Figures/GeneralTimeoutBinarySearch.png Graphic file (type png)
 
 <use Figures/GeneralTimeoutBinarySearch.png>
@@ -2632,12 +2702,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 64--211
+Underfull \hbox (badness 10000) in paragraph at lines 64--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--211
+Underfull \hbox (badness 10000) in paragraph at lines 64--214
 
  []
 
@@ -2702,7 +2772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[30] <Figures/GanttTable2.png, id=990, 454.69875pt x 1027.84pt>
+[30] <Figures/GanttTable2.png, id=998, 454.69875pt x 1027.84pt>
 File: Figures/GanttTable2.png Graphic file (type png)
 
 <use Figures/GanttTable2.png>
@@ -2724,12 +2794,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--103
  []
 
 [32])
-Underfull \hbox (badness 10000) in paragraph at lines 128--212
+Underfull \hbox (badness 10000) in paragraph at lines 128--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--212
+Underfull \hbox (badness 10000) in paragraph at lines 128--215
 
  []
 
@@ -2785,12 +2855,12 @@ Overfull \hbox (65.723pt too wide) in paragraph at lines 161--170
  []
 
 [37])
-Underfull \hbox (badness 10000) in paragraph at lines 215--213
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--213
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
@@ -2839,8 +2909,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
+<Figures/value-cover.png, id=1065, 456.20438pt x 255.95625pt>
+File: Figures/value-cover.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--21
+<use Figures/value-cover.png>
+Package pdftex.def Info: Figures/value-cover.png used on input line 22.
+(pdftex.def)             Requested size: 323.22449pt x 181.35135pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 23.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
@@ -2849,24 +2931,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
 
 
-] <Figures/benchmarks.png, id=1063, 455.45157pt x 255.95625pt>
+ <./Figures/value-cover.png (PNG copy)>]
+<Figures/benchmarks.png, id=1072, 455.45157pt x 255.95625pt>
 File: Figures/benchmarks.png Graphic file (type png)
 
 <use Figures/benchmarks.png>
-Package pdftex.def Info: Figures/benchmarks.png used on input line 56.
+Package pdftex.def Info: Figures/benchmarks.png used on input line 69.
 (pdftex.def)             Requested size: 323.22449pt x 181.64818pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 57.
+(caption)                particular \caption on input line 70.
 See the caption package documentation for explanation.
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 60--215
+[43])
+Underfull \hbox (badness 10000) in paragraph at lines 73--218
 
  []
 
-[43 <./Figures/benchmarks.png (PNG copy)>]
+[44 <./Figures/benchmarks.png (PNG copy)>]
 \openout2 = `Chapters/Ch10-Conclusions.aux'.
 
  (./Chapters/Ch10-Conclusions.tex
@@ -2904,27 +2987,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
 )
 1: section
-[44
+[45
 
 
 
-] [45]
+] [46]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
 Appendix A.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--224
+Underfull \hbox (badness 10000) in paragraph at lines 10--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--224
+Underfull \hbox (badness 10000) in paragraph at lines 10--227
 
  []
 
 1: section
-[46
+[47
 
 
 
@@ -2934,7 +3017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--224
  (./Appendices/GoogleTest.tex
 Appendix B.
 1: section
-[47
+[48
 
 
 
@@ -2950,7 +3033,7 @@ Overfull \hbox (15.62846pt too wide) in paragraph at lines 87--87
 or< int32_t > &[] 
  []
 
-[48] <Figures/google-test-output.png, id=1090, 530.98375pt x 235.88126pt>
+[49] <Figures/google-test-output.png, id=1104, 530.98375pt x 235.88126pt>
 File: Figures/google-test-output.png Graphic file (type png)
 
 <use Figures/google-test-output.png>
@@ -2963,31 +3046,31 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 )
-Overfull \hbox (19.32529pt too wide) in paragraph at lines 97--226
+Overfull \hbox (19.32529pt too wide) in paragraph at lines 97--229
 \T1/ppl/m/n/10.95 The fig-ure above [[][]B.1[][]] was the out-put from \T1/ppl/
 m/it/10.95 Gen-er-al-Time-out-Solver_SlowSearchStrategy_INT
  []
 
-[49 <./Figures/google-test-output.png>]
-Overfull \hbox (4.91273pt too wide) in paragraph at lines 230--230
+[50 <./Figures/google-test-output.png>]
+Overfull \hbox (4.91273pt too wide) in paragraph at lines 233--233
 []\T1/ppl/m/n/10.95 PagePersonnel. ^^P  Se-lec-ción y tra-bajo tem-po-ral es-pe
 -cial-izado^^Q. In: (). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/lmtt
 /m/n/10.95 https :
  []
 
 
-Overfull \hbox (33.3236pt too wide) in paragraph at lines 230--230
+Overfull \hbox (33.3236pt too wide) in paragraph at lines 233--233
 \T1/lmtt/m/n/10.95 / / www . pagepersonnel . es / sites / pagepersonnel . es / 
 files / er{\ _ }tecnologia16 .
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
 1: section
-[50
+[51
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./main.aux (./Chapters/Ch1-IntroductionContext.aux)
 (./Chapters/Ch2-ProjectScope.aux) (./Chapters/Ch3-Development.aux)
 (./Chapters/Ch4-SearchAlgorithms.aux) (./Chapters/Ch5-Timeouts.aux)
@@ -2995,10 +3078,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 (./Chapters/Ch8-SustainabilitySocialCommitment.aux)
 (./Chapters/Ch9-ExperimentsResults.aux) (./Chapters/Ch10-Conclusions.aux)
 (./Appendices/AppendixA.aux) (./Appendices/GoogleTest.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FD025C0BADC70880028BFD62B5317050;17315.
+(rerunfilecheck)             Checksum: 9FA6391AA9D79B09D5E01F54D522D616;17545.
 
 
 LaTeX Warning: There were undefined references.
@@ -3017,10 +3100,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 104 was incomplete) 
 Here is how much of TeX's memory you used:
- 32211 strings out of 494953
- 642696 string characters out of 6180978
- 737653 words of memory out of 5000000
- 34781 multiletter control sequences out of 15000+600000
+ 32221 strings out of 494953
+ 642876 string characters out of 6180978
+ 737735 words of memory out of 5000000
+ 34787 multiletter control sequences out of 15000+600000
  87634 words of font info for 146 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  64i,21n,88p,10377b,2243s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3036,10 +3119,10 @@ ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (58 pages, 794887 bytes).
+Output written on main.pdf (59 pages, 814593 bytes).
 PDF statistics:
- 1212 PDF objects out of 1440 (max. 8388607)
- 1105 compressed objects within 12 object streams
- 255 named destinations out of 1000 (max. 500000)
- 1087 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1226 PDF objects out of 1440 (max. 8388607)
+ 1117 compressed objects within 12 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 1100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
