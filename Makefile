@@ -178,8 +178,6 @@ link_benchmarks:
 	$(CC) -o $(BENCH_BUILD)bench_4_lin $(BENCH_BUILD)bench_4_lin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 	$(CC) -o $(BENCH_BUILD)bench_4_bin $(BENCH_BUILD)bench_4_bin.o -L$(TFG_BUILD) $(TFG_LIBS) -lpthread $(PBLIB_LIBS_INCLUDE) $(PBLIB_LIBS)
 
-
-
 benchmarks:
 	make compile_benchmarks link_benchmarks
 	$(BENCH_BUILD)bench_1_lin
