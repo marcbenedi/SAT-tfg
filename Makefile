@@ -71,8 +71,8 @@ tfg:
 
 clean:
 	rm -f *.o *.gch $(MAIN)
-	rm -f $(TFG_BUILD)*.gch $(TFG_BUILD)*.o $(TFG_BUILD)*.a
-	rm -f $(TEST_BUILD)*.gch $(TEST_BUILD)*.o $(TEST_BUILD)*.a
+	rm -f $(TFG_BUILD)*
+	rm -f $(TEST_BUILD)*
 	rm -f output.txt
 	rm -f input.txt
 	rm -f $(BENCH_BUILD)*
