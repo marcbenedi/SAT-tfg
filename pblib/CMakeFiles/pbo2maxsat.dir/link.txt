@@ -1,1 +1,0 @@
-g++   -O3 -std=c++11 -O3 -DNDEBUG   CMakeFiles/pbo2maxsat.dir/pbo2maxsat.cpp.o  -o pbo2maxsat  -L/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat -rdynamic libpblib.a -Wl,-rpath,/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/minisat 

@@ -1,8 +1,0 @@
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/install.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/list_install_components.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/rebuild_cache.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/edit_cache.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/pbsolver.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/CheckForLibs.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/install/local.dir
-/home/marcbenedi/Desktop/SAT-tfg/pblib/BasicPBSolver/CMakeFiles/install/strip.dir

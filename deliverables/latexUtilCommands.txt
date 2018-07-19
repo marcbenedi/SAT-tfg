@@ -1,2 +1,0 @@
-apt-cache search biblatex
-sudo apt-get install texlive-bibtex-extra
