@@ -1,6 +1,8 @@
-# Project Title
+# SAT-tfg
 
-One Paragraph of project description goes here
+This project is an environment to work with Pseudo-Boolean optimisation problems and Boolean formulae.
+
+## Example
 
 ## Getting Started
 
@@ -8,59 +10,43 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
+For installing and running, there are two requisites:
+* [cmake](https://cmake.org/install/)
+* [picosat](http://fmv.jku.at/picosat/)
+Both need to be accessible through the cml:
+```sh
+$ picosat --version
+$ cmake --version
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+Download the project.
+It is recommended to download always stable versions:
+```sh
+$ wget https://github.com/marcbenedi/SAT-tfg/archive/v1.1.zip
+$ unzip  v1.1.zip
 ```
-Give the example
+This will create SAT-tfg-1.1 directory.
+
+To install this project execute:
+```sh
+$ chmod +x installer.sh
+$ ./installer.sh
 ```
+This script will install all the required things:
+* [Google Test](https://github.com/google/googletest)
+* [PBLib](http://tools.computational-logic.org/content/pblib.php)
+* [Cudd](https://github.com/ivmai/cudd)
+Finally, it will execute the tests.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+## Compile a file
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Google Test](https://github.com/google/googletest)
+* [PBLib](http://tools.computational-logic.org/content/pblib.php)
+* [Cudd](https://github.com/ivmai/cudd)
 
 ## Contributing
 
@@ -71,10 +57,10 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
+* **[Jordi Cortadella](https://www.cs.upc.edu/~jordicf/)** - *Original idea and supervisor*
+* **[Marc Benedí](http://marcb.pro/)** - *Creator*
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/marcbenedi/SAT-tfg/contributors) who participated in this project.
 
 ## License
 
@@ -82,6 +68,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Jordi Cortadella](https://www.cs.upc.edu/~jordicf/)
