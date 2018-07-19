@@ -13,6 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 For installing and running, there are two requisites:
 * [cmake](https://cmake.org/install/)
 * [picosat](http://fmv.jku.at/picosat/)
+
 Both need to be accessible through the cml:
 ```sh
 $ picosat --version
@@ -38,6 +39,7 @@ This script will install all the required things:
 * [Google Test](https://github.com/google/googletest)
 * [PBLib](http://tools.computational-logic.org/content/pblib.php)
 * [Cudd](https://github.com/ivmai/cudd)
+
 Finally, it will execute the tests.
 
 ## Compile a file
@@ -54,7 +56,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+For the versions available, see the [tags on this repository](https://github.com/marcbenedi/SAT-tfg/tags).
 
 ## Authors
 * **[Jordi Cortadella](https://www.cs.upc.edu/~jordicf/)** - *Original idea and supervisor*
