@@ -19,6 +19,8 @@ make
 make check
 cd ..
 
+#apt-get install zlib1g-dev
+
 #PBlib
 rm -rf pblib
 unzip pblib.zip
