@@ -19,8 +19,6 @@ make
 make check
 cd ..
 
-#apt-get install zlib1g-dev
-
 #PBlib
 rm -rf pblib
 unzip pblib.zip
@@ -29,10 +27,6 @@ cmake .
 make setup
 cd ..
 
-
-#Requirements
-#picosat
-#cmake
 
 rm -rf test_build source_build
 mkdir test_build source_build
