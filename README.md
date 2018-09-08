@@ -13,11 +13,14 @@ These instructions will get you a copy of the project up and running on your loc
 For installing and running, there are two requisites:
 * [cmake](https://cmake.org/install/)
 * [picosat](http://fmv.jku.at/picosat/)
+* [minisat](http://minisat.se/)
+* [zlib1g-dev](https://packages.debian.org/search?keywords=zlib1g-dev)
 
-Both need to be accessible through the cml:
+The first three need to be accessible through the cml:
 ```sh
 $ picosat --version
 $ cmake --version
+$ minisat
 ```
 
 ### Installing
