@@ -31,7 +31,7 @@ PBLIB_LIBS_INCLUDE = -L$(PBLIB)/lib
 PBLIB_LIBS = -lpblib
 
 compile_main:
-	$(CC) -c -std=c++0x -g -fpermissive   $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
+	$(CC) -c -std=c++0x -g -fpermissive $(MAIN).cpp $(TFG_INCLUDE) $(CUDD_INCLUDE) $(PBLIB_INCLUDE)
 
 link_main:
 	$(CC) -o $(MAIN) $(MAIN).o -L$(TFG_BUILD) $(TFG_LIBS) $(CUDD_LIBS_INCLUDE) $(PBLIB_LIBS_INCLUDE)  -Wl,--whole-archive -lpthread -Wl,--no-whole-archive -static $(CUDD_LIBS) $(PBLIB_LIBS)
