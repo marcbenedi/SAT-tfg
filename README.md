@@ -48,10 +48,10 @@ $ minisat
 Download the project.
 It is recommended to download always stable versions:
 ```sh
-$ wget https://github.com/marcbenedi/SAT-tfg/archive/v1.1.zip
-$ unzip  v1.1.zip
+$ wget https://github.com/marcbenedi/SAT-tfg/archive/v1.2.zip
+$ unzip  v1.2.zip
 ```
-This will create SAT-tfg-1.1 directory.
+This will create SAT-tfg-1.2 directory.
 
 To install this project execute:
 ```sh
